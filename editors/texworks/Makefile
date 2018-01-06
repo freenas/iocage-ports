@@ -4,7 +4,7 @@
 PORTNAME=	texworks
 PORTVERSION=	0.4.6
 DISTVERSIONPREFIX=	release-
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	editors
 
 MAINTAINER=	hrs@FreeBSD.org
@@ -47,7 +47,7 @@ PORTDOCS=	*
 OPTIONS_DEFINE=	DOCS LUA PYTHON
 LUA_USES=	lua:51
 LUA_PLIST_FILES=lib/texworks/libTWLuaPlugin.so
-PYTHON_USES=	python:3
+PYTHON_USES=	python:3.4+
 PYTHON_PLIST_FILES=lib/texworks/libTWPythonPlugin.so
 
 post-extract:

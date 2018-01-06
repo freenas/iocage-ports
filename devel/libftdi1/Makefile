@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	libftdi1
-PORTVERSION=	1.3
-PORTREVISION=	3
+PORTVERSION=	1.4
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.intra2net.com/en/developer/libftdi/download/
 
@@ -22,7 +22,7 @@ PYTHON_DESC=	Build Python bindings
 
 BROKEN_sparc64=		Does not build: fails to link
 
-USES=		cmake pkgconfig tar:bzip2
+USES=		cmake gettext-runtime pkgconfig tar:bzip2
 USE_LDCONFIG=	yes
 
 PORTDOCS=	COPYING.LIB ChangeLog README
@@ -44,7 +44,8 @@ CMAKE_ARGS+=	-DEXAMPLES:BOOL=false
 .if ${PORT_OPTIONS:MPYTHON}
 USES+=		python:2
 CMAKE_ARGS+=	-DPYTHON_BINDINGS:BOOL=true
-BUILD_DEPENDS+=	swig2.0:devel/swig20
+BUILD_DEPENDS+=	swig3.0:devel/swig30
+BINARY_ALIAS=	swig=swig3.0
 .else
 CMAKE_ARGS+=	-DPYTHON_BINDINGS:BOOL=false
 .endif

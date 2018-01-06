@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME?=	postgresql
-DISTVERSION?=	9.2.22
-PORTREVISION?=	1
+DISTVERSION?=	9.2.24
+PORTREVISION?=	0
 CATEGORIES?=	databases
 MASTER_SITES=	PGSQL/source/v${DISTVERSION}
 PKGNAMESUFFIX?=	${PORTVERSION:R:S/.//}${COMPONENT}
@@ -30,6 +30,7 @@ USES+=		tar:bzip2 cpe
 .if !defined(NO_BUILD)
 USES+=	gmake
 GNU_CONFIGURE=	yes
+LLD_UNSAFE=	yes
 .endif
 
 PG_USER?=	pgsql

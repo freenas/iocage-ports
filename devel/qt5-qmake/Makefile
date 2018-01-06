@@ -2,7 +2,7 @@
 
 PORTNAME=	qmake
 DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel
 PKGNAMEPREFIX=	qt5-
 
@@ -32,6 +32,8 @@ CONFIGURE_ARGS=	-no-accessibility -no-openssl -no-gui -no-cups \
 TBR_CONFIG=	concurrent|inotify|xlib
 QMAKESPEC=	${WRKSRC}/mkspecs/freebsd-${QMAKE_COMPILER}
 INSTALL_TARGET=	sub-qmake-qmake-aux-pro-install_subtargets install_mkspecs
+
+BROKEN_powerpc64=	fails to compile: error: unrecognized command line option -std=c++11
 
 BUILD_WRKSRC=	${WRKSRC}/${PORTNAME}
 

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	polygraph
-PORTVERSION=	4.9.0
-PORTREVISION=	3
+PORTVERSION=	4.11.0
 DISTVERSIONSUFFIX=	-src
 CATEGORIES=	benchmarks www
 MASTER_SITES=	http://www.web-polygraph.org/downloads/srcs/
@@ -20,6 +19,9 @@ USES=		gmake ncurses shebangfix tar:tgz
 SHEBANG_FILES=	tools/*.pl
 USE_GCC=	any
 GNU_CONFIGURE=	yes
+
+# The port does not build with C++11 or later (bug 219275).
+USE_CXXSTD=	gnu++03
 
 CONFLICTS=	ltrace-0*
 

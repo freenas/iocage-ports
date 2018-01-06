@@ -3,7 +3,7 @@
 
 PORTNAME=	gcl
 PORTVERSION=	2.6.12
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	lang tcl tk
 MASTER_SITES=	GNU
 
@@ -14,6 +14,8 @@ LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
 
 BROKEN=		missing header
+DEPRECATED=	Broken for more than 6 months
+EXPIRATION_DATE=	2018-01-27
 
 BUILD_DEPENDS=	gawk:lang/gawk
 LIB_DEPENDS=	libgmp.so:math/gmp

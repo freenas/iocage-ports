@@ -3,7 +3,7 @@
 
 PORTNAME=	texmaker
 PORTVERSION=	4.5
-PORTREVISION=	9
+PORTREVISION=	10
 PORTEPOCH=	3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
@@ -11,7 +11,7 @@ MASTER_SITES=	http://www.xm1math.net/texmaker/
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	LaTeX Development Environment
 
-LICENSE=	GPLv2
+LICENSE=	GPLv2+
 
 LIB_DEPENDS=	libhunspell-1.6.so:textproc/hunspell \
 		libpoppler.so:graphics/poppler

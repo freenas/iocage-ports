@@ -100,18 +100,15 @@
     SUBDIR += irssi-themes
     SUBDIR += kde-gtk-config
     SUBDIR += kde-icons-black-and-white
-    SUBDIR += kde-icons-dark-glass
     SUBDIR += kde-icons-gartoon-blue-svg
     SUBDIR += kde-icons-gartoon-svg
     SUBDIR += kde-icons-graphite-rade8
-    SUBDIR += kde-icons-icosx
     SUBDIR += kde-icons-kool-gorilla
     SUBDIR += kde-icons-lime-rade8
     SUBDIR += kde-icons-lush
     SUBDIR += kde-icons-noia
     SUBDIR += kde-icons-nuovext2
     SUBDIR += kde-icons-nuvola
-    SUBDIR += kde-icons-umicons
     SUBDIR += kde4-base-artwork
     SUBDIR += kde4-style-bespin
     SUBDIR += kde4-style-nitrogen
@@ -127,6 +124,7 @@
     SUBDIR += kf5-kemoticons
     SUBDIR += kf5-kiconthemes
     SUBDIR += kf5-oxygen-icons5
+    SUBDIR += lumina-themes
     SUBDIR += lxappearance
     SUBDIR += lxde-icon-theme
     SUBDIR += mate-backgrounds
@@ -164,10 +162,12 @@
     SUBDIR += qtcurve-utils
     SUBDIR += rezlooks
     SUBDIR += sawfish-themes
+    SUBDIR += sddm-freebsd-black-theme
     SUBDIR += slim-themes
     SUBDIR += thewidgetfactory
     SUBDIR += ubuntulooks
     SUBDIR += xcursor-themes
+    SUBDIR += xfce-evolution
     SUBDIR += xfce-icons-elementary
 
 .include <bsd.port.subdir.mk>

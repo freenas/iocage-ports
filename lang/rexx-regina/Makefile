@@ -3,6 +3,7 @@
 
 PORTNAME=	regina
 PORTVERSION=	3.9.1
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	SF/${PORTNAME}-rexx/${PORTNAME}-rexx/${PORTVERSION}:source \
 		SF/${PORTNAME}-rexx/${PORTNAME}-documentation/${PORTVERSION}:docs
@@ -19,6 +20,7 @@ LICENSE=	LGPL21+
 
 BROKEN_aarch64=		Does not build: error: expected expression
 BROKEN_armv6=		Does not build: error: expected expression
+BROKEN_armv7=		Does not build: error: expected expression
 BROKEN_mips=		Does not build: error: expected expression
 BROKEN_mips64=		Does not build: error: expected expression
 BROKEN_powerpc64=	Does not build: error: expected expression
@@ -59,6 +61,10 @@ post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^examplesdir/s|=.*|= $$(datadir)/examples/$$(PACKAGE)| ; \
 		 /$$(sysconfdir)/s|^|#|' ${WRKSRC}/Makefile.in
+
+post-stage:
+	@${LN} -f ${STAGEDIR}/${PREFIX}/man/man1/regina.1.gz \
+		${STAGEDIR}/${PREFIX}/man/man1/rexx.1.gz
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}

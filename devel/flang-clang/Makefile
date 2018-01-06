@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	flang-clang
-DISTVERSION=	4.0-20170612
+DISTVERSION=	5.0-20171019
+PORTREVISION=	1
 CATEGORIES=	devel lang
 
 MAINTAINER=	jmd@FreeBSD.org
@@ -13,10 +14,11 @@ LICENSE_NAME=	LLVM Release License
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-BUILD_DEPENDS=	llvm40>=0:devel/llvm40 \
-		openmp>=0:devel/openmp
-RUN_DEPENDS=	llvm40>=0:devel/llvm40 \
-		openmp>=0:devel/openmp
+BUILD_DEPENDS=	llvm50>=0:devel/llvm50
+RUN_DEPENDS=	llvm50>=0:devel/llvm50
+
+ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS_REASON_amd64=	for now only builds and is supported on amd64
 
 USE_LDCONFIG=	${PREFIX}/flang/lib
 USES=		cmake:outsource compiler:c++11-lib libedit tar:xz perl5 \
@@ -31,9 +33,9 @@ SHEBANG_FILES=	tools/scan-view/bin/scan-view \
 USE_GITHUB=	yes
 GH_ACCOUNT=	flang-compiler
 GH_PROJECT=	clang
-GH_TAGNAME=	17f4427
+GH_TAGNAME=	b11539a
 
-CMAKE_ARGS+=	-DLLVM_CONFIG=${LOCALBASE}/bin/llvm-config40
+CMAKE_ARGS+=	-DLLVM_CONFIG=${LOCALBASE}/bin/llvm-config50
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/flang
 

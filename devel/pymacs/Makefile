@@ -4,7 +4,7 @@
 PORTNAME=	Pymacs
 PORTVERSION=	0.25
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel editors python elisp
 
 MAINTAINER=	ports@FreeBSD.org
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 USE_GITHUB=	yes
 GH_ACCOUNT=	pinard
 
-USES=		python
+USES=		python:2.7
 USE_EMACS=	yes
 USE_PYTHON=	distutils
 

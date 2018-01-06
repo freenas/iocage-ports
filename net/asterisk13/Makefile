@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	asterisk
-PORTVERSION=	13.17.0
+PORTVERSION=	13.18.5
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
@@ -19,8 +20,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
 		libjansson.so:devel/jansson
 
-BROKEN_armv6=		fails to configure: the SPANDSP installation appears to be missing or broken
-ONLY_FOR_ARCHS=		amd64 armv6 i386 powerpc sparc64
+ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc sparc64
 
 EXTRACT_ONLY:=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -72,6 +72,7 @@ OPTIONS_DEFAULT_amd64=		DAHDI BASE XMPP
 OPTIONS_DEFAULT_sparc64=	DAHDI GCC XMPP
 OPTIONS_DEFAULT_powerpc=	GCC XMPP
 OPTIONS_DEFAULT_armv6=		BASE
+OPTIONS_DEFAULT_armv7=		BASE
 
 OPTIONS_GROUP=			CODECS
 OPTIONS_GROUP_CODECS=		GSM NEWG711 SPEEX VORBIS
@@ -101,7 +102,7 @@ G729_DISTFILES=			${ASTERISK_CORE_G729_SOUNDS}:g729 \
 
 ASTVERSION_DESC?= Install astversion (requires bash)
 BACKTRACE_DESC?= Stack backtrace support via (lib)execinfo
-BASE_DESC=	Use base compiler (experimental)
+BASE_DESC=	Use base compiler
 DAHDI_DESC?=	DAHDI support
 EXCHANGE_DESC?=	Exchange calendar support
 MP3PLAYER_DESC=	Install MP3 Player for Music-On-Hold (mpg123)
@@ -117,7 +118,6 @@ OPTIONS_SUB=		yes
 ASTVERSION_RUN_DEPENDS=		bash:shells/bash
 
 BACKTRACE_CONFIGURE_WITH=	execinfo
-BACKTRACE_USES=			execinfo
 
 CURL_CONFIGURE_ON=	--with-libcurl
 CURL_CONFIGURE_OFF=	--with-libcurl=no
@@ -161,11 +161,6 @@ ODBC_CONFIGURE_WITH=	unixodbc
 ODBC_CONFIGURE_ON=	--with-ltdl
 ODBC_LIB_DEPENDS=	libodbc.so:databases/unixODBC \
 			libltdl.so:devel/libltdl
-
-OOH323_CPPFLAGS=	-I${LOCALBASE}/include/openh323
-OOH323_LIB_DEPENDS=     libpt_r.so:devel/pwlib \
-			libh323_r.so:net/openh323
-OOH323_MAKE_ENV=	OPENH323DIR=${LOCALBASE}/share/openh323
 
 PGSQL_CONFIGURE_WITH=	postgres
 PGSQL_USES=		pgsql

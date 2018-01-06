@@ -1,4 +1,11 @@
---- Source/WebCore/platform/graphics/cpu/arm/filters/FELightingNEON.cpp.orig	2016-04-10 06:48:37 UTC
+armv6/v7:
+Use correct UAL syntax for 'vmov rx, ry,...' instruction. 
+The '.u32' modifier in not allowed for this operand combination 
+by ARM ARM, but gas silently ignores it.
+
+See PR 222612
+
+--- Source/WebCore/platform/graphics/cpu/arm/filters/FELightingNEON.cpp.orig	2017-08-23 05:04:24 UTC
 +++ Source/WebCore/platform/graphics/cpu/arm/filters/FELightingNEON.cpp
 @@ -403,7 +403,7 @@ TOSTRING(neonDrawLighting) ":" NL
      "vmin.f32 " TMP2_D0 ", " TMP2_D0 ", " CONST_ONE_HI_D NL

@@ -3,6 +3,7 @@
 
 PORTNAME=	gitg
 PORTVERSION=	3.24.0
+PORTREVISION=	1
 CATEGORIES=	devel deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -11,6 +12,8 @@ COMMENT=	GTK-based git repository viewer
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN=		fails to configure
 
 BUILD_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas \
 		valac:lang/vala
@@ -47,6 +50,6 @@ NLS_USES_OFF=	gettext-tools
 NLS_CONFIGURE_ENABLE=	nls
 PYTHON_USES=	python:3.2+
 PYTHON_CONFIGURE_ENABLE=	python
-PYTHON_USE=	GNOME=py3gobject3
+PYTHON_USE=	GNOME=pygobject3
 
 .include <bsd.port.mk>

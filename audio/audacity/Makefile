@@ -4,6 +4,7 @@
 PORTNAME=	audacity
 PORTVERSION=	2.1.3
 DISTVERSIONPREFIX=	Audacity-
+PORTREVISION=	3
 CATEGORIES=	audio
 
 MAINTAINER=	xxjack12xx@gmail.com

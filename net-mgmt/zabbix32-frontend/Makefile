@@ -17,8 +17,10 @@ USE_PHP=	bcmath ctype dom gd gettext json ldap mbstring pcre \
 USES+=		php:web
 
 OPTIONS_DEFINE=		MYSQL MYSQLI PGSQL SQLITE ORACLE
-OPTIONS_DEFAULT=	MYSQL MYSQLI
+OPTIONS_DEFAULT=	MYSQLI
 MYSQLI_DESC=		MySQLI backend
+
+MYSQL_VARS=	IGNORE_WITH_PHP+=70 71
 
 .include <bsd.port.options.mk>
 

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	osquery
-PORTVERSION=	2.6.0
+PORTVERSION=	2.10.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	zi@FreeBSD.org
@@ -11,10 +11,13 @@ COMMENT=	SQL powered OS instrumentation, monitoring, and analytics
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN=		fails to link
+
 BUILD_DEPENDS=	thrift>0:devel/thrift \
 		bash>0:shells/bash \
 		linenoise-ng>0:devel/linenoise-ng \
 		asio>0:net/asio \
+		rapidjson>0:devel/rapidjson \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2
 LIB_DEPENDS=	libaugeas.so:textproc/augeas \
 		libboost_regex.so:devel/boost-libs \
@@ -36,12 +39,13 @@ CONFIGURE_ENV+=	OSQUERY_BUILD_VERSION="${PORTVERSION}" HOME="${WRKDIR}" \
 		SKIP_TESTS="yes" CC="${CC}" CXX="${CXX}"
 CMAKE_ARGS+=	-DFREEBSD=awesome -DCMAKE_SYSTEM_NAME="FreeBSD"
 BLDDIR=		${WRKDIR}/.build/${PORTNAME}
+TPVERSION=	${PORTVERSION}
 USE_RC_SUBR=	${PORTNAME}d
 USE_GITHUB=	yes
 GH_ACCOUNT=	facebook ${PORTNAME}:tp
 GH_PROJECT=	third-party:tp
 GH_SUBDIR=	third-party:tp
-GH_TAGNAME=	2.5.2:tp
+GH_TAGNAME=	${TPVERSION}:tp
 
 # Some options for things that bring in many dependencies
 OPTIONS_DEFINE=	TSK AWS YARA LLDPD
@@ -65,9 +69,9 @@ LLDPD_CONFIGURE_ENV_OFF=SKIP_LLDPD=1
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 1100000
-BUILD_DEPENDS+=	clang38:devel/llvm38
-CC=	clang38
-CXX=	clang++38
+BUILD_DEPENDS+=	clang40:devel/llvm40
+CC=	clang40
+CXX=	clang++40
 .endif
 
 post-patch:

@@ -14,13 +14,11 @@
     SUBDIR += asis
     SUBDIR += asn1c
     SUBDIR += atlast
-    SUBDIR += ats
     SUBDIR += awka
     SUBDIR += bas2tap
     SUBDIR += basic256
     SUBDIR += beignet
     SUBDIR += bf2c
-    SUBDIR += bigloo
     SUBDIR += bsh
     SUBDIR += bwbasic
     SUBDIR += c
@@ -28,9 +26,11 @@
     SUBDIR += cdent
     SUBDIR += ceylon
     SUBDIR += cfortran
+    SUBDIR += chez-scheme
     SUBDIR += chibi-scheme
     SUBDIR += chicken
     SUBDIR += cilkplus
+    SUBDIR += cim
     SUBDIR += cint
     SUBDIR += cjs
     SUBDIR += clang-devel
@@ -48,7 +48,6 @@
     SUBDIR += cparser
     SUBDIR += csharp-mode.el
     SUBDIR += cython
-    SUBDIR += cython3
     SUBDIR += diveintopython
     SUBDIR += dlang-tools
     SUBDIR += dlv
@@ -86,7 +85,6 @@
     SUBDIR += fpc-rtl-extra
     SUBDIR += fpc-rtl-objpas
     SUBDIR += fpc-rtl-unicode
-    SUBDIR += fpc-tcl
     SUBDIR += fpc-units
     SUBDIR += fpc-utils
     SUBDIR += fsharp
@@ -95,13 +93,10 @@
     SUBDIR += gawk
     SUBDIR += gcc
     SUBDIR += gcc-ecj45
-    SUBDIR += gcc46
     SUBDIR += gcc47
     SUBDIR += gcc48
     SUBDIR += gcc49
     SUBDIR += gcc5
-    SUBDIR += gcc5-aux
-    SUBDIR += gcc5-devel
     SUBDIR += gcc6
     SUBDIR += gcc6-aux
     SUBDIR += gcc6-devel
@@ -210,6 +205,7 @@
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opendylan
+    SUBDIR += owl-lisp
     SUBDIR += p2c
     SUBDIR += p5-Data-JavaScript
     SUBDIR += p5-Error
@@ -261,6 +257,8 @@
     SUBDIR += php70-extensions
     SUBDIR += php71
     SUBDIR += php71-extensions
+    SUBDIR += php72
+    SUBDIR += php72-extensions
     SUBDIR += php_doc
     SUBDIR += picoc
     SUBDIR += pike78
@@ -285,7 +283,6 @@
     SUBDIR += python2
     SUBDIR += python27
     SUBDIR += python3
-    SUBDIR += python33
     SUBDIR += python34
     SUBDIR += python35
     SUBDIR += python36
@@ -306,6 +303,7 @@
     SUBDIR += ruby22
     SUBDIR += ruby23
     SUBDIR += ruby24
+    SUBDIR += ruby25
     SUBDIR += runawk
     SUBDIR += rust
     SUBDIR += rust-nightly
@@ -347,7 +345,6 @@
     SUBDIR += tcc
     SUBDIR += tcl-manual
     SUBDIR += tcl-wrapper
-    SUBDIR += tcl84
     SUBDIR += tcl85
     SUBDIR += tcl86
     SUBDIR += tcl87
@@ -363,7 +360,6 @@
     SUBDIR += v8-devel
     SUBDIR += vala
     SUBDIR += visualworks
-    SUBDIR += whitespace
     SUBDIR += x10
     SUBDIR += yabasic
     SUBDIR += yap

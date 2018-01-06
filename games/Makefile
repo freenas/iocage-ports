@@ -32,6 +32,7 @@
     SUBDIR += agame
     SUBDIR += ags
     SUBDIR += aisleriot
+    SUBDIR += aklabeth
     SUBDIR += alephone
     SUBDIR += alephone-data
     SUBDIR += alephone-scenarios
@@ -102,7 +103,6 @@
     SUBDIR += blokish
     SUBDIR += bloodfrontier
     SUBDIR += bluemoon
-    SUBDIR += bogged
     SUBDIR += bomber
     SUBDIR += bomberclone
     SUBDIR += bomberinstinct
@@ -179,7 +179,6 @@
     SUBDIR += crafty-open-large
     SUBDIR += crafty-open-medium
     SUBDIR += crafty-tablebase-no-pawn
-    SUBDIR += crafty-tablebase-pawn
     SUBDIR += crashtest
     SUBDIR += cre
     SUBDIR += cretan-hubris
@@ -243,7 +242,6 @@
     SUBDIR += einstein
     SUBDIR += el
     SUBDIR += el-data
-    SUBDIR += ember
     SUBDIR += emptyepsilon
     SUBDIR += endgame-singularity
     SUBDIR += endgame-singularity-music
@@ -254,6 +252,7 @@
     SUBDIR += entombed
     SUBDIR += enygma
     SUBDIR += epiar
+    SUBDIR += epiphany-game
     SUBDIR += etracer
     SUBDIR += euchre
     SUBDIR += evilfinder
@@ -408,6 +407,7 @@
     SUBDIR += gturing
     SUBDIR += gtypist
     SUBDIR += gunfudeadlands
+    SUBDIR += gzdoom
     SUBDIR += hangman
     SUBDIR += hedgewars
     SUBDIR += help_hannahs_horse
@@ -431,7 +431,6 @@
     SUBDIR += icbm3d
     SUBDIR += icebreaker
     SUBDIR += iceicepenguin
-    SUBDIR += ifm
     SUBDIR += imaze
     SUBDIR += impossible_mission_puzzle
     SUBDIR += inform
@@ -459,6 +458,7 @@
     SUBDIR += joequake
     SUBDIR += jools
     SUBDIR += jtans
+    SUBDIR += jumpnbump
     SUBDIR += jutils
     SUBDIR += jvgs
     SUBDIR += jzip
@@ -535,6 +535,7 @@
     SUBDIR += libretro-cores
     SUBDIR += libshhcards
     SUBDIR += lightsoff
+    SUBDIR += lightyears
     SUBDIR += lincity
     SUBDIR += lincity-ng
     SUBDIR += linux-darwinia-demo
@@ -558,7 +559,6 @@
     SUBDIR += linux-quake3-demo
     SUBDIR += linux-quake4
     SUBDIR += linux-quake4-demo
-    SUBDIR += linux-rtcw
     SUBDIR += linux-ssamtfe
     SUBDIR += linux-ssamtse
     SUBDIR += linux-unigine-heaven
@@ -610,6 +610,7 @@
     SUBDIR += minerbold
     SUBDIR += minetest
     SUBDIR += minetest_game
+    SUBDIR += minilens
     SUBDIR += mirrormagic
     SUBDIR += miscom
     SUBDIR += mkgichessclub
@@ -670,6 +671,7 @@
     SUBDIR += numptyphysics
     SUBDIR += numptyphysics-npcomplete
     SUBDIR += nwndata
+    SUBDIR += nxengine
     SUBDIR += odamex
     SUBDIR += oldrunner
     SUBDIR += omega
@@ -678,6 +680,7 @@
     SUBDIR += oneko-sakura
     SUBDIR += oolite
     SUBDIR += oonsoo
+    SUBDIR += open-adventure
     SUBDIR += openalchemist
     SUBDIR += openarena
     SUBDIR += openarena-data
@@ -691,6 +694,7 @@
     SUBDIR += openbor4432
     SUBDIR += openbubbles
     SUBDIR += opencity
+    SUBDIR += openclaw
     SUBDIR += openclonk
     SUBDIR += opengfx
     SUBDIR += openglad
@@ -702,6 +706,7 @@
     SUBDIR += openomf
     SUBDIR += openpref
     SUBDIR += openra
+    SUBDIR += openrct2
     SUBDIR += opensfx
     SUBDIR += opensonic
     SUBDIR += openspades
@@ -755,7 +760,6 @@
     SUBDIR += pipenightdreams
     SUBDIR += pipepanic
     SUBDIR += pipewalker
-    SUBDIR += plee-the-bear
     SUBDIR += plutocracy
     SUBDIR += pmars
     SUBDIR += pmars-sdl
@@ -763,7 +767,6 @@
     SUBDIR += poker-eval
     SUBDIR += pokerth
     SUBDIR += polyglot
-    SUBDIR += polypuzzle
     SUBDIR += pongix
     SUBDIR += popstar
     SUBDIR += pouetchess
@@ -886,6 +889,7 @@
     SUBDIR += sdl_jewels
     SUBDIR += sdl_lopan
     SUBDIR += sdl_scavenger
+    SUBDIR += sdlpop
     SUBDIR += sdlroids
     SUBDIR += sdlsand
     SUBDIR += sea-defender
@@ -919,6 +923,7 @@
     SUBDIR += solarwolf
     SUBDIR += sopwith
     SUBDIR += spacejunk
+    SUBDIR += spacezero
     SUBDIR += speak
     SUBDIR += species
     SUBDIR += spellathon
@@ -953,6 +958,7 @@
     SUBDIR += syobon
     SUBDIR += tads
     SUBDIR += taipan
+    SUBDIR += taisei
     SUBDIR += tali
     SUBDIR += tanglet
     SUBDIR += tanks-of-freedom
@@ -975,7 +981,6 @@
     SUBDIR += timeseal
     SUBDIR += tinymux
     SUBDIR += tkmoo
-    SUBDIR += tksol
     SUBDIR += tomatoes
     SUBDIR += tome4
     SUBDIR += tomenet
@@ -998,8 +1003,8 @@
     SUBDIR += trophy
     SUBDIR += tsito
     SUBDIR += tt
-    SUBDIR += ttraffic
     SUBDIR += ttt
+    SUBDIR += tty-solitaire
     SUBDIR += tux-aqfh
     SUBDIR += tuxfighter
     SUBDIR += tuxkart
@@ -1150,6 +1155,7 @@
     SUBDIR += xpilot-ng-server
     SUBDIR += xpipeman
     SUBDIR += xpired
+    SUBDIR += xptools
     SUBDIR += xpuyopuyo
     SUBDIR += xpuzzletama
     SUBDIR += xpyraminx
@@ -1157,7 +1163,6 @@
     SUBDIR += xrally
     SUBDIR += xrick
     SUBDIR += xrisk
-    SUBDIR += xroach
     SUBDIR += xrobots
     SUBDIR += xrot
     SUBDIR += xrubik

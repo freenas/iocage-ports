@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	ceph
-DISTVERSION=	wip.v2017-07-27-1
+DISTVERSION=	wip.v2017-08-15-1
+PORTREVISION=	2
 CATEGORIES=	net
 PKGNAMESUFFIX=	-devel
 
@@ -12,10 +13,13 @@ COMMENT=Ceph delivers object, block, and file storage in a unified system
 LICENSE=	GPLv2 LGPL3
 LICENSE_COMB=	dual
 
+# even though i386 will build, it is not really advised.
+ONLY_FOR_ARCHS=	amd64
+IGNORE_FreeBSD_10=	Doesnt build for FreeBSD 10.x
+
 BUILD_DEPENDS=	\
 	yasm:devel/yasm \
 	pkgconf:devel/pkgconf \
-	cython>=0.25.2:lang/cython \
 	sphinx-build:textproc/py-sphinx \
 	${LOCALBASE}/lib/libatomic_ops.a:devel/libatomic_ops \
 	gperf:devel/gperf
@@ -42,8 +46,10 @@ RUN_DEPENDS=	\
 	flock:sysutils/flock \
 	virtualenv:devel/py-virtualenv
 
-USES=	gmake cmake:outsource,noninja python:2.7 fuse gettext-runtime shebangfix
+CONFLICTS_INSTALL=	ceph
 
+USES=	gmake cmake:outsource,noninja python:2.7 fuse gettext-runtime shebangfix
+USE_PYTHON=	cython
 USE_GITHUB=	yes
 GH_ACCOUNT=	wjwithagen:DEFAULT
 GH_TUPLE+=	ceph:ceph-erasure-code-corpus:2d7d78b:ceph_erasure_code_corpus/ceph-erasure-code-corpus
@@ -84,10 +90,6 @@ SHEBANG_FILES=src/rbdmap src/ceph-post-file.in src/rbd-replay-many \
 	src/brag/client/ceph-brag src/ceph-rest-api \
 	src/tools/ceph-monstore-update-crush.sh src/mount.fuse.ceph \
 	src/ceph-create-keys
-
-# even though i386 will build, it is not really advised.
-ONLY_FOR_ARCHS=	amd64
-IGNORE_FreeBSD_10=	Doesnt build for FreeBSD 10.x
 
 USE_RC_SUBR=	ceph
 USE_LDCONFIG=	yes
@@ -131,6 +133,12 @@ post-install:
 	${RM} ${STAGEDIR}${PREFIX}/bin/ceph_tpbench
 	${RM} ${STAGEDIR}${PREFIX}/bin/ceph_xattr_bench
 	${RM} ${STAGEDIR}${PREFIX}/sbin/ceph-disk-udev
+	# ceph-volume does not support ZFS
+	${RM} -rf ${STAGEDIR}${PYTHON_SITELIBDIR}/ceph_volume-*
+	${RM} -rf ${STAGEDIR}${PYTHON_SITELIBDIR}/ceph_volume/
+	${RM} ${STAGEDIR}${PREFIX}/sbin/ceph-volume
+	${RM} ${STAGEDIR}${PREFIX}/sbin/ceph-volume-systemd
+
 	${RMDIR} ${STAGEDIR}${PREFIX}/etc/init.d
 	${INSTALL_DATA} ${WRKSRC}/src/sample.ceph.conf ${STAGEDIR}${PREFIX}/etc/ceph/ceph.conf.sample
 

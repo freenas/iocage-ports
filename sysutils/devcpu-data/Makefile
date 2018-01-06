@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	data
-PORTVERSION=	1.10
+PORTVERSION=	1.12
 CATEGORIES=	sysutils
-MASTER_SITES=	https://downloadmirror.intel.com/26798/eng/:intel \
+MASTER_SITES=	https://downloadmirror.intel.com/27337/eng/:intel \
 		http://www.amd64.org/microcode/:amd
 PKGNAMEPREFIX=	devcpu-
-DISTFILES=	microcode-20170511.tgz:intel amd-ucode-2014-12-01.tar.bz2:amd
+DISTFILES=	microcode-20171117.tgz:intel amd-ucode-2014-12-01.tar.bz2:amd
 
 MAINTAINER=	clarkjc@runbox.com
 COMMENT=	Intel and AMD CPUs microcode updates
@@ -17,10 +17,9 @@ LICENSE_NAME=	Intel Software License Agreement
 LICENSE_FILE=	${FILESDIR}/LICENSE
 LICENSE_PERMS=	dist-mirror no-dist-sell pkg-mirror no-pkg-sell auto-accept
 
+ONLY_FOR_ARCHS=	amd64 i386
 NO_ARCH=	yes
 NO_WRKSUBDIR=	yes
-
-ONLY_FOR_ARCHS=	i386 amd64
 
 DATADIR=	${PREFIX}/share/cpucontrol
 

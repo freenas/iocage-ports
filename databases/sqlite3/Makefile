@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	sqlite3
-PORTVERSION=	3.20.0
-PORTREVISION=	2
+PORTVERSION=	3.21.0
+PORTREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://www.sqlite.org/2017/ http://www2.sqlite.org/2017/ http://www3.sqlite.org/2017/
 DISTNAME=	sqlite-autoconf-${PORTVERSION:C/\.([[:digit:]])[[:>:]]/0\1/g:S/.//g}00
@@ -23,7 +23,7 @@ MAKE_JOBS_UNSAFE=	yes
 # Compilation Options For SQLite https://www.sqlite.org/compile.html
 OPTIONS_DEFINE=	FTS4 UPD_DEL_LIMIT URI URI_AUTHORITY SOUNDEX METADATA \
 		DIRECT_READ MEMMAN SECURE_DELETE UNLOCK_NOTIFY THREADS \
-		EXTENSION ARMOR STMT DBSTAT FTS5 JSON1 RBU NULL_TRIM \
+		EXTENSION ARMOR STMT DBPAGE DBSTAT FTS5 JSON1 RBU NULL_TRIM \
 		LIKENOTBLOB STSHELL FTS3_TOKEN SESSION UNKNOWN_SQL
 OPTIONS_SINGLE=	RAMT
 OPTIONS_RADIO=	STAT
@@ -90,6 +90,9 @@ STAT_DESC=		Which query planner to use, Stability or ...
 STAT3_DESC=		collect histogram data from leftmost column
 STAT4_DESC=		collect histogram data from all columns
 
+# https://sqlite.org/compile.html#enable_dbpage_vtab
+DBPAGE_DESC=		Enable DBPAGE Virtual Table
+
 # https://www.sqlite.org/dbstat.html
 DBSTAT_DESC=		Enable DBSTAT Virtual Table
 
@@ -115,10 +118,11 @@ EDITLINE_PREVENTS=	READLINES READLINEP
 
 OPTIONS_DEFAULT=	FTS4 URI METADATA SECURE_DELETE UNLOCK_NOTIFY THREADS \
 			EXTENSION TS1 UNICODE61 RTREE DBSTAT STSHELL READLINES \
-			FTS3_TOKEN
+			FTS3_TOKEN FTS5
 # SECURE_DELETE, UNLOCK_NOTIFY, DBSTAT (since 41.0) used by www/firefox et al.
 # RTREE used by graphics/mapnik, databases/spatialite
 # FTS3_TOKEN used by audio/clementine-player
+# FTS5 used by sysutils/tracker
 
 PLIST_FILES=	bin/sqlite3 include/sqlite3.h include/sqlite3ext.h \
 		lib/libsqlite3.a lib/libsqlite3.so lib/libsqlite3.so.0 \
@@ -156,6 +160,7 @@ UNLOCK_NOTIFY_CPPFLAGS=	-DSQLITE_ENABLE_UNLOCK_NOTIFY=1
 METADATA_CPPFLAGS=	-DSQLITE_ENABLE_COLUMN_METADATA=1
 STAT3_CPPFLAGS=	-DSQLITE_ENABLE_STAT3=1
 STAT4_CPPFLAGS=	-DSQLITE_ENABLE_STAT4=1
+DBPAGE_CPPFLAGS=	-DSQLITE_ENABLE_DBPAGE_VTAB=1
 DBSTAT_CPPFLAGS=	-DSQLITE_ENABLE_DBSTAT_VTAB=1
 URI_CPPFLAGS=	-DSQLITE_USE_URI=1
 URI_AUTHORITY_CPPFLAGS=	-DSQLITE_ALLOW_URI_AUTHORITY=1
@@ -200,9 +205,6 @@ NULL_TRIM_CPPFLAGS=	-DSQLITE_ENABLE_NULL_TRIM=1
 .include <bsd.port.options.mk>
 
 # Platform Configuration
-.if !defined(WITH_DEBUG)
-CFLAGS+=	-Os
-.endif
 CPPFLAGS+=	-DHAVE_ISNAN=1 -DHAVE_MALLOC_USABLE_SIZE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_USLEEP=1 -DHAVE_STRCHRNUL=1
 
 post-configure:
@@ -221,7 +223,11 @@ post-install:
 	${RM} ${STAGEDIR}${PREFIX}/include/msvc.h
 
 # for compares with checksum from of the site
-sha1:
+sha1: fetch
+.if defined(SHA1) && !empty(SHA1)
+	@sha1 -c ${SHA1} ${DISTDIR}/${ALLFILES}
+.else
 	@sha1 ${DISTDIR}/${ALLFILES}
+.endif
 
 .include <bsd.port.mk>

@@ -3,7 +3,7 @@
 
 PORTNAME=	semi
 PORTVERSION=	${SEMI_VER}
-PORTREVISION=	18
+PORTREVISION=	19
 CATEGORIES=	editors elisp
 MASTER_SITES=	http://git.chise.org/elisp/dist/semi/semi-1.14-for-flim-1.14/
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
@@ -45,7 +45,6 @@ MAKE_ARGS+=	PREFIX="${STAGEDIR}${LOCALBASE}" \
 OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.pre.mk>
-.include <bsd.port.options.mk>
 
 PLIST=		${PKGDIR}/pkg-plist.emacs20
 # depends on flim

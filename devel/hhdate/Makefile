@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	hhdate
-PORTVERSION=	2.2
-DISTVERSIONPREFIX=	v
+DISTVERSION=	2.3
 CATEGORIES=	devel
 
 MAINTAINER=	andreas.sommer87@googlemail.com
@@ -37,6 +36,6 @@ post-extract-TEST-on:
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/include/hhdate
-	${INSTALL_DATA} ${WRKSRC}/date.h ${STAGEDIR}${PREFIX}/include/hhdate/
+	${INSTALL_DATA} ${WRKSRC}/include/date/date.h ${STAGEDIR}${PREFIX}/include/hhdate/
 
 .include <bsd.port.mk>

@@ -41,7 +41,7 @@ GROUPS=		gdm
 
 PORTSCOUT=	limitw:1,even
 
-USES=		cpe execinfo gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		cpe gettext gmake libtool pathfix pkgconfig tar:xz
 CPE_VENDOR=	gnome
 CPE_VENDOR=	gnome_display_manager
 USE_GNOME=	dconf intlhack introspection librsvg2
@@ -92,7 +92,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 GNOME_LOCALSTATEDIR=	/var
 
 OPTIONS_DEFINE=	IPV6
-KEYRING_RUN_DEPENDS=	${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/gnome-keyring
+KEYRING_RUN_DEPENDS=	${LOCALBASE}/lib/pam_gnome_keyring.so:security/gnome-keyring
 
 IPV6_CONFIGURE_ENABLE=	ipv6
 

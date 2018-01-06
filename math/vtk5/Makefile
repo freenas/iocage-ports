@@ -3,7 +3,7 @@
 
 PORTNAME=	vtk
 PORTVERSION=	5.10.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	math graphics
 MASTER_SITES=	http://www.vtk.org/files/release/${PORTVERSION:R}/
 PKGNAMESUFFIX=	5
@@ -138,7 +138,7 @@ IGNORE=		python wrapping requires shared libraries.\
 		Run make config again and enable the SHARED option
 .endif
 USES+=		python
-USE_PYTHON=	distutils
+USE_PYTHON=	distutils noflavors
 PYDISTUTILS_PKGNAME=	VTK
 # INSTALLS_EGGINFO support has been removed
 # INSTALLS_EGGINFO=	yes

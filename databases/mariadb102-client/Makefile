@@ -1,6 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	mariadb
+PORTREVISION=	0
 PKGNAMESUFFIX=	102-client
 
 COMMENT=	Multithreaded SQL database (client)
@@ -20,10 +21,15 @@ USE_LDCONFIG=	${PREFIX}/lib/mysql
 
 CLIENT_ONLY=	yes
 
+post-configure:
+	${REINPLACE_CMD} -Ee 's|(#define INCLUDE.*)"$$|\1 -I${PREFIX}/include"|' \
+		-e 's|(#define LIBS.*)"\\ $$|\1 -L${PREFIX}/lib "\\|' \
+		${WRKSRC}/libmariadb/mariadb_config/mariadb_config.c
+
 post-install:
 	${RM} ${STAGEDIR}${PREFIX}/share/aclocal/mysql.m4
 	${RM} -r ${STAGEDIR}${PREFIX}/share/pkgconfig
-	${RM} -r ${STAGEDIR}${PREFIX}/include/mysql/private
+	${RM} -r ${STAGEDIR}${PREFIX}/include/mysql/server
 	${RM} -r ${STAGEDIR}${DATADIR}/policy
 	${RM} ${STAGEDIR}${PREFIX}/man/man1/aria* ${STAGEDIR}${PREFIX}/man/man1/myisam*
 	# Fix https://mariadb.atlassian.net/browse/MDEV-9388

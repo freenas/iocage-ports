@@ -1,7 +1,6 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
 # $FreeBSD$
 
-PORTREVISION=	1
 CATEGORIES=	net-p2p python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -16,7 +15,7 @@ BUILD_WRKSRC=	${WRKSRC}/bindings/python
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 SLAVE_PORT=	yes
-USES=		python
+USES=		python:2.7
 USE_PYTHON=	distutils
 PYDISTUTILS_PKGNAME=	python_libtorrent
 

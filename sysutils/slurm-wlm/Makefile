@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	slurm
-DISTVERSION=	17.02.6
+DISTVERSION=	17.02.9
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.schedmd.com/download/latest/ \
 		http://www.schedmd.com/download/archive/ \
@@ -23,14 +24,15 @@ LIB_DEPENDS=	libjson-c.so:devel/json-c \
 USERS=		slurm
 GROUPS=		${USERS}
 
-GNU_CONFIGURE=	yes
-USE_LDCONFIG=	yes
-USE_RC_SUBR=	slurmctld slurmd
-PLIST_SUB=	PORTVERSION="${PORTVERSION}"
-INSTALL_TARGET=	install-strip
 USES=		gmake libtool pkgconfig python:build readline:port shebangfix \
 		ssl tar:bz2
+USE_LDCONFIG=	yes
 USE_PERL5=	configure
+USE_RC_SUBR=	slurmctld slurmd
+
+GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
+PLIST_SUB=	PORTVERSION="${PORTVERSION}"
 SHEBANG_FILES=	doc/html/shtml2html.py doc/man/man2html.py
 
 OPTIONS_DEFINE=	CURL DOCS GTK2 HDF5 HWLOC IPMI MYSQL RRD LINUX
@@ -41,7 +43,7 @@ CURL_DESC=	Require cURL for elasticsearch plugins
 GTK2_DESC=	Build sview GUI config tool
 HDF5_DESC=	Job profiling using HDF5
 HWLOC_DESC=	Portable hardware locality
-IPMI_DESC=	IPMI engergy consumption accounting
+IPMI_DESC=	IPMI energy consumption accounting
 RRD_DESC=	RRD external sensor data collection
 LINUX_DESC=	Support jobacct_gather/linux (requires linprocfs)
 
@@ -102,6 +104,8 @@ post-patch:
 		-e 's|SlurmdSpoolDir=.*|SlurmdSpoolDir=/var/spool/slurmd|' \
 		-e 's|StateSaveLocation=.*|StateSaveLocation=/var/run/slurm|' \
 		${WRKSRC}/etc/slurm.conf.example
+
+post-patch-LINUX-on:
 	@${REINPLACE_CMD} -e 's|"/proc|"/compat/linux/proc|g' \
 		${WRKSRC}/src/slurmd/slurmstepd/req.c \
 		${WRKSRC}/src/slurmd/slurmstepd/pdebug.c \

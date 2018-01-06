@@ -3,23 +3,24 @@
 PORTNAME=		goss
 PORTVERSION=		0.3.4
 DISTVERSIONPREFIX=	v
-CATEGORIES=	 	sysutils
+PORTREVISION=		1
+CATEGORIES=		sysutils
 
-MAINTAINER=	 	englishm@llnw.com
+MAINTAINER=		englishm@llnw.com
 COMMENT=		Quick and Easy server validation
 
 LICENSE=		APACHE20
-LICENSE_FILE=	 	${WRKSRC}/LICENSE
+LICENSE_FILE=		${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=		go:lang/go
 
 ONLY_FOR_ARCHS=		amd64
 ONLY_FOR_ARCHS_REASON=	go-ps only supports amd64
 
-PLIST_FILES=		bin/goss
+USE_RC_SUBR=		goss
 
-USE_GITHUB=	 	yes
-GH_ACCOUNT=	 	aelsabbahy
+USE_GITHUB=		yes
+GH_ACCOUNT=		aelsabbahy
 GH_SUBDIR=		src/github.com/aelsabbahy/${PORTNAME}
 GH_TUPLE=		achanda:go-sysctl:6be7678:achanda/src/github.com/achanda/go-sysctl \
 			aelsabbahy:go-ps:4433868:gops/src/github.com/aelsabbahy/go-ps \
@@ -37,6 +38,10 @@ GH_TUPLE=		achanda:go-sysctl:6be7678:achanda/src/github.com/achanda/go-sysctl \
 			opencontainers:runc:8779fa5:opencontainers/src/github.com/opencontainers/runc \
 			patrickmn:go-cache:1881a9b:patrickmn/src/github.com/patrickmn/go-cache \
 			urfave:cli:d86a009:urfave/src/github.com/urfave/cli
+
+post-patch:
+	${REINPLACE_CMD} 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/extras/goss.yaml.sample
+
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} CGO_ENABLED=0 GOPATH=${WRKSRC} \
 	go build -ldflags "-X main.version=${DISTVERSIONPREFIX}${PORTVERSION} -s -w" -o \
@@ -45,5 +50,9 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/github.com/${GH_ACCOUNT}/${PORTNAME}/bin/${PORTNAME} \
 		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_DATA} ${WRKSRC}/extras/goss.yaml.sample ${STAGEDIR}${PREFIX}/etc/goss.yaml.sample
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/goss.d
+	${INSTALL_DATA} ${WRKSRC}/extras/process_goss.yaml.sample \
+		${STAGEDIR}${PREFIX}/etc/goss.d/process_goss.yaml.sample
 
 .include <bsd.port.mk>

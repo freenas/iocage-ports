@@ -11,10 +11,10 @@ DIST_SUBDIR=	perl
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Practical Extraction and Report Language
 
-LICENSE=	ART10 GPLv1
+LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
 LICENSE_FILE_ART10=	${WRKSRC}/Artistic
-LICENSE_FILE_GPLv1=	${WRKSRC}/Copying
+LICENSE_FILE_GPLv1+ =	${WRKSRC}/Copying
 
 # Uncomment when the default Perl is switched to 5.2(X+2)
 #DEPRECATED=	Support ends three years after .0 release, please upgrade to a more recent version of Perl
@@ -32,7 +32,7 @@ OPTIONS_EXCLUDE_FreeBSD_10=	DTRACE
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE+=	DTRACE
 .endif
-.for a in aarch64 arm armeb armv6 mips mips64 mips64el mipsel mipsn32 powerpc \
+.for a in aarch64 arm armeb armv6 armv7 mips mips64 mips64el mipsel mipsn32 powerpc \
 	powerpc64 sparc64
 OPTIONS_EXCLUDE_${a}=	DTRACE
 .endfor
@@ -162,11 +162,9 @@ PLIST_SUB+=	PERL_VERSION=${PERL_VERSION} \
 
 _PERL5_DEFAULT_FILE=	/tmp/PERL5_DEFAULT
 
-# bsd.default-versions.mk needs to know LOCALBASE for Perl, so
-# bsd.port.options.mk is needed before including it.
+# Get the default version, and possibly, overwrite it.
 .include <bsd.port.options.mk>
 .sinclude "${_PERL5_DEFAULT_FILE}"
-.include "${.CURDIR}/../../Mk/bsd.default-versions.mk"
 
 # if this port is default due PERL5_DEFAULT
 # change PKGNAME to reflect this

@@ -39,6 +39,7 @@
     SUBDIR += chord2html
     SUBDIR += cinnamon-translations
     SUBDIR += clex
+    SUBDIR += cldr-emoji-annotation
     SUBDIR += cloc
     SUBDIR += clpbar
     SUBDIR += cmatrix
@@ -55,6 +56,7 @@
     SUBDIR += countrycodes
     SUBDIR += cpuid
     SUBDIR += crosspad
+    SUBDIR += crosti
     SUBDIR += cs
     SUBDIR += cstream
     SUBDIR += dahdi
@@ -95,13 +97,13 @@
     SUBDIR += floatator
     SUBDIR += fortune-mod-bible
     SUBDIR += fortune-mod-bofh
-    SUBDIR += fortune-mod-culmea-culmilor
     SUBDIR += fortune-mod-epictetus
-    SUBDIR += fortune-mod-ferengi_rules_of_acquisition
+    SUBDIR += fortune-mod-freebsd-classic
     SUBDIR += fortune-mod-futurama
     SUBDIR += fortune-mod-psalms
     SUBDIR += fortuneit
     SUBDIR += fpc-chm
+    SUBDIR += free42
     SUBDIR += freebsd-doc-all
     SUBDIR += freebsd-doc-bn
     SUBDIR += freebsd-doc-da
@@ -241,12 +243,14 @@
     SUBDIR += ktouch
     SUBDIR += kwordquiz
     SUBDIR += latex-mk
+    SUBDIR += lazyread
     SUBDIR += lc
     SUBDIR += lesspipe
     SUBDIR += libeatmydata
     SUBDIR += libisocodes
     SUBDIR += libkdeedu
     SUBDIR += libmetalink
+    SUBDIR += libpostal
     SUBDIR += libpri
     SUBDIR += libsupertone
     SUBDIR += libutf
@@ -256,7 +260,6 @@
     SUBDIR += localedata
     SUBDIR += logsurfer
     SUBDIR += loop
-    SUBDIR += lr
     SUBDIR += lv
     SUBDIR += lxde-common
     SUBDIR += magicpoint
@@ -277,6 +280,7 @@
     SUBDIR += najitool
     SUBDIR += newer
     SUBDIR += nms
+    SUBDIR += nnn
     SUBDIR += nsf
     SUBDIR += numchar
     SUBDIR += nut
@@ -287,6 +291,7 @@
     SUBDIR += osinfo-db
     SUBDIR += ossp-uuid
     SUBDIR += otter
+    SUBDIR += owrep
     SUBDIR += p5-Acme-ButFirst
     SUBDIR += p5-Array-Compare
     SUBDIR += p5-Array-Diff
@@ -295,7 +300,6 @@
     SUBDIR += p5-Array-LineReader
     SUBDIR += p5-Array-PrintCols
     SUBDIR += p5-Array-RefElem
-    SUBDIR += p5-Asterisk
     SUBDIR += p5-Asterisk-FastAGI
     SUBDIR += p5-Bot-Training
     SUBDIR += p5-Bot-Training-MegaHAL
@@ -350,6 +354,7 @@
     SUBDIR += p5-Text-FIGlet
     SUBDIR += p5-Tie-DxHash
     SUBDIR += p5-Zen-Koans
+    SUBDIR += p5-asterisk-perl
     SUBDIR += pantry
     SUBDIR += parley
     SUBDIR += pastebinit
@@ -364,6 +369,7 @@
     SUBDIR += php56-calendar
     SUBDIR += php70-calendar
     SUBDIR += php71-calendar
+    SUBDIR += php72-calendar
     SUBDIR += phraze
     SUBDIR += pinfo
     SUBDIR += pipe
@@ -371,12 +377,15 @@
     SUBDIR += posixtestsuite
     SUBDIR += proxyper
     SUBDIR += pspresent
+    SUBDIR += ptsort
     SUBDIR += py-YABT
     SUBDIR += py-cinder
+    SUBDIR += py-colorbrewer
     SUBDIR += py-crudini
     SUBDIR += py-fuzzy
     SUBDIR += py-glance
     SUBDIR += py-osd
+    SUBDIR += py-palettable
     SUBDIR += py-pexpect
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
@@ -387,14 +396,11 @@
     SUBDIR += py-qt4-demo
     SUBDIR += py-qt4-doc
     SUBDIR += py-qt5-demo
-    SUBDIR += py-qt5-doc
     SUBDIR += py-socli
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup
     SUBDIR += py-tqdm
     SUBDIR += py-yolk
-    SUBDIR += py3-pexpect
-    SUBDIR += py3-tqdm
     SUBDIR += pylize
     SUBDIR += qbrew
     SUBDIR += qlas
@@ -459,6 +465,7 @@
     SUBDIR += tempcontrol
     SUBDIR += termatrix
     SUBDIR += teseq
+    SUBDIR += thefuck
     SUBDIR += timediff
     SUBDIR += tkcron
     SUBDIR += tkinfo
@@ -476,6 +483,7 @@
     SUBDIR += umodunpack
     SUBDIR += unclutter
     SUBDIR += unclutter-xfixes
+    SUBDIR += unicode-emoji
     SUBDIR += upclient
     SUBDIR += us-zipcodes
     SUBDIR += usbids
@@ -511,7 +519,6 @@
     SUBDIR += xtail
     SUBDIR += xtar
     SUBDIR += xtypo
-    SUBDIR += xyzcmd
     SUBDIR += yaunc
     SUBDIR += ytree
     SUBDIR += zoneinfo

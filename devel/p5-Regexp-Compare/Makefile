@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Partial ordering for regular expressions
 
-LICENSE=	ART10 GPLv1
+LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
 
 USE_PERL5=	configure
@@ -22,7 +22,7 @@ post-install:
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} >= 502700
-BROKEN=		Does not support 5.27+
+BROKEN=		does not support 5.27+
 .endif
 
 .include <bsd.port.post.mk>

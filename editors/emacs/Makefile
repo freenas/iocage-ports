@@ -3,7 +3,7 @@
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}
-PORTREVISION=	2
+PORTREVISION=	1
 PORTEPOCH=	3
 CATEGORIES=	editors ipv6
 MASTER_SITES=	GNU
@@ -21,7 +21,7 @@ CONFLICTS_INSTALL?=	emacs-devel-[0-9]* emacs-nox11-[0-9]*
 
 BROKEN_aarch64=		Fails to link: missing sbrk
 
-EMACS_VER=	25.2
+EMACS_VER=	25.3
 GNU_CONFIGURE=	yes
 USES=		cpe gmake makeinfo ncurses pkgconfig tar:xz
 # Building with GCC 4.6+ requires it; remove after 9.3 EOL
@@ -184,6 +184,17 @@ XWIDGETS_USE=		XORG=xcomposite
 XWIDGETS_CONFIGURE_WITH=xwidgets
 XWIDGETS_LIB_DEPENDS=	libwebkitgtk-3.0.so:www/webkit-gtk3
 XWIDGETS_IMPLIES=	GTK3
+
+.include <bsd.port.options.mk>
+
+# has graphics/ImageMagick been compiled with OPENMP?
+.if ${PORT_OPTIONS:MMAGICK} && ${:!${GREP} -sc " \-fopenmp " ${LOCALBASE}/libdata/pkgconfig/ImageMagick.pc || true!} == "1"
+_MAGICK_WITH_OPENMP=	true
+.endif
+
+.ifdef _MAGICK_WITH_OPENMP
+USES+=	compiler:openmp
+.endif
 
 # With a desktop entry stage-qa will give a warning about requiring
 # desktop-file-utils and portlint -C will give a warning about INSTALL_ICONS,

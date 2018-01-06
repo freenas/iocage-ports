@@ -44,8 +44,7 @@ MASTER_SITE_PORTS_JP+= \
 .if !defined(IGNORE_MASTER_SITE_AFTERSTEP)
 MASTER_SITE_AFTERSTEP+= \
 	ftp://ftp.afterstep.org/%SUBDIR%/ \
-	ftp://ftp.kddlabs.co.jp/X11/AfterStep/%SUBDIR%/ \
-	ftp://ftp.dti.ad.jp/pub/X/AfterStep/%SUBDIR%/
+	ftp://ftp.kddlabs.co.jp/X11/AfterStep/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_APACHE)
@@ -61,7 +60,6 @@ MASTER_SITE_APACHE+= \
 	ftp://ftp.forthnet.gr/pub/www/apache/%SUBDIR%/ \
 	ftp://xenia.sote.hu/pub/mirrors/www.apache.org/%SUBDIR%/ \
 	ftp://ftp.heanet.ie/mirrors/www.apache.org/dist/%SUBDIR%/ \
-	ftp://ftp.sunet.se/pub/www/servers/apache/dist/%SUBDIR%/ \
 	http://mirrors.ircam.fr/pub/apache/%SUBDIR%/
 .endif
 
@@ -110,7 +108,6 @@ MASTER_SITE_CHEESESHOP+= \
 MASTER_SITE_COMP_SOURCES+= \
 	http://ftp.isc.org/pub/usenet/comp.sources.%SUBDIR%/ \
 	http://ftp.funet.fi/pub/archive/comp.sources.%SUBDIR%/ \
-	http://ftp.sunet.se/pub/usenet/ftp.uu.net/comp.sources.%SUBDIR%/ \
 	http://ftp.fi.netbsd.org/pub/misc/archive/comp.sources.%SUBDIR%/
 .endif
 
@@ -143,23 +140,23 @@ MASTER_SITE_DEBIAN+= \
 
 .if !defined(IGNORE_MASTER_SITE_DEBIAN_NON_US)
 MASTER_SITE_DEBIAN_NON_US+= \
-	ftp://ftp.au.debian.org/debian-non-US/%SUBDIR%/ \
+	http://ftp.au.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.bg.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.br.debian.org/debian-non-US/%SUBDIR%/ \
-	ftp://ftp.cl.debian.org/debian-non-US/%SUBDIR%/ \
+	http://ftp.cl.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.cz.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.de.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.ee.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.es.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.fi.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.fr.debian.org/debian-non-US/%SUBDIR%/ \
-	ftp://ftp.hk.debian.org/debian-non-US/%SUBDIR%/ \
-	ftp://ftp.hr.debian.org/debian-non-US/%SUBDIR%/ \
+	http://ftp.hk.debian.org/debian-non-US/%SUBDIR%/ \
+	http://ftp.hr.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.hu.debian.org/debian-non-US/%SUBDIR%/ \
-	ftp://ftp.ie.debian.org/debian-non-US/%SUBDIR%/ \
+	http://ftp.ie.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.is.debian.org/debian-non-US/%SUBDIR%/ \
-	ftp://ftp.it.debian.org/debian-non-US/%SUBDIR%/ \
-	ftp://ftp.jp.debian.org/debian-non-US/%SUBDIR%/ \
+	http://ftp.it.debian.org/debian-non-US/%SUBDIR%/ \
+	http://ftp.jp.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.nl.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.no.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.pl.debian.org/debian-non-US/%SUBDIR%/ \
@@ -168,10 +165,9 @@ MASTER_SITE_DEBIAN_NON_US+= \
 	ftp://ftp.si.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.sk.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.uk.debian.org/debian-non-US/%SUBDIR%/ \
-	ftp://ftp.wa.au.debian.org/debian-non-US/%SUBDIR%/ \
+	http://ftp.wa.au.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp2.de.debian.org/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.snt.utwente.nl/pub/linux/debian-non-US/%SUBDIR%/ \
-	ftp://ftp.df.lth.se/pub/debian-non-US/%SUBDIR%/ \
 	ftp://ftp.acc.umu.se/debian-non-US/%SUBDIR%/ \
 	ftp://mirror.symnds.com/debian-non-US/%SUBDIR%/
 .endif
@@ -192,9 +188,6 @@ MASTER_SITE_ECLIPSE+= \
 	ftp://sunsite.informatik.rwth-aachen.de/pub/mirror/eclipse.org/%SUBDIR%/ \
 	ftp://sunsite.informatik.rwth-aachen.de/pub/mirror/eclipse/%SUBDIR%/ \
 	http://ftp-stud.hs-esslingen.de/pub/Mirrors/eclipse/%SUBDIR%/ \
-	ftp://sunsite.cnlab-switch.ch/mirror/eclipse/%SUBDIR%/ \
-	ftp://sunsite.cnlab-switch.ch/mirror/eclipse/eclipse/downloads/drops/%SUBDIR%/ \
-	ftp://sunsite.cnlab-switch.ch/mirror/eclipse/eclipse/downloads/drops4/%SUBDIR%/ \
 	http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/%SUBDIR%/ \
 	http://eclipse.stu.edu.tw/%SUBDIR%/
 .endif
@@ -264,8 +257,7 @@ MASTER_SITE_FARSIGHT+= \
 .if !defined(IGNORE_MASTER_SITE_FESTIVAL)
 MASTER_SITE_FESTIVAL+= \
 	http://www.festvox.org/packed/festival/%SUBDIR%/ \
-	http://www.cstr.ed.ac.uk/downloads/festival/%SUBDIR%/ \
-	http://stuff.mit.edu/afs/sipb/project/speech-tools/src/festival/festvox.org/packed/festival/%SUBDIR%/
+	http://www.cstr.ed.ac.uk/downloads/festival/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_FESTIVAL_OGI)
@@ -287,8 +279,7 @@ MASTER_SITE_FREEBSD_ORG+= \
 	ftp://ftp.se.FreeBSD.org/pub/FreeBSD/%SUBDIR%/ \
 	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/%SUBDIR%/ \
 	ftp://ftp.uk.FreeBSD.org/pub/FreeBSD/%SUBDIR%/ \
-	ftp://ftp.ru.FreeBSD.org/pub/FreeBSD/%SUBDIR%/ \
-	ftp://ftp.dti.ad.jp/pub/FreeBSD/%SUBDIR%/
+	ftp://ftp.ru.FreeBSD.org/pub/FreeBSD/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_FRUGALWARE)
@@ -332,35 +323,23 @@ MASTER_SITE_GENTOO+= \
 	http://gentoo.mirrors.pair.com/%SUBDIR%/ \
 	http://mirrors.tds.net/pub/gentoo/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/www.ibiblio.org/gentoo/%SUBDIR%/ \
-	http://ftp.belnet.be/mirror/rsync.gentoo.org/gentoo/%SUBDIR%/ \
 	http://ftp.snt.utwente.nl/pub/os/linux/gentoo/%SUBDIR%/ \
 	http://trumpetti.atm.tut.fi/gentoo/%SUBDIR%/ \
-	http://sunsite.cnlab-switch.ch/ftp/mirror/gentoo/%SUBDIR%/ \
 	http://ftp.uni-erlangen.de/pub/mirrors/gentoo/%SUBDIR%/ \
-	http://darkstar.ist.utl.pt/gentoo/%SUBDIR%/ \
 	http://gentoo.inode.at/%SUBDIR%/ \
-	http://ftp.rhnet.is/pub/gentoo/%SUBDIR%/ \
 	http://gentoo.gg3.net/%SUBDIR%/ \
-	http://gentoo.kems.net/%SUBDIR%/ \
 	http://mirrors.163.com/gentoo/%SUBDIR%/ \
 	ftp://ftp.gtlib.gatech.edu/pub/gentoo/%SUBDIR%/ \
-	ftp://mirror.iawnet.sandia.gov/pub/gentoo/%SUBDIR%/ \
 	ftp://ftp.ussg.iu.edu/pub/linux/gentoo/%SUBDIR%/ \
-	ftp://ftp.ucsb.edu/pub/mirrors/linux/gentoo/%SUBDIR%/ \
-	ftp://gentoo.mirrors.pair.com/%SUBDIR%/ \
 	ftp://mirrors.tds.net/pub/gentoo/%SUBDIR%/ \
 	ftp://ftp.belnet.be/mirror/rsync.gentoo.org/gentoo/%SUBDIR%/ \
 	ftp://ftp.snt.utwente.nl/pub/os/linux/gentoo/%SUBDIR%/ \
 	ftp://trumpetti.atm.tut.fi/gentoo/%SUBDIR%/ \
-	ftp://sunsite.cnlab-switch.ch/mirror/gentoo/%SUBDIR%/ \
 	ftp://ftp.tu-clausthal.de/pub/linux/gentoo/%SUBDIR%/ \
 	ftp://sunsite.informatik.rwth-aachen.de/pub/Linux/gentoo/%SUBDIR%/ \
 	ftp://linux.rz.ruhr-uni-bochum.de/gentoo-mirror/%SUBDIR%/ \
 	ftp://ftp.uni-erlangen.de/pub/mirrors/gentoo/%SUBDIR%/ \
-	ftp://darkstar.ist.utl.pt/pub/gentoo/%SUBDIR%/ \
-	ftp://gentoo.inode.at/source/%SUBDIR%/ \
-	ftp://ftp.rhnet.is/pub/gentoo/%SUBDIR%/ \
-	ftp://files.gentoo.gr/%SUBDIR%/
+	ftp://gentoo.inode.at/source/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_GITHUB)
@@ -420,87 +399,28 @@ GH_PROJECT?=	${GH_PROJECT_DEFAULT}
 # Use full PREFIX/SUFFIX and converted DISTVERSION
 GH_TAGNAME_DEFAULT=	${DISTVERSIONFULL}
 GH_TAGNAME?=	${GH_TAGNAME_DEFAULT}
-# Iterate over GH_ACCOUNT, GH_PROJECT and GH_TAGNAME to extract groups
+# Iterate over GH_ACCOUNT, GH_PROJECT, GH_TAGNAME and GH_SUBDIR to extract groups
 _GITHUB_GROUPS= DEFAULT
-.  for _A in ${GH_ACCOUNT}
-_S_TEMP=	${_A:S/^${_A:C@:[^/:]+$@@}//:S/^://}
-.    if !empty(_S_TEMP)
-.      for _group in ${_S_TEMP:S/,/ /g}
-_G_TEMP=	${_group}
-.        if ${_G_TEMP} == all || ${_G_TEMP} == ALL || ${_G_TEMP} == default
+.  for _gh_v in GH_ACCOUNT GH_PROJECT GH_TAGNAME GH_SUBDIR
+.    for _v_ex in ${${_gh_v}}
+_GH_GROUPS=	${_v_ex:S/^${_v_ex:C@:[^/:]+$@@}//:S/^://}
+.      if !empty(_GH_GROUPS)
+.        for _group in ${_GH_GROUPS:S/,/ /g}
+.          if ${_group} == all || ${_group} == ALL || ${_group} == default
 check-makevars::
 		@${ECHO_MSG} "Makefile error: the words all, ALL and default are reserved and cannot be"
-		@${ECHO_MSG} "used in group definitions. Please fix your GH_ACCOUNT"
+		@${ECHO_MSG} "used in group definitions. Please fix your ${_gh_v}"
 		@${FALSE}
-.        endif
-.        if !${_GITHUB_GROUPS:M${_group}}
+.          endif
+.          if !${_GITHUB_GROUPS:M${_group}}
 _GITHUB_GROUPS+=	${_group}
-.         endif
-GH_ACCOUNT_${_group}=	${_A:C@^(.*):[^/:]+$@\1@}
-.      endfor
-.    else
-GH_ACCOUNT_DEFAULT=	${_A:C@^(.*):[^/:]+$@\1@}
-.    endif
-.  endfor
-.  for _P in ${GH_PROJECT}
-_S_TEMP=	${_P:S/^${_P:C@:[^/:]+$@@}//:S/^://}
-.    if !empty(_S_TEMP)
-.      for _group in ${_S_TEMP:S/,/ /g}
-_G_TEMP=	${_group}
-.        if ${_G_TEMP} == all || ${_G_TEMP} == ALL || ${_G_TEMP} == default
-check-makevars::
-		@${ECHO_MSG} "Makefile error: the words all, ALL and default are reserved and cannot be"
-		@${ECHO_MSG} "used in group definitions. Please fix your GH_PROJECT"
-		@${FALSE}
-.        endif
-.        if !${_GITHUB_GROUPS:M${_group}}
-_GITHUB_GROUPS+=	${_group}
-.         endif
-GH_PROJECT_${_group}=	${_P:C@^(.*):[^/:]+$@\1@}
-.      endfor
-.    else
-GH_PROJECT_DEFAULT=	${_P:C@^(.*):[^/:]+$@\1@}
-.    endif
-.  endfor
-.  for _T in ${GH_TAGNAME}
-_S_TEMP=	${_T:S/^${_T:C@:[^/:]+$@@}//:S/^://}
-.    if !empty(_S_TEMP)
-.      for _group in ${_S_TEMP:S/,/ /g}
-_G_TEMP=	${_group}
-.        if ${_G_TEMP} == all || ${_G_TEMP} == ALL || ${_G_TEMP} == default
-check-makevars::
-		@${ECHO_MSG} "Makefile error: the words all, ALL and default are reserved and cannot be"
-		@${ECHO_MSG} "used in group definitions. Please fix your GH_TAGNAME"
-		@${FALSE}
-.        endif
-.        if !${_GITHUB_GROUPS:M${_group}}
-_GITHUB_GROUPS+=	${_group}
-.         endif
-GH_TAGNAME_${_group}=	${_T:C@^(.*):[^/:]+$@\1@}
-.      endfor
-.    else
-GH_TAGNAME_DEFAULT=	${_T:C@^(.*):[^/:]+$@\1@}
-.    endif
-.  endfor
-.  for _S in ${GH_SUBDIR}
-_S_SEMP=	${_S:S/^${_S:C@:[^/:]+$@@}//:S/^://}
-.    if !empty(_S_SEMP)
-.      for _group in ${_S_SEMP:S/,/ /g}
-_G_SEMP=	${_group}
-.        if ${_G_SEMP} == all || ${_G_SEMP} == ALL || ${_G_SEMP} == default
-check-makevars::
-		@${ECHO_MSG} "Makefile error: the words all, ALL and default are reserved and cannot be"
-		@${ECHO_MSG} "used in group definitions. Please fix your GH_SUBDIR"
-		@${FALSE}
-.        endif
-.        if !${_GITHUB_GROUPS:M${_group}}
-_GITHUB_GROUPS+=	${_group}
-.         endif
-GH_SUBDIR_${_group}=	${_S:C@^(.*):[^/:]+$@\1@}
-.      endfor
-.    else
-GH_SUBDIR_DEFAULT=	${_S:C@^(.*):[^/:]+$@\1@}
-.    endif
+.          endif
+${_gh_v}_${_group}=	${_v_ex:C@^(.*):[^/:]+$@\1@}
+.        endfor
+.      else
+${_gh_v}_DEFAULT=	${_v_ex:C@^(.*):[^/:]+$@\1@}
+.      endif
+.    endfor
 .  endfor
 # Put the default values back into the variables so that the *default* behavior
 # is not changed.
@@ -531,8 +451,14 @@ DISTNAME:=	${DISTNAME}_GH${_GITHUB_REV}
 .  endif
 _GITHUB_EXTRACT_SUFX=	.tar.gz
 # Put the DEFAULT distfile first
+_GITHUB_CLONE_DIR?=	${WRKDIR}/git-clone
+_PORTS_DIRECTORIES+=	${_GITHUB_CLONE_DIR}
 .  if !${USE_GITHUB:Mnodefault} && defined(_GITHUB_MUST_SET_DISTNAME)
 DISTFILES+=	${DISTNAME}${_GITHUB_EXTRACT_SUFX}
+git-clone: git-clone-DEFAULT
+git-clone-DEFAULT: ${_GITHUB_CLONE_DIR}
+	@git clone https://github.com/${GH_ACCOUNT_DEFAULT}/${GH_PROJECT_DEFAULT}.git ${_GITHUB_CLONE_DIR}/${GH_PROJECT_DEFAULT}
+	@${ECHO_MSG} "Cloned the default github repository into ${_GITHUB_CLONE_DIR}/${GH_PROJECT_DEFAULT}" | ${FMT_80}
 .  endif
 .  if !empty(GH_SUBDIR)
 _SITES_extract:=	690:post-extract-gh-DEFAULT
@@ -564,8 +490,12 @@ post-extract-gh-${_group}:
 	@${RMDIR} ${WRKSRC}/${GH_SUBDIR_${_group}} 2>/dev/null || :
 	@${MKDIR} ${WRKSRC}/${GH_SUBDIR_${_group}:H} 2>/dev/null || :
 	@${MV} ${WRKSRC_${_group}} ${WRKSRC}/${GH_SUBDIR_${_group}}
-	@ln -s ${WRKSRC:T}/${GH_SUBDIR_${_group}} ${WRKSRC_${_group}}
+	@${LN} -s ${WRKSRC:T}/${GH_SUBDIR_${_group}} ${WRKSRC_${_group}}
 .      endif
+git-clone: git-clone-${_group}
+git-clone-${_group}: ${_GITHUB_CLONE_DIR}
+	@git clone https://github.com/${GH_ACCOUNT_${_group}}/${GH_PROJECT_${_group}}.git ${_GITHUB_CLONE_DIR}/${GH_PROJECT_${_group}}
+	@${ECHO_MSG} "Cloned the ${_group} github repository into ${_GITHUB_CLONE_DIR}/${GH_PROJECT_${_group}}" | ${FMT_80}
 .    endfor
 .  endif
 convert-to-gh-tuple:
@@ -577,14 +507,12 @@ convert-to-gh-tuple:
 MASTER_SITE_GNOME+= \
 	https://download.gnome.org/%SUBDIR%/ \
 	http://download.gnome.org/%SUBDIR%/ \
+	http://ftp.belnet.be/mirror/ftp.gnome.org/%SUBDIR%/ \
 	ftp://ftp.belnet.be/mirror/ftp.gnome.org/%SUBDIR%/ \
 	http://ftp.acc.umu.se/pub/GNOME/%SUBDIR%/ \
 	ftp://ftp.cse.buffalo.edu/pub/Gnome/%SUBDIR%/ \
 	http://fr2.rpmfind.net/linux/gnome.org/%SUBDIR%/ \
 	http://www.gtlib.gatech.edu/pub/gnome/%SUBDIR%/ \
-	ftp://ftp.dti.ad.jp/pub/X/gnome/%SUBDIR%/ \
-	http://linorg.usp.br/gnome/%SUBDIR%/ \
-	http://mirror.aarnet.edu.au/pub/gnome/%SUBDIR%/ \
 	ftp://ftp.kddlabs.co.jp/pub/GNOME/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.gnome.org/pub/GNOME/%SUBDIR%/ \
 	ftp://ftp.nara.wide.ad.jp/pub/X11/GNOME/%SUBDIR%/ \
@@ -609,7 +537,6 @@ MASTER_SITE_GNU+= \
 	http://www.gtlib.gatech.edu/pub/gnu/gnu/%SUBDIR%/ \
 	http://mirrors.kernel.org/gnu/%SUBDIR%/ \
 	ftp://ftp.kddlabs.co.jp/GNU/gnu/%SUBDIR%/ \
-	ftp://ftp.dti.ad.jp/pub/GNU/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.gnu.org/gnu/%SUBDIR%/ \
 	ftp://ftp.informatik.hu-berlin.de/pub/gnu/gnu/%SUBDIR%/ \
 	ftp://ftp.informatik.rwth-aachen.de/pub/mirror/ftp.gnu.org/pub/gnu/%SUBDIR%/ \
@@ -620,7 +547,6 @@ MASTER_SITE_GNU+= \
 MASTER_SITE_GNUPG+= \
 	https://gnupg.org/ftp/gcrypt/%SUBDIR%/ \
 	http://ftp.heanet.ie/mirrors/ftp.gnupg.org/gcrypt/%SUBDIR%/ \
-	ftp://ftp.sunet.se/pub/security/gnupg/%SUBDIR%/ \
 	ftp://ftp.franken.de/pub/crypt/mirror/ftp.gnupg.org/gcrypt/%SUBDIR%/ \
 	ftp://mirror.switch.ch/mirror/gnupg/%SUBDIR%/ \
 	http://gd.tuwien.ac.at/privacy/gnupg/%SUBDIR%/ \
@@ -692,10 +618,8 @@ MASTER_SITE_ISC+= \
 	ftp://ftp.ciril.fr/pub/isc/%SUBDIR%/ \
 	ftp://ftp.freenet.de/pub/ftp.isc.org/isc/%SUBDIR%/ \
 	ftp://ftp.iij.ad.jp/pub/network/isc/%SUBDIR%/ \
-	ftp://ftp.dti.ad.jp/pub/net/isc/%SUBDIR%/ \
 	ftp://ftp.u-aizu.ac.jp/pub/net/isc/%SUBDIR%/ \
 	ftp://ftp.task.gda.pl/mirror/ftp.isc.org/isc/%SUBDIR%/ \
-	ftp://ftp.sunet.se/pub/network/isc/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.isc.org/isc/%SUBDIR%/ \
 	ftp://ftp.nominum.com/pub/isc/%SUBDIR%/ \
 	ftp://ftp.ripe.net/mirrors/sites/ftp.isc.org/isc/%SUBDIR%/ \
@@ -711,9 +635,6 @@ MASTER_SITE_KDE+= \
 	ftp://ftp.gtlib.gatech.edu/pub/kde/%SUBDIR%/ \
 	ftp://ftp.informatik.hu-berlin.de/pub/Mirrors/ftp.kde.org/%SUBDIR%/ \
 	http://ftp.gtlib.gatech.edu/pub/kde/%SUBDIR%/ \
-	ftp://ftp.solnet.ch/mirror/KDE/%SUBDIR%/ \
-	ftp://gd.tuwien.ac.at/kde/%SUBDIR%/ \
-	http://gd.tuwien.ac.at/kde/%SUBDIR%/ \
 	http://kde.mirrors.tds.net/pub/kde/%SUBDIR%/ \
 	ftp://ftp.rz.uni-wuerzburg.de/pub/unix/kde/%SUBDIR%/ \
 	http://mirrors.dotsrc.org/kde/%SUBDIR%/ \
@@ -722,19 +643,11 @@ MASTER_SITE_KDE+= \
 	http://ftp.fi.muni.cz/pub/kde/%SUBDIR%/ \
 	ftp://sunsite.icm.edu.pl/pub/unix/kde/%SUBDIR%/ \
 	http://sunsite.icm.edu.pl/pub/unix/kde/%SUBDIR%/ \
-	ftp://ftp.sunet.se/pub/X11/kde/%SUBDIR%/ \
-	http://ftp.sunet.se/pub/X11/kde/%SUBDIR%/ \
-	ftp://ftp.kde.org/pub/kde/%SUBDIR%/ \
-	ftp://ftp.belnet.be/packages/kde/%SUBDIR%/ \
-	http://ftp.belnet.be/packages/kde/%SUBDIR%/ \
 	ftp://ftp.lip6.fr/pub/X11/kde/%SUBDIR%/ \
 	http://www-ftp.lip6.fr/pub/X11/kde/%SUBDIR%/ \
-	ftp://ftp.rhnet.is/pub/kde/%SUBDIR%/ \
-	http://ftp.rhnet.is/pub/kde/%SUBDIR%/ \
 	http://ftp-stud.hs-esslingen.de/Mirrors/ftp.kde.org/pub/kde/%SUBDIR%/ \
 	ftp://ftp.cronyx.ru/pub/mirror/kde/%SUBDIR%/ \
 	http://ftp.twaren.net/Unix/X/KDE/%SUBDIR%/ \
-	ftp://ftp.na.kde.org/pub/kde/%SUBDIR%/ \
 	ftp://ftp.fu-berlin.de/pub/unix/X11/gui/kde/%SUBDIR%/ \
 	ftp://sunsite.informatik.rwth-aachen.de/pub/Linux/kde/%SUBDIR%/ \
 	ftp://ftp.ntua.gr/pub/X11/kde/%SUBDIR%/ \
@@ -743,18 +656,14 @@ MASTER_SITE_KDE+= \
 	http://ftp.heanet.ie/mirrors/ftp.kde.org/%SUBDIR%/ \
 	ftp://ftp.kddlabs.co.jp/pub/X11/kde/%SUBDIR%/ \
 	http://ftp.kddlabs.co.jp/pub/X11/kde/%SUBDIR%/ \
-	http://kde.mirror.uber.com.au/%SUBDIR%/ \
 	ftp://ftp.ussg.iu.edu/pub/kde/%SUBDIR%/ \
 	http://ftp.ussg.iu.edu/kde/%SUBDIR%/ \
 	ftp://ftp.sayclub.com/pub/X/KDE/%SUBDIR%/ \
 	http://ftp.sayclub.com/pub/X/KDE/%SUBDIR%/ \
-	ftp://carroll.aset.psu.edu/pub/kde/%SUBDIR%/ \
 	http://mirror.cc.columbia.edu/pub/software/kde/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.kde.org/pub/kde/%SUBDIR%/ \
 	http://www.mirrorservice.org/sites/ftp.kde.org/pub/kde/%SUBDIR%/ \
-	http://master.kde.org/%SUBDIR%/ \
 	http://ftp.icm.edu.pl/pub/unix/kde/%SUBDIR%/ \
-	http://kde-mirror.freenux.org/%SUBDIR%/ \
 	http://ftp.fi.muni.cz/pub/kde/%SUBDIR%/ \
 	ftp://ftp.funet.fi/pub/mirrors/ftp.kde.org/pub/kde/%SUBDIR%/ \
 	http://ftp.funet.fi/pub/mirrors/ftp.kde.org/pub/kde/%SUBDIR%/
@@ -813,23 +722,11 @@ MASTER_SITE_MPLAYERHQ+= \
 .if !defined(IGNORE_MASTER_SITE_MYSQL)
 MASTER_SITE_MYSQL+= \
 	ftp://ftp.fi.muni.cz/pub/mysql/Downloads/%SUBDIR%/ \
-	http://mysql.mirrors.cybercity.dk/Downloads/%SUBDIR%/ \
-	ftp://ftp.fh-wolfenbuettel.de/pub/database/mysql/Downloads/%SUBDIR%/ \
 	ftp://ftp.gwdg.de/pub/misc/mysql/Downloads/%SUBDIR%/ \
-	http://netmirror.org/mirror/mysql.com/Downloads/%SUBDIR%/ \
-	ftp://netmirror.org/mysql.com/Downloads/%SUBDIR%/ \
 	http://mirrors.ntua.gr/MySQL/Downloads/%SUBDIR%/ \
 	ftp://ftp.ntua.gr/pub/databases/mysql/Downloads/%SUBDIR%/ \
-	http://mysql.sote.hu/Downloads/%SUBDIR%/ \
-	ftp://ftp.rhnet.is/pub/mysql/Downloads/%SUBDIR%/ \
-	ftp://mirror.widexs.nl/pub/mysql/Downloads/%SUBDIR%/ \
 	ftp://mirror.switch.ch/mirror/mysql/Downloads/%SUBDIR%/ \
-	http://mysql.dp.ua/Downloads/%SUBDIR%/ \
-	ftp://mirror.services.wisc.edu/mirrors/mysql/Downloads/%SUBDIR%/ \
 	http://mysql.mirrors.pair.com/Downloads/%SUBDIR%/ \
-	ftp://ftp.linorg.usp.br/mysql/Downloads/%SUBDIR%/ \
-	ftp://ftp.cbn.net.id/mirror/mysql/Downloads/%SUBDIR%/ \
-	ftp://ftp.easynet.be/mysql/Downloads/%SUBDIR%/ \
 	http://download.softagency.net/MySQL/Downloads/%SUBDIR%/
 .endif
 
@@ -842,9 +739,7 @@ MASTER_SITE_NETBSD+= \
 	ftp://ftp.unina.it/pub/Unix/NetBSD/packages/distfiles/%SUBDIR%/ \
 	ftp://ftp.uninett.no/bsd/unix/NetBSD/packages/distfiles/%SUBDIR%/ \
 	ftp://sunsite.uio.no/bsd/unix/NetBSD/packages/distfiles/%SUBDIR%/ \
-	ftp://ftp.sunet.se/pub/NetBSD/packages/distfiles/%SUBDIR%/ \
 	ftp://ftp.demon.co.uk/pub/mirrors/NetBSD/packages/distfiles/%SUBDIR%/ \
-	ftp://ftp.dti.ad.jp/pub/NetBSD/packages/distfiles/%SUBDIR%/ \
 	ftp://ftp.funet.fi/pub/NetBSD/packages/distfiles/%SUBDIR%/
 .endif
 
@@ -853,7 +748,6 @@ MASTER_SITE_NETLIB+= \
 	http://www.netlib.org/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.netlib.org/%SUBDIR%/ \
 	http://www.mirrorservice.org/sites/ftp.netlib.org/%SUBDIR%/ \
-	http://www.netlib.no/netlib/%SUBDIR%/ \
 	ftp://ftp.irisa.fr/pub/netlib/%SUBDIR%/ \
 	http://netlib.sandia.gov/%SUBDIR%/
 .endif
@@ -888,12 +782,7 @@ MASTER_SITE_OSSP+= \
 .if !defined(IGNORE_MASTER_SITE_PACKETSTORM)
 MASTER_SITE_PACKETSTORM+= \
 	http://dl.packetstormsecurity.net/%SUBDIR%/ \
-	http://packetstorm.codar.com.br/%SUBDIR%/ \
-	http://packetstorm.interhost.co.il/%SUBDIR%/ \
-	http://packetstorm.foofus.com/%SUBDIR%/ \
-	http://packetstorm.tacticalflex.com/%SUBDIR%/ \
-	http://packetstorm.unixteacher.org/%SUBDIR%/ \
-	http://packetstorm.wowhacker.com/%SUBDIR%/
+	http://packetstorm.foofus.com/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_PERL_CPAN)
@@ -911,7 +800,6 @@ MASTER_SITE_PERL_CPAN_BY+= \
 	http://www.cpan.dk/%CPANSORT%/%SUBDIR%/ \
 	ftp://ftp.kddlabs.co.jp/lang/perl/CPAN/%CPANSORT%/%SUBDIR%/ \
 	http://ftp.jaist.ac.jp/pub/CPAN/%CPANSORT%/%SUBDIR%/ \
-	ftp://ftp.sunet.se/pub/lang/perl/CPAN/%CPANSORT%/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/cpan.perl.org/CPAN/%CPANSORT%/%SUBDIR%/ \
 	ftp://ftp.auckland.ac.nz/pub/perl/CPAN/%CPANSORT%/%SUBDIR%/ \
 	http://backpan.perl.org/%CPANSORT%/%SUBDIR%/ \
@@ -936,9 +824,7 @@ _PERL_CPAN_ID=	${MASTER_SITE_SUBDIR:C/^CPAN:(.)(.)(.*)$/\1\/\1\2\/\1\2\3/}
 #
 .if !defined(IGNORE_MASTER_SITE_PGSQL)
 MASTER_SITE_PGSQL+= \
-	http://ftp.postgresql.org/pub/%SUBDIR%/ \
-	https://ftp.postgresql.org/pub/%SUBDIR%/ \
-	ftp://ftp.postgresql.org/pub/%SUBDIR%/
+	https://ftp.postgresql.org/pub/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_PHP)
@@ -979,11 +865,7 @@ MASTER_SITE_QT+= \
 	http://www.mirrorservice.org/sites/download.qt-project.org/%SUBDIR%/ \
 	http://www.nic.funet.fi/pub/mirrors/download.qt-project.org/%SUBDIR%/ \
 	http://qtmirror.ics.com/pub/qtproject/%SUBDIR%/ \
-	http://anychimirror101.mirrors.tds.net/pub/Qt/%SUBDIR%/ \
-	http://www.las.ic.unicamp.br/pub/qtproject/%SUBDIR%/ \
-	http://linorg.usp.br/Qt/%SUBDIR%/ \
-	http://ftp.jaist.ac.jp/pub/qtproject/%SUBDIR%/ \
-	http://mirrors.neusoft.edu.cn/qt/%SUBDIR%/
+	http://ftp.jaist.ac.jp/pub/qtproject/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_REDHAT_LINUX)
@@ -1015,9 +897,7 @@ MASTER_SITE_RUBYGEMS+= \
 
 .if !defined(IGNORE_MASTER_SITE_SAMBA)
 MASTER_SITE_SAMBA+= \
-	http://ftp.samba.org/pub/%SUBDIR%/ \
-	ftp://ca.samba.org/pub/%SUBDIR%/ \
-	ftp://de.samba.org/pub/%SUBDIR%/
+	http://ftp.samba.org/pub/%SUBDIR%/
 .endif
 
 # List:	http://download.savannah.gnu.org/mirmon/
@@ -1029,8 +909,7 @@ MASTER_SITE_SAVANNAH+= \
 	http://mirror.lihnidos.org/GNU/savannah/%SUBDIR%/ \
 	http://ftp.twaren.net/Unix/NonGNU/%SUBDIR%/ \
 	ftp://ftp.twaren.net/Unix/NonGNU/%SUBDIR%/ \
-	http://gnu.mirrors.pair.com/savannah/savannah/%SUBDIR%/ \
-	ftp://gnu.mirrors.pair.com/savannah/%SUBDIR%/
+	http://gnu.mirrors.pair.com/savannah/savannah/%SUBDIR%/
 .endif
 
 # List:		https://sourceforge.net/p/forge/documentation/Mirrors/
@@ -1038,15 +917,15 @@ MASTER_SITE_SAVANNAH+= \
 .if !defined(IGNORE_MASTER_SITE_SOURCEFORGE)
 .for p in https http
 MASTER_SITE_SOURCEFORGE+= ${p}://downloads.sourceforge.net/project/%SUBDIR%/
-.for m in cytranet dronedata excellmedia freefr jaist kent liquidtelecom nchc \
-	netassist netcologne netix superb-dca2 superb-sea2 tenet ufpr vorboss
+.for m in cytranet excellmedia freefr jaist kent nchc \
+	netcologne netix superb-dca2 superb-sea2 ufpr vorboss
 MASTER_SITE_SOURCEFORGE+= ${p}://${m}.dl.sourceforge.net/project/%SUBDIR%/
 .endfor
 .endfor
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_SOURCEFORGE_JP)
-.for mirror in iij jaist keihanna osdn
+.for mirror in iij jaist osdn
 MASTER_SITE_SOURCEFORGE_JP+= \
 	http://${mirror}.dl.sourceforge.jp/%SUBDIR%/
 .endfor
@@ -1094,14 +973,7 @@ MASTER_SITE_SUDO+= \
 MASTER_SITE_SUNSITE+= \
 	http://www.ibiblio.org/pub/Linux/%SUBDIR%/ \
 	http://www.gtlib.gatech.edu/pub/Linux/%SUBDIR%/ \
-	ftp://ftp.cs.tu-berlin.de/pub/linux/Mirrors/sunsite.unc.edu/%SUBDIR%/ \
-	ftp://ftp.etsimo.uniovi.es/pub/linux/%SUBDIR%/ \
-	ftp://ftp.lip6.fr/pub/linux/sunsite/%SUBDIR%/ \
-	ftp://ftp.nluug.nl/pub/metalab/%SUBDIR%/ \
-	ftp://ftp.nvg.ntnu.no/pub/mirrors/metalab.unc.edu/%SUBDIR%/ \
 	ftp://ftp.icm.edu.pl/pub/Linux/sunsite/%SUBDIR%/ \
-	ftp://ftp.cse.cuhk.edu.hk/pub4/Linux/%SUBDIR%/ \
-	ftp://ftp.chg.ru/pub/Linux/sunsite/%SUBDIR%/ \
 	ftp://ftp.sun.ac.za/pub/mirrors/sunsite.unc.edu/pub/Linux/%SUBDIR%/
 .endif
 
@@ -1115,12 +987,10 @@ MASTER_SITE_TCLTK+= \
 
 .if !defined(IGNORE_MASTER_SITE_TEX_CTAN)
 MASTER_SITE_TEX_CTAN+= \
-	ftp://ctan.unsw.edu.au/tex-archive/%SUBDIR%/ \
-	ftp://ftp.tex.ac.uk/tex-archive/%SUBDIR%/ \
+	http://ctan.unsw.edu.au/%SUBDIR%/ \
 	ftp://ftp.kddlabs.co.jp/CTAN/%SUBDIR%/ \
 	ftp://ctan.tug.org/tex-archive/%SUBDIR%/ \
 	ftp://ftp.dante.de/tex-archive/%SUBDIR%/ \
-	ftp://ftp.chg.ru/pub/TeX/CTAN/%SUBDIR%/ \
 	ftp://mirror.macomnet.net/pub/CTAN/%SUBDIR%/ \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/%SUBDIR%/
 .endif
@@ -1181,12 +1051,7 @@ MASTER_SITE_WINDOWMAKER+= \
 
 .if !defined(IGNORE_MASTER_SITE_XCONTRIB)
 MASTER_SITE_XCONTRIB+= \
-	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/%SUBDIR%/ \
-	ftp://ftp.x.org/contrib/%SUBDIR%/ \
-	ftp://ftp.sunet.se/pub/X11/ftp.x.org/contrib/%SUBDIR%/ \
-	ftp://ftp.dti.ad.jp/pub/X/XFree86/mirror/X.Org/contrib/%SUBDIR%/ \
-	ftp://ftp.kddlabs.co.jp/X11/ftp.x.org/contrib/%SUBDIR%/ \
-	ftp://ftp2.x.org/contrib/%SUBDIR%/
+	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_XFCE)
@@ -1229,7 +1094,6 @@ MASTER_SITE_XORG+= \
 MASTER_SITE_KERNEL_ORG+= \
 	https://www.kernel.org/pub/%SUBDIR%/ \
 	ftp://ftp.ntu.edu.tw/%SUBDIR%/ \
-	http://ftp.sunet.se/pub/Linux/kernel.org/%SUBDIR%/ \
 	http://ftp.yandex.ru/pub/%SUBDIR%/ \
 	http://ftp.heanet.ie/pub/%SUBDIR%/ \
 	http://slackware.cs.utah.edu/pub/kernel.org/pub/%SUBDIR%/

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	freeipmi
-PORTVERSION=	1.5.6
-PORTREVISION=	1
+PORTVERSION=	1.5.7
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU \
 		http://ftp.gluster.com/pub/${PORTNAME}/${PORTVERSION}/
@@ -14,11 +13,16 @@ COMMENT=	Library and tools to support IPMI-capable hardware
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN_aarch64=		invokes x86 assembler
+BROKEN_armv6=		invokes x86 assembler
+BROKEN_armv7=		invokes x86 assembler
+BROKEN_mips=		invokes x86 assembler
+BROKEN_mips64=		invokes x86 assembler
+BROKEN_sparc64=		invokes x86 assembler
+BROKEN_powerpc64=	invokes x86 assembler
+
 LIB_DEPENDS=	libargp.so:devel/argp-standalone \
 		libgcrypt.so:security/libgcrypt
-
-ONLY_FOR_ARCHS=	i386 amd64
-ONLY_FOR_ARCHS_REASON=	invokes i386 asm
 
 OPTIONS_DEFINE=	DEBUG DOCS IOPERM
 IOPERM_DESC=	Use i386_set_ioperm

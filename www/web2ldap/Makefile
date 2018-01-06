@@ -2,21 +2,19 @@
 # $FreeBSD$
 
 PORTNAME=	web2ldap
-PORTVERSION=	1.2.71
-PORTREVISION=	1
+PORTVERSION=	1.2.94
 CATEGORIES=	www
 MASTER_SITES=	http://www.web2ldap.de/download/ \
-		http://www.sfr-fresh.com/unix/www/ \
-		LOCAL/bsam
+		http://www.sfr-fresh.com/unix/www/
 
 MAINTAINER=	bsam@FreeBSD.org
 COMMENT=	Python-based WWW gateway to LDAP servers
 
 LICENSE=	GPLv2
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ldap>=2.4.0:net/py-ldap \
-		${PYTHON_SITELIBDIR}/pyweblib/__init__.py:www/pyweblib \
-		${PYTHON_PKGNAMEPREFIX}ipaddr>0:devel/py-ipaddr \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ldap>=2.4.0:net/py-ldap@${PY_FLAVOR} \
+		${PYTHON_SITELIBDIR}/pyweblib/__init__.py:www/py-pyweblib@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}ipaddr>0:devel/py-ipaddr@${PY_FLAVOR} \
 		${LOCALBASE}/etc/mime.types:misc/mime-support
 
 OPTIONS_DEFINE=	DOCS

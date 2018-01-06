@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	leiningen
-PORTVERSION=	2.7.1
-PORTREVISION=	1
+PORTVERSION=	2.8.1
 CATEGORIES=	devel lisp java
 MASTER_SITES=	https://github.com/technomancy/leiningen/releases/download/${PORTVERSION}/:standalone
 DISTFILES=	leiningen-${PORTVERSION}-standalone.zip:standalone
@@ -33,7 +32,7 @@ SHEBANG_FILES=	bin/lein-pkg
 bash_CMD=	/bin/sh
 
 post-patch:
-	@${REINPLACE_CMD} -E -e 's|function (.*) {|\1() {|' \
+	@${REINPLACE_CMD} -E -e 's|function (.*) \{|\1() {|' \
 		-e 's|(local )-i |\1|' \
 		-e 's|^if \[\[ (.*) \]\];|if [ \1 ];|' \
 		-e 's|(BOOTCLASSPATH)\[@\]|\1|' \

@@ -1,8 +1,10 @@
 bin/cppcheck
 %%DATADIR%%/avr.cfg
+%%DATADIR%%/bsd.cfg
 %%DATADIR%%/gnu.cfg
 %%DATADIR%%/gtk.cfg
 %%DATADIR%%/microsoft_sal.cfg
+%%DATADIR%%/motif.cfg
 %%DATADIR%%/posix.cfg
 %%DATADIR%%/qt.cfg
 %%DATADIR%%/sdl.cfg

@@ -3,11 +3,11 @@
 
 PORTNAME=	clamav
 PORTVERSION=	0.99.2
-PORTREVISION=	4
+PORTREVISION=	8
 CATEGORIES=	security
 MASTER_SITES=	http://www.clamav.net/downloads/production/
 
-MAINTAINER=	garga@FreeBSD.org
+MAINTAINER=	ler@FreeBSD.org
 COMMENT=	Command line virus scanner written entirely in C
 
 LICENSE=	GPLv2
@@ -94,6 +94,7 @@ CLAMAVUSER?=	clamav
 CLAMAVGROUP?=	clamav
 
 CLAMAV_CLAMD_SOCKET?=	${RUNDIR}/clamd.sock
+CLAMAV_CLAMD_PIDFILE?=	${RUNDIR}/clamd.pid
 CLAMAV_MILTER_SOCKET?=	${RUNDIR}/clmilter.sock
 
 SUB_FILES=	pkg-deinstall
@@ -105,6 +106,7 @@ SUB_LIST+=	DBDIR=${DBDIR} \
 		CLAMAVUSER=${CLAMAVUSER} \
 		CLAMAVGROUP=${CLAMAVGROUP} \
 		CLAMAV_CLAMD_SOCKET=${CLAMAV_CLAMD_SOCKET} \
+		CLAMAV_CLAMD_PIDFILE=${CLAMAV_CLAMD_PIDFILE} \
 		CLAMAV_MILTER_SOCKET=${CLAMAV_MILTER_SOCKET}
 
 SED_CONF=	-E -e 's|^\#?(Example)$$|\#\1|' \

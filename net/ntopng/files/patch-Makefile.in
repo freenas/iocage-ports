@@ -1,39 +1,21 @@
---- Makefile.in.orig	2017-06-01 07:18:57 UTC
+--- Makefile.in.orig	2017-12-06 11:11:19 UTC
 +++ Makefile.in
-@@ -51,8 +51,10 @@ else
- endif
+@@ -34,7 +34,8 @@ LIBPCAP=-lpcap
+ MONGOOSE_HOME=${PWD}/third-party/mongoose
+ MONGOOSE_INC=-I$(MONGOOSE_HOME)
  ######
- ifeq ($(OS), $(filter $(OS), FreeBSD))
--	LIBNBPF_HOME=${PWD}/../PF_RING/userland/nbpf
--	LIBNBPF_LIB=$(LIBNBPF_HOME)/libnbpf.a
-+	ifneq (, $(wildcard "${PWD}/../PF_RING/userland/nbpf/libnbpf.a"))
-+		LIBNBPF_HOME=${PWD}/../PF_RING/userland/nbpf
-+		LIBNBPF_LIB=$(LIBNBPF_HOME)/libnbpf.a
-+	endif
- endif
- ######
- HTTPCLIENT_INC=${PWD}/third-party/http-client-c/src/
-@@ -79,7 +81,7 @@ endif
- HAS_ZEROMQ=$(shell pkg-config --exists libzmq; echo $$?)
- ifeq ($(HAS_ZEROMQ), 0)
+-HAS_LUAJIT=$(shell pkg-config --exists luajit; echo $$?)
++# Force using embedded luajit
++HAS_LUAJIT=1
+ ifeq ($(HAS_LUAJIT), 0)
+ 	LUAJIT_INC = $(shell pkg-config --cflags luajit)
+ 	LUAJIT_LIB = $(shell pkg-config --libs luajit)
+@@ -91,7 +92,7 @@ ifeq (@NEDGE@, 0)
+  HAS_ZEROMQ=$(shell pkg-config --exists libzmq; echo $$?)
+  ifeq ($(HAS_ZEROMQ), 0)
  	ZEROMQ_INC = $(shell pkg-config --cflags libzmq)
 -	ZMQ_STATIC=/usr/local/lib/libzmq.a
 +	ZMQ_STATIC=/nonexistent
  	ifeq ($(wildcard $(ZMQ_STATIC)),)
  		ZEROMQ_LIB = $(shell pkg-config --libs libzmq)
  	else
-@@ -178,10 +180,10 @@ geoip:
- 	  cp ~/dat_files/* httpdocs/geoip; gunzip -f httpdocs/geoip/*.dat.gz ; \
- 	else \
- 	  cd httpdocs/geoip; \
--	  wget -nc http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz; \
--	  wget -nc http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz; \
--	  wget -nc http://download.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz; \
--	  wget -nc http://download.maxmind.com/download/geoip/database/asnum/GeoIPASNumv6.dat.gz; \
-+	  fetch http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz; \
-+	  fetch http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz; \
-+	  fetch http://download.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz; \
-+	  fetch http://download.maxmind.com/download/geoip/database/asnum/GeoIPASNumv6.dat.gz; \
- 	  gunzip -f *.dat.gz ; \
- 	fi
- 
