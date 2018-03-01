@@ -4,7 +4,6 @@ PORTNAME=	seahub
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${SEAHUB_VER}
 DISTVERSIONSUFFIX=	-pro
-PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	ultima@FreeBSD.org
@@ -32,7 +31,7 @@ RUN_DEPENDS=	bash:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}MySQLdb>0:databases/py-MySQLdb@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}qrcode>0:textproc/py-qrcode@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}futures>0:devel/py-futures@${PY_FLAVOR}
+		${PY_FUTURES}
 
 USES=		python:-2.7 shebangfix
 USE_GITHUB=	yes

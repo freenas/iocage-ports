@@ -89,6 +89,7 @@
     SUBDIR += icingaweb2-module-cube
     SUBDIR += icingaweb2-module-director
     SUBDIR += icingaweb2-module-elasticsearch
+    SUBDIR += icingaweb2-module-fileshipper
     SUBDIR += icingaweb2-module-generictts
     SUBDIR += icingaweb2-module-grafana
     SUBDIR += icingaweb2-module-graphite
@@ -294,7 +295,9 @@
     SUBDIR += pnp-icinga
     SUBDIR += pnp-icinga2
     SUBDIR += portmon
-    SUBDIR += prometheus
+    SUBDIR += prometheus1
+    SUBDIR += prometheus2
+    SUBDIR += prometheus-collectd-exporter
     SUBDIR += pushgateway
     SUBDIR += py-adal
     SUBDIR += py-dnsdiag
@@ -326,6 +329,7 @@
     SUBDIR += routers2-extensions
     SUBDIR += routers2-extras
     SUBDIR += rrdbot
+    SUBDIR += rtrlib
     SUBDIR += rubygem-blimpy
     SUBDIR += rubygem-oxidized
     SUBDIR += rubygem-oxidized-script
@@ -364,6 +368,7 @@
     SUBDIR += torrus
     SUBDIR += triton-guesttools
     SUBDIR += unbound_exporter
+    SUBDIR += unifi-devel
     SUBDIR += unifi5
     SUBDIR += victorops-nagios
     SUBDIR += vidalia

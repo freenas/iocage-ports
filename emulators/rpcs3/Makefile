@@ -2,8 +2,8 @@
 
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.4-225
-DISTVERSIONSUFFIX=	-g19d181fa4
+DISTVERSION=	0.0.5-24
+DISTVERSIONSUFFIX=	-g8d7620d95
 CATEGORIES=	emulators
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -39,15 +39,12 @@ USE_QT5=	qmake_build buildtools_build core dbus gui network widgets
 USE_XORG=	x11
 EXTRA_PATCHES+=	${EXTRA_PATCHES_${OPSYS}_${OSREL}}
 EXTRA_PATCHES_FreeBSD_10.3=	${PATCHDIR}/extra-patch-no-thread_local
-CONFIGURE_ENV+=	TRAVIS=1 # XXX Rename to be less generic
 CMAKE_ON=	CMAKE_SKIP_RPATH USE_SYSTEM_FFMPEG USE_SYSTEM_LIBPNG
+CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS
 CXXFLAGS+=	-D_GLIBCXX_USE_C99 # XXX ports/193528
 CXXFLAGS+=	-Wno-macro-redefined # __STDC_*_MACROS sys/cdefs.h vs. llvm-config
 LDFLAGS+=	-Wl,--as-needed # GLU
-PLIST_FILES=	bin/${PORTNAME} \
-		share/applications/${PORTNAME}.desktop \
-		share/icons/hicolor/48x48/apps/${PORTNAME}.png \
-		share/icons/hicolor/scalable/apps/${PORTNAME}.svg \
+MESA_LLVM_VER?=	50
 
 OPTIONS_DEFINE=	ALSA EVDEV GDB LLVM PULSEAUDIO VULKAN
 OPTIONS_DEFAULT=ALSA LLVM VULKAN
@@ -67,7 +64,8 @@ GDB_DESC=		GDB remote stub (powerpc64 target)
 GDB_CMAKE_BOOL=		WITH_GDB
 
 LLVM_DESC=		LLVM-based PPU recompiler
-LLVM_BUILD_DEPENDS=	llvm40>0:devel/llvm40
+LLVM_BUILD_DEPENDS=	llvm${MESA_LLVM_VER}>0:devel/llvm${MESA_LLVM_VER}
+LLVM_CMAKE_ON=		-DLLVM_DIR:PATH=${LOCALBASE}/llvm${MESA_LLVM_VER}/lib/cmake/llvm
 LLVM_CMAKE_BOOL_OFF=	WITHOUT_LLVM
 
 PULSEAUDIO_LIB_DEPENDS=	libpulse-simple.so:audio/pulseaudio

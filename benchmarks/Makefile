@@ -3,6 +3,7 @@
 
     COMMENT = Benchmarking tools
 
+    SUBDIR += apib
     SUBDIR += autobench
     SUBDIR += blogbench
     SUBDIR += bombardier
@@ -38,6 +39,7 @@
     SUBDIR += iperf3
     SUBDIR += libmicro
     SUBDIR += lmbench
+    SUBDIR += lzbench
     SUBDIR += mdtest
     SUBDIR += nbench
     SUBDIR += netio
@@ -61,6 +63,7 @@
     SUBDIR += postal
     SUBDIR += postmark
     SUBDIR += py-naarad
+    SUBDIR += py-throughpy
     SUBDIR += py-zopkio
     SUBDIR += pybench
     SUBDIR += raidtest
@@ -86,6 +89,7 @@
     SUBDIR += typometer
     SUBDIR += ubench
     SUBDIR += unixbench
+    SUBDIR += vegeta
     SUBDIR += webbench
     SUBDIR += wrk
 

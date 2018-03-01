@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	mysqlwsrep
-PORTVERSION?=	5.6.38
+PORTVERSION?=	5.6.39
 DISTVERSIONPREFIX?=	wsrep_
-DISTVERSIONSUFFIX?=	-25.21
+DISTVERSIONSUFFIX?=	-25.22
 CATEGORIES=	databases ipv6
 PKGNAMESUFFIX=	56-server
 
@@ -12,6 +12,9 @@ MAINTAINER=	devel@galeracluster.com
 COMMENT=	MySQL database enhanced with Galera replication (server package)
 
 LICENSE=	GPLv2
+
+BROKEN_SSL=	openssl-devel
+BROKEN_SSL_REASON_openssl-devel=	incomplete definition of type 'struct dh_st'
 
 RUN_DEPENDS=	bash:shells/bash \
 		lsof:sysutils/lsof \

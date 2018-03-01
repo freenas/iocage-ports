@@ -2,6 +2,7 @@
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/nss/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 DISTNAME=	nss-${VERSION_NSS}${NSS_SUFFIX}
@@ -32,7 +33,7 @@ PLIST_SUB+=	CERTDIR=${CERTDIR}
 # !!!  Please DO NOT submit patches for new version until it has !!!
 # !!!  been committed there first.                               !!!
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-VERSION_NSS=	3.34.1
+VERSION_NSS=	3.35
 #NSS_SUFFIX=	-with-ckbi-1.98
 CERTDATA_TXT_PATH=	nss-${VERSION_NSS}/nss/lib/ckfw/builtins/certdata.txt
 BUNDLE_PROCESSOR=	MAca-bundle.pl

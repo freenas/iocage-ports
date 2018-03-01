@@ -2,7 +2,7 @@
 
 PORTNAME=	gcc-msp430-ti-toolchain
 PORTVERSION=	${GCC_VERSION}.${TI_VERSION}.${RELEASE_DATE}
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel
 MASTER_SITES=	GCC/releases/gcc-${GCC_REL_VERSION}:gcc \
 		SOURCEWARE/binutils/releases:binutils \
@@ -45,6 +45,7 @@ USES=		bison compiler cpe gmake iconv libtool makeinfo ncurses \
 		tar:bzip2
 USE_CSTD=	gnu89
 
+
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/${SUBPREFIX}
 
@@ -66,6 +67,7 @@ CPE_VERSION=	${GCC_REL_VERSION}
 
 SUBPREFIX=	${PORTNAME}-${TI_VERSION}
 
+PATCH_WRKSRC=	${WRKDIR}
 MANPREFIX=	${GNU_CONFIGURE_PREFIX}
 DOCSDIR=	${GNU_CONFIGURE_PREFIX}/docs
 PLIST_SUB+=	TARGET=${TARGET} GCC_VERSION=${GCC_VERSION} \
@@ -165,9 +167,8 @@ do-install:
 		${TAR} xf - -C ${STAGEDIR}${GNU_CONFIGURE_PREFIX}
 	@${ECHO_MSG} "Install minimal documentation..."
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_MAN} ${DISTDIR}/${DIST_SUBDIR}/slau591${DOC_VERSION}.pdf \
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/slau591${DOC_VERSION}.pdf \
 		${STAGEDIR}${DOCSDIR}/slau591c.pdf
-	${INSTALL_MAN} ${FILESDIR}/watchdog.txt \
-		${STAGEDIR}${DOCSDIR}/watchdog.txt
+	${INSTALL_DATA} ${FILESDIR}/watchdog.txt ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

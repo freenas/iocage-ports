@@ -1,10 +1,10 @@
 # $FreeBSD$
 
 PORTNAME=	asterisk
-PORTVERSION=	13.18.5
+PORTVERSION=	13.19.2
 PORTREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
+MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
 			asterisk/old-releases/ \
 			sounds/releases/:g729
@@ -61,7 +61,7 @@ OPTIONS_DEFINE=			ASTVERSION BACKTRACE CURL EXCHANGE FREETDS LDAP LUA \
 				MP3PLAYER OOH323 OPTIMIZED_CFLAGS PJSIP PORTAUDIO RADIUS SNMP \
 				SPANDSP SRTP SYSINFO XMPP
 OPTIONS_DEFAULT=		CURL FREETDS GSM LUA MP3PLAYER NEWT ODBC MYSQL PGSQL PJSIP \
-				PORTAUDIO RADIUS SNMP SPANDSP SPEEX SQLITE2 VORBIS
+				PORTAUDIO RADIUS SNMP SPANDSP SPEEX SRTP SQLITE2 VORBIS
 
 OPTIONS_DEFINE_i386=		DAHDI
 OPTIONS_DEFINE_amd64=		DAHDI
@@ -130,7 +130,9 @@ DAHDI_LIB_DEPENDS=	libpri.so:misc/libpri \
 			libtonezone.so:misc/dahdi
 
 EXCHANGE_CONFIGURE_OFF=	--without-neon --without-neon29
-EXCHANGE_LIB_DEPENDS=	libneon.so:www/neon
+EXCHANGE_LIB_DEPENDS=	libneon.so:www/neon \
+			libexpat.so:textproc/expat2
+EXCHANGE_USES=		gettext-runtime
 
 FREETDS_CONFIGURE_ON=	--with-tds=${LOCALBASE}
 FREETDS_CONFIGURE_OFF=	--without-tds
@@ -192,6 +194,7 @@ SQLITE2_CONFIGURE_WITH=	sqlite
 SQLITE2_LIB_DEPENDS=	libsqlite.so:databases/sqlite2
 
 SRTP_CONFIGURE_WITH=	srtp
+SRTP_LIB_DEPENDS=	libsrtp.so:net/libsrtp
 
 SYSINFO_LIB_DEPENDS=	libsysinfo.so:devel/libsysinfo
 

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	nextcloud
-PORTVERSION=	12.0.4
+DISTVERSION=	13.0.0
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/prereleases/
 
@@ -30,6 +30,7 @@ OPTIONS_MULTI=	DB
 OPTIONS_MULTI_DB=	MYSQL PGSQL SQLITE
 OPTIONS_DEFAULT=	EXIF LDAP MYSQL SMB SSL
 
+DB_DESC=	Database backend(s)
 EXIF_DESC=	Image rotation support
 
 EXIF_USE=	PHP=exif

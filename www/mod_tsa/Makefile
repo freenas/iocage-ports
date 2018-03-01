@@ -8,12 +8,11 @@ CATEGORIES=	www
 MASTER_SITES=	http://am.nesiac.org/static/ \
 		http://ubique.spb.ru/src/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Time stamping authority (RFC 3161) module for apache
 
 OPTIONS_DEFINE=	MYSQL PGSQL FIREBIRD DEBUG DEBUG_MEMORY
 DEBUG_MEMORY_DESC=	Memory debug
-
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-openssl-incdir=${OPENSSLINC} \

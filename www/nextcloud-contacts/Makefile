@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	contacts
-PORTVERSION=	2.0.1
+PORTVERSION=	2.1.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/${PKGNAMEPREFIX:S/-//}/${PORTNAME}/releases/download/${DISTVERSIONPREFIX}${PORTVERSION}/
@@ -15,7 +15,7 @@ COMMENT=	Contacts app for Nextcloud
 
 LICENSE=	AGPLv3
 
-RUN_DEPENDS=	nextcloud>=12:www/nextcloud
+RUN_DEPENDS=	nextcloud>=11:www/nextcloud
 
 NO_BUILD=	yes
 NO_ARCH=	yes

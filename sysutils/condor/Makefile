@@ -6,12 +6,12 @@
 
 PORTNAME=	condor
 PORTVERSION=	8.4.9
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://www.acadix.biz/Ports/distfiles/
 DISTNAME=	condor_src-${PORTVERSION}-all-all
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	High-throughput computing on distributively owned resources
 
 LICENSE=	APACHE20
@@ -20,13 +20,13 @@ LICENSE_FILE=	${WRKSRC}/LICENSE-2.0.txt
 LIB_DEPENDS+=	libkrb5support.so:security/krb5 \
 		libpcre.so:devel/pcre \
 		libcurl.so:ftp/curl \
-		libboost_python.so:devel/boost-python-libs \
+		${PY_BOOST} \
 		libexpat.so:textproc/expat2
 
 WRKSRC=		${WRKDIR}/condor-${PORTVERSION}
 USE_LDCONFIG=	yes
 # Does not build with Python 3
-USES=		cmake cpe perl5 pgsql python:2 shebangfix ssl
+USES=		cmake cpe perl5 pgsql python:2.7 shebangfix ssl
 CPE_VENDOR=	condor_project
 SHEBANG_FILES=	src/condor_scripts/condor_qsub \
 		src/condor_gridmanager/remote_gahp \

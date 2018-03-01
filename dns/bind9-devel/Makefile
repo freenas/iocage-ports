@@ -8,17 +8,17 @@ PORTVERSION=	${ISCVERSION:S/-P/P/:S/b/.b/:S/a/.a/:S/rc/.rc/}
 PORTREVISION=	0
 .else
 # dns/bind9xx here
-PORTREVISION=	1
+PORTREVISION=	0
 .endif
 CATEGORIES=	dns net ipv6
-MASTER_SITES=	LOCAL/mat/bind
-#MASTER_SITES=	https://source.isc.org/cgi-bin/gitweb.cgi?p=bind9.git;a=snapshot;h=${HASH};sf=tgz;/
+MASTER_SITES=	LOCAL/mat/bind \
+		https://gitlab.isc.org/isc-projects/bind9/repository/${HASH}/archive.tar.bz2?d/
 .if defined(BIND_TOOLS_SLAVE)
 PKGNAMESUFFIX=	-tools
 .else
 PKGNAMESUFFIX=	9-devel
 .endif
-DISTNAME=	${PORTNAME}9-${HASH}
+DISTNAME=	${PORTNAME}9-${HASH}-${HASH}
 
 MAINTAINER=	mat@FreeBSD.org
 .if defined(BIND_TOOLS_SLAVE)
@@ -31,10 +31,10 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.13.0a0.2018.01.02
-HASH=		05612f4
+ISCVERSION=	9.13.0a0.2018.02.26
+HASH=		e1d6c9a6631f2db967d1a6331b5a177b78e08b89
 
-USES=	cpe libedit
+USES=	cpe libedit tar:bz2
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -54,11 +54,11 @@ CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
 		--sysconfdir=${ETCDIR}
 ETCDIR=		${PREFIX}/etc/namedb
 
-CONFLICTS=	bind99 bind910 bind9-devel
+CONFLICTS=	bind99 bind910 bind911 bind912
 
 .if defined(BIND_TOOLS_SLAVE)
 CONFIGURE_ARGS+=	--disable-shared
-CONFLICTS+=		bind911
+CONFLICTS+=		bind9-devel
 .else
 USE_RC_SUBR=	named
 SUB_FILES=	pkg-message named.conf
@@ -71,17 +71,17 @@ PORTDOCS=	*
 
 OPTIONS_DEFAULT=	SSL THREADS SIGCHASE IDN GSSAPI_NONE JSON PYTHON
 OPTIONS_DEFINE=		IDN LARGE_FILE PYTHON JSON \
-			FIXED_RRSET SIGCHASE IPV6 THREADS FILTER_AAAA
+			FIXED_RRSET SIGCHASE IPV6 THREADS
 
 OPTIONS_RADIO=	CRYPTO GOSTDEF
 OPTIONS_RADIO_CRYPTO=	SSL NATIVE_PKCS11
 OPTIONS_RADIO_GOSTDEF=	GOST GOST_ASN1
 
 .if !defined(BIND_TOOLS_SLAVE)
-OPTIONS_DEFAULT+=	DLZ_FILESYSTEM LMDB RPZ_NSDNAME RPZ_NSIP
+OPTIONS_DEFAULT+=	DLZ_FILESYSTEM LMDB RPZ_NSDNAME RPZ_NSIP TCP_FASTOPEN
 OPTIONS_DEFINE+=	RPZ_NSIP RPZ_NSDNAME DOCS GEOIP \
 			MINCACHE PORTREVISION QUERYTRACE LMDB DNSTAP \
-			START_LATE
+			START_LATE TUNING_LARGE TCP_FASTOPEN
 OPTIONS_GROUP=		DLZ
 OPTIONS_GROUP_DLZ=	DLZ_POSTGRESQL DLZ_MYSQL DLZ_BDB \
 			DLZ_LDAP DLZ_FILESYSTEM DLZ_STUB
@@ -100,7 +100,6 @@ DLZ_MYSQL_DESC=		DLZ MySQL driver (no threading)
 DLZ_POSTGRESQL_DESC=	DLZ Postgres driver
 DLZ_STUB_DESC=		DLZ stub driver
 DNSTAP_DESC=		Provides fast passive logging of DNS messages
-FILTER_AAAA_DESC=	Enable filtering of AAAA records
 FIXED_RRSET_DESC=	Enable fixed rrset ordering
 GEOIP_DESC=		Allow geographically based ACL.
 GOSTDEF_DESC=		Enable GOST ciphers, needs SSL
@@ -122,6 +121,8 @@ RPZ_NSIP_DESC=		Enable RPZ NSIP trigger rules
 SIGCHASE_DESC=		dig/host/nslookup will do DNSSEC validation
 SSL_DESC=		Build with OpenSSL (Required for DNSSEC)
 START_LATE_DESC=	Start BIND late in the boot process (see help)
+TCP_FASTOPEN_DESC=	RFC 7413 support
+TUNING_LARGE_DESC=	Tune named for large systems (**READ HELP**)
 
 DLZ_BDB_CONFIGURE_ON=	--with-dlz-bdb=yes
 DLZ_BDB_USES=		bdb
@@ -144,8 +145,6 @@ DNSTAP_CONFIGURE_ENABLE=	dnstap
 DNSTAP_IMPLIES=		THREADS
 DNSTAP_LIB_DEPENDS=	libfstrm.so:devel/fstrm \
 			libprotobuf-c.so:devel/protobuf-c
-
-FILTER_AAAA_CONFIGURE_ENABLE=	filter-aaaa
 
 FIXED_RRSET_CONFIGURE_ENABLE=	fixed-rrset
 
@@ -212,7 +211,13 @@ START_LATE_SUB_LIST=	NAMED_REQUIRE="SERVERS cleanvar" \
 START_LATE_SUB_LIST_OFF=NAMED_REQUIRE="NETWORKING ldconfig syslogd" \
 			NAMED_BEFORE="SERVERS"
 
+TCP_FASTOPEN_CONFIGURE_ENABLE=	tcp-fastopen
+
 THREADS_CONFIGURE_ENABLE=	threads
+
+TUNING_LARGE_IMPLIES=	THREADS
+TUNING_LARGE_CONFIGURE_ON=	--with-tuning=large
+TUNING_LARGE_CONFIGURE_OFF=	--with-tuning=default
 
 .include <bsd.port.pre.mk>
 

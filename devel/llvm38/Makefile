@@ -182,7 +182,7 @@ CLANG_PATTERN=	(c-index-test|clang|scan-|Reporter.py|ScanView.py|scanview.css|so
 
 .if ${PORT_OPTIONS:MLIT}
 MAN1SRCS+=	lit.1 FileCheck.1
-_USES_PYTHON=	python
+_USES_PYTHON=	python:2.7
 LIT_COMMANDS=	lit llvm-lit FileCheck
 .endif
 
@@ -191,7 +191,7 @@ COMMANDS+=	argdumper \
 		lldb \
 		lldb-mi \
 		lldb-server
-_USES_PYTHON=	python
+_USES_PYTHON=	python:2.7
 .endif
 
 .if ! ${OPTIONS_DEFINE:MCOMPILER_RT}
@@ -211,7 +211,7 @@ PLIST_SUB+=    OPENMP="@comment "
 .else
 .endif
 
-_USES_PYTHON?=	python:build
+_USES_PYTHON?=	python:2.7,build
 USES+=		${_USES_PYTHON}
 
 MAN1SRCS+=	bugpoint.1 llc.1 lli.1 llvm-ar.1 llvm-as.1 \
@@ -272,10 +272,7 @@ COMMANDS+=	lld
 PORTDOCS+=	lld
 .endif
 
-.if ${PYTHON_REL} < 3400
-LLDB_BUILD_DEPENDS+= \
-	${PYTHON_PKGNAMEPREFIX}enum34>0:devel/py-enum34
-.endif
+LLDB_BUILD_DEPENDS+= ${PY_ENUM34}
 
 .if ${PORT_OPTIONS:MLLDB} && ${PYTHON_REL} >= 3000
 BROKEN=	LLDB does not build with Python 3

@@ -1,9 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	frr
-PORTVERSION=	3.0.2
+PORTVERSION=	3.0.3
 DISTVERSIONPREFIX=	frr-
-PORTREVISION=	1
 CATEGORIES=	net ipv6
 
 MAINTAINER=	olivier@FreeBSD.org
@@ -14,6 +13,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	gawk:lang/gawk
 LIB_DEPENDS=	libjson-c.so:devel/json-c
+
+RESTRICTED=	possible GPL violation of Quagga project
 
 CONFLICTS=	openbgpd openospfd zebra quagga-esr quagga
 

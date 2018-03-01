@@ -7,8 +7,22 @@ depends on different modules with module-specific .api files.
 Also fixes a bug where dbus support drops multiple -I flags produced
 by pkg-config --cflags dbus-1 .
 
+Also fixes the build of www/py-qt5-webengine@py36 by adding printsupport to
+QtWebEngineWidgets.
+
+Also causes .pyi files to be installed regardless of the Python version to
+simplify plist handling.
 --- configure.py.orig	2017-11-23 14:44:03 UTC
 +++ configure.py
+@@ -98,7 +98,7 @@ MODULE_METADATA = {
+     'QtWebEngineCore':      ModuleMetadata(qmake_QT=['webenginecore', '-gui']),
+     'QtWebEngineWidgets':   ModuleMetadata(
+                                     qmake_QT=['webenginewidgets', 'webchannel',
+-                                            'network', 'widgets'],
++                                              'network', 'printsupport', 'widgets'],
+                                     cpp11=True),
+     'QtWebKit':             ModuleMetadata(qmake_QT=['webkit', 'network']),
+     'QtWebKitWidgets':      ModuleMetadata(
 @@ -503,7 +503,7 @@ class TargetConfiguration:
          self.no_pydbus = False
          self.no_qml_plugin = False
@@ -124,6 +138,15 @@ by pkg-config --cflags dbus-1 .
              if metadata.public and mname != 'Qt':
                  sip_files = matching_files(source_path('sip', mname, '*.sip'))
  
+@@ -1618,7 +1605,7 @@ INSTALLS += sip%s
+ ))
+ 
+     # Install the stub files.
+-    if target_config.py_version >= 0x030500 and target_config.pyqt_stubs_dir:
++    if target_config.pyqt_stubs_dir:
+         out_f.write('''
+ pep484_stubs.files = %s Qt.pyi
+ pep484_stubs.path = %s
 @@ -1628,11 +1615,12 @@ INSTALLS += pep484_stubs
  
      # Install the QScintilla .api file.
@@ -138,6 +161,24 @@ by pkg-config --cflags dbus-1 .
 +''' % (api_list, qmake_quote(target_config.qsci_api_dir + '/api/python')))
  
      out_f.close()
+ 
+@@ -1864,7 +1852,7 @@ def inform_user(target_config, sip_version):
+                         os.path.join(
+                                 target_config.qsci_api_dir, 'api', 'python'))
+ 
+-    if target_config.py_version >= 0x030500 and target_config.pyqt_stubs_dir:
++    if target_config.pyqt_stubs_dir:
+         inform("The PyQt5 PEP 484 stub files will be installed in %s." %
+                 target_config.pyqt_stubs_dir)
+ 
+@@ -2431,7 +2419,7 @@ def generate_sip_module_code(target_config, verbose, p
+             argv.append('-a')
+             argv.append(mname + '.api')
+ 
+-        if target_config.py_version >= 0x030500 and target_config.pyqt_stubs_dir:
++        if target_config.pyqt_stubs_dir:
+             argv.append('-y')
+             argv.append(mname + '.pyi')
  
 @@ -2604,7 +2592,7 @@ target.files = $$PY_MODULE
      pro_lines.append('INSTALLS += target')

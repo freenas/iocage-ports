@@ -36,6 +36,7 @@
     SUBDIR += R-cran-car
     SUBDIR += R-cran-coda
     SUBDIR += R-cran-combinat
+    SUBDIR += R-cran-conf.design
     SUBDIR += R-cran-ddalpha
     SUBDIR += R-cran-deldir
     SUBDIR += R-cran-dimRed
@@ -106,7 +107,7 @@
     SUBDIR += alt-ergo
     SUBDIR += amath
     SUBDIR += ambit
-    SUBDIR += analitza
+    SUBDIR += analitza-kde4
     SUBDIR += ann
     SUBDIR += apc
     SUBDIR += aribas
@@ -115,7 +116,6 @@
     SUBDIR += arpack++
     SUBDIR += arpack-ng
     SUBDIR += arpack-ng-mpich
-    SUBDIR += asir2000
     SUBDIR += aspcud
     SUBDIR += asymptote
     SUBDIR += atlas
@@ -130,7 +130,7 @@
     SUBDIR += calc
     SUBDIR += calcoo
     SUBDIR += calctool
-    SUBDIR += cantor
+    SUBDIR += cantor-kde4
     SUBDIR += cblas
     SUBDIR += ccmath
     SUBDIR += ceres-solver
@@ -205,6 +205,7 @@
     SUBDIR += glgraph
     SUBDIR += glm
     SUBDIR += glpk
+    SUBDIR += glucose
     SUBDIR += gmm++
     SUBDIR += gmp
     SUBDIR += gmp-ecm
@@ -263,12 +264,12 @@
     SUBDIR += jsmath-fonts
     SUBDIR += jtransforms
     SUBDIR += jts
-    SUBDIR += kalgebra
-    SUBDIR += kbruch
-    SUBDIR += kcalc
-    SUBDIR += kig
+    SUBDIR += kalgebra-kde4
+    SUBDIR += kbruch-kde4
+    SUBDIR += kcalc-kde4
+    SUBDIR += kig-kde4
     SUBDIR += kktdirect
-    SUBDIR += kmplot
+    SUBDIR += kmplot-kde4
     SUBDIR += labplot
     SUBDIR += lambda
     SUBDIR += lapack
@@ -397,7 +398,6 @@
     SUBDIR += octave-forge-nurbs
     SUBDIR += octave-forge-ocs
     SUBDIR += octave-forge-oct2mat
-    SUBDIR += octave-forge-octcdf
     SUBDIR += octave-forge-octclip
     SUBDIR += octave-forge-octproj
     SUBDIR += octave-forge-odebvp
@@ -409,7 +409,6 @@
     SUBDIR += octave-forge-parallel
     SUBDIR += octave-forge-pdb
     SUBDIR += octave-forge-plot
-    SUBDIR += octave-forge-pt_br
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
     SUBDIR += octave-forge-secs1d
@@ -660,6 +659,7 @@
     SUBDIR += py-patsy
     SUBDIR += py-plastex
     SUBDIR += py-probstat
+    SUBDIR += py-pyasp
     SUBDIR += py-pybloom
     SUBDIR += py-pycosat
     SUBDIR += py-pyhull
@@ -688,11 +688,12 @@
     SUBDIR += randlib
     SUBDIR += rapid
     SUBDIR += reduce
+    SUBDIR += reduce-psl
     SUBDIR += reed-solomon
     SUBDIR += rexx-regmath
     SUBDIR += rkward-kde4
     SUBDIR += rngstreams
-    SUBDIR += rocs
+    SUBDIR += rocs-kde4
     SUBDIR += rpcalc
     SUBDIR += rpy
     SUBDIR += rpy2
@@ -714,6 +715,7 @@
     SUBDIR += scilab-toolbox-swt
     SUBDIR += sdpa
     SUBDIR += sdpara
+    SUBDIR += secp256k1
     SUBDIR += sfft
     SUBDIR += sfst
     SUBDIR += simd-viterbi
@@ -736,16 +738,17 @@
     SUBDIR += symmetrica
     SUBDIR += tablix
     SUBDIR += taucs
+    SUBDIR += tblis
     SUBDIR += testu01
     SUBDIR += tetgen
     SUBDIR += timbl
+    SUBDIR += tmv
     SUBDIR += tomsfastmath
     SUBDIR += topaz
     SUBDIR += triangle
     SUBDIR += trlan
     SUBDIR += truthtable
     SUBDIR += tvmet
-    SUBDIR += ufc
     SUBDIR += ump
     SUBDIR += units
     SUBDIR += unuran

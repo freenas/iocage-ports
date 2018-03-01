@@ -14,6 +14,7 @@ COMMENT=	GNU Compiler Collection 5
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
+DEPRECATED=	Unsupported by upstream. Use GCC 6 or newer instead.
 ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 i386 powerpc powerpc64 sparc64
 BROKEN_sparc64=	Does not build: bootstrap comparison failure
 
@@ -116,6 +117,11 @@ CONFIGURE_ARGS+=--enable-languages=${LANGUAGES}
 
 pre-everything::
 	@${ECHO_MSG} "Making GCC ${PORTVERSION} for ${CONFIGURE_TARGET} [${LANGUAGES}]"
+
+post-patch:
+	@${FIND} ${WRKSRC} -type f \( -name '*.[ch]' -o -name '*.cc' \) | \
+	    ${XARGS} ${EGREP} -l '"(HOST_WIDE|PLUGIN_COND|PRId64)' | \
+	    ${XARGS} ${REINPLACE_CMD} -E -e 's/"(HOST_WIDE|PLUGIN_COND|PRId64)/" \1/g'
 
 pre-configure:
 	cd ${WRKSRC} ; contrib/gcc_update --touch
