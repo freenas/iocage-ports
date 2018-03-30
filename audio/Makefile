@@ -21,11 +21,11 @@
     SUBDIR += alienwah
     SUBDIR += alsa-lib
     SUBDIR += alsa-plugins
+    SUBDIR += alsa-sndio
     SUBDIR += alsa-utils
     SUBDIR += alure
     SUBDIR += amarok-kde4
     SUBDIR += amb-plugins
-    SUBDIR += amp
     SUBDIR += ample
     SUBDIR += amsynth
     SUBDIR += aqualung
@@ -223,6 +223,7 @@
     SUBDIR += gmpc-mserver
     SUBDIR += gmpc-shout
     SUBDIR += gmpc-wikipedia
+    SUBDIR += gmsynth-lv2
     SUBDIR += gmtp
     SUBDIR += gmusicbrowser
     SUBDIR += gnaural

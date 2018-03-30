@@ -3,11 +3,12 @@
 
 PORTNAME=	elasticsearch
 PORTVERSION=	1.7.6
+PORTREVISION=	1
 CATEGORIES=	textproc java devel
 MASTER_SITES=	http://download.elasticsearch.org/${PORTNAME}/${PORTNAME}/ \
 		http://mirrors.rit.edu/zi/
 
-MAINTAINER=	tj@FreeBSD.org
+MAINTAINER=	elastic@FreeBSD.org
 COMMENT=	Full-text search engine for Java
 
 LICENSE=	APACHE20

@@ -6,6 +6,7 @@
     SUBDIR += affiche
     SUBDIR += alarm-clock-applet
     SUBDIR += anamnesis
+    SUBDIR += anydesk
     SUBDIR += appwrapper
     SUBDIR += aspostit
     SUBDIR += autocutsel
@@ -22,7 +23,6 @@
     SUBDIR += calibre
     SUBDIR += cartotheque
     SUBDIR += cdcat
-    SUBDIR += charmap
     SUBDIR += charmtimetracker
     SUBDIR += clipit
     SUBDIR += conduit
@@ -163,6 +163,7 @@
     SUBDIR += nautilus-actions
     SUBDIR += nautilus-sendto
     SUBDIR += nemo-extensions
+    SUBDIR += nextcloudclient
     SUBDIR += note
     SUBDIR += notecase
     SUBDIR += noti

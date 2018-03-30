@@ -18,6 +18,7 @@
     SUBDIR += R-cran-rmarkdown
     SUBDIR += R-cran-stringi
     SUBDIR += R-cran-stringr
+    SUBDIR += R-cran-utf8
     SUBDIR += R-cran-xml2
     SUBDIR += R-cran-xtable
     SUBDIR += R-cran-yaml
@@ -336,6 +337,7 @@
     SUBDIR += ibus-kmfl
     SUBDIR += ibus-m17n
     SUBDIR += ibus-qt
+    SUBDIR += ibus-table
     SUBDIR += ibus-typing-booster
     SUBDIR += icdiff
     SUBDIR += id-aspell
@@ -387,6 +389,7 @@
     SUBDIR += kibana5
     SUBDIR += kibana5-search-guard
     SUBDIR += kibana5-x-pack
+    SUBDIR += kibana6
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -583,7 +586,6 @@
     SUBDIR += p5-Geo-Parse-OSM
     SUBDIR += p5-Getopt-Lucid
     SUBDIR += p5-Google-Data-JSON
-    SUBDIR += p5-HTML-CTPP2
     SUBDIR += p5-HTML-Copy
     SUBDIR += p5-HTML-Entities-ImodePictogram
     SUBDIR += p5-HTML-Entities-Interpolate
@@ -1144,6 +1146,7 @@
     SUBDIR += p5-XML-XUpdate-LibXML
     SUBDIR += p5-YAML
     SUBDIR += p5-YAML-LibYAML
+    SUBDIR += p5-YAML-PP
     SUBDIR += p5-YAML-Shell
     SUBDIR += p5-YAML-Syck
     SUBDIR += p5-YAML-Tiny
@@ -1276,6 +1279,7 @@
     SUBDIR += py-asv
     SUBDIR += py-autopep8
     SUBDIR += py-awesome-slugify
+    SUBDIR += py-bibtexparser
     SUBDIR += py-bugzillatools
     SUBDIR += py-chardet
     SUBDIR += py-cjkwrap
@@ -1301,6 +1305,7 @@
     SUBDIR += py-feedparser
     SUBDIR += py-gambit-elasticsearch
     SUBDIR += py-genshi
+    SUBDIR += py-gfm
     SUBDIR += py-guess-language
     SUBDIR += py-hexdump
     SUBDIR += py-html2text
@@ -1337,7 +1342,10 @@
     SUBDIR += py-pyes
     SUBDIR += py-pygments
     SUBDIR += py-pygtail
+    SUBDIR += py-pyhamcrest
     SUBDIR += py-pyhwp
+    SUBDIR += py-pylons-sphinx-themes
+    SUBDIR += py-pypandoc
     SUBDIR += py-pyphen
     SUBDIR += py-pyscss
     SUBDIR += py-pysrt
@@ -1474,15 +1482,16 @@
     SUBDIR += rubygem-babosa
     SUBDIR += rubygem-case_transform
     SUBDIR += rubygem-charlock_holmes
+    SUBDIR += rubygem-chewy
     SUBDIR += rubygem-citrus
     SUBDIR += rubygem-cld3
     SUBDIR += rubygem-coderay
     SUBDIR += rubygem-colorator
     SUBDIR += rubygem-colored
+    SUBDIR += rubygem-commonmarker
     SUBDIR += rubygem-compass
     SUBDIR += rubygem-compass-core
     SUBDIR += rubygem-compass-import-once
-    SUBDIR += rubygem-compass-rails
     SUBDIR += rubygem-creole
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
@@ -1492,6 +1501,7 @@
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
+    SUBDIR += rubygem-elasticsearch-dsl
     SUBDIR += rubygem-elasticsearch-transport
     SUBDIR += rubygem-emot
     SUBDIR += rubygem-escape_utils

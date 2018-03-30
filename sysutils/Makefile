@@ -6,6 +6,7 @@
     SUBDIR += 3dm
     SUBDIR += 44bsd-more
     SUBDIR += 915resolution
+    SUBDIR += DTraceToolkit
     SUBDIR += LPRng
     SUBDIR += LPRngTool
     SUBDIR += UEFITool
@@ -39,6 +40,7 @@
     SUBDIR += ansible
     SUBDIR += ansible1
     SUBDIR += ansible23
+    SUBDIR += ansible24
     SUBDIR += anvil
     SUBDIR += apachetop
     SUBDIR += apcpwr
@@ -49,6 +51,7 @@
     SUBDIR += areca-cli
     SUBDIR += ascpu
     SUBDIR += asfsm
+    SUBDIR += asmctl
     SUBDIR += asmem
     SUBDIR += asmon
     SUBDIR += asusoled
@@ -145,6 +148,7 @@
     SUBDIR += cfengine-masterfiles37
     SUBDIR += cfengine-masterfiles38
     SUBDIR += cfengine-masterfiles39
+    SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine22
     SUBDIR += cfengine310
     SUBDIR += cfengine311
@@ -156,6 +160,7 @@
     SUBDIR += cfengine37
     SUBDIR += cfengine38
     SUBDIR += cfengine39
+    SUBDIR += cfengine-devel
     SUBDIR += chgrep
     SUBDIR += chyves
     SUBDIR += cinnamon-control-center
@@ -188,6 +193,7 @@
     SUBDIR += consolekit2
     SUBDIR += consul
     SUBDIR += consul-alerts
+    SUBDIR += consul-replicate
     SUBDIR += consul_exporter
     SUBDIR += container-diff
     SUBDIR += contractor
@@ -200,6 +206,7 @@
     SUBDIR += cpuburn
     SUBDIR += cpuid
     SUBDIR += cpulimit
+    SUBDIR += cpupdate
     SUBDIR += cramfs
     SUBDIR += crashme
     SUBDIR += createrepo
@@ -209,7 +216,6 @@
     SUBDIR += curly
     SUBDIR += currtime
     SUBDIR += cw
-    SUBDIR += DTraceToolkit
     SUBDIR += daa2iso
     SUBDIR += dae
     SUBDIR += daemonize
@@ -312,6 +318,7 @@
     SUBDIR += file
     SUBDIR += filedupe
     SUBDIR += filelight
+    SUBDIR += filelight-kde4
     SUBDIR += fileprune
     SUBDIR += fileschanged
     SUBDIR += filetype
@@ -363,6 +370,7 @@
     SUBDIR += fusefs-gnome-vfs
     SUBDIR += fusefs-gstfs
     SUBDIR += fusefs-gunzip
+    SUBDIR += fusefs-hfsfuse
     SUBDIR += fusefs-httpfs
     SUBDIR += fusefs-ifuse
     SUBDIR += fusefs-libs
@@ -382,6 +390,7 @@
     SUBDIR += fusefs-sshfs
     SUBDIR += fusefs-unionfs
     SUBDIR += fusefs-wdfs
+    SUBDIR += fusefs-webdavfs
     SUBDIR += fusefs-wikipediafs
     SUBDIR += fusefs-zip
     SUBDIR += fvcool
@@ -448,6 +457,7 @@
     SUBDIR += hal
     SUBDIR += hal-info
     SUBDIR += hardlink
+    SUBDIR += hare
     SUBDIR += hatop
     SUBDIR += hdrecover
     SUBDIR += healthd
@@ -584,6 +594,7 @@
     SUBDIR += logstash
     SUBDIR += logstash-forwarder
     SUBDIR += logstash5
+    SUBDIR += logstash6
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += lookat
@@ -599,6 +610,8 @@
     SUBDIR += lxsplit
     SUBDIR += lxtask
     SUBDIR += lxterminal
+    SUBDIR += mac_nonet
+    SUBDIR += mac_rtprio
     SUBDIR += magicrescue
     SUBDIR += manck
     SUBDIR += mapchan
@@ -679,6 +692,7 @@
     SUBDIR += mountsmb2
     SUBDIR += mpiexec
     SUBDIR += mptd
+    SUBDIR += msiklm
     SUBDIR += msktutil
     SUBDIR += msyslog
     SUBDIR += mtpfs
@@ -916,8 +930,10 @@
     SUBDIR += py-gmailfs-fuse
     SUBDIR += py-google-compute-engine
     SUBDIR += py-halite
+    SUBDIR += py-hared
     SUBDIR += py-honcho
     SUBDIR += py-iowait
+    SUBDIR += py-mqttwarn
     SUBDIR += py-nagiosplugin
     SUBDIR += py-nomad
     SUBDIR += py-pkginfo
@@ -945,7 +961,6 @@
     SUBDIR += py-tmuxp
     SUBDIR += py-uptime
     SUBDIR += py-zdaemon
-    SUBDIR += py-zfs
     SUBDIR += pydf
     SUBDIR += qchroot
     SUBDIR += qdirstat
@@ -1076,6 +1091,7 @@
     SUBDIR += rubygem-yell
     SUBDIR += rundeck
     SUBDIR += runit
+    SUBDIR += runit-faster
     SUBDIR += runwhen
     SUBDIR += s6
     SUBDIR += s6-rc
@@ -1116,6 +1132,7 @@
     SUBDIR += shmcat
     SUBDIR += showbeastie
     SUBDIR += siegfried
+    SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-qt5
     SUBDIR += signon-ui
     SUBDIR += skill
@@ -1169,6 +1186,7 @@
     SUBDIR += syslog-ng311
     SUBDIR += syslog-ng312
     SUBDIR += syslog-ng313
+    SUBDIR += syslog-ng314
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
     SUBDIR += syslog-ng39
@@ -1202,6 +1220,7 @@
     SUBDIR += tmpwatch
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
+    SUBDIR += tmux23
     SUBDIR += topless
     SUBDIR += torque
     SUBDIR += toshctl

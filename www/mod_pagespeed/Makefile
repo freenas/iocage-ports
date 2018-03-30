@@ -2,7 +2,7 @@
 
 PORTNAME=	mod_pagespeed
 PORTVERSION=	1.12.34.2
-PORTREVISION=	5
+PORTREVISION=	8
 PORTEPOCH=	1
 CATEGORIES=	www devel
 MASTER_SITES=	LOCAL/mmokhi:boringssl,chromium_base,chromium_build,googleurl,gflags_arch,gflags_src,libjpeg_turbo_src,yasm_patched,libwebp,modpb64 \
@@ -32,9 +32,8 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libicutu.so:devel/icu \
 		libopencv_legacy.so:graphics/opencv
 
-USES=		compiler:c++14-lang gperf jpeg gmake localbase pkgconfig \
-		python:2.7 shebangfix ssl tar:xz
-USE_APACHE=	22+
+USES=		apache:2.2+ compiler:c++14-lang gperf jpeg gmake localbase \
+		pkgconfig python:2.7 shebangfix ssl tar:xz
 SHEBANG_GLOB=	*.gyp *.gypi *.py *.sh
 SHEBANG_FILES=	build/fix_proto_and_invoke_protoc
 

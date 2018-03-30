@@ -5660,7 +5660,6 @@ devel/sgl||2014-03-16|Has expired: never progressed beyond incomplete graduate p
 palm/jpilot-db||2014-03-16|Has expired
 databases/ludia||2014-03-18|Has expired: Broken since June 2013
 lang/schemetoc||2014-03-18|Has expired: Broken since July 2013
-sysutils/cfengine-devel||2014-03-19|Has expired: Broken since June 2013
 sysutils/py-salt-cloud|sysutils/py-salt|2014-03-19|Removed:py-salt-cloud is now part of py-salt
 devel/py-pyzmq|net/py-pyzmq|2014-03-22|Move to a more suitable category with other ZeroMQ ports
 audio/p5-Xmms|multimedia/audacious|2014-03-23|Has expired: Abandonware, please consider using multimedia/audacious instead
@@ -7523,7 +7522,6 @@ net-mgmt/glpi-plugins-tracker-server|net-mgmt/glpi-plugins-fusioninventory-serve
 science/rubygem-netcdf|science/rubygem-ruby-netcdf|2015-05-24|Rename to match our rubygem- port naming
 security/rubygem-rc4|security/rubygem-ruby-rc4|2015-05-24|Rename to match our rubygem- port naming
 print/rubygem-colortools|print/rubygem-color-tools|2015-05-24|Rename to match our rubygem- port naming
-security/qtkeychain|security/qtkeychain-qt5|2015-05-24|Renamed to indicate supported QT version
 www/rubygem-layout-yullio|www/rubygem-layout_yullio_generator|2015-05-27|Rename to match our rubygem- port naming
 net/rubygem-rightaws|net/rubygem-right_aws|2015-05-27|Rename to match our rubygem- port naming
 net/rubygem-rightflexiscale|net/rubygem-right_flexiscale|2015-05-27|Rename to match our rubygem- port naming
@@ -8565,6 +8563,7 @@ textproc/asciinema|textproc/py3-asciinema|2016-09-13|Has expired: use textproc/p
 x11-toolkits/qtada||2016-09-13|Has expired: No development since 2012, usefulness unclear
 security/letsencrypt.sh|security/dehydrated|2016-09-13|Upstream renamed the project
 devel/py-dogpile.core|devel/py-dogpile.cache|2016-09-13|EOL upstream. Merged into devel/py-dogpile.cache since 0.6.0
+archivers/php5-snappy|archivers/pecl-snappy|2016-09-15|It is PHP 7 compatible now
 korean/imhangul||2016-09-15|Split into korean/imhangul-gtk2 and korean/imhangul-gtk3
 devel/poco-devel|devel/poco|2016-09-18|Has expired: older than stable devel/poco
 databases/pglogical-output|databases/pglogical|2016-09-22|databases/pglogical-output merged into databases/pglogical
@@ -9080,6 +9079,7 @@ x11/rsibreak-kde4|x11/rsibreak|2017-03-11|Renamed to drop the -kde4 suffix
 textproc/ack|textproc/p5-ack|2017-03-12|Rename to match our perl naming
 misc/p5-Geo-Coder-Geocoder-US||2017-03-12|Has expired: http://geocoder.us/ disappeared in late 2015
 databases/py-sqlalchemy09|databases/py-sqlalchemy10|2017-03-12|Has expired: Upstream has declared this version EoL: please migrate to databases/py-sqlalchemy10
+lang/OpenCoarrays|lang/opencoarrays|2017-03-12|Rename to lower case
 devel/avr-gcc-devel||2017-03-13|Has expired: There's no longer a point to have both, a -devel and a regular port of GCC for the AVR
 net/py-pysimplesoap|net/py-soap2py|2017-03-13|Rename to match upstream naming
 games/trigger-data|games/trigger-rally|2017-03-15|Merged into games/trigger-rally
@@ -9304,7 +9304,6 @@ games/libfov||2017-04-30|Has expired: Unfetchable for more than six months (goog
 games/dcross||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 games/lostfeathers||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 games/hexglass||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
-textproc/ibus-table||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 textproc/chm2pdf||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 textproc/dtdinst||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 textproc/py-xmltv||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
@@ -9517,7 +9516,6 @@ devel/py3-enum34||2017-09-03|Removed, Python 3.3 only
 security/clambc||2017-09-14|Has expired: Practically unmaintained, featuring issues elsewhere solved 6 years ago
 devel/cmake-modules||2017-09-14|Deleted, merged into devel/cmake
 devel/cargo|lang/rust|2017-09-15|Merged with lang/rust
-sysutils/filelight-kde4|sysutils/filelight|2017-09-16|Renamed to sysutils/filelight
 security/gnupg22|security/gnupg|2017-09-19|Removed, security/gnupg is now gnupg22
 mail/milter-greylist-devel|mail/milter-greylist|2017-09-22|Has expired: mail/milter-greylist provides same version and options
 devel/libexecinfo||2017-09-22|Is present in the base system of all supported releases
@@ -10141,3 +10139,107 @@ devel/rubygem-progressbar09||2018-02-28|Has expired: Only used by deprecated sys
 sysutils/rubygem-bosh_cli||2018-02-28|Has expired: Use net/bosh-cli (CLI v2) instead
 www/rubygem-gon-rails4||2018-02-28|Has expired: It is actually www/rubygem-gon with PKGNAMESUFFIX
 science/veusz|science/py-veusz|2018-03-01|Rename to match our py- port naming
+security/obfsproxy|security/py-obfsproxy-tor|2018-03-01|Rename to match our py- port naming
+devel/dotconf++||2018-03-02|Has expired: No upstream, not depend on in the ports tree
+emulators/gnuboy||2018-03-02|Has expired: Latest version is 1.0.5, older version does not fetch
+games/adgali||2018-03-02|Has expired: Mastersite disappeared
+games/tuxpuck||2018-03-02|Has expired: Mastersite disappeared
+japanese/migemo-emacs||2018-03-02|Has expired: Unmaintained
+math/clarence||2018-03-02|Has expired: Mastersite disappeared
+devel/cstringbuffer||2018-03-02|Has expired: Abandonware, no more upstream
+deskutils/charmap||2018-03-02|Has expired: Mastersite disappeared
+devel/afay||2018-03-02|Has expired: Abandonware, not used in the ports tree
+devel/alabastra||2018-03-02|Has expired: Abandonware, not used in the ports tree
+devel/adime||2018-03-02|Has expired: Abandonware, not used in the ports tree
+devel/boaconstructor||2018-03-02|Has expired: Abandonware, does not work with recent python/wxPython
+audio/amp||2018-03-02|Has expired: No more upstream
+devel/alf||2018-03-02|Has expired: Abandonware, unused in the ports tree
+net/remmina-plugin-gnome|net/remmina-plugin-secret|2018-03-04|Renamed upstream
+databases/php70-memcache|databases/php-memcache@php70|2018-03-08|Merge into a flavorized version
+databases/php71-memcache|databases/php-memcache@php71|2018-03-08|Merge into a flavorized version
+databases/php72-memcache|databases/php-memcache@php72|2018-03-08|Merge into a flavorized version
+ftp/php56-fastdfs|ftp/php-fastdfs@php56|2018-03-08|Merge into flavorized version
+ftp/php70-fastdfs|ftp/php-fastdfs@php70|2018-03-08|Merge into flavorized version
+ftp/php71-fastdfs|ftp/php-fastdfs@php71|2018-03-08|Merge into flavorized version
+ftp/php72-fastdfs|ftp/php-fastdfs@php72|2018-03-08|Merge into flavorized version
+www/unit-php56|www/unit-php@php56|2018-03-08|Merge into flavorized version
+www/unit-php70|www/unit-php@php70|2018-03-08|Merge into flavorized version
+www/unit-php71|www/unit-php@php71|2018-03-08|Merge into flavorized version
+www/unit-php72|www/unit-php@php72|2018-03-08|Merge into flavorized version
+databases/php70-memcached|databases/php-memcached|2018-03-08|Move to flavorized version
+www/openxmldir||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/hastymail2||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/dalbum||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/iwebcal||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/impresscms||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/freeway||2018-03-08|Has expired: Unmaintained upstream, all www files wrongly belongs to www user
+www/xaraya||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/subsonic||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/phpwebapp||2018-03-08|Has expired: Unmaintained upstream, all www files wrongly belongs to www user
+www/hastymail||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/b2evolution||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/textpattern||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/eventum||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/quickie||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/jinzora||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/zen-cart||2018-03-08|Has expired: Unmaintained, no upstream, all www files wrongly belongs to www user
+www/bblog||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/extjs||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/geeklog||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/lilurl||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/zikula||2018-03-08|Has expired: Unmaintained, no upstream, all www files wrongly belongs to www user
+www/yii||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/phpmp||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/lionwiki||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+databases/php-memcached|databases/pecl-memcached|2018-03-10|Remove duplicate port, use databases/pecl-memcached instead
+emulators/i386-wine-staging|emulators/i386-wine-devel|2018-03-10|Broken for months, abandoned upstream
+archivers/quazip-qt5|archivers/quazip@qt5|2018-03-11|Moved to a flavoured version
+devel/go-json-rest||2018-03-11|Go libraries aren't allowed (GH/ant0ine/go-json-rest)
+security/qtkeychain-qt4|security/qtkeychain@qt4|2018-03-12|Moved to a flavoured version
+security/qtkeychain-qt5|security/qtkeychain@qt5|2018-03-12|Moved to a flavoured version
+devel/libdbusmenu-qt5|devel/libdbusmenu-qt@qt5|2018-03-12|Moved to a flavoured version
+finance/electrum2|finance/electrum|2018-03-13|Has expired: Vulnerable legacy port, please use finance/electrum instead
+math/py-gsl|math/py-pygsl|2018-03-13|Rename to match PyPI naming
+www/mediawiki123|www/mediawiki127|2018-03-14|Has expired: Upstream no longer maintained
+www/mediawiki128|www/mediawiki130|2018-03-14|Has expired: Upstream no longer maintained
+sysutils/py-zfs||2018-03-16|Not needed since ZFS 28
+net/freebsd-tftp||2018-03-16|Imported into base in FreeBSD 8.0
+multimedia/plexpy|multimedia/tautulli|2018-03-17|Project renamed due to copyright infringement
+net-im/ring-daemon||2018-03-18|Ring can't build because it depends on custom bundled versions of other packages
+net-im/ring-libclient||2018-03-18|Ring can't build because it depends on custom bundled versions of other packages
+net-im/ring-gnome||2018-03-18|Ring can't build because it depends on custom bundled versions of other packages
+astro/libkgeomap|astro/libkgeomap-kde4|2018-03-20|Make room for KDE updates
+databases/akonadi|databases/akonadi-kde4|2018-03-20|Make room for KDE updates
+graphics/code-eli||2018-03-20|Has expired: Broken for more than 6 months
+databases/pg_rman||2018-03-20|Has expired: Broken for more than 6 months
+devel/elixir-simple_bayes||2018-03-20|Has expired: Broken for more than 6 months
+devel/elixir-stemmer||2018-03-20|Has expired: Broken for more than 6 months
+benchmarks/expedite||2018-03-20|Has expired: Broken for more than 6 months
+textproc/p5-HTML-CTPP2||2018-03-20|Has expired: Broken for more than 6 months
+textproc/rubygem-compass-rails||2018-03-20|Has expired: Broken for more than 6 months
+graphics/pfscalibration||2018-03-20|Deprecated: pfs-calibration is a part of pfstools (from version 2.0)
+graphics/pfstmo||2018-03-20|Deprecated: pfstmo is a part of pfstools
+games/timeseal||2018-03-22|Has expired: Abandoned, outdated, requires COMPAT_43 kernel option which was removed from GENERIC in FreeBSD 7.0
+net-im/ktp-accounts-kcm|net-im/ktp-accounts-kcm-kde4|2018-03-23|Make room for KDE updates
+net-im/ktp-approver|net-im/ktp-approver-kde4|2018-03-23|Make room for KDE updates
+net-im/ktp-auth-handler|net-im/ktp-auth-handler-kde4|2018-03-23|Make room for KDE updates
+net-im/ktp-common-internals|net-im/ktp-common-internals-kde4|2018-03-23|Make room for KDE updates
+net-im/ktp-contact-list|net-im/ktp-contact-list-kde4|2018-03-23|Make room for KDE updates
+net-im/ktp-contact-runner|net-im/ktp-contact-runner-kde4|2018-03-23|Make room for KDE updates
+net-im/ktp-desktop-applets|net-im/ktp-desktop-applets-kde4|2018-03-23|Make room for KDE updates
+net-im/ktp-filetransfer-handler|net-im/ktp-filetransfer-handler-kde4|2018-03-23|Make room for KDE updates
+net-im/ktp-kded-integration-module|net-im/ktp-kded-integration-module-kde4|2018-03-23|Make room for KDE updates
+net-im/ktp-send-file|net-im/ktp-send-file-kde4|2018-03-23|Make room for KDE updates
+net-im/ktp-text-ui|net-im/ktp-text-ui-kde4|2018-03-23|Make room for KDE updates
+net-im/kde-telepathy|net-im/telepathy-kde4|2018-03-23|Make room for KDE updates
+net-im/plasma-applet-ktp|net-im/plasma-applet-ktp-kde4|2018-03-23|Make room for KDE updates
+multimedia/gmencoder||2018-03-23|Abandonware, does not support modern codecs
+mail/wanderlust-devel|mail/wanderlust|2018-03-23|Removed, use mail/wanderlust instead
+graphics/skanlite|graphics/skanlite-kde4|2018-03-25|Make room for KDE updates
+lang/x10||2018-03-25|Has expired: Broken for more than 6 months
+science/siril|astro/siril|2018-03-25|Moved to a more appropriate category
+net/samba44|net/samba45|2018-03-26|Has expired: unsupported upstream
+mail/sisyphus||2018-03-26|Has expired: Never built
+www/fira-webfont||2018-03-26|Has expired: Unused with no apparent use case
+www/dummyflash||2018-03-26|Has expired: Unused, unmaintained, and obsolete
+devel/guikachu||2018-03-26|Has expired: Broken for more than 9 months
