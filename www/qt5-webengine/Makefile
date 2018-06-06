@@ -13,6 +13,10 @@
 # - We need to see if more "use_system_<FOO>" flags can be passed.
 # - The process of porting QtWebEngine needs to be documented so we can move to
 #   newer releases more easily.
+#
+# Also note that, due to the insane amount of patches this port needs, it tends
+# to lag behind the rest of the official Qt5 ones, which is why we set
+# QT5_VERSION and DISTINFO_FILE here.
 
 PORTNAME=	webengine
 DISTVERSION=	${QT5_VERSION}
@@ -43,6 +47,9 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libsnappy.so:archivers/snappy \
 		libsrtp.so:net/libsrtp \
 		libwebp.so:graphics/webp
+
+DISTINFO_FILE=	${.CURDIR}/distinfo
+QT5_VERSION=	5.9.5
 
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO
@@ -80,11 +87,15 @@ ALL_TARGET=	first
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-10
-
-BUILD_DEPENDS+=	clang50:devel/llvm50
-CC=		clang50
-CXX=		clang++50
 .endif  # ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
+
+# 1101513 is 11-STABLE after merging clang, llvm, lld, lldb, compiler-rt and
+#            libc++ 6.0.0 release, and several follow-up fixes.
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1101513
+BUILD_DEPENDS+=	clang60:devel/llvm60
+CC=		clang60
+CXX=		clang++60
+.endif  # ${OPSYS} == FreeBSD && ${OSVERSION} < 1101513
 
 # We need ar(1) from ports because the Chromium code uses the @file syntax.
 # We then need to ensure ld(1) from ports is used because of the archives ar(1)

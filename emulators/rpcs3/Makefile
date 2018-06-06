@@ -2,8 +2,8 @@
 
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.5-137
-DISTVERSIONSUFFIX=	-g70cc2e366
+DISTVERSION=	0.0.5-441
+DISTVERSIONSUFFIX=	-g88f9d5d58
 CATEGORIES=	emulators
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -25,26 +25,26 @@ ONLY_FOR_ARCHS_REASON=	requires int128 and SSE2
 USE_GITHUB=	yes
 GH_ACCOUNT=	RPCS3
 GH_TUPLE=	RPCS3:hidapi:hidapi-0.8.0-rc1-25-gca39ce8:hidapi/3rdparty/hidapi \
+		RPCS3:llvm:17ec6d78a73:llvm/llvm \
 		RPCS3:yaml-cpp:release-0.5.3-62-g017626a:yamlcpp/Utilities/yaml-cpp \
 		akrzemi1:Optional:f27e790:Optional/3rdparty/Optional \
+		Cyan4973:xxHash:v0.6.5:xxHash/3rdparty/xxHash \
 		kobalicek:asmjit:673dcef:asmjit/asmjit \
+		KhronosGroup:glslang:3.0-1794-ge22e3473:glslang/Vulkan/glslang \
 		Microsoft:GSL:fc5fce4:GSL/3rdparty/GSL \
 		USCiLab:cereal:v1.2.0:cereal/3rdparty/cereal \
 		zeux:pugixml:v1.8.1-148-g257fbb4:pugixml/3rdparty/pugixml
 
-USES=		cmake compiler:c++14-lang iconv:wchar_t localbase:ldflags \
+USES=		cmake:outsource compiler:c++14-lang iconv:wchar_t localbase:ldflags \
 		openal:soft pkgconfig
 USE_GL=		gl glew
 USE_QT5=	qmake_build buildtools_build core dbus gui network widgets qml
 USE_XORG=	x11
-EXTRA_PATCHES+=	${EXTRA_PATCHES_${OPSYS}_${OSREL}}
-EXTRA_PATCHES_FreeBSD_10.3=	${PATCHDIR}/extra-patch-no-thread_local
 CMAKE_ON=	CMAKE_SKIP_RPATH USE_SYSTEM_FFMPEG USE_SYSTEM_LIBPNG
 CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS
 CXXFLAGS+=	-D_GLIBCXX_USE_C99 # XXX ports/193528
 CXXFLAGS+=	-Wno-macro-redefined # __STDC_*_MACROS sys/cdefs.h vs. llvm-config
 LDFLAGS+=	-Wl,--as-needed # GLU
-MESA_LLVM_VER?=	50
 
 OPTIONS_DEFINE=	ALSA EVDEV GDB LLVM PULSEAUDIO VULKAN
 OPTIONS_DEFAULT=ALSA LLVM VULKAN
@@ -64,17 +64,14 @@ GDB_DESC=		GDB remote stub (powerpc64 target)
 GDB_CMAKE_BOOL=		WITH_GDB
 
 LLVM_DESC=		LLVM-based PPU recompiler
-LLVM_BUILD_DEPENDS=	llvm${MESA_LLVM_VER}>0:devel/llvm${MESA_LLVM_VER}
-LLVM_CMAKE_ON=		-DLLVM_DIR:PATH=${LOCALBASE}/llvm${MESA_LLVM_VER}/lib/cmake/llvm
 LLVM_CMAKE_BOOL_OFF=	WITHOUT_LLVM
 
 PULSEAUDIO_LIB_DEPENDS=	libpulse-simple.so:audio/pulseaudio
 PULSEAUDIO_CMAKE_BOOL=	USE_PULSE
 
 VULKAN_DESC=		Vulkan renderer
-VULKAN_BUILD_DEPENDS=	${LOCALBASE}/lib/libglslang.a:devel/glslang
 VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-sdk
-VULKAN_CMAKE_BOOL=	USE_VULKAN VULKAN_PREBUILT
+VULKAN_CMAKE_BOOL=	USE_VULKAN
 
 post-patch:
 	@${REINPLACE_CMD} -e '/GIT_BRANCH/s/unknown/master/' \

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	botan
-DISTVERSION=	2.4.0
+DISTVERSION=	2.6.0
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://botan.randombit.net/releases/
@@ -62,7 +62,7 @@ post-patch:
 		${WRKSRC}/src/build-data/cc/clang.txt
 
 post-install:
-.for i in bin/botan lib/libbotan-2.so.4.4.0
+.for i in bin/botan lib/libbotan-2.so.5.6.0
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${i}
 .endfor
 

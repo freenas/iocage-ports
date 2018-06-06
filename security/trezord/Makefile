@@ -3,7 +3,7 @@
 
 PORTNAME=	trezord
 PORTVERSION=	1.2.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	LOCAL/ale
 
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libjsoncpp.so:devel/jsoncpp \
 		libmicrohttpd.so:www/libmicrohttpd
 
-USES=		cmake pkgconfig
+USES=		cmake compiler:c++11-lang pkgconfig
 
 USE_RC_SUBR=	${PORTNAME}
 

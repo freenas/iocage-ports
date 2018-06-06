@@ -3,7 +3,7 @@
 
 PORTNAME=	cjdns
 DISTVERSIONPREFIX=	cjdns-v
-DISTVERSION=	20.1
+DISTVERSION=	20.2
 CATEGORIES=	net security
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -30,7 +30,7 @@ post-patch:
 		${WRKSRC}/contrib/sh/run-cjdroute.sh
 
 do-build:
-	cd ${WRKSRC} && ./do
+	@cd ${WRKSRC} && ./do
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cjdroute ${STAGEDIR}${PREFIX}/bin

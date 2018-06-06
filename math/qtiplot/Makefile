@@ -3,11 +3,11 @@
 
 PORTNAME=	qtiplot
 DISTVERSION=	0.9.8.9
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	math science
 MASTER_SITES=	BERLIOS http://soft.proindependent.com/src/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Data analysis and scientific plotting
 
 LIB_DEPENDS=	libgsl.so:math/gsl \
@@ -28,7 +28,7 @@ DESKTOP_ENTRIES="QtiPlot" "Data analysis and plotting" \
 		"${PREFIX}/share/pixmaps/qtiplot.png" \
 		"qtiplot" "" true
 
-OPTIONS_DEFINE=	DOCS PYTHON NLS DEBUG
+OPTIONS_DEFINE=	DOCS PYTHON NLS
 OPTIONS_DEFAULT=	PYTHON
 OPTIONS_SUB=	yes
 
@@ -56,20 +56,19 @@ post-patch:
 		${WRKSRC}/fitPlugins/*/*.pro
 	${REINPLACE_CMD} -e '/^system($$$$LUPDATE/d; /^system($$$$LRELEASE/d' \
 		${WRKSRC}/${PORTNAME}/qtiplot.pro
-
-post-patch-PYTHON-on:
-	${REINPLACE_CMD} -e \
-		'/^sys.path.append/s|"\."|"${DATADIR}"|' \
-		${WRKSRC}/${PORTNAME}/qtiplotrc.py
+# fix build with clang6
+	${REINPLACE_CMD} \
+		-e '/new[[:space:]]*QComboBox/s,false,,g' \
+		-e '/new[[:space:]]*PatternBox/s,false,,g' \
+		${WRKSRC}/qtiplot/src/matrix/MatrixValuesDialog.cpp \
+		${WRKSRC}/qtiplot/src/plot2D/dialogs/LayerDialog.cpp \
+		${WRKSRC}/qtiplot/src/plot2D/dialogs/PlotDialog.cpp \
+		${WRKSRC}/qtiplot/src/table/SetColValuesDialog.cpp \
+		${WRKSRC}/qtiplot/src/table/TableDialog.cpp
 
 post-patch-PYTHON-off:
 	${REINPLACE_CMD} -e \
 		"s/SCRIPTING_LANGS.*Python//" \
-		${WRKSRC}/build.conf
-
-post-patch-DEBUG-on:
-	${REINPLACE_CMD} -e \
-		"/^CONFIG.*release/s|release|debug|" \
 		${WRKSRC}/build.conf
 
 post-patch-NLS-off:
