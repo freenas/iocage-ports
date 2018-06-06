@@ -2,16 +2,17 @@
 # $FreeBSD$
 
 PORTNAME=	redis
-DISTVERSION=	4.0.8
-PORTREVISION=	1
+DISTVERSION=	5.0-rc1
 CATEGORIES=	databases
-MASTER_SITES=	http://download.redis.io/releases/
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Persistent key-value database with built-in net interface
 
 LICENSE=	BSD3CLAUSE
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	antirez
 
 OPTIONS_DEFINE=	TESTS TRIB
 OPTIONS_RADIO=	EXTLUA
@@ -57,15 +58,13 @@ USES+=		tcl:build
 
 LDFLAGS+=	-lpthread -lm -lexecinfo
 
-CONFLICTS?=	redis-3.*
+CONFLICTS?=	redis-4.*
 
 USES+=		gmake
 MAKE_ENV=	"V=yo"
 USE_RC_SUBR=	redis sentinel
 BIN_FILES=	redis-benchmark redis-check-aof redis-check-rdb \
 		redis-cli redis-sentinel redis-server
-
-PKGMESSAGE=	${WRKDIR}/pkg-message
 
 USERS=	redis
 GROUPS=	redis
@@ -107,7 +106,7 @@ do-install:
 		${STAGEDIR}${REDIS_DBDIR} \
 		${STAGEDIR}${REDIS_RUNDIR}
 
-regression-test: build
+do-test:
 	@cd ${WRKSRC} && ${TCLSH} tests/test_helper.tcl
 
 .include <bsd.port.mk>

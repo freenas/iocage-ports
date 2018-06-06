@@ -2,18 +2,22 @@
 # $FreeBSD$
 
 PORTNAME=	emacs-w3m
-PORTVERSION=	1.4.598.b.${SNAPDATE}
-PORTREVISION=	3
+PORTVERSION=	1.4.620.b.${SNAPDATE}
 CATEGORIES=	www elisp
 MASTER_SITES=	LOCAL/nobutaka
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
-DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-1.4.598-${SNAPDATE}
+DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-1.4.620-${SNAPDATE}
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	Simple front-end to w3m for emacs
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+.if ${FLAVOR:U} != devel && ${FLAVOR:U} != devel_nox
+# http://pkg.awarnach.mathstat.dal.ca/data/11i386-default/2018-05-30_07h36m11s/logs/errors/emacs-w3m-emacs26-1.4.620.b.20180331_1.log
+BROKEN=		fails to configure
+.endif
 
 BUILD_DEPENDS=	w3m:www/w3m
 RUN_DEPENDS=	w3m:www/w3m
@@ -25,7 +29,7 @@ ALL_TARGET=	default
 INSTALL_TARGET=	install install-icons
 
 NO_ARCH=	yes
-SNAPDATE=	20170903
+SNAPDATE=	20180331
 MAKE_JOBS_UNSAFE=	yes
 
 GNU_CONFIGURE=	yes

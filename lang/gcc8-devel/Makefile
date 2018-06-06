@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gcc
-PORTVERSION=	8.0.1.s20180325
+PORTVERSION=	8.1.1.s20180601
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -14,7 +14,7 @@ COMMENT=	GNU Compiler Collection 8
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
-ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 sparc64
+ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpcspe sparc64
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
@@ -25,6 +25,8 @@ RUN_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
 .if defined(MAINTAINER_MODE)
 BUILD_DEPENDS+=	runtest:misc/dejagnu
 .endif
+
+CONFLICTS=	gcc8-8.*
 
 CPE_VENDOR=	gnu
 CPE_VERSION=	${GCC_VERSION}
@@ -63,6 +65,9 @@ CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 .elif ${ARCH} == powerpc64
 CONFIGURE_ENV+=	UNAME_m="powerpc64"
 USE_GCC=	yes
+
+.elif ${ARCH} == powerpcspe
+CONFIGURE_ARGS+=	--with-cpu=8540 --enable-e500_double --without-fp
 .endif
 
 LANGUAGES:=	c,c++,objc,fortran

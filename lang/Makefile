@@ -4,6 +4,7 @@
     COMMENT = Programming languages
 
     SUBDIR += Gofer
+    SUBDIR += J
     SUBDIR += abcl
     SUBDIR += adacontrol
     SUBDIR += afnix
@@ -45,6 +46,7 @@
     SUBDIR += cmucl
     SUBDIR += cmucl-extra
     SUBDIR += cocor
+    SUBDIR += coffeescript
     SUBDIR += cparser
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
@@ -55,6 +57,7 @@
     SUBDIR += dmd1
     SUBDIR += dmd2
     SUBDIR += duktape
+    SUBDIR += duktape-lib
     SUBDIR += ecl
     SUBDIR += elan
     SUBDIR += elixir
@@ -62,6 +65,7 @@
     SUBDIR += elk
     SUBDIR += emacs-lisp-intro
     SUBDIR += erlang
+    SUBDIR += erlang-doc
     SUBDIR += erlang-java
     SUBDIR += erlang-riak
     SUBDIR += erlang-runtime15
@@ -105,6 +109,7 @@
     SUBDIR += gcc7
     SUBDIR += gcc7-devel
     SUBDIR += gcc8-devel
+    SUBDIR += gcc9-devel
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += gjs
@@ -150,6 +155,8 @@
     SUBDIR += jython
     SUBDIR += kawa
     SUBDIR += kf5-kross
+    SUBDIR += kross-interpreters
+    SUBDIR += kturtle
     SUBDIR += kturtle-kde4
     SUBDIR += lafontaine
     SUBDIR += lci
@@ -244,9 +251,9 @@
     SUBDIR += pcc
     SUBDIR += pecl-perl
     SUBDIR += perl5-devel
-    SUBDIR += perl5.22
     SUBDIR += perl5.24
     SUBDIR += perl5.26
+    SUBDIR += perl5.28
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += phantomjs
@@ -268,7 +275,6 @@
     SUBDIR += ponyc
     SUBDIR += ptoc
     SUBDIR += pure
-    SUBDIR += py-clojure_py
     SUBDIR += py-hy
     SUBDIR += py-mx-base
     SUBDIR += py-prolog
@@ -318,7 +324,6 @@
     SUBDIR += scheme48
     SUBDIR += scm
     SUBDIR += sdcc
-    SUBDIR += sdcc-devel
     SUBDIR += see
     SUBDIR += seed7
     SUBDIR += siod
@@ -338,6 +343,7 @@
     SUBDIR += spidermonkey185
     SUBDIR += spidermonkey24
     SUBDIR += spidermonkey38
+    SUBDIR += spidermonkey52
     SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel

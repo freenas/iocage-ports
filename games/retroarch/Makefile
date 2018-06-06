@@ -4,7 +4,7 @@
 PORTNAME=	RetroArch
 PORTVERSION=	1.3.6
 DISTVERSIONPREFIX=	v
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	games
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -26,6 +26,7 @@ NETPLAY_DESC=	Peer-to-peer netplay
 PYTHON_DESC=	Script support in shaders
 FBO_DESC=	OpenGL render-to-texture
 
+FFMPEG_BROKEN=		fails to build with ffmpeg 4.0
 FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 FFMPEG_CONFIGURE_ENABLE=ffmpeg
 OSS_CONFIGURE_ENABLE=	oss
@@ -64,6 +65,7 @@ SUB_FILES=	pkg-message
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--global-config-dir=${LOCALBASE}/etc
 USE_XORG=	x11 xcb xext xinerama xv xxf86vm
+LLD_UNSAFE=	yes
 SHEBANG_FILES=	libretro-common/glsym/glgen.py libretro-common/glsym/rglgen.py tools/cg2glsl.py tools/vulkan_loader_generator.py
 
 post-patch:

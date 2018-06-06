@@ -1,11 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	8.11.0
+PORTVERSION=	8.11.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	8
+
+PATCH_SITES=	https://github.com/nodejs/node/commit/
+PATCHFILES=	b8f47b27571f.patch:-p1
 
 MAINTAINER=	bhughes@FreeBSD.org
 COMMENT=	V8 JavaScript for client and server (8.x LTS)

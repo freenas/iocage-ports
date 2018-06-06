@@ -3,7 +3,7 @@
 
 PORTNAME=	shibboleth-sp
 PORTVERSION=	2.6.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security www
 MASTER_SITES=	http://shibboleth.net/downloads/service-provider/${PORTVERSION}/
 
@@ -45,7 +45,7 @@ MEMCACHED_DESC=	Store sessions in memcached
 FASTCGI_DESC=	FastCGI protocol support, e.g. for NGINX
 APACHE_DESC=	Build Apache module
 
-APACHE_USES=	apache=2.2+
+APACHE_USES=	apache:2.2+
 
 ODBC_CONFIGURE_ENABLE=	odbc
 ODBC_LIB_DEPENDS=	libodbc.so:databases/unixODBC

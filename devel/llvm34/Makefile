@@ -2,7 +2,7 @@
 
 PORTNAME=	llvm
 PORTVERSION=	3.4.2
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/releases/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
@@ -239,7 +239,8 @@ post-install:
 .endif
 
 TEST_CMD=	'(cd ${WRKSRC}/test; ${SETENV} ${MAKE_ENV} LD_LIBRARY_PATH=${WRKSRC}/Release/lib ${MAKE_CMD} check-local-lit)'
-regression-test: ${BUILD_COOKIE}
+do-test:
+	echo ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 	if [ `${ID} -u` = 0 ]; then \
 		${CHOWN} -R nobody ${WRKSRC}/test; \
 		su -m nobody -c ${TEST_CMD}; \

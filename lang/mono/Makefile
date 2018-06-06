@@ -3,6 +3,7 @@
 
 PORTNAME=	mono
 PORTVERSION=	5.2.0.215
+PORTREVISION=	1
 DISTVERSIONPREFIX=	mono-
 CATEGORIES=	lang
 
@@ -50,6 +51,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 LLD_UNSAFE=	yes
 SHEBANG_FILES=	scripts/mono-heapviz
+MAKE_JOBS_UNSAFE=	yes
 
 USE_GITHUB=	yes
 GH_TUPLE=	mono:Lucene.Net.Light:85978b7:1/external/Lucene.Net.Light \

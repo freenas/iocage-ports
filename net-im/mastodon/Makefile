@@ -2,7 +2,8 @@
 
 PORTNAME=	mastodon
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.3.2
+DISTVERSION=	2.3.3
+PORTREVISION=	1
 CATEGORIES=	net-im www
 
 MAINTAINER=	ports@FreeBSD.org
@@ -10,6 +11,10 @@ COMMENT=	GNU Social-compatible microblogging server
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		Fails to build
+DEPRECATED=	Breaks too frequently
+EXPIRATION_DATE=	2018-07-01
 
 BUILD_DEPENDS=	yarn>:www/yarn\
 		${BR_DEPENDS}

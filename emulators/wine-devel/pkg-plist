@@ -878,6 +878,8 @@ include/wine/windows/winuser.h
 include/wine/windows/winuser.rh
 include/wine/windows/winver.h
 include/wine/windows/wlanapi.h
+include/wine/windows/wmcodecdsp.h
+include/wine/windows/wmcodecdsp.idl
 include/wine/windows/wmdrmsdk.h
 include/wine/windows/wmdrmsdk.idl
 include/wine/windows/wmistr.h
@@ -886,6 +888,7 @@ include/wine/windows/wmiutils.h
 include/wine/windows/wmiutils.idl
 include/wine/windows/wmp.h
 include/wine/windows/wmp.idl
+include/wine/windows/wmpids.h
 include/wine/windows/wmsbuffer.h
 include/wine/windows/wmsbuffer.idl
 include/wine/windows/wmsdk.h
@@ -938,7 +941,7 @@ include/wine/windows/zmouse.h
 include/wine/windows/ddk/compstui.h
 include/wine/windows/ddk/csq.h
 include/wine/windows/ddk/d3dkmthk.h
-%%STAGING%%include/wine/windows/ddk/fltkernel.h
+include/wine/windows/ddk/fltkernel.h
 include/wine/windows/ddk/hidclass.h
 include/wine/windows/ddk/hidpi.h
 include/wine/windows/ddk/hidport.h
@@ -1189,6 +1192,7 @@ lib/wine/atl100.dll.so
 lib/wine/atl110.dll.so
 lib/wine/atl80.dll.so
 lib/wine/atl90.dll.so
+lib/wine/atmlib.dll.so
 lib/wine/attrib.exe.so
 lib/wine/authz.dll.so
 lib/wine/avicap32.dll.so
@@ -1240,7 +1244,7 @@ lib/wine/d3d10.dll.so
 lib/wine/d3d10_1.dll.so
 lib/wine/d3d10core.dll.so
 lib/wine/d3d11.dll.so
-lib/wine/d3d12.dll.so
+%%VKD3D%%lib/wine/d3d12.dll.so
 lib/wine/d3d8.dll.so
 lib/wine/d3d9.dll.so
 lib/wine/d3dcompiler_33.dll.so
@@ -1385,7 +1389,7 @@ lib/wine/ext-ms-win-rtcore-ntuser-syscolors-l1-1-0.dll.so
 lib/wine/ext-ms-win-rtcore-ntuser-sysparams-l1-1-0.dll.so
 lib/wine/ext-ms-win-security-credui-l1-1-0.dll.so
 lib/wine/ext-ms-win-security-cryptui-l1-1-0.dll.so
-%%STAGING%%lib/wine/ext-ms-win-uxtheme-themes-l1-1-0.dll.so
+lib/wine/ext-ms-win-uxtheme-themes-l1-1-0.dll.so
 %%STAGING%%lib/wine/ext-ms-win-xaml-pal-l1-1-0.dll.so
 lib/wine/extrac32.exe.so
 lib/wine/fakedlls/acledit.dll
@@ -1614,6 +1618,7 @@ lib/wine/fakedlls/atl100.dll
 lib/wine/fakedlls/atl110.dll
 lib/wine/fakedlls/atl80.dll
 lib/wine/fakedlls/atl90.dll
+lib/wine/fakedlls/atmlib.dll
 lib/wine/fakedlls/attrib.exe
 lib/wine/fakedlls/authz.dll
 lib/wine/fakedlls/avicap32.dll
@@ -1665,7 +1670,7 @@ lib/wine/fakedlls/d3d10.dll
 lib/wine/fakedlls/d3d10_1.dll
 lib/wine/fakedlls/d3d10core.dll
 lib/wine/fakedlls/d3d11.dll
-lib/wine/fakedlls/d3d12.dll
+%%VKD3D%%lib/wine/fakedlls/d3d12.dll
 lib/wine/fakedlls/d3d8.dll
 lib/wine/fakedlls/d3d9.dll
 lib/wine/fakedlls/d3dcompiler_33.dll
@@ -1810,11 +1815,11 @@ lib/wine/fakedlls/ext-ms-win-rtcore-ntuser-syscolors-l1-1-0.dll
 lib/wine/fakedlls/ext-ms-win-rtcore-ntuser-sysparams-l1-1-0.dll
 lib/wine/fakedlls/ext-ms-win-security-credui-l1-1-0.dll
 lib/wine/fakedlls/ext-ms-win-security-cryptui-l1-1-0.dll
-%%STAGING%%lib/wine/fakedlls/ext-ms-win-uxtheme-themes-l1-1-0.dll
+lib/wine/fakedlls/ext-ms-win-uxtheme-themes-l1-1-0.dll
 %%STAGING%%lib/wine/fakedlls/ext-ms-win-xaml-pal-l1-1-0.dll
 lib/wine/fakedlls/extrac32.exe
 lib/wine/fakedlls/faultrep.dll
-%%STAGING%%lib/wine/fakedlls/feclient.dll
+lib/wine/fakedlls/feclient.dll
 lib/wine/fakedlls/findstr.exe
 lib/wine/fakedlls/fltlib.dll
 lib/wine/fakedlls/fltmgr.sys
@@ -2074,6 +2079,7 @@ lib/wine/fakedlls/rundll32.exe
 lib/wine/fakedlls/samlib.dll
 lib/wine/fakedlls/sane.ds
 lib/wine/fakedlls/sapi.dll
+lib/wine/fakedlls/sas.dll
 lib/wine/fakedlls/sc.exe
 lib/wine/fakedlls/scarddlg.dll
 lib/wine/fakedlls/sccbase.dll
@@ -2110,6 +2116,7 @@ lib/wine/fakedlls/softpub.dll
 %%WINE32%%lib/wine/fakedlls/sound.drv16
 lib/wine/fakedlls/spoolss.dll
 lib/wine/fakedlls/spoolsv.exe
+lib/wine/fakedlls/srclient.dll
 lib/wine/fakedlls/sspicli.dll
 lib/wine/fakedlls/start.exe
 lib/wine/fakedlls/stdole2.tlb
@@ -2117,6 +2124,7 @@ lib/wine/fakedlls/stdole32.tlb
 lib/wine/fakedlls/sti.dll
 %%WINE32%%lib/wine/fakedlls/storage.dll16
 %%WINE32%%lib/wine/fakedlls/stress.dll16
+lib/wine/fakedlls/strmdll.dll
 lib/wine/fakedlls/subst.exe
 lib/wine/fakedlls/svchost.exe
 lib/wine/fakedlls/svrapi.dll
@@ -2171,6 +2179,7 @@ lib/wine/fakedlls/virtdisk.dll
 %%WINE32%%lib/wine/fakedlls/vnetbios.vxd
 lib/wine/fakedlls/vssapi.dll
 %%WINE32%%lib/wine/fakedlls/vtdapi.vxd
+lib/wine/fakedlls/vulkan-1.dll
 %%WINE32%%lib/wine/fakedlls/vwin32.vxd
 %%WINE32%%lib/wine/fakedlls/w32skrnl.dll
 %%WINE32%%lib/wine/fakedlls/w32sys.dll16
@@ -2195,7 +2204,6 @@ lib/wine/fakedlls/winebrowser.exe
 lib/wine/fakedlls/winebus.sys
 lib/wine/fakedlls/winecfg.exe
 lib/wine/fakedlls/wineconsole.exe
-%%STAGING%%lib/wine/fakedlls/wined3d-csmt.dll
 lib/wine/fakedlls/wined3d.dll
 lib/wine/fakedlls/winedbg.exe
 lib/wine/fakedlls/winedevice.exe
@@ -2218,6 +2226,7 @@ lib/wine/fakedlls/wing32.dll
 lib/wine/fakedlls/winhlp32.exe
 lib/wine/fakedlls/winhttp.dll
 lib/wine/fakedlls/wininet.dll
+lib/wine/fakedlls/winmgmt.exe
 lib/wine/fakedlls/winmm.dll
 %%WINE32%%lib/wine/fakedlls/winnls.dll16
 lib/wine/fakedlls/winnls32.dll
@@ -2292,7 +2301,7 @@ lib/wine/fakedlls/xolehlp.dll
 lib/wine/fakedlls/xpsprint.dll
 lib/wine/fakedlls/xpssvcs.dll
 lib/wine/faultrep.dll.so
-%%STAGING%%lib/wine/feclient.dll.so
+lib/wine/feclient.dll.so
 lib/wine/findstr.exe.so
 lib/wine/fltlib.dll.so
 lib/wine/fltmgr.sys.so
@@ -2384,7 +2393,7 @@ lib/wine/libd3d10.def
 lib/wine/libd3d10_1.def
 lib/wine/libd3d10core.def
 lib/wine/libd3d11.def
-lib/wine/libd3d12.def
+%%VKD3D%%lib/wine/libd3d12.def
 lib/wine/libd3d8.def
 lib/wine/libd3d9.def
 lib/wine/libd3dcompiler.def
@@ -2399,6 +2408,7 @@ lib/wine/libdciman32.def
 lib/wine/libddraw.def
 lib/wine/libdinput.a
 lib/wine/libdinput8.def
+lib/wine/libdmoguids.a
 lib/wine/libdnsapi.def
 lib/wine/libdplayx.def
 lib/wine/libdpnet.def
@@ -2520,6 +2530,7 @@ lib/wine/libwindowscodecs.def
 lib/wine/libwindowscodecsext.def
 lib/wine/libwinecrt0.a
 lib/wine/libwined3d.def
+lib/wine/libwinevulkan.def
 lib/wine/libwinhttp.def
 lib/wine/libwininet.def
 lib/wine/libwinmm.def
@@ -2530,6 +2541,7 @@ lib/wine/libwintab32.def
 lib/wine/libwintrust.def
 lib/wine/libwlanapi.def
 lib/wine/libwldap32.def
+lib/wine/libwmcodecdspuuid.a
 lib/wine/libwmvcore.def
 lib/wine/libwnaspi32.def
 %%WINE32%%lib/wine/libwow32.def
@@ -2739,6 +2751,7 @@ lib/wine/rundll32.exe.so
 lib/wine/samlib.dll.so
 lib/wine/sane.ds.so
 lib/wine/sapi.dll.so
+lib/wine/sas.dll.so
 lib/wine/sc.exe.so
 lib/wine/scarddlg.dll.so
 lib/wine/sccbase.dll.so
@@ -2775,6 +2788,7 @@ lib/wine/softpub.dll.so
 %%WINE32%%lib/wine/sound.drv16.so
 lib/wine/spoolss.dll.so
 lib/wine/spoolsv.exe.so
+lib/wine/srclient.dll.so
 lib/wine/sspicli.dll.so
 lib/wine/start.exe.so
 lib/wine/stdole2.tlb.so
@@ -2782,6 +2796,7 @@ lib/wine/stdole32.tlb.so
 lib/wine/sti.dll.so
 %%WINE32%%lib/wine/storage.dll16.so
 %%WINE32%%lib/wine/stress.dll16.so
+lib/wine/strmdll.dll.so
 lib/wine/subst.exe.so
 lib/wine/svchost.exe.so
 lib/wine/svrapi.dll.so
@@ -2836,6 +2851,7 @@ lib/wine/virtdisk.dll.so
 %%WINE32%%lib/wine/vnetbios.vxd.so
 lib/wine/vssapi.dll.so
 %%WINE32%%lib/wine/vtdapi.vxd.so
+lib/wine/vulkan-1.dll.so
 %%WINE32%%lib/wine/vwin32.vxd.so
 %%WINE32%%lib/wine/w32skrnl.dll.so
 %%WINE32%%lib/wine/w32sys.dll16.so
@@ -2860,7 +2876,6 @@ lib/wine/winebrowser.exe.so
 lib/wine/winebus.sys.so
 lib/wine/winecfg.exe.so
 lib/wine/wineconsole.exe.so
-%%STAGING%%lib/wine/wined3d-csmt.dll.so
 lib/wine/wined3d.dll.so
 lib/wine/winedbg.exe.so
 lib/wine/winedevice.exe.so
@@ -2883,6 +2898,7 @@ lib/wine/wing32.dll.so
 lib/wine/winhlp32.exe.so
 lib/wine/winhttp.dll.so
 lib/wine/wininet.dll.so
+lib/wine/winmgmt.exe.so
 lib/wine/winmm.dll.so
 %%WINE32%%lib/wine/winnls.dll16.so
 lib/wine/winnls32.dll.so

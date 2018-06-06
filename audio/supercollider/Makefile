@@ -2,7 +2,7 @@
 
 PORTNAME=	supercollider
 PORTVERSION=	3.8.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/supercollider/supercollider/releases/download/Version-${PORTVERSION}/
 DISTNAME=	SuperCollider-${PORTVERSION}-Source-linux
@@ -29,7 +29,6 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/SuperCollider-Source
 
-CMAKE_ENV=	PKG_CONFIG_PATH=${LOCALBASE}/libdata/pkgconfig
 CMAKE_ARGS=	-DCMAKE_PREFIX_PATH=${LOCALBASE}/lib/qt5 \
 		-DLIBUSB_1_INCLUDE_DIR=/usr/include \
 		-DLIBUSB_1_LIBRARY=/usr/lib/libusb.so \

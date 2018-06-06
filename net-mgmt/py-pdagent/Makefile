@@ -4,6 +4,7 @@
 PORTNAME=	pdagent
 PORTVERSION=	1.4
 DISTVERSIONPREFIX=v
+PORTREVISION=	2
 CATEGORIES=	net-mgmt python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -13,6 +14,7 @@ COMMENT=	PagerDuty Agent software
 LICENSE=	BSD3CLAUSE
 
 USES=		python:2.7 shebangfix
+USE_PYTHON=	flavors
 SHEBANG_FILES=	bin/*
 NO_ARCH=	yes
 NO_BUILD=	yes
@@ -25,6 +27,9 @@ GH_ACCOUNT=	PagerDuty
 SUB_LIST+=	PYTHON_CMD="${PYTHON_CMD}"
 
 BINFILES=	pd-queue pd-send pdagentd.py
+
+USERS=	pdagent
+GROUPS=	pdagent
 
 do-patch:
 	${REINPLACE_CMD} -e 's|/var/lib/pdagent|/var/db/pdagent|' -e 's|/etc|${ETCDIR}|' ${WRKSRC}/pdagent/confdirs.py
