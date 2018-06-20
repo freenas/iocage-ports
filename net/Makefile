@@ -423,6 +423,7 @@
     SUBDIR += libsignal
     SUBDIR += libsocket++
     SUBDIR += libsrtp
+    SUBDIR += libsrtp2
     SUBDIR += libstorj
     SUBDIR += libtnl
     SUBDIR += libtrace
@@ -486,6 +487,7 @@
     SUBDIR += mpich
     SUBDIR += mpich2
     SUBDIR += mping
+    SUBDIR += mptsd
     SUBDIR += mrouted
     SUBDIR += msend
     SUBDIR += mtr
@@ -1091,7 +1093,6 @@
     SUBDIR += py-port-for
     SUBDIR += py-portend
     SUBDIR += py-pygeoip
-    SUBDIR += py-pyldap
     SUBDIR += py-pynmsg
     SUBDIR += py-pynsq
     SUBDIR += py-pypcap
@@ -1347,7 +1348,6 @@
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += s3ql
-    SUBDIR += samba45
     SUBDIR += samba46
     SUBDIR += samba47
     SUBDIR += samba48
@@ -1421,9 +1421,6 @@
     SUBDIR += sup
     SUBDIR += svnup
     SUBDIR += syncthing
-    SUBDIR += syncthing-cli
-    SUBDIR += syncthing-discosrv
-    SUBDIR += syncthing-inotify
     SUBDIR += syndication
     SUBDIR += tableutil
     SUBDIR += tac_plus4
