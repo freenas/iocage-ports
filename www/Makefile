@@ -103,6 +103,7 @@
     SUBDIR += cutelyst
     SUBDIR += cutycapt
     SUBDIR += davical
+    SUBDIR += davix
     SUBDIR += dddbl
     SUBDIR += ddgr
     SUBDIR += decss
@@ -553,7 +554,6 @@
     SUBDIR += nuvolaplayer-yandex-music
     SUBDIR += nuvolaplayer-youtube
     SUBDIR += obhttpd
-    SUBDIR += ocaml-net
     SUBDIR += opencart
     SUBDIR += opera
     SUBDIR += opera-linuxplugins
@@ -1915,6 +1915,7 @@
     SUBDIR += qupzilla-qt5
     SUBDIR += qutebrowser
     SUBDIR += radicale
+    SUBDIR += radicale2
     SUBDIR += red5
     SUBDIR += redaxo
     SUBDIR += redmine

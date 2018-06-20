@@ -305,6 +305,7 @@
     SUBDIR += openhab2-addons
     SUBDIR += openmvg
     SUBDIR += openr2
+    SUBDIR += orange3
     SUBDIR += orville-write
     SUBDIR += osinfo-db
     SUBDIR += ossp-uuid
@@ -400,6 +401,9 @@
     SUBDIR += ptsort
     SUBDIR += pubs
     SUBDIR += py-PyUserInput
+    SUBDIR += py-QSpectrumAnalyzer
+    SUBDIR += py-SimpleSoapy
+    SUBDIR += py-SoapySDR
     SUBDIR += py-YABT
     SUBDIR += py-cinder
     SUBDIR += py-colorbrewer
@@ -407,6 +411,10 @@
     SUBDIR += py-emoji
     SUBDIR += py-fuzzy
     SUBDIR += py-glance
+    SUBDIR += py-orange3-datafusion
+    SUBDIR += py-orange3-educational
+    SUBDIR += py-orange3-network
+    SUBDIR += py-orange3-timeseries
     SUBDIR += py-osd
     SUBDIR += py-palettable
     SUBDIR += py-pexpect
@@ -421,6 +429,9 @@
     SUBDIR += py-qt4-demo
     SUBDIR += py-qt4-doc
     SUBDIR += py-qt5-demo
+    SUBDIR += py-scikit-fusion
+    SUBDIR += py-serverfiles
+    SUBDIR += py-soapy_power
     SUBDIR += py-socli
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup
@@ -475,6 +486,7 @@
     SUBDIR += sloccount
     SUBDIR += sls
     SUBDIR += smssend
+    SUBDIR += soapysdr
     SUBDIR += solarized
     SUBDIR += spamcalc
     SUBDIR += sshbuddy
@@ -512,6 +524,7 @@
     SUBDIR += unicode-emoji
     SUBDIR += upclient
     SUBDIR += urbit
+    SUBDIR += urh
     SUBDIR += us-zipcodes
     SUBDIR += usbids
     SUBDIR += usbrh-libusb
