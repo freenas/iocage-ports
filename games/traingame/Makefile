@@ -3,10 +3,10 @@
 
 PORTNAME=	traingame
 PORTVERSION=	0.3
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	games
 
-MAINTAINER=	nemysis@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Game about Trains
 
 LICENSE=	GPLv3+

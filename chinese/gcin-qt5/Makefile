@@ -3,7 +3,7 @@
 
 PORTNAME=	gcin
 PORTVERSION=	2.8.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	chinese textproc gnome
 MASTER_SITES=	http://hyperrate.com/gcin-source/
 PKGNAMESUFFIX=	-qt5
@@ -17,8 +17,8 @@ LICENSE=	LGPL21
 LIB_DEPENDS=	libgcin-im-client.so:chinese/gcin
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/qt5-im
-USES=		compiler:c++11-lang gmake pkgconfig tar:xz
-USE_QT5=	qdbus qmake_build buildtools_build core gui
+USES=		compiler:c++11-lang gmake pkgconfig qt:5 tar:xz
+USE_QT=		qdbus qmake_build buildtools_build core gui
 USE_CXXSTD=	c++11
 MAKE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		MKDIR="${MKDIR}"

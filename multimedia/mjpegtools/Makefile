@@ -3,7 +3,7 @@
 
 PORTNAME=	mjpegtools
 PORTVERSION=	2.1.0
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME:S/tools//}/${PORTNAME}/${PORTVERSION}
 
@@ -52,7 +52,7 @@ post-patch:
 		-e 's| \*-\*-linux\*)| *-*-*)|' \
 		-e '/ARCHFLAGS=/d' ${WRKSRC}/configure
 
-post-install:
+post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in AUTHORS BUGS CHANGES ChangeLog HINTS NEWS PLANS README README.DV \
 	README.avilib README.glav README.AltiVec README.lavpipe \

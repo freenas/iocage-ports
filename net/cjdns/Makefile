@@ -13,6 +13,8 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_FreeBSD_10_i386=	fails CC_OUTPUT_921dbbb2_65ad290d=error: invalid value 'c++14' in '-std=c++14' yes
+BROKEN_armv6=		fails to build: Killing runaway build after 21600 seconds with no output
+BROKEN_armv7=		fails to build: Killing runaway build after 21600 seconds with no output
 
 BUILD_DEPENDS=	node:www/node \
 		bash:shells/bash

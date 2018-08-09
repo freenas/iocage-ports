@@ -89,14 +89,10 @@ USE_XORG=	x11 xcomposite xdamage xext xfixes xrender xt
 HAS_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 
-.if ${MOZILLA} != "libxul"
 BUNDLE_LIBS=	yes
-.endif
 
 .if ${MOZILLA_VER:R:R} >= 49
-USES+=		compiler:c++14-lang
-CPPFLAGS+=	-D_GLIBCXX_USE_C99 -D_GLIBCXX_USE_C99_MATH_TR1 \
-			-D_DECLARE_C99_LDBL_MATH # XXX ports/193528
+USES+=		compiler:c++17-lang
 .else
 USES+=		compiler:c++11-lang
 .endif
@@ -116,7 +112,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/python${PYTHON3_DEFAULT}:lang/python${PYTHON3_D
 MOZ_EXPORT+=	PYTHON3="${LOCALBASE}/bin/python${PYTHON3_DEFAULT}"
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSREL} == 11.1
+.if ${OPSYS} == FreeBSD && ${OSREL} == 11.1 && ${MOZILLA_VER:R:R} < 49
 LLD_UNSAFE=	yes
 .endif
 

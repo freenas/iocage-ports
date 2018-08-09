@@ -4,15 +4,17 @@
 PORTNAME=	dogecoin
 PORTVERSION=	1.10.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	4
+PORTREVISION=	7
 CATEGORIES=	net-p2p finance
 
-MAINTAINER=	ehaupt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	P2P crypto currency client favored by shiba inus worldwide
 
 LICENSE=	MIT
 
 BROKEN=		fails to build with boost 1.66, see bug 224131
+DEPRECATED=	Broken for more than 5 months
+EXPIRATION_DATE=	2018-08-20
 NOT_FOR_ARCHS=		powerpc powerpc64 sparc64
 NOT_FOR_ARCHS_REASON=	fails to configure: "Big Endian not supported"
 
@@ -39,8 +41,8 @@ CONFIGURE_ARGS+=	--with-incompatible-bdb --disable-tests
 
 GUI_CONFIGURE_ARGS=	--with-gui=qt5
 GUI_CONFIGURE_OFF=	--with-gui=no
-GUI_USE=		QT5=buildtools,core,dbus,gui,linguist_build,network,printsupport,testlib,widgets
-GUI_USES=		desktop-file-utils
+GUI_USE=		QT=buildtools,core,dbus,gui,linguist_build,network,printsupport,testlib,widgets
+GUI_USES=		desktop-file-utils qt:5
 
 QRCODES_CONFIGURE_WITH=	qrencode
 QRCODES_LIB_DEPENDS=	libqrencode.so:graphics/libqrencode

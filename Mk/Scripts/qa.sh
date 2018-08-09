@@ -551,12 +551,10 @@ proxydeps_suggest_uses() {
 		warn "you need USE_XORG+=pixman"
 	# Qt4
 	elif expr ${pkg} : '.*/qt4-.*' > /dev/null; then
-		warn "you need USE_QT4+=$(echo ${pkg} | sed -E 's|.*/qt4-||')"
-	elif expr ${pkg} : '.*/.*-qt4' > /dev/null; then
-		warn "you need USE_QT4+=$(echo ${pkg} | sed -E 's|.*/(.*)-qt4|\1|')"
+		warn "you need USES=qt:4 and USE_QT+=$(echo ${pkg} | sed -E 's|.*/qt4-||')"
 	# Qt5
 	elif expr ${pkg} : '.*/qt5-.*' > /dev/null; then
-		warn "you need USE_QT5+=$(echo ${pkg} | sed -E 's|.*/qt5-||')"
+		warn "you need USES=qt:5 and USE_QT+=$(echo ${pkg} | sed -E 's|.*/qt5-||')"
 	# MySQL
 	elif expr ${lib_file} : "${LOCALBASE}/lib/mysql/[^/]*$" > /dev/null; then
 		warn "you need USES+=mysql"
@@ -916,9 +914,38 @@ flavors()
 	return ${rc}
 }
 
+license()
+{
+	local lic autoaccept pkgmirror #distsell distmirror pkgsell
+
+	if [ -n "$DISABLE_LICENSES" ]; then
+		warn "You have disabled the licenses framework with DISABLE_LICENSES, unable to run checks"
+	elif [ -n "$LICENSE" ]; then
+		for lic in $LICENSE_PERMS; do
+			case "$lic" in
+				auto-accept) autoaccept=1 ;;
+				#dist-mirror) distmirror=1 ;;
+				#dist-sell)   distsell=1   ;;
+				pkg-mirror)  pkgmirror=1  ;;
+				#pkg-sell)    pkgsell=1    ;;
+			esac
+		done
+
+		if [ -z "$autoaccept" ]; then
+			warn "License is not auto-accepted, packages will not be built, ports depending on this one will be ignored."
+		fi
+		if [ -z "$pkgmirror" ]; then
+			warn "License does not allow package to be distributed, ports depending on this one will be ignored"
+		fi
+	fi
+
+	return 0
+}
+
 checks="shebang symlinks paths stripped desktopfileutils sharedmimeinfo"
 checks="$checks suidfiles libtool libperl prefixvar baselibs terminfo"
 checks="$checks proxydeps sonames perlcore no_arch gemdeps gemfiledeps flavors"
+checks="$checks license"
 
 ret=0
 cd ${STAGEDIR} || exit 1

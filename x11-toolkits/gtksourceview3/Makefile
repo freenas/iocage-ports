@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gtksourceview
-PORTVERSION=	3.24.7
+PORTVERSION=	3.24.8
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -20,6 +21,7 @@ PORTSCOUT=	limitw:1,even
 .if !defined(REFERENCE_PORT)
 
 BUILD_DEPENDS=	vala:lang/vala
+LIB_DEPENDS=	libfribidi.so:converters/fribidi
 
 USES+=		compiler:c11 gettext gmake gnome libtool pathfix pkgconfig
 USE_CSTD=	c11

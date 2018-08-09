@@ -4,6 +4,7 @@
 PORTNAME=	sayonara
 DISTVERSIONPREFIX=	player-
 DISTVERSION=	1.0.0
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-git1-20171231
 CATEGORIES=	audio
 MASTER_SITES=	http://www.sayonara-player.com/sw/
@@ -18,10 +19,10 @@ LIB_DEPENDS=	libtag.so:audio/taglib \
 		libmtp.so:multimedia/libmtp
 
 USES=		cmake:outsource compiler:c++11-lib desktop-file-utils \
-		pkgconfig
+		pkgconfig qt:5
 USE_GNOME=	glib20
 USE_GSTREAMER1=	flac libav mpg123 ogg opus vorbis
-USE_QT5=	dbus core gui network sql sql-sqlite3_run widgets xml \
+USE_QT=		dbus core gui network sql sql-sqlite3_run widgets xml \
 		buildtools_build qmake_build linguisttools_build
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-player

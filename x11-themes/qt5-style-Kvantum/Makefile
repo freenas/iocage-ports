@@ -2,6 +2,7 @@
 
 PORTNAME=	Kvantum
 PORTVERSION=	0.10.5
+PORTREVISION=	1
 DISTVERSIONPREFIX=	V
 CATEGORIES=	x11-themes
 PKGNAMEPREFIX=	qt5-style-
@@ -15,8 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GITHUB=	yes
 GH_ACCOUNT=	tsujan
 
-USES=		compiler:c++11-lang qmake
-USE_QT5=	core gui svg widgets x11extras buildtools_build linguisttools_build
+USES=		compiler:c++11-lang qmake qt:5
+USE_QT=		core gui svg widgets x11extras buildtools_build linguisttools_build
 USE_XORG=	x11 xext
 USE_GL=		gl
 

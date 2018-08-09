@@ -3,7 +3,7 @@
 
 PORTNAME=	qhacc
 PORTVERSION=	4.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	finance
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -16,8 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libgpgme.so:security/gpgme \
 		libqwt6.so:x11-toolkits/qwt6@qt4
 
-USES=		compiler:c++11-lib qmake:norecursive tar:tgz
-USE_QT4=	corelib gui sql moc_build rcc_build uic_build
+USES=		compiler:c++11-lib qmake:norecursive qt:4 tar:tgz
+USE_QT=		corelib gui sql moc_build rcc_build uic_build
 USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 

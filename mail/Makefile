@@ -385,7 +385,6 @@
     SUBDIR += p5-Mail-Box-IMAP4-SSL
     SUBDIR += p5-Mail-Box-Parser-C
     SUBDIR += p5-Mail-Bulkmail
-    SUBDIR += p5-Mail-Cache
     SUBDIR += p5-Mail-CheckUser
     SUBDIR += p5-Mail-ClamAV
     SUBDIR += p5-Mail-DKIM
@@ -401,7 +400,6 @@
     SUBDIR += p5-Mail-Graph
     SUBDIR += p5-Mail-IMAPClient
     SUBDIR += p5-Mail-IMAPTalk
-    SUBDIR += p5-Mail-IMAPTalk-MailCache
     SUBDIR += p5-Mail-LMLM
     SUBDIR += p5-Mail-ListDetector
     SUBDIR += p5-Mail-MailStats
@@ -434,7 +432,6 @@
     SUBDIR += p5-Net-ManageSieve
     SUBDIR += p5-Net-POP3-SSLWrapper
     SUBDIR += p5-Net-QMTP
-    SUBDIR += p5-Net-SMTP-SSL
     SUBDIR += p5-Net-SMTP-Server
     SUBDIR += p5-Net-SMTP-TLS
     SUBDIR += p5-Net-SMTP-TLS-ButMaintained
@@ -458,7 +455,6 @@
     SUBDIR += p5-URI-imaps
     SUBDIR += p5-WWW-GMail
     SUBDIR += p5-WWW-Hotmail
-    SUBDIR += p5-ZConf-Mail
     SUBDIR += p5-qpsmtpd
     SUBDIR += panda-cclient
     SUBDIR += panda-imap
@@ -522,8 +518,6 @@
     SUBDIR += postfix-policyd-weight
     SUBDIR += postfix-postfwd
     SUBDIR += postfix-sasl
-    SUBDIR += postfix211
-    SUBDIR += postfix211-sasl
     SUBDIR += postfixadmin
     SUBDIR += postgrey
     SUBDIR += postsrsd
@@ -606,6 +600,7 @@
     SUBDIR += roundcube-contextmenu
     SUBDIR += roundcube-groupvice
     SUBDIR += roundcube-html5_notifier
+    SUBDIR += roundcube-identity_smtp
     SUBDIR += roundcube-login_info
     SUBDIR += roundcube-markasjunk2
     SUBDIR += roundcube-mobilecube
@@ -615,6 +610,7 @@
     SUBDIR += roundcube-thunderbird_labels
     SUBDIR += roundcube-umich
     SUBDIR += roundcube-veximaccountadmin
+    SUBDIR += roundcube-yubikey_auth
     SUBDIR += rspamd
     SUBDIR += rspamd-devel
     SUBDIR += rss2email2
@@ -634,8 +630,8 @@
     SUBDIR += rubygem-pony
     SUBDIR += rubygem-premailer
     SUBDIR += rubygem-premailer-rails
-    SUBDIR += rubygem-premailer-rails19
     SUBDIR += rubygem-premailer-rails-rails5
+    SUBDIR += rubygem-premailer-rails19
     SUBDIR += rubygem-rmail
     SUBDIR += rubygem-roadie
     SUBDIR += rubygem-roadie-rails

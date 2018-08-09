@@ -28,6 +28,7 @@
     SUBDIR += cartotheque
     SUBDIR += cdcat
     SUBDIR += charmtimetracker
+    SUBDIR += chart
     SUBDIR += clipit
     SUBDIR += conduit
     SUBDIR += conkyemail
@@ -171,6 +172,7 @@
     SUBDIR += lumina-screenshot
     SUBDIR += lumina-textedit
     SUBDIR += lumina-xdg-entry
+    SUBDIR += mat
     SUBDIR += mate-notification-daemon
     SUBDIR += mate-utils
     SUBDIR += mbox-importer
@@ -199,9 +201,6 @@
     SUBDIR += p5-Data-ICal
     SUBDIR += p5-Data-ICal-DateTime
     SUBDIR += p5-Goo
-    SUBDIR += p5-ZConf-BGSet
-    SUBDIR += p5-ZConf-Runner
-    SUBDIR += p5-ZConf-Runner-GUI-GTK
     SUBDIR += pal
     SUBDIR += parcellite
     SUBDIR += phpcollab
@@ -262,6 +261,7 @@
     SUBDIR += sugarcrm
     SUBDIR += superkaramba-kde4
     SUBDIR += surrealtodo
+    SUBDIR += synapse
     SUBDIR += syncthing-gtk
     SUBDIR += systempreferences
     SUBDIR += tagutils
@@ -312,6 +312,7 @@
     SUBDIR += xpostitPlus
     SUBDIR += xrolo
     SUBDIR += xwrits
+    SUBDIR += zanshin
     SUBDIR += zim
     SUBDIR += znotes
     SUBDIR += zorro
