@@ -5,6 +5,7 @@
 
     SUBDIR += amule
     SUBDIR += amule-devel
+    SUBDIR += awgg
     SUBDIR += bitcoin
     SUBDIR += bitcoin-daemon
     SUBDIR += bitcoin-utils
@@ -92,8 +93,7 @@
     SUBDIR += transmission-cli
     SUBDIR += transmission-daemon
     SUBDIR += transmission-gtk
-    SUBDIR += transmission-qt4
-    SUBDIR += transmission-qt5
+    SUBDIR += transmission-qt
     SUBDIR += transmission-remote-gui
     SUBDIR += tribler
     SUBDIR += twister

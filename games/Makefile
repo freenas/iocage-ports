@@ -310,6 +310,7 @@
     SUBDIR += freedroidrpg
     SUBDIR += freeminer
     SUBDIR += freeminer-default
+    SUBDIR += freeorion
     SUBDIR += freera
     SUBDIR += freesweep
     SUBDIR += freesynd
@@ -726,6 +727,7 @@
     SUBDIR += oolite
     SUBDIR += oonsoo
     SUBDIR += open-adventure
+    SUBDIR += openage
     SUBDIR += openalchemist
     SUBDIR += openarena
     SUBDIR += openarena-data

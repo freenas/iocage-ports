@@ -22,9 +22,11 @@
     SUBDIR += clustalw
     SUBDIR += clustalx
     SUBDIR += consed
+    SUBDIR += cytoscape
     SUBDIR += ddocent
     SUBDIR += diamond
     SUBDIR += emboss
+    SUBDIR += exonerate
     SUBDIR += fasta
     SUBDIR += fasta3
     SUBDIR += fastahack
@@ -43,6 +45,7 @@
     SUBDIR += hmmer
     SUBDIR += htslib
     SUBDIR += hyphy
+    SUBDIR += igv
     SUBDIR += infernal
     SUBDIR += iolib
     SUBDIR += iqtree
@@ -103,6 +106,7 @@
     SUBDIR += py-cutadapt
     SUBDIR += py-macs2
     SUBDIR += py-orange3-bioinformatics
+    SUBDIR += py-orange3-single-cell
     SUBDIR += py-pysam
     SUBDIR += pycogent
     SUBDIR += pyfasta
@@ -123,6 +127,7 @@
     SUBDIR += slclust
     SUBDIR += smithwaterman
     SUBDIR += stacks
+    SUBDIR += stringtie
     SUBDIR += tRNAscan-SE
     SUBDIR += t_coffee
     SUBDIR += tabixpp
@@ -132,8 +137,8 @@
     SUBDIR += trimmomatic
     SUBDIR += ugene
     SUBDIR += unanimity
-    SUBDIR += vcftools
     SUBDIR += vcflib
+    SUBDIR += vcftools
     SUBDIR += velvet
     SUBDIR += wise
     SUBDIR += xmolwt

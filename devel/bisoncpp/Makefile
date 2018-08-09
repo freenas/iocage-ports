@@ -2,7 +2,7 @@
 
 PORTNAME=	bisoncpp
 PORTVERSION=	4.10.01
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/bisonc%2B%2B/${PORTVERSION}
 DISTNAME=	bisonc++_${PORTVERSION}.orig
@@ -11,6 +11,9 @@ MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	LALR(1) parser generator that generates C++ classes
 
 LICENSE=	GPLv3
+
+DEPRECATED=	Depends on broken and expiring libbobcat
+EXPIRATION_DATE=	2018-08-20
 
 BUILD_DEPENDS=	icmake:devel/icmake \
 		yodl>=3.0:textproc/yodl \

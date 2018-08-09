@@ -1,8 +1,7 @@
 # $FreeBSD: head/net-p2p/rslsync/Makefile 470279 2018-05-18 08:35:08Z knu $
 
 PORTNAME=	rslsync
-PORTVERSION=	2.5.12
-PORTREVISION=	1
+PORTVERSION=	2.5.13
 CATEGORIES=	net-p2p
 MASTER_SITES=	https://download-cdn.resilio.com/${PORTVERSION}/FreeBSD-${CONFIG_ARCH}/ \
 		http://download-cdn.resilio.com/${PORTVERSION}/FreeBSD-${CONFIG_ARCH}/
@@ -37,8 +36,8 @@ CONFIG_ARCH=	x64
 CONFIG_ARCH=	${ARCH}
 .endif
 
-do-build: 
-	${CP} files/rslsync.conf.sample ${WRKSRC}/rslsync.conf.sample
+do-build:
+	${WRKSRC}/rslsync --nodaemon --dump-sample-config > ${WRKSRC}/rslsync.conf.sample
 	${REINPLACE_CMD} -e 's;^//\([[:space:]]*"storage_path"[[:space:]]*:[[:space:]]*\)"/.*",$$;\1"/var/db/rslsync",;' ${WRKSRC}/rslsync.conf.sample
 	${REINPLACE_CMD} -e 's;^//\([[:space:]]*"pid_file"[[:space:]]*:[[:space:]]*\)"/.*",$$;\1"/var/run/rslsync/rslsync.pid",;' ${WRKSRC}/rslsync.conf.sample
 do-install:

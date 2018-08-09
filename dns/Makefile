@@ -10,11 +10,9 @@
     SUBDIR += axfr2acl
     SUBDIR += bind-tools
     SUBDIR += bind9-devel
-    SUBDIR += bind910
     SUBDIR += bind911
     SUBDIR += bind912
     SUBDIR += bind913
-    SUBDIR += bind99
     SUBDIR += bindgraph
     SUBDIR += bundy
     SUBDIR += c-ares
@@ -34,6 +32,7 @@
     SUBDIR += dns2blackhole
     SUBDIR += dns2tcp
     SUBDIR += dns_balance
+    SUBDIR += dnsblast
     SUBDIR += dnscap
     SUBDIR += dnscheck
     SUBDIR += dnscheckengine
@@ -56,6 +55,7 @@
     SUBDIR += dnsrecon
     SUBDIR += dnsreflector
     SUBDIR += dnstable
+    SUBDIR += dnstable-convert
     SUBDIR += dnstop
     SUBDIR += dnstracer
     SUBDIR += dnsutl
@@ -63,6 +63,7 @@
     SUBDIR += dnswalk
     SUBDIR += dnswall
     SUBDIR += doc
+    SUBDIR += doh-proxy
     SUBDIR += dq
     SUBDIR += drool
     SUBDIR += dsc
@@ -111,6 +112,7 @@
     SUBDIR += mdnsd
     SUBDIR += mydns
     SUBDIR += mydns-ng
+    SUBDIR += namesilo_ddns
     SUBDIR += noip
     SUBDIR += nsd
     SUBDIR += nslint
@@ -201,6 +203,7 @@
     SUBDIR += py-pywdns
     SUBDIR += py-tld
     SUBDIR += py-tldextract
+    SUBDIR += qmdnsengine
     SUBDIR += radns
     SUBDIR += rbldnsd
     SUBDIR += rbllookup
@@ -224,6 +227,7 @@
     SUBDIR += udns
     SUBDIR += unbound
     SUBDIR += updatedd
+    SUBDIR += utdns
     SUBDIR += validns
     SUBDIR += vhostcname
     SUBDIR += vizone

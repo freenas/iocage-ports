@@ -3,7 +3,7 @@
 
 PORTNAME?=	svxlink
 PORTVERSION=	15.11
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	comms hamradio
 
 MAINTAINER=	hamradio@FreeBSD.org
@@ -22,7 +22,7 @@ LIB_DEPENDS?=	libgsm.so:audio/gsm \
 BUILD_DEPENDS=	pkg-config:devel/pkgconf \
 		${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
 
-USES=		cmake compiler:c++11-lang tcl groff
+USES+=		cmake compiler:c++11-lang tcl groff
 USE_GITHUB=	yes
 GH_ACCOUNT=	sm0svx
 GH_PROJECT=	svxlink

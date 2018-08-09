@@ -97,6 +97,7 @@
     SUBDIR += icons-tango
     SUBDIR += icons-tango-extras
     SUBDIR += irssi-themes
+    SUBDIR += kde-base-artwork-kde4
     SUBDIR += kde-gtk-config
     SUBDIR += kde-icons-black-and-white
     SUBDIR += kde-icons-gartoon-blue-svg
@@ -108,7 +109,6 @@
     SUBDIR += kde-icons-noia
     SUBDIR += kde-icons-nuovext2
     SUBDIR += kde-icons-nuvola
-    SUBDIR += kde-base-artwork-kde4
     SUBDIR += kde-wallpapers-kde4
     SUBDIR += kde4-style-bespin
     SUBDIR += kde4-style-nitrogen
@@ -126,6 +126,7 @@
     SUBDIR += lumina-themes
     SUBDIR += lxappearance
     SUBDIR += lxde-icon-theme
+    SUBDIR += lxqt-themes
     SUBDIR += mate-backgrounds
     SUBDIR += mate-icon-theme
     SUBDIR += mate-icon-theme-faenza

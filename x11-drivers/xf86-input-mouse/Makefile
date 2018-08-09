@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	xf86-input-mouse
-PORTVERSION=	1.9.2
+PORTVERSION=	1.9.3
 PORTREVISION=	1
 CATEGORIES=	x11-drivers
 

@@ -2,6 +2,7 @@
 
 PORTNAME=	google-compute-engine
 DISTVERSION=	2.8.3
+PORTREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,9 +13,9 @@ COMMENT=	Guest Environment for Google Compute Engine
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}boto>0:devel/py-boto@${FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}netaddr>0:net/py-netaddr@${FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}netifaces>0:net/py-netifaces@${FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}boto>0:devel/py-boto@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}netaddr>0:net/py-netaddr@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}netifaces>0:net/py-netifaces@${PY_FLAVOR} \
 		google_oslogin_control:sysutils/google-compute-engine-oslogin \
 		sudo:security/sudo
 

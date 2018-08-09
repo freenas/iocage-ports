@@ -3,6 +3,7 @@
 
 PORTNAME=	adwaita-qt
 DISTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	x11-themes
 
 MAINTAINER=	tcberner@FreeBSD.org
@@ -18,11 +19,13 @@ qt5_PKGNAMESUFFIX=	5
 
 USES=		cmake:outsource compiler:c++11-lib localbase pkgconfig
 .  if ${FLAVOR} == qt4
-USE_QT4=	corelib dbus gui \
+USES+=		qt:4
+USE_QT=		corelib dbus gui \
 		moc_build rcc_build uic_build qmake_build
 CMAKE_ON=	USE_QT4
 .  else
-USE_QT5=	core dbus gui widgets \
+USES+=		qt:5
+USE_QT=		core dbus gui widgets \
 		buildtools_build qmake_build
 CMAKE_OFF=	USE_QT4
 .  endif

@@ -3,7 +3,7 @@
 
 PORTNAME=	syobon
 PORTVERSION=	1.0.1
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	games
 MASTER_SITES=	http://zapek.com/wp-content/uploads/2010/09/ \
 		SF/nemysisfreebsdp/${CATEGORIES}/:icons
@@ -15,6 +15,9 @@ LICENSE=	NONE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Platform game as Super Mario Bros
+
+DEPRECATED=	unknown license
+EXPIRATION_DATE=	2018-08-15
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

@@ -4,7 +4,7 @@
 PORTNAME=	namecoin
 PORTVERSION=	0.3.80
 DISTVERSIONPREFIX=	nc
-PORTREVISION=	16
+PORTREVISION=	19
 PORTEPOCH=	1
 CATEGORIES=	net-p2p dns
 
@@ -17,6 +17,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libboost_date_time.so:devel/boost-libs
 
 BROKEN=		fails to build with boost 1.66, see bug 224186
+DEPRECATED=	Broken for more than 5 months
+EXPIRATION_DATE=	2018-08-20
 BROKEN_powerpc64=	fails to build: util.cpp: undefined reference to boost::program_options::to_internal
 
 OPTIONS_DEFINE=	X11 UPNP QRCODES DBUS
@@ -26,7 +28,7 @@ QRCODES_DESC=	QR code display support
 
 USE_GITHUB=	yes
 
-USES=		bdb:48 gmake compiler:c++11-lib ssl
+USES=		bdb:48 gmake compiler:c++11-lib qt:4 ssl
 MAKE_JOBS_UNSAFE=yes
 
 CXXFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
@@ -36,7 +38,7 @@ CXXFLAGS+=	-DCRYPTOPP_DISABLE_ASM
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
-USE_QT4=	corelib network gui qmake_build linguist_build uic_build moc_build rcc_build
+USE_QT=		corelib network gui qmake_build linguist_build uic_build moc_build rcc_build
 
 BINARY=		namecoin-qt
 LIB_DEPENDS+=	libprotobuf.so:devel/protobuf
@@ -54,7 +56,7 @@ QMAKE_USE_QRCODE=0
 .endif
 
 .if ${PORT_OPTIONS:MDBUS}
-USE_QT4+=	dbus
+USE_QT+=	dbus
 QMAKE_USE_DBUS=	1
 .else
 QMAKE_USE_DBUS=	0

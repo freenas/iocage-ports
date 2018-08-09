@@ -3,7 +3,8 @@
 
 PORTNAME=	monero-cli
 # To build from an arbitrary git commit comment the following two lines
-PORTVERSION=	0.12.2.0
+PORTVERSION=	0.12.3.0
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 # and uncomment the following two lines
 #PORTVERSION=	0

@@ -2,7 +2,7 @@
 
 PORTNAME=	qwt
 PORTVERSION=	6.1.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF
 PKGNAMESUFFIX=	6-${FLAVOR}
@@ -15,7 +15,7 @@ FLAVOR?=	${FLAVORS:[1]}
 
 USES=		gmake qmake tar:bzip2
 USE_GL=		gl
-USE_LDCONFIG=	yes
+USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
 DOCSDIR=	${PREFIX}/share/doc/qwt6-${FLAVOR}
 PORTDOCS=	*
@@ -25,9 +25,11 @@ PLIST_SUB=	SHLIB_VER=${PORTVERSION} \
 QMAKE_ARGS+=	PLUGINDIR=${PREFIX}/${QT_PLUGINDIR_REL}
 
 .if ${FLAVOR} == qt4
-USE_QT4=	corelib designer gui opengl svg xml moc_build rcc_build script
+USES+=		qt:4
+USE_QT=		corelib designer gui opengl svg xml moc_build rcc_build script
 .else
-USE_QT5=	buildtools_build widgets gui core designer gui opengl svg xml printsupport concurrent
+USES+=		qt:5
+USE_QT=		buildtools_build widgets gui core designer gui opengl svg xml printsupport concurrent
 .endif
 
 OPTIONS_DEFINE=	DOCS

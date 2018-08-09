@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	kodi
-DISTVERSION=	18.0.g201805221344
+DISTVERSION=	18.0.g201807222249
+PORTREVISION=	1
 CATEGORIES=	multimedia
 PKGNAMESUFFIX?=	-devel
 
@@ -9,9 +10,8 @@ MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Award winning media center application
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/LICENSE.GPL
+LICENSE_FILE=	${WRKSRC}/copying.txt
 
-BROKEN_FreeBSD_10=	does not build
 ONLY_FOR_ARCHS=	amd64 armv6 armv7 i386
 
 BUILD_DEPENDS=	rapidjson>=0:devel/rapidjson \
@@ -49,18 +49,18 @@ LIB_DEPENDS=	libass.so:multimedia/libass \
 # leads to dependency problems where libcpluff.a is not yet finished
 # building when it's required.
 USES=		autoreconf:build cmake:outsource,noninja compiler:c++11-lib \
-		gettext gmake iconv:wchar_t jpeg libtool pkgconfig python:-2.7 \
+		gettext gmake iconv:wchar_t jpeg libtool pkgconfig python:2.7 \
 		ssl sqlite
 USE_GITHUB=	yes
 GH_ACCOUNT=	xbmc
 GH_PROJECT=	xbmc
-GH_TAGNAME=	d2b10e2bb0650d8d47caf8a5d15fa4b6f2cb7254
+GH_TAGNAME=	64a79f3e8c1cc1af0b8dc4f645e60f6c889e3667
 USE_GNOME=	libxslt libxml2
 USE_JAVA=	yes
 JAVA_BUILD=	yes
 USE_LDCONFIG=	yes
 
-CONFLICTS_INSTALL=	kodi-[0-9]*
+CONFLICTS_INSTALL=	kodi
 
 CMAKE_ARGS=	-DLIBDVD_INCLUDE_DIRS="${LOCALBASE}/include" \
 		-DDVDREAD_LIBRARY="${LOCALBASE}/lib/libdvdread.so" \
@@ -69,16 +69,19 @@ CMAKE_OFF=	ENABLE_ALSA \
 		ENABLE_DVDCSS \
 		ENABLE_INTERNAL_FFMPEG \
 		ENABLE_INTERNAL_CROSSGUID
-CONFIGURE_ENV=	OPENSSL_LIBS="-L${OPENSSLLIB}" OPENSSL_CFLAGS="-I${OPENSSLINC}"
+CONFIGURE_ENV=	OPENSSL_LIBS="-L${OPENSSLLIB}" OPENSSL_CFLAGS="-I${OPENSSLINC}" \
+		CPU_FEATURES=" Features=0xdeadbeef<${CPU_FEATURES:ts,}>"
 
 KODIARCH_i386=	x86
 KODIARCH_amd64=	x86_64
 
 PLIST_SUB=	ARCH=${KODIARCH_${ARCH}:U${ARCH}} OPSYS=${OPSYS:tl}
 
-OPTIONS_DEFINE=	AVAHI CEC DBUS LIBBLURAY MYSQL NFS SMB SSH UPNP VAAPI	\
-		VDPAU WEBSERVER
-OPTIONS_DEFAULT=	LIBBLURAY SSH UPNP WEBSERVER X11
+OPTIONS_DEFINE=	AVAHI CEC DBUS LIBBLURAY MYSQL NFS SMB UPNP VAAPI VDPAU WEBSERVER
+OPTIONS_DEFINE_amd64=	SSE
+OPTIONS_DEFINE_i386=	SSE
+OPTIONS_DEFAULT=	LIBBLURAY UPNP VAAPI VDPAU WEBSERVER X11
+OPTIONS_DEFAULT_amd64=	SSE
 OPTIONS_SINGLE=	PLATFORM
 OPTIONS_SINGLE_PLATFORM=	GBM RPI WAYLAND X11
 OPTIONS_EXCLUDE_amd64=	RPI
@@ -134,8 +137,9 @@ SMB_CMAKE_BOOL=		ENABLE_SMBCLIENT
 SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 SNDIO_CMAKE_BOOL=	ENABLE_SNDIO
 
-SSH_LIB_DEPENDS=	libssh.so:security/libssh
-SSH_CMAKE_BOOL=		ENABLE_SSH
+SSE_CPU_FEATURES=	SSE SSE2 SSE3 SSSE3 SSE4.1 SSE4.2
+SSE_CMAKE_BOOL=		${SSE_CPU_FEATURES:S/./_/g:S/^/ENABLE_/}
+SSE_VARS=		CPU_FEATURES+=${SSE_CPU_FEATURES:ts,}
 
 UPNP_CMAKE_BOOL=	ENABLE_UPNP
 # XXX: Upstream is https://github.com/plutinosoft/Neptune
@@ -148,11 +152,9 @@ UPNP_CXXFLAGS=		-DNPT_CONFIG_HAVE_ARPA_INET_H \
 			-DNPT_CONFIG_HAVE_SOCKADDR_DL \
 			-DNPT_CONFIG_HAVE_SOCKADDR_IN_SIN_LEN
 
-VAAPI_BROKEN=		Crashes at startup with VAAPI enabled
 VAAPI_CMAKE_BOOL=	ENABLE_VAAPI
 VAAPI_LIB_DEPENDS=	libva.so:multimedia/libva
 
-VDPAU_BROKEN=		Crashes at startup with VDPAU enabled
 VDPAU_CMAKE_BOOL=	ENABLE_VDPAU
 VDPAU_LIB_DEPENDS=	libvdpau.so:multimedia/libvdpau
 
@@ -183,6 +185,10 @@ post-patch:
 # (see CMAKE_ARGS).
 	@${REINPLACE_CMD} 's@KODI_DEPENDSBUILD@true@' \
 		${WRKSRC}/cmake/modules/FindLibDvd.cmake
+# Make sure freebsd.xml is in sync with linux.xml since the
+# upstream devs do not sync them
+	@${CP} ${WRKSRC}/system/settings/linux.xml \
+		${WRKSRC}/system/settings/freebsd.xml
 
 .if ${SLAVE_PORT} == no
 post-install:

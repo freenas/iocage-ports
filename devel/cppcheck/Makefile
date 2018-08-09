@@ -3,6 +3,7 @@
 
 PORTNAME=	cppcheck
 PORTVERSION=	1.84
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -21,7 +22,8 @@ COMMENT=		Static analysis of C/C++ code (GUI)
 RUN_DEPENDS=		cppcheck:devel/cppcheck
 
 CMAKE_ARGS=		-DBUILD_GUI=TRUE
-USE_QT5=		core gui widgets printsupport qmake_build buildtools_build linguisttools_build
+USES+=			qt:5
+USE_QT=			core gui widgets printsupport qmake_build buildtools_build linguisttools_build
 
 BUILD_WRKSRC=		${WRKSRC}/gui
 INSTALL_WRKSRC=		${WRKSRC}/gui

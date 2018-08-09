@@ -3,7 +3,7 @@
 
 PORTNAME=	v8
 PORTVERSION=	3.27.7
-PORTREVISION=	15
+PORTREVISION=	17
 CATEGORIES=	lang
 MASTER_SITES=	LOCAL/vanilla
 PKGNAMESUFFIX=	-devel
@@ -14,6 +14,8 @@ COMMENT=	Open source JavaScript engine by Google
 LICENSE=	BSD3CLAUSE
 
 BROKEN=		fails to build
+DEPRECATED=	Broken for more than 5 months
+EXPIRATION_DATE=	2018-08-20
 
 LIB_DEPENDS=	libicui18n.so:devel/icu
 

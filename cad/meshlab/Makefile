@@ -3,7 +3,7 @@
 
 PORTNAME=	meshlab
 PORTVERSION=	1.3.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	cad
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/MeshLab%20v${PORTVERSION}/
 DISTNAME=	MeshLabSrc_AllInc_v${PORTVERSION:C|\.||g}
@@ -22,10 +22,10 @@ EXTRACT_DEPENDS=gtar:archivers/gtar
 LIB_DEPENDS=	libQtSolutions_SOAP-head.so:devel/qt4-qtsolutions-soap	\
 		libmpir.so:math/mpir
 
-USES=		compiler:c++11-lib dos2unix qmake tar:tgz
+USES=		compiler:c++11-lib dos2unix qmake qt:4 tar:tgz
 USE_CXXSTD=	c++11
 USE_GL=		glew glu
-USE_QT4=	moc_build rcc_build uic_build corelib gui xml \
+USE_QT=		moc_build rcc_build uic_build corelib gui xml \
 		xmlpatterns opengl network script
 USE_LDCONFIG=	yes
 DOS2UNIX_FILES=	external/structuresynth/ssynth/SyntopiaCore/GLEngine/Object3D.h \

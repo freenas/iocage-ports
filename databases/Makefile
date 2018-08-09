@@ -53,6 +53,7 @@
     SUBDIR += dbf
     SUBDIR += dbf2mysql
     SUBDIR += dbh
+    SUBDIR += dbixx
     SUBDIR += dbow
     SUBDIR += dbtool
     SUBDIR += dbview
@@ -202,9 +203,9 @@
     SUBDIR += mongodb32
     SUBDIR += mongodb32-tools
     SUBDIR += mongodb34
-    SUBDIR += mongodb34-rocks
     SUBDIR += mongodb34-tools
     SUBDIR += mongodb36
+    SUBDIR += mongodb36-tools
     SUBDIR += mroonga
     SUBDIR += mrtg-mysql-load
     SUBDIR += mtools-mongodb
@@ -274,6 +275,7 @@
     SUBDIR += p5-CDB_File-Generator
     SUBDIR += p5-CGI-Session-Driver-memcached
     SUBDIR += p5-CHI-Driver-Memcached
+    SUBDIR += p5-CHI-Driver-Redis
     SUBDIR += p5-Cache-BDB
     SUBDIR += p5-Cache-Memcached
     SUBDIR += p5-Cache-Memcached-Fast
@@ -494,6 +496,7 @@
     SUBDIR += p5-SQL-Statement
     SUBDIR += p5-SQL-Translator
     SUBDIR += p5-SQLite-Work
+    SUBDIR += p5-Scope-Container-DBI
     SUBDIR += p5-Search-InvertedIndex
     SUBDIR += p5-Search-Namazu
     SUBDIR += p5-Search-Xapian10
@@ -587,6 +590,7 @@
     SUBDIR += pg_qualstats
     SUBDIR += pg_reorg
     SUBDIR += pg_repack
+    SUBDIR += pg_similarity
     SUBDIR += pg_stat_kcache
     SUBDIR += pgaccess
     SUBDIR += pgadmin3
@@ -603,7 +607,6 @@
     SUBDIR += pgmetrics
     SUBDIR += pgmodeler
     SUBDIR += pgpool
-    SUBDIR += pgpool-II-33
     SUBDIR += pgpool-II-35
     SUBDIR += pgpool-II-36
     SUBDIR += pgpool-II-37
@@ -772,8 +775,11 @@
     SUBDIR += py-PyGreSQL
     SUBDIR += py-Pyrseas
     SUBDIR += py-agate-sql
+    SUBDIR += py-aiopg
+    SUBDIR += py-aioredis
     SUBDIR += py-alembic
     SUBDIR += py-apsw
+    SUBDIR += py-asyncpg
     SUBDIR += py-bsddb
     SUBDIR += py-bsddb3
     SUBDIR += py-carbon
@@ -812,6 +818,7 @@
     SUBDIR += py-pg8000
     SUBDIR += py-pg_pqueue
     SUBDIR += py-pgcli
+    SUBDIR += py-pgdbconn
     SUBDIR += py-pglite
     SUBDIR += py-pgspecial
     SUBDIR += py-pgxnclient
@@ -896,6 +903,7 @@
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += retcl
+    SUBDIR += riak
     SUBDIR += rocksdb
     SUBDIR += rocksdb-lite
     SUBDIR += rrdman
@@ -962,7 +970,6 @@
     SUBDIR += rubygem-em-redis-unified
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
-    SUBDIR += rubygem-flipper-active_record011
     SUBDIR += rubygem-flipper-active_record013
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
@@ -981,9 +988,9 @@
     SUBDIR += rubygem-peek-mysql2
     SUBDIR += rubygem-peek-pg
     SUBDIR += rubygem-pg
-    SUBDIR += rubygem-pg_array_parser
     SUBDIR += rubygem-pg0
     SUBDIR += rubygem-pg018
+    SUBDIR += rubygem-pg_array_parser
     SUBDIR += rubygem-pghero
     SUBDIR += rubygem-pghero-rails5
     SUBDIR += rubygem-pghero-rails50
@@ -994,7 +1001,6 @@
     SUBDIR += rubygem-redis-actionpack-rails5
     SUBDIR += rubygem-redis-actionpack-rails50
     SUBDIR += rubygem-redis-namespace
-    SUBDIR += rubygem-redis-namespace15
     SUBDIR += rubygem-redis3
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
@@ -1064,6 +1070,7 @@
     SUBDIR += xapian-core
     SUBDIR += xapian-core10
     SUBDIR += xapian-core12
+    SUBDIR += xrootd
     SUBDIR += xtrabackup
     SUBDIR += zabbix22-libzbxpgsql
     SUBDIR += zabbix3-libzbxpgsql
