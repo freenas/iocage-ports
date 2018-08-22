@@ -2,6 +2,7 @@
 
 PORTNAME=	cloudstack
 PORTVERSION=	4.11.1
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	miwi@ixsystems.com
@@ -12,7 +13,8 @@ RUN_DEPENDS=	bash:shells/bash \
 		mkisofs:sysutils/cdrtools \
 		wget:ftp/wget \
 		e2fsprogs>0:sysutils/e2fsprogs \
-		iftop>0:net-mgmt/iftop
+		iftop>0:net-mgmt/iftop \
+		unzip:archivers/unzip
 
 USES=		python:2.7
 NO_BUILD=	yes
