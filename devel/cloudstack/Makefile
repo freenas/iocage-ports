@@ -2,19 +2,22 @@
 
 PORTNAME=	cloudstack
 PORTVERSION=	4.11.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	miwi@ixsystems.com
 COMMENT=	Cloudstack Server
 
-BUILD_DEPENDS=  ${LOCALBASE}/share/java/maven3/bin/mvn:devel/maven3
-RUN_DEPENDS=	bash:shells/bash \
+RUN_DEPENDS=	${LOCALBASE}/share/java/maven3/bin/mvn:devel/maven3 \
+		bash:shells/bash \
 		mkisofs:sysutils/cdrtools \
 		wget:ftp/wget \
 		e2fsprogs>0:sysutils/e2fsprogs \
 		iftop>0:net-mgmt/iftop \
-		unzip:archivers/unzip
+		unzip:archivers/unzip \
+		ipmitool:sysutils/ipmitool \
+		dnsmasq:dns/dnsmasq \
+		${LOCALBASE}/bin/sudo:security/sudo
 
 USES=		python:2.7
 NO_BUILD=	yes

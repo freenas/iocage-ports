@@ -63,6 +63,16 @@ sed -i .bak 's,/bin/keytool,/local/bin/keytool,' $a
 sed -i .bak 's,/etc/sudoers.d,/usr/local/etc/sudoers.d,' $a
 done
 
+echo ".. Shebang ipmi"
+for a in \
+	plugins/outofbandmanagement-drivers/ipmitool/src/org/apache/cloudstack/outofbandmanagement/driver/ipmitool/IpmitoolOutOfBandManagementDriver.java \
+	scripts/util/ipmi.py
+do
+sed -i .bak 's,/usr/bin/ipmitool,/usr/local/bin/ipmitool,' $a
+done
+
+
+
 echo "Shebang python.."
 
 for i in \
