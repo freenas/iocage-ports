@@ -43,11 +43,13 @@
     SUBDIR += chemps2
     SUBDIR += chemtool
     SUBDIR += chemtool-devel
+    SUBDIR += chrono
     SUBDIR += clhep
     SUBDIR += clipper
     SUBDIR += colt
     SUBDIR += coot
     SUBDIR += crf++
+    SUBDIR += datawarrior
     SUBDIR += dcl
     SUBDIR += devisor
     SUBDIR += dft_tools
@@ -65,6 +67,7 @@
     SUBDIR += fvcom
     SUBDIR += fvcom-mpi
     SUBDIR += fvm
+    SUBDIR += gabedit
     SUBDIR += gchemutils
     SUBDIR += gdma
     SUBDIR += getdp
@@ -85,6 +88,7 @@
     SUBDIR += hypre
     SUBDIR += iboview
     SUBDIR += isaac-cfd
+    SUBDIR += jdftx
     SUBDIR += jstrack
     SUBDIR += kalzium
     SUBDIR += kalzium-kde4
@@ -98,6 +102,7 @@
     SUBDIR += libgeodecomp
     SUBDIR += libghemical
     SUBDIR += libint
+    SUBDIR += libint2
     SUBDIR += libkml
     SUBDIR += liblinear
     SUBDIR += liboglappth
@@ -107,6 +112,7 @@
     SUBDIR += libsvm-python
     SUBDIR += libxc
     SUBDIR += linsmith
+    SUBDIR += madness
     SUBDIR += massxpert
     SUBDIR += mbdyn
     SUBDIR += mcstas
@@ -124,11 +130,14 @@
     SUBDIR += mpb
     SUBDIR += mpqc
     SUBDIR += mpqc-mpich
+    SUBDIR += multiwfn
     SUBDIR += ncs
     SUBDIR += netcdf
     SUBDIR += netcdf-cxx
     SUBDIR += netcdf-fortran
     SUBDIR += nifticlib
+    SUBDIR += nwchem
+    SUBDIR += octopus
     SUBDIR += openbabel
     SUBDIR += openkim
     SUBDIR += openstructure
@@ -177,9 +186,11 @@
     SUBDIR += py-ScientificPython
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
+    SUBDIR += py-ase
     SUBDIR += py-cdo
     SUBDIR += py-coards
     SUBDIR += py-dlib
+    SUBDIR += py-gpaw
     SUBDIR += py-gsd
     SUBDIR += py-h5py
     SUBDIR += py-hcluster
@@ -215,9 +226,12 @@
     SUBDIR += pybrain
     SUBDIR += pycdf
     SUBDIR += pynn
+    SUBDIR += qbox
     SUBDIR += qcl
+    SUBDIR += qmcpack
     SUBDIR += qtresistors
     SUBDIR += quantum-espresso
+    SUBDIR += qwalk
     SUBDIR += rdkit
     SUBDIR += rmf
     SUBDIR += rubygem-ai4r

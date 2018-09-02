@@ -115,6 +115,7 @@
     SUBDIR += denemo
     SUBDIR += dir2ogg
     SUBDIR += discid
+    SUBDIR += dpf-plugins-lv2
     SUBDIR += dream
     SUBDIR += drumgizmo
     SUBDIR += drumpiler
@@ -146,6 +147,7 @@
     SUBDIR += faad
     SUBDIR += fabla2-lv2
     SUBDIR += fapg
+    SUBDIR += fasttracker2
     SUBDIR += faust
     SUBDIR += faust-lv2
     SUBDIR += faustlive
@@ -664,6 +666,7 @@
     SUBDIR += puddletag
     SUBDIR += pulseaudio
     SUBDIR += pulseaudio-module-sndio
+    SUBDIR += pulseaudio-module-xrdp
     SUBDIR += py-SoundFile
     SUBDIR += py-al
     SUBDIR += py-ao
