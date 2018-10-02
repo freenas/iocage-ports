@@ -2,7 +2,6 @@
 
 PORTNAME=	artikulate
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	misc kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -19,5 +18,7 @@ USE_QT=		core dbus gui multimedia network qml quick sql testlib widgets \
 		xml xmlpatterns \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

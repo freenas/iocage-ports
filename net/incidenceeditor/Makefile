@@ -2,7 +2,6 @@
 
 PORTNAME=	incidenceeditor
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -26,5 +25,7 @@ USE_QT=		core dbus gui network printsupport testlib uitools webkit \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

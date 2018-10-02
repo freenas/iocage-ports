@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	puppetserver
-PORTVERSION=	5.3.4
+PORTVERSION=	5.3.5
 CATEGORIES=	sysutils java
 MASTER_SITES=	https://downloads.puppetlabs.com/puppet/
 PKGNAMESUFFIX=	5
@@ -23,6 +23,8 @@ USE_RUBY=	yes
 NO_ARCH=	yes
 NO_BUILD=	yes
 JAVA_VERSION=	1.8+
+
+CONFLICTS_INSTALL=	puppetserver-* puppetserver6-*
 
 SHEBANG_FILES=  ext/bin/puppetserver
 

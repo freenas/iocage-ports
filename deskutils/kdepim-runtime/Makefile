@@ -2,7 +2,6 @@
 
 PORTNAME=	kdepim-runtime
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -35,5 +34,7 @@ USE_QT=		core dbus gui location network printsupport qml quick speech \
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

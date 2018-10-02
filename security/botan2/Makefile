@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	botan
-DISTVERSION=	2.6.0
-PORTREVISION=	3
+DISTVERSION=	2.7.0
 CATEGORIES=	security
 MASTER_SITES=	http://botan.randombit.net/releases/
 PKGNAMESUFFIX=	2
@@ -16,7 +15,6 @@ LICENSE_FILE=	${WRKSRC}/license.txt
 
 BROKEN_armv6=		include/arm_neon.h:28:2: error: "NEON support not enabled"
 BROKEN_armv7=		fails to package: pkg-static: Unable to access file stage/usr/local/include/botan-2/botan/rdrand_rng.h:No such file or directory
-BROKEN_powerpc64=	fails to configure: Unknown compiler "None"; available options: clang ekopath gcc hpcc icc msvc pgi sunstudio xlc
 
 LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs
 
@@ -62,7 +60,7 @@ post-patch:
 		${WRKSRC}/src/build-data/cc/clang.txt
 
 post-install:
-.for i in bin/botan lib/libbotan-2.so.5.6.0
+.for i in bin/botan lib/libbotan-2.so.7.7.0
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${i}
 .endfor
 

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	e2fsprogs
-# XXX if bumping PORTVERSION, check/adjust pre-configure!
-PORTVERSION=	1.44.3
+PORTVERSION=	1.44.4
 PORTREVISION?=	0
 CATEGORIES?=	sysutils
 MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
@@ -18,10 +17,6 @@ LICENSE_FILE?=	${WRKSRC}/NOTICE
 LICENSE_DISTFILES_GPLv2=	${DISTNAME}${EXTRACT_SUFX}
 
 PORTSCOUT=	ignore	# cannot handle the version in the directory
-
-.if !defined(MASTERDIR)
-BROKEN_powerpc64=	fails to build: Entry '..' in Signal (11) SIGSEGV si_code=SEGV_MAPERR fault addr=0x2434
-.endif
 
 USES=		cpe gmake makeinfo pkgconfig tar:xz
 CPE_VENDOR=	e2fsprogs_project
@@ -86,6 +81,12 @@ MAKE_ARGS+=	V=1
 
 .include <bsd.port.options.mk>
 
+. if ${ARCH} == powerpc64
+# Fix powerpc64 SIGSEGV,
+# see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=231570
+USES+=		compiler:c11
+. endif
+
 .if ${PORT_OPTIONS:MFUSEFS}
 USES+=		fuse
 .endif
@@ -124,6 +125,7 @@ post-patch::
 	    -e "s/ == 0/ = 0/" -e "s/tar x$$/tar xf -/" -e "s/\<dd\>/gdd/" \
 	    ${WRKSRC}/tests/[a-z]_*/script
 	@${REINPLACE_CMD} -e 's/<malloc\.h>/<stdlib.h>/' ${WRKSRC}/*/*.c
+	@${REINPLACE_CMD} -E -e 's/__GNUC_PREREQ\>/__GNUC_PREREQ__/' ${WRKSRC}/*/*/*.[ch] ${WRKSRC}/*/*.c
 .if empty(PORT_OPTIONS:MALLTESTS)
 . for i in \
 		d_fallocate_blkmap \
@@ -171,9 +173,6 @@ post-patch::
 	@${MV} ${WRKSRC}/tests/${i} ${WRKSRC}/tests/disabled_test-${i}
 . endfor
 .endif
-
-pre-configure::
-	${REINPLACE_CMD} -e 's/July/Jul/' ${WRKSRC}/version.h
 
 ##############################################################
 # Master port stuff that is not to be seen by the slave ports.

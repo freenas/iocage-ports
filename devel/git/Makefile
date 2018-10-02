@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	git
-DISTVERSION=	2.18.0
+DISTVERSION=	2.19.0
 PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	KERNEL_ORG/software/scm/git
@@ -87,7 +87,8 @@ PCRE2_LIB_DEPENDS=	libpcre2-8.so:devel/pcre2
 PCRE2_CONFIGURE_WITH=	libpcre
 
 SEND_EMAIL_IMPLIES=	PERL
-SEND_EMAIL_RUN_DEPENDS=	p5-Authen-SASL>=0:security/p5-Authen-SASL
+SEND_EMAIL_RUN_DEPENDS=	p5-Authen-SASL>=0:security/p5-Authen-SASL \
+			p5-IO-Socket-SSL>=0:security/p5-IO-Socket-SSL
 
 ICONV_USES=		iconv
 ICONV_MAKE_ARGS_OFF=	NO_ICONV=1
@@ -229,13 +230,13 @@ post-install-CONTRIB-on:
 	# will be useful
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
 	@${LN} -s ../../share/git-core/contrib/completion/git-completion.bash \
-		${STAGEDIR}${PREFIX}/etc/bash_completion.d/git.sh
+		${STAGEDIR}${PREFIX}/etc/bash_completion.d/
 
 post-install-CONTRIB-off:
 	# Install the contrib completions anyway
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/completion/git-completion.bash \
-		${STAGEDIR}${PREFIX}/etc/bash_completion.d/git.sh
+		${STAGEDIR}${PREFIX}/etc/bash_completion.d/
 
 post-install-P4-on:
 	${INSTALL_SCRIPT} ${WRKSRC}/git-p4.py ${STAGEDIR}${PREFIX}/bin/

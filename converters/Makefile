@@ -35,7 +35,6 @@
     SUBDIR += hs-aeson
     SUBDIR += hs-aeson-compat
     SUBDIR += hs-aeson-pretty
-    SUBDIR += hs-dataenc
     SUBDIR += hs-json
     SUBDIR += hs-sandi
     SUBDIR += htx
@@ -183,7 +182,6 @@
     SUBDIR += tuc
     SUBDIR += unix2dos
     SUBDIR += uudeview
-    SUBDIR += uudx
     SUBDIR += uulib
     SUBDIR += vda2fbd
     SUBDIR += wkhtmltopdf

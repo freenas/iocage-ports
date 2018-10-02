@@ -2,7 +2,6 @@
 
 PORTNAME=	kig
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
 CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -19,5 +18,7 @@ USE_KDE=	archive auth codecs completion config configwidgets coreaddons \
 USE_QT=		core dbus gui network printsupport svg widgets xml xmlpatterns \
 		buildtools_build qmake_build
 SHEBANG_FILES=	pykig/pykig.py
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

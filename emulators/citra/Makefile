@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	citra
-PORTVERSION=	s20180808
-PORTREVISION?=	1
+PORTVERSION=	s20181001
+PORTREVISION?=	0
 CATEGORIES=	emulators
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -23,22 +23,25 @@ BUILD_DEPENDS=	boost-libs>=1.66:devel/boost-libs
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	citra-emu
-GH_TAGNAME=	84fc8eaab
+GH_TAGNAME=	fceec3494
 GH_TUPLE=	citra-emu:ext-libressl-portable:7d01cb0:libressl/externals/libressl \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
-		MerryMage:dynarmic:r1-2-g4b350a3:dynarmic/externals/dynarmic \
+		MerryMage:dynarmic:r1-992-g4e6848d1:dynarmic/externals/dynarmic \
 		arsenm:sanitizers-cmake:f09151b:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		benhoyt:inih:r40:inih/externals/inih/inih \
-		catchorg:Catch2:v2.2.2:catch/externals/catch \
+		catchorg:Catch2:v2.3.0:catch/externals/catch \
 		fmtlib:fmt:5.1.0:fmt/externals/fmt \
-		herumi:xbyak:v5.64:xbyak/externals/xbyak \
+		herumi:xbyak:v5.71:xbyak/externals/xbyak \
 		kinetiknz:cubeb:cubeb-0.2-1039-g44341a1:cubeb/externals/cubeb \
 		lsalzman:enet:39a72ab:enet/externals/enet \
 		neobrain:nihstro:fd69de1:nihstro/externals/nihstro \
-		weidai11:cryptopp:CRYPTOPP_7_0_0-23-gf320e7d9:cryptopp/externals/cryptopp/cryptopp
+		weidai11:cryptopp:CRYPTOPP_7_0_0-23-gf320e7d9:cryptopp/externals/cryptopp/cryptopp \
+		zeromq:cppzmq:v4.2.3:cppzmq/externals/cppzmq \
+		zeromq:libzmq:v4.2.5:libzmq/externals/libzmq
 
 USES=		cmake:outsource compiler:c++17-lang iconv localbase:ldflags
 USE_SDL=	sdl2
+CMAKE_OFF=	ENABLE_SCRIPTING # XXX #4206 and #4207
 LDFLAGS+=	-Wl,--as-needed # Qt5Network
 TEST_TARGET=	test
 

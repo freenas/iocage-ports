@@ -2,7 +2,6 @@
 
 PORTNAME=	kleopatra
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	security kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -22,5 +21,7 @@ USE_KDE=	auth codecs config configwidgets coreaddons dbusaddons \
 		libkleo mime
 USE_QT=		core dbus gui network printsupport testlib widgets xml \
 		buildtools_build qmake_build
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

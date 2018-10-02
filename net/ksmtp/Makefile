@@ -2,7 +2,6 @@
 
 PORTNAME=	ksmtp
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -19,5 +18,7 @@ USE_QT=		core network \
 		buildtools_build qmake_build
 
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

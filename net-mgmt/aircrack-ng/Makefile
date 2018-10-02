@@ -2,12 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	aircrack-ng
-DISTVERSION=	1.3
-PORTREVISION=	1
+DISTVERSION=	1.4
 CATEGORIES=	net-mgmt security
 MASTER_SITES=	http://download.aircrack-ng.org/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	lme@FreeBSD.org
 COMMENT=	802.11 WEP and WPA-PSK keys cracking program
 
 LICENSE=	GPLv2 BSD3CLAUSE APACHE20
@@ -20,6 +19,8 @@ BROKEN_powerpc64=	fails to compile: sse-intrinsics.c: error: emmintrin.h: No suc
 
 USES=		autoreconf cpe dos2unix gmake libtool ssl
 USE_GCC=	yes
+USE_LDCONFIG=	yes
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-experimental
 CPE_VERSION=	${DISTVERSION:C/-.*//}

@@ -26,11 +26,13 @@ OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	HAMLIB FLDIGI DOCS
 HAMLIB_DESC=	Support rig control via hamlib
 FLDIGI_DESC=	Support fldigi XML-RPC integration
-OPTIONS_DEFAULT=HAMLIB FLDIGI DOCS
+OPTIONS_DEFAULT=HAMLIB FLDIGI
 
 HAMLIB_LIB_DEPENDS=	libhamlib.so:comms/hamlib
 HAMLIB_CONFIGURE_ENABLE=hamlib
 FLDIGI_LIB_DEPENDS=	libxmlrpc.so:net/xmlrpc-c
 FLDIGI_CONFIGURE_ENABLE=fldigi-xmlrpc
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

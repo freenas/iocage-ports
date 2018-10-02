@@ -2,7 +2,6 @@
 
 PORTNAME=	eventviews
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -23,5 +22,7 @@ USE_KDE+=	akonadi akonadicalendar akonadicontacts calendarcore \
 USE_QT=		core gui printsupport testlib uitools widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

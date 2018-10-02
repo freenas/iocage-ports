@@ -44,6 +44,7 @@
     SUBDIR += bdes
     SUBDIR += bearssl
     SUBDIR += beecrypt
+    SUBDIR += beid
     SUBDIR += belier
     SUBDIR += bfbtester
     SUBDIR += binwalk
@@ -146,8 +147,6 @@
     SUBDIR += fakebo
     SUBDIR += fakeident
     SUBDIR += fakeroot
-    SUBDIR += fastd
-    SUBDIR += fastd-devel
     SUBDIR += fbopenssl
     SUBDIR += fcheck
     SUBDIR += fcrackzip
@@ -293,13 +292,13 @@
     SUBDIR += jbrofuzz
     SUBDIR += john
     SUBDIR += kbfs
+    SUBDIR += kbfsd
     SUBDIR += kc
     SUBDIR += kc24
     SUBDIR += kdbx-viewer
     SUBDIR += kedpm
     SUBDIR += keepass
     SUBDIR += keepass-plugin-keepassrpc
-    SUBDIR += keepassx
     SUBDIR += keepassx-devel
     SUBDIR += keepassx2
     SUBDIR += keepassxc
@@ -316,6 +315,7 @@
     SUBDIR += knock
     SUBDIR += knocker
     SUBDIR += kpcli
+    SUBDIR += kpkpass
     SUBDIR += kqoauth
     SUBDIR += kr
     SUBDIR += krb5
@@ -336,7 +336,6 @@
     SUBDIR += libadacrypt
     SUBDIR += libargon2
     SUBDIR += libassuan
-    SUBDIR += libbeid
     SUBDIR += libbf
     SUBDIR += libcryptui
     SUBDIR += libdecaf
@@ -396,11 +395,12 @@
     SUBDIR += linux-c7-openssl
     SUBDIR += linux-c7-p11-kit
     SUBDIR += linux-c7-trousers
-    SUBDIR += lockdown
     SUBDIR += log2timeline
     SUBDIR += logcheck
     SUBDIR += luasec
     SUBDIR += luasec-51
+    SUBDIR += lxqt-openssh-askpass
+    SUBDIR += lxqt-sudo
     SUBDIR += lynis
     SUBDIR += mac-robber
     SUBDIR += maia
@@ -424,6 +424,7 @@
     SUBDIR += morphis
     SUBDIR += munge
     SUBDIR += mussh
+    SUBDIR += n2n
     SUBDIR += nacl
     SUBDIR += ncrack
     SUBDIR += ncrypt
@@ -447,6 +448,7 @@
     SUBDIR += ocaml-ssl
     SUBDIR += oidentd
     SUBDIR += oinkmaster
+    SUBDIR += onionscan
     SUBDIR += op
     SUBDIR += openbsm
     SUBDIR += openca-tools-forked
@@ -464,6 +466,7 @@
     SUBDIR += openssl
     SUBDIR += openssl-devel
     SUBDIR += openssl-unsafe
+    SUBDIR += openssl111
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas8
     SUBDIR += openvas8-cli
@@ -493,6 +496,7 @@
     SUBDIR += outguess
     SUBDIR += owasp-dependency-check
     SUBDIR += p11-kit
+    SUBDIR += p5-Alt-Crypt-RSA-BigInt
     SUBDIR += p5-Apache-Htpasswd
     SUBDIR += p5-App-Genpass
     SUBDIR += p5-App-TLSMe
@@ -827,7 +831,6 @@
     SUBDIR += pecl-ssh2
     SUBDIR += pecl-ssh2-0
     SUBDIR += pev
-    SUBDIR += pft
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
@@ -951,6 +954,7 @@
     SUBDIR += py-gnupg
     SUBDIR += py-gnutls
     SUBDIR += py-google-auth
+    SUBDIR += py-google-auth-httplib2
     SUBDIR += py-gpgme
     SUBDIR += py-gpsoauth
     SUBDIR += py-gssapi
@@ -1290,6 +1294,7 @@
     SUBDIR += tcpcrypt
     SUBDIR += teleport
     SUBDIR += testssl.sh
+    SUBDIR += theonionbox
     SUBDIR += tinc
     SUBDIR += tinc-devel
     SUBDIR += tinyca

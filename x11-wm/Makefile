@@ -62,6 +62,7 @@
     SUBDIR += hs-xmonad
     SUBDIR += hs-xmonad-contrib
     SUBDIR += i3
+    SUBDIR += i3-gaps
     SUBDIR += icewm
     SUBDIR += ion
     SUBDIR += jewel
@@ -114,7 +115,6 @@
     SUBDIR += spectrwm
     SUBDIR += stumpwm
     SUBDIR += subtle
-    SUBDIR += swm
     SUBDIR += tinywm
     SUBDIR += transset
     SUBDIR += treewm

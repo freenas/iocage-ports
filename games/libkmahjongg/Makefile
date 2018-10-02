@@ -2,7 +2,6 @@
 
 PORTNAME=	libkmahjongg
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -13,5 +12,7 @@ USE_KDE=	completion config configwidgets coreaddons ecm i18n widgetsaddons
 USE_QT=		core gui svg widgets \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

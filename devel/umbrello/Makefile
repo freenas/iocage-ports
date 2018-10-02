@@ -2,7 +2,6 @@
 
 PORTNAME=	umbrello
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -22,6 +21,8 @@ USE_QT=		core dbus gui network printsupport svg webkit widgets xml \
 
 # Build the KDE Frameworks 5 based version.
 CMAKE_BOOL=	BUILD_KF5
+
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
 # The CMakeFile  sets BUILD_UNITTESTS to 1, not respecting the
