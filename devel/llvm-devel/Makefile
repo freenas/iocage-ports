@@ -3,12 +3,30 @@
 
 PORTNAME=	llvm
 PORTVERSION=	${LLVM_MAJOR}.0.d${SNAPDATE}
-PORTREVISION=	2
+PORTREVISION=	0
 CATEGORIES=	devel lang
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	LLVM and Clang
+
+# License are listed in the order they appear in LICENSE.TXT
+LICENSE=	LLVM GTEST REGEX MIT ARM PD
+LICENSE_COMB=	multi
+LICENSE_NAME_LLVM=	LLVM Release License
+LICENSE_PERMS_LLVM=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LICENSE_FILE_LLVM=	${WRKSRC}/LICENSE.TXT
+LICENSE_NAME_GTEST=	Google test license
+LICENSE_PERMS_GTEST=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LICENSE_FILE_GTEST=	${WRKSRC}/utils/unittest/googletest/LICENSE.TXT
+LICENSE_NAME_REGEX=	OpenBSD Regex License
+LICENSE_PERMS_REGEX=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LICENSE_FILE_REGEX=	${WRKSRC}/lib/Support/COPYRIGHT.regex
+# pyyaml tests are under the MIT license
+LICENSE_NAME_ARM=	ARM Limited license
+LICENSE_PERMS_ARM=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LICENSE_FILE_ARM=	${WRKSRC}/lib/Target/ARM/LICENSE.TXT
+# md5 is in the public domain
 
 LLVM_SUFFIX=	-devel
 LLVM_PREFIX=	${PREFIX}/llvm${LLVM_SUFFIX}
@@ -100,6 +118,7 @@ LLD_GH_SUBDIR=		tools/lld:lld
 LLD_GH_TAGNAME=		${LLD_COMMIT}:lld
 LLDB_BUILD_DEPENDS=	swig3.0:devel/swig30
 LLDB_DESC=		Install lldb, the LLVM debugger
+LLDB_EXTRA_PATCHES=	${PATCHDIR}/lldb-patch-tools_lldb_source_Plugins_Process_FreeBSD_ProcessFreeBSD.cpp
 LLDB_GH_PROJECT=	lldb:lldb
 LLDB_GH_SUBDIR=		tools/lldb:lldb
 LLDB_GH_TAGNAME=	${LLDB_COMMIT}:lldb
@@ -132,6 +151,7 @@ COMMANDS=	bugpoint \
 		llvm-config \
 		llvm-cov \
 		llvm-cvtres \
+		llvm-cxxmap \
 		llvm-diff \
 		llvm-dis \
 		llvm-dlltool \
@@ -162,6 +182,7 @@ COMMANDS=	bugpoint \
 		llvm-symbolizer \
 		llvm-tblgen \
 		llvm-undname \
+		llvm-xray \
 		macho-dump \
 		opt \
 		sancov
@@ -177,6 +198,7 @@ MAN1SRCS+=	bugpoint.1 \
 		llvm-build.1 \
 		llvm-config.1 \
 		llvm-cov.1 \
+		llvm-cxxmap.1 \
 		llvm-diff.1 \
 		llvm-dis.1 \
 		llvm-dwarfdump.1 \
@@ -285,7 +307,8 @@ COMMANDS+=	lldb \
 		lldb-argdumper \
 		lldb-mi \
 		lldb-server \
-		lldb-test
+		lldb-test \
+		lldb-vscode
 .endif
 
 .if ! ${OPTIONS_DEFINE:MCOMPILER_RT}

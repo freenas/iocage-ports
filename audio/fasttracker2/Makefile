@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	fasttracker2
-DISTVERSION=	0.1-b93
+DISTVERSION=	0.1-b99
 CATEGORIES=	audio
 MASTER_SITES=	https://16-bits.org/ \
 		LOCAL/ehaupt
@@ -39,6 +39,8 @@ LDFLAGS+=	-lSDL2 -lpthread -lstdc++ -lm -liconv
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 ALSA_CFLAGS+=	-D__LINUX_ALSA__
 ALSA_LDFLAGS+=	-lasound
+
+CFLAGS_i386+=	-msse2
 
 do-build:
 	${CC} ${CFLAGS} ${LDFLAGS} \

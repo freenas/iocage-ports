@@ -153,6 +153,8 @@
     SUBDIR += jruby
     SUBDIR += js_of_ocaml
     SUBDIR += julia
+    SUBDIR += julia06
+    SUBDIR += julia07
     SUBDIR += jython
     SUBDIR += kawa
     SUBDIR += kf5-kross
@@ -216,12 +218,14 @@
     SUBDIR += nyan
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
+    SUBDIR += ocaml-camlidl
     SUBDIR += ocaml-nox11
     SUBDIR += ohugs
     SUBDIR += onyx
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opendylan
+    SUBDIR += ott
     SUBDIR += owl-lisp
     SUBDIR += p2c
     SUBDIR += p5-Data-JavaScript

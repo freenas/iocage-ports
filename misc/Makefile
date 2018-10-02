@@ -154,6 +154,7 @@
     SUBDIR += gkrellweather2
     SUBDIR += gkx86info2
     SUBDIR += gnome-devel-docs
+    SUBDIR += gnome-getting-started-docs
     SUBDIR += gnome-icon-theme
     SUBDIR += gnome-icon-theme-extras
     SUBDIR += gnome-mime-data
@@ -445,6 +446,7 @@
     SUBDIR += py-tqdm
     SUBDIR += py-yolk
     SUBDIR += pylize
+    SUBDIR += pyobd
     SUBDIR += qbrew
     SUBDIR += qlas
     SUBDIR += qmetro
@@ -515,7 +517,6 @@
     SUBDIR += termatrix
     SUBDIR += teseq
     SUBDIR += thefuck
-    SUBDIR += timediff
     SUBDIR += tkcron
     SUBDIR += tkinfo
     SUBDIR += tkregexp
@@ -526,6 +527,7 @@
     SUBDIR += tudu
     SUBDIR += tvbrowser
     SUBDIR += typetrainer
+    SUBDIR += tzdiff
     SUBDIR += uk-phone
     SUBDIR += uk-postcodes
     SUBDIR += umodunpack

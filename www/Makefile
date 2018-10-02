@@ -53,7 +53,6 @@
     SUBDIR += bluefish
     SUBDIR += boa
     SUBDIR += bolt
-    SUBDIR += bookmarkbridge
     SUBDIR += bozohttpd
     SUBDIR += buku
     SUBDIR += butterfly
@@ -254,14 +253,12 @@
     SUBDIR += hotcrp
     SUBDIR += hs-DAV
     SUBDIR += hs-HTTP
-    SUBDIR += hs-activehs
     SUBDIR += hs-authenticate
     SUBDIR += hs-cgi
     SUBDIR += hs-cookie
     SUBDIR += hs-css-text
     SUBDIR += hs-fastcgi
     SUBDIR += hs-gitit
-    SUBDIR += hs-hS3
     SUBDIR += hs-happstack
     SUBDIR += hs-happstack-server
     SUBDIR += hs-heist
@@ -1579,7 +1576,6 @@
     SUBDIR += py-django-jsonfield
     SUBDIR += py-django-jsonfield2
     SUBDIR += py-django-ldapdb
-    SUBDIR += py-django-livesettings
     SUBDIR += py-django-markdownx
     SUBDIR += py-django-markwhat
     SUBDIR += py-django-mezzanine
@@ -1621,12 +1617,14 @@
     SUBDIR += py-django-tables2
     SUBDIR += py-django-tagging
     SUBDIR += py-django-taggit
+    SUBDIR += py-django-taggit-serializer
     SUBDIR += py-django-tastypie
     SUBDIR += py-django-templatetag-sugar
     SUBDIR += py-django-timezone-field
     SUBDIR += py-django-tinymce
     SUBDIR += py-django-treebeard
     SUBDIR += py-django-voting
+    SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django111
     SUBDIR += py-django20
@@ -1858,7 +1856,6 @@
     SUBDIR += py-scrapy
     SUBDIR += py-seafdav
     SUBDIR += py-seafobj
-    SUBDIR += py-searx
     SUBDIR += py-selector
     SUBDIR += py-selenium
     SUBDIR += py-slimit
@@ -2040,7 +2037,6 @@
     SUBDIR += rubygem-hamlit-rails
     SUBDIR += rubygem-hamlit-rails-rails5
     SUBDIR += rubygem-hamlit-rails-rails50
-    SUBDIR += rubygem-hamlit26
     SUBDIR += rubygem-hashicorp-checkpoint
     SUBDIR += rubygem-heroku
     SUBDIR += rubygem-heroku-api
@@ -2239,6 +2235,7 @@
     SUBDIR += seahub
     SUBDIR += seamonkey
     SUBDIR += seamonkey-i18n
+    SUBDIR += searx
     SUBDIR += selenium
     SUBDIR += serendipity
     SUBDIR += serf
@@ -2446,7 +2443,6 @@
     SUBDIR += w3mir
     SUBDIR += waccess
     SUBDIR += wadcomblog
-    SUBDIR += waterfox
     SUBDIR += web2ldap
     SUBDIR += webalizer
     SUBDIR += webbrowser

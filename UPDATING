@@ -5,6 +5,79 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180930:
+  AFFECTS: users of DRM components
+  AUTHOR: jmd@FreeBSD.org
+
+  A metaport, graphics/drm-kmod, was introduced for users of both the LinuxKPI-
+  based DRM components as well as the legacy ones. It is recommended to use the
+  metaport from now on, which will select a recommended DRM version based on
+  the FreeBSD version.
+
+20180924:
+  AFFECTS: www/libresonic-standalone
+  AUTHOR: jlh@FreeBSD.org
+
+  HTTPS support has been removed from the port, as it will be removed upstream:
+    https://github.com/Libresonic/libresonic/issues/125#issuecomment-256227104
+
+  In order to avoid strange behavior for users who are using this feature, the
+  rc.d script will fail fast if libresonic_ssl="YES". You should remove the
+  following variables from rc.conf(5): libresonic_ssl libresonic_ssl_keystore
+  libresonic_ssl_password.
+
+  # sed -i '' /libresonic_ssl/d /etc/rc.conf
+
+  Users needing SSL are encouraged to use an HTTP reverse-proxy. Example
+  configurations can be found here:
+    https://github.com/Libresonic/libresonic/issues/119
+
+20180922:
+  AFFECTS: users of graphics/ilmbase, graphics/OpenEXR
+  AUTHOR: mandree@FreeBSD.org
+
+  The IlmBase package has been updated to 2.3.0.
+  The OpenEXR package has been renamed to openexr and updated to 2.3.0.
+
+  The PORTREVISION of all ports requiring either has been bumped to
+  ease the reubuilds, and where there were versions in the file names,
+  these have been removed from the *_DEPENDS lines for easier maintenance.
+
+  A full ports or package upgrade should just work.
+
+  If you are doing partial updates, be sure to rebuild and reinstall
+  all packages that require either of OpenEXR or ilmbase.
+  Normally, these can be listed by running:
+
+  # pkg info -q -r OpenEXR ilmbase  | sort -u | xargs pkg info -q -o
+
+20180905:
+  AFFECTS: users of lang/php56
+  AUTHOR: tz@FreeBSD.org
+
+  The default version of PHP has been switched from 5.6 to 7.1.
+
+  If you use binary packages you should make a list of php packages
+  before running 'pkg upgrade':
+
+  # pkg info php5\* > ~/installed-php-ports-list
+
+  After the upgrade, check with such list if all your php extensions
+  are still installed, and reinstall them if needed.
+
+  If you use mod_php56 you need to deinstall it and install mod_php71.
+
+20180901:
+  AFFECTS: net/samba48
+  AUTHOR: timur@FreeBSD.org
+
+  Samba ports from now on are not dependent from the databases/ldb* ports,
+  as the link between Samba and LDB is too tight and each next major Samba
+  release requires it's own major LDB release. Please, remove installed
+  version of databases/ldb13 from your system with:
+
+  # pkg delete -f databases/ldb13
+
 20180901:
   AFFECTS: net-mgmt/librenms
   AUTHOR: dvl@FreeBSD.org

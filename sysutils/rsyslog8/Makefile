@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rsyslog
-PORTVERSION=	8.37.0
-PORTREVISION=	1
+PORTVERSION=	8.38.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.rsyslog.com/files/download/rsyslog/
 
@@ -75,7 +74,7 @@ MYSQL_PORTDOCS=		plugins/ommysql/createDB.sql
 
 OPENSSL_USES=		ssl
 OPENSSL_CONFIGURE_ENABLE=	openssl
-OPENSSL_CONFIGURE_ENV=	OPENSSL_LIBS="-L${OPENSSLLIB} -lcrypto" \
+OPENSSL_CONFIGURE_ENV=	OPENSSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto" \
 			OPENSSL_CFLAGS="-I ${OPENSSLINC}"
 OPENSSL_PLIST_FILES=	lib/rsyslog/lmnsd_ossl.so
 
