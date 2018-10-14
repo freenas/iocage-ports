@@ -23,8 +23,17 @@ options are available in
 
 	%%WWWDIR%%/config/config.php
 
+<<<<<<< HEAD
 You can find annotated configuration options in config.documented.php
 in the same directory. Nextcloud's configuration documentation is at 
+=======
+/!\ The FreeBSD package REQUIRES the apps_paths configuration as    /!\
+/!\ seen in config/config.sample.php to function                    /!\
+
+***********************************************************************
+*                       NEXTCLOUD VERSION UPGRADE                     *
+***********************************************************************
+>>>>>>> www/nextcloud: Fix fresh installs
 
 	https://docs.nextcloud.com/server/18/admin_manual/configuration_server
 

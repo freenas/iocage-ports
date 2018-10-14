@@ -26,9 +26,15 @@ $CONFIG = array (
     ),
   ),
 
+<<<<<<< HEAD
 // Log-files belong in the appropriate location
   'logfile' => '/var/log/nextcloud/nextcloud.log',
 
 // Enable user caching when option is enabled
 %%APCU%%  'memcache.local' => '\OC\Memcache\APCu',
+=======
+/** Log-files belong in the appropriate location
+  */
+  'logfile' => '/var/log/nextcloud/nextcloud.log',
+>>>>>>> www/nextcloud: Fix fresh installs
 );
