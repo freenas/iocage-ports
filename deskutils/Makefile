@@ -16,6 +16,7 @@
     SUBDIR += autocutsel
     SUBDIR += baobab
     SUBDIR += basket
+    SUBDIR += belcard
     SUBDIR += bigyear
     SUBDIR += bijiben
     SUBDIR += bitcollider
@@ -231,6 +232,7 @@
     SUBDIR += puush
     SUBDIR += py-bugwarrior
     SUBDIR += py-khal
+    SUBDIR += py-khard
     SUBDIR += py-pystash
     SUBDIR += py-send2trash
     SUBDIR += py-taskw
@@ -238,7 +240,9 @@
     SUBDIR += py-vobject
     SUBDIR += pybookreader
     SUBDIR += pypanel
+    SUBDIR += qlipper
     SUBDIR += qorganizer
+    SUBDIR += qownnotes
     SUBDIR += qrfcview
     SUBDIR += qtm
     SUBDIR += recoll
@@ -267,7 +271,6 @@
     SUBDIR += synapse
     SUBDIR += syncthing-gtk
     SUBDIR += systempreferences
-    SUBDIR += tagutils
     SUBDIR += taskcoach
     SUBDIR += taskd
     SUBDIR += tasksh
