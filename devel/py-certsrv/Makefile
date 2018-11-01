@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	certsrv
-PORTVERSION=	1.5.0
+PORTVERSION=	2.0.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	feld@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python client for the Microsoft Certificate Authority
 
 LICENSE=	MIT
