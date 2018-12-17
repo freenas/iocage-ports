@@ -3,7 +3,7 @@
 
 PORTNAME=	osquery
 PORTVERSION=	3.3.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	zi@FreeBSD.org
@@ -66,12 +66,6 @@ LLDPD_LIB_DEPENDS=	liblldpctl.so:net-mgmt/lldpd
 LLDPD_CONFIGURE_ENV_OFF=SKIP_LLDPD=1
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 1100000
-BUILD_DEPENDS+=	clang60:devel/llvm60
-CC=	clang60
-CXX=	clang++60
-.endif
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/var/osquery/|/var/db/osquery/|g' \

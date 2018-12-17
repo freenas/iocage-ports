@@ -3,6 +3,7 @@
 
 PORTNAME=	treesheets
 PORTVERSION=	1.0.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	deskutils
 
@@ -35,14 +36,6 @@ PLIST_FILES=	bin/${PORTNAME} \
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-.include <bsd.port.pre.mk>
-
-.if (${OPSYS} == FreeBSD && ${OSVERSION} < 1100000) || make(makesum)
-MASTER_SITES+=	http://releases.llvm.org/6.0.1/:llvm
-DISTFILES+=	libcxx-6.0.1.src.tar.xz:llvm
-CXXFLAGS+=	-isystem ${WRKDIR}/libcxx-6.0.1.src/include
-.endif
-
 post-patch: .SILENT
 	${REINPLACE_CMD} -e 's|sys->frame->GetPath(L"|(L"${DOCSDIR}/|' \
 		${BUILD_WRKSRC}/document.h
@@ -71,4 +64,4 @@ do-install-EXAMPLES-on:
 	(cd ${WRKSRC}/TS/examples && ${COPYTREE_SHARE} "${PORTEXAMPLES}" \
 		${STAGEDIR}${EXAMPLESDIR})
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

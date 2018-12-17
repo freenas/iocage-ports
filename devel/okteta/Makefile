@@ -2,6 +2,7 @@
 
 PORTNAME=	okteta
 DISTVERSION=	0.25.3
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}/src
@@ -18,7 +19,7 @@ USE_KDE=	attica auth bookmarks codecs completion crash \
 		ecm i18n iconthemes itemviews jobwidgets kcmutils kio \
 		newstuff parts service solid sonnet textwidgets \
 		widgetsaddons xmlgui
-USE_QT=		concurrent core dbus designer gui network printsupport qml \
+USE_QT=		concurrent core dbus declarative designer gui network printsupport  \
 		script scripttools widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes

@@ -543,8 +543,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  the path relative to ${INFO_PATH}.
 # INFO_PATH		- Path, where all .info files will be installed by your
 #				  port, relative to ${PREFIX}
-#				  Default: "share/info" if ${PREFIX} is equal to /usr
-#				  and "info" otherwise.
 #
 # Set the following to specify all documentation your port installs into
 # ${DOCSDIR}
@@ -1423,7 +1421,7 @@ USES+=	mate
 .endif
 
 .if defined(USE_GL) && (!defined(USES) || !${USES:Mgl})
-DEV_WARNING+=	"Setting USE_GL without USES=gl is deprecated"
+DEV_WARNING+=	"Using USE_GL alone is deprecated, please add USES=gl."
 USES+=	gl
 .endif
 
@@ -2671,12 +2669,7 @@ MAN${sect}PREFIX?=	${MANPREFIX}
 .endfor
 MANLPREFIX?=	${MANPREFIX}
 MANNPREFIX?=	${MANPREFIX}
-
-.if ${PREFIX} == /usr
 INFO_PATH?=	share/info
-.else
-INFO_PATH?=	info
-.endif
 
 .if defined(INFO)
 RUN_DEPENDS+=	indexinfo:print/indexinfo

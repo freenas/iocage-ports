@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rspamd
-PORTVERSION=	1.8.1
+PORTVERSION=	1.8.3
 PORTREVISION=	1
 CATEGORIES=	mail
 
@@ -57,7 +57,6 @@ CMAKE_ARGS+=	-DCONFDIR=${PREFIX}/etc/rspamd \
 		-DNO_SHARED=ON
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	vstakhov
 
 USE_RC_SUBR=	rspamd
 

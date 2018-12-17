@@ -11,7 +11,7 @@ USES=		cmake:outsource kde:5 qt:5 tar:xz
 USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		crash dbusaddons ecm i18n kio libkdegames service \
 		widgetsaddons xmlgui
-USE_QT=		core dbus gui network qml quick widgets xml \
+USE_QT=		core dbus declarative gui network widgets xml \
 		buildtools_build qmake_build
 
 OPTIONS_DEFINE=	DOCS

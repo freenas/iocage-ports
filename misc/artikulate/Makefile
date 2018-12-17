@@ -14,7 +14,7 @@ USES=		cmake:outsource compiler:c++11-lang gettext kde:5 qt:5 tar:xz
 USE_KDE=	archive attica auth codecs config configwidgets coreaddons \
 		crash doctools ecm i18n kdeclarative newstuff service \
 		widgetsaddons xmlgui
-USE_QT=		core dbus gui multimedia network qml quick sql testlib widgets \
+USE_QT=		core dbus declarative gui multimedia network sql testlib widgets \
 		xml xmlpatterns \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes

@@ -15,7 +15,7 @@ LICENSE_FILE_GPLv2=	 ${WRKSRC}/COPYING
 USES=		cmake:outsource compiler:c++11-lang gl kde:5 qt:5 tar:xz
 USE_GL=		glu
 USE_KDE=	ecm
-USE_QT=		core gui network opengl printsupport qml quick svg widgets xml \
+USE_QT=		core declarative gui network opengl printsupport svg widgets xml \
 		buildtools_build linguisttools_build qmake_build
 
 USE_LDCONFIG=	yes

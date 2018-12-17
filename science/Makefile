@@ -32,8 +32,8 @@
     SUBDIR += avogadro2
     SUBDIR += avogadrolibs
     SUBDIR += bagel
+    SUBDIR += berkeleygw
     SUBDIR += bddsolve
-    SUBDIR += bft
     SUBDIR += bodr
     SUBDIR += brian
     SUBDIR += buddy
@@ -50,6 +50,7 @@
     SUBDIR += chrono
     SUBDIR += clhep
     SUBDIR += clipper
+    SUBDIR += code_saturne
     SUBDIR += colt
     SUBDIR += coordgenlibs
     SUBDIR += coot
@@ -64,12 +65,13 @@
     SUBDIR += dkh
     SUBDIR += dlib-cpp
     SUBDIR += dlpoly-classic
+    SUBDIR += drawxtl
     SUBDIR += eccodes
-    SUBDIR += ecs
     SUBDIR += elk
     SUBDIR += epte
     SUBDIR += erd
     SUBDIR += erkale
+    SUBDIR += esys-particle
     SUBDIR += fastcap
     SUBDIR += fasthenry
     SUBDIR += fisicalab
@@ -77,7 +79,6 @@
     SUBDIR += fsom
     SUBDIR += fvcom
     SUBDIR += fvcom-mpi
-    SUBDIR += fvm
     SUBDIR += gabedit
     SUBDIR += gamess-us
     SUBDIR += gchemutils
@@ -128,7 +129,7 @@
     SUBDIR += libsvm
     SUBDIR += libsvm-python
     SUBDIR += libxc
-    SUBDIR += linsmith
+    SUBDIR += liggghts
     SUBDIR += lm
     SUBDIR += luscus
     SUBDIR += madness
@@ -142,7 +143,6 @@
     SUBDIR += mdynamix
     SUBDIR += medit
     SUBDIR += meep
-    SUBDIR += mei
     SUBDIR += metaf2xml
     SUBDIR += metaphysicl
     SUBDIR += minc2
@@ -156,7 +156,6 @@
     SUBDIR += msms
     SUBDIR += multiwfn
     SUBDIR += namd
-    SUBDIR += ncs
     SUBDIR += netcdf
     SUBDIR += netcdf-cxx
     SUBDIR += netcdf-fortran
@@ -166,6 +165,7 @@
     SUBDIR += openbabel
     SUBDIR += openkim
     SUBDIR += openmx
+    SUBDIR += opensim-core
     SUBDIR += openstructure
     SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
@@ -206,6 +206,7 @@
     SUBDIR += pulseview
     SUBDIR += py-DendroPy
     SUBDIR += py-PyFR
+    SUBDIR += py-lifelines
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
@@ -237,6 +238,7 @@
     SUBDIR += py-pupynere
     SUBDIR += py-pyaixi
     SUBDIR += py-pydicom
+    SUBDIR += py-pygeodesy
     SUBDIR += py-pymatgen
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
@@ -263,6 +265,7 @@
     SUBDIR += qmcpack
     SUBDIR += qtresistors
     SUBDIR += quantum-espresso
+    SUBDIR += quantum-espresso-pseudopotentials
     SUBDIR += qwalk
     SUBDIR += rdkit
     SUBDIR += rmf
@@ -280,9 +283,11 @@
     SUBDIR += sigrok-firmware-fx2lafw
     SUBDIR += sigrok-firmware-utils
     SUBDIR += silo
+    SUBDIR += simbody
     SUBDIR += simint
     SUBDIR += simlib
     SUBDIR += simsmith
+    SUBDIR += sparta
     SUBDIR += spglib
     SUBDIR += step
     SUBDIR += step-kde4
@@ -302,5 +307,6 @@
     SUBDIR += xdrawchem
     SUBDIR += xfce4-equake-plugin
     SUBDIR += xmakemol
+    SUBDIR += yoda
 
 .include <bsd.port.subdir.mk>

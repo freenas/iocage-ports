@@ -11,6 +11,7 @@
     SUBDIR += alltray
     SUBDIR += alttab
     SUBDIR += altyo
+    SUBDIR += aminal
     SUBDIR += antimicro
     SUBDIR += appres
     SUBDIR += apwal
@@ -27,8 +28,8 @@
     SUBDIR += blast
     SUBDIR += bmpanel2
     SUBDIR += bricons
-    SUBDIR += brightside
     SUBDIR += brisk-menu
+    SUBDIR += cde
     SUBDIR += cinnamon
     SUBDIR += cinnamon-desktop
     SUBDIR += cinnamon-menus
@@ -36,6 +37,7 @@
     SUBDIR += cinnamon-session
     SUBDIR += cl-clx
     SUBDIR += cl-clx-sbcl
+    SUBDIR += compton-conf
     SUBDIR += controllermap
     SUBDIR += cool-retro-term
     SUBDIR += decurs
@@ -102,6 +104,7 @@
     SUBDIR += hs-X11-xft
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
+    SUBDIR += i3blocks
     SUBDIR += i3lock
     SUBDIR += i3status
     SUBDIR += iceauth
@@ -416,6 +419,7 @@
     SUBDIR += xfce4-embed-plugin
     SUBDIR += xfce4-goodies
     SUBDIR += xfce4-quicklauncher-plugin
+    SUBDIR += xfce4-screensaver
     SUBDIR += xfce4-screenshooter-plugin
     SUBDIR += xfce4-taskmanager
     SUBDIR += xfce4-terminal

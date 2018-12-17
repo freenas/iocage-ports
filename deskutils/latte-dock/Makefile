@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	latte-dock
-DISTVERSION=	0.8.2
+DISTVERSION=	0.8.3
 CATEGORIES=	deskutils kde
 MASTER_SITES=	KDE/stable/latte-dock
 
@@ -19,7 +19,7 @@ USE_KDE=	activities archive attica auth codecs config configwidgets \
 		kdeclarative newstuff notifications package plasma-framework service \
 		wayland widgetsaddons windowsystem xmlgui \
 		ecm_build
-USE_QT=		core dbus gui network qml quick widgets x11extras xml \
+USE_QT=		core dbus declarative gui network widgets x11extras xml \
 		buildtools_build qmake_build
 USE_XORG=	ice sm x11 xcb xext
 

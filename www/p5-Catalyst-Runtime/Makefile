@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	Catalyst-Runtime
-PORTVERSION=	5.90120
+PORTVERSION=	5.90123
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -37,6 +37,7 @@ RUN_DEPENDS=	p5-CGI-Simple>=1.109:www/p5-CGI-Simple \
 		p5-MooseX-Getopt>=0.48:devel/p5-MooseX-Getopt \
 		p5-MooseX-MethodAttributes>=0.24:devel/p5-MooseX-MethodAttributes \
 		p5-Path-Class>=0.09:devel/p5-Path-Class \
+		p5-PerlIO-utf8_strict>=0:devel/p5-PerlIO-utf8_strict \
 		p5-Plack>=0.9991:www/p5-Plack \
 		p5-Plack-Middleware-FixMissingBodyInRedirect>=0.09:www/p5-Plack-Middleware-FixMissingBodyInRedirect \
 		p5-Plack-Middleware-MethodOverride>=0.12:www/p5-Plack-Middleware-MethodOverride \

@@ -1,7 +1,7 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
 # $FreeBSD$
 
-PORTREVISION=	18
+PORTREVISION=	19
 CATEGORIES=	audio
 PKGNAMEPREFIX=	cpp-
 
@@ -16,7 +16,7 @@ USES=		ssl
 USE_LDCONFIG=	yes
 USE_GNOME=	glib20
 
-BROKEN_SSL=	openssl-devel
+BROKEN_SSL=	openssl111
 
 PLIST=		${.CURDIR}/pkg-plist
 

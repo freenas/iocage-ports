@@ -18,7 +18,7 @@ USE_KDE=	archive auth codecs completion config configwidgets coreaddons \
 		kcmutils kdewebkit kio notifications notifyconfig people \
 		service sonnet textwidgets wallet widgetsaddons windowsystem \
 		xmlgui
-USE_QT=		core dbus gui location network qml quick speech webchannel \
+USE_QT=		core dbus declarative gui location network speech webchannel \
 		webengine widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes

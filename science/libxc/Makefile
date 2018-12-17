@@ -3,10 +3,11 @@
 
 PORTNAME=	libxc
 DISTVERSION=	4.2.3
+PORTREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	http://www.tddft.org/programs/octopus/download/libxc/${DISTVERSION}/
 
-MAINTAINER=	dieterich@ogolem.org
+MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Library of exchange-correlation functionals for DFT
 
 LICENSE=	LGPL3+

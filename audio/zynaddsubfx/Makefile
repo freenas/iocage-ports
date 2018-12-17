@@ -47,7 +47,7 @@ GUI_ON=				-DGuiModule:STRING=fltk
 GUI_CMAKE_OFF=			-DGuiModule:STRING=OFF
 GUI_USE+=			XORG=x11,xext,xfixes,xcursor,xrender,ice,sm,xpm,xinerama,xft
 GUI_USE+=			GL=gl,glu
-GUI_USES=			jpeg
+GUI_USES=			gl jpeg
 
 OSS_CMAKE_ON=			-DOssEnable:BOOL=ON
 OSS_CMAKE_OFF=			-DOssEnable:BOOL=OFF
@@ -81,15 +81,7 @@ PORTEXAMPLES=	*
 CMAKE_ARGS+=	-DZYN_DATADIR:STRING=${DATADIR}
 CMAKE_ARGS+=	-DZYN_EXAMPLESDIR:STRING=${EXAMPLESDIR}
 
-.include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
-# Build fix for ZynAddSubFx
-BUILD_DEPENDS+=	clang60:devel/llvm60
-CC=		clang60
-CXX=		clang++60
-.endif
 
 .if ${ARCH} == "i386" || ${ARCH} == "amd64"
 CFLAGS+=	-DASM_F2I_YES

@@ -4,9 +4,10 @@
 PORTNAME=	clrng
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.0-beta
+PORTREVISION=	1
 CATEGORIES=	math
 
-MAINTAINER=	dieterich@ogolem.org
+MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Library for uniform random number generation in OpenCL
 
 LICENSE=	BSD2CLAUSE

@@ -3,6 +3,7 @@
 
 PORTNAME=	vlc
 DISTVERSION=	3.0.4
+PORTREVISION=	6
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
@@ -25,8 +26,8 @@ BUILD_DEPENDS=	ffmpeg>=3.4.1,1:multimedia/ffmpeg \
 		yasm:devel/yasm
 RUN_DEPENDS=	ffmpeg>=3.4.1,1:multimedia/ffmpeg
 
-USES=		compiler:c++11-lib desktop-file-utils gmake gnome iconv libtool \
-		pathfix pkgconfig tar:xz
+USES=		compiler:c++11-lib desktop-file-utils gettext-tools gmake gnome \
+		iconv libtool pathfix pkgconfig tar:xz
 
 # VLC git (post 2.2.4) requires C++11 support and passes the appropriate flag
 # to the compiler. Until the port is updated, we explicitly pass -std=c++11 to
@@ -55,8 +56,9 @@ CONFIGURE_ARGS=	--enable-avcodec --enable-avformat --enable-dvbpsi \
 		--disable-tiger --disable-tremor --disable-udev \
 		--disable-update-check --disable-vsxu \
 		--disable-wasapi --disable-x26410b \
-		--with-kde-solid=${PREFIX}/share/apps/solid/actions \
-		ac_cv_search_pthread_rwlock_init=-pthread
+		--with-kde-solid=${PREFIX}/share/solid/actions \
+		ac_cv_search_pthread_rwlock_init=-pthread \
+		BUILDCC="${CC}"
 .if defined(WITH_DEBUG)
 CONFIGURE_ARGS+=--enable-debug
 .endif
@@ -64,7 +66,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS_i386=	-fomit-frame-pointer
 LIBS+=		-L${LOCALBASE}/lib
 
-OPTIONS_DEFINE=	A52 AALIB ASS AVAHI CACA CHROMECAST DBUS DCA DOCS DVDREAD \
+OPTIONS_DEFINE=	A52 AALIB AOM ASS AVAHI CACA CHROMECAST DAV1D DBUS DCA DOCS DVDREAD \
 		DVDNAV FAAD FLAC FLUID FREERDP FRIBIDI GME GNUTLS \
 		GOOM HARFBUZZ JACK KATE LIBBLURAY LIBRSVG2 LIBSSH2 LIRC \
 		LIVEMEDIA LUA MAD MODPLUG MPEG2 MTP MUSEPACK \
@@ -75,11 +77,13 @@ OPTIONS_DEFINE=	A52 AALIB ASS AVAHI CACA CHROMECAST DBUS DCA DOCS DVDREAD \
 OPTIONS_DEFAULT=A52 AVAHI DBUS DCA DVDREAD DVDNAV FAAD FLAC GNUTLS \
 		LIVEMEDIA LUA MAD MPEG2 OGG OPTIMIZED_CFLAGS \
 		OPUS PNG QT5 SAMPLERATE STREAM SPEEX TAGLIB THEORA TWOLAME \
-		V4L VAAPI VCD VDPAU VORBIS X11
+		V4L VAAPI VCD VDPAU VORBIS WAYLAND X11
 OPTIONS_SUB=	yes
 
+AOM_DESC=	AV1 video encoding/decoding via libaom
 ASS_DESC=	ASS/SSA subtitle rendering
 CHROMECAST_DESC=Streaming to Chromecast devices
+DAV1D_DESC=	AV1 video decoding via libdav1d
 DVDREAD_DESC=	DVD Playback support
 DVDNAV_DESC=	DVD menu navigation
 FLUID_DESC=	Fluidsynth MIDI support
@@ -108,6 +112,9 @@ AALIB_CONFIGURE_ENABLE=	aa
 ASS_LIB_DEPENDS=	libass.so:multimedia/libass
 ASS_CONFIGURE_ENABLE=	libass
 
+AOM_LIB_DEPENDS=	libaom.so:multimedia/aom
+AOM_CONFIGURE_ENABLE=	aom
+
 AVAHI_LIB_DEPENDS=	libavahi-common.so:net/avahi-app
 AVAHI_CONFIGURE_ENABLE=	avahi
 
@@ -116,6 +123,9 @@ CACA_CONFIGURE_ENABLE=	caca
 
 CHROMECAST_LIB_DEPENDS=	libprotobuf-lite.so:devel/protobuf
 CHROMECASE_CONFIGURE_ENABLE=	chromecast
+
+DAV1D_LIB_DEPENDS=	libdav1d.so:multimedia/dav1d
+DAV1D_CONFIGURE_ENABLE=	dav1d
 
 DBUS_LIB_DEPENDS=	libdbus-1.so:devel/dbus
 DBUS_CONFIGURE_ENABLE=	dbus

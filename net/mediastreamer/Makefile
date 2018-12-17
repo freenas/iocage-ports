@@ -3,6 +3,7 @@
 
 PORTNAME=	mediastreamer
 PORTVERSION=	2.16.1
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://www.linphone.org/releases/sources/mediastreamer/
 
@@ -18,7 +19,7 @@ LIB_DEPENDS=	libbctoolbox.so:net/bctoolbox \
 		libsrtp2.so:net/libsrtp2 \
 		libbzrtp.so:security/bzrtp
 
-USES=		cmake:outsource python:build
+USES=		cmake:outsource compiler python:build
 USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DENABLE_ALSA=NO -DENABLE_BV16=NO -DENABLE_DOC=NO \
@@ -86,8 +87,13 @@ XVIDEO_IMPLIES=		VIDEO
 XVIDEO_CMAKE_BOOL=	ENABLE_X11 ENABLE_XV
 XVIDEO_USE=		XORG=xorgproto,x11,xv
 
+.include <bsd.port.pre.mk>
+
 post-patch:
 	@${REINPLACE_CMD} 's,gsm/gsm\.h,gsm.h,' \
 		${WRKSRC}/cmake/FindGSM.cmake ${WRKSRC}/src/audiofilters/gsm.c
+.if ${CHOSEN_COMPILER_TYPE} == gcc
+	@${REINPLACE_CMD} '/-Wno-format-truncation/d' ${WRKSRC}/CMakeLists.txt
+.endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

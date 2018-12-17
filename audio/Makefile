@@ -93,7 +93,8 @@
     SUBDIR += cpp-xmms2
     SUBDIR += creox
     SUBDIR += crip
-    SUBDIR += csound6
+    SUBDIR += csound
+    SUBDIR += csoundqt
     SUBDIR += ctronome
     SUBDIR += cue2toc
     SUBDIR += cueplayer
@@ -131,6 +132,7 @@
     SUBDIR += eawpats
     SUBDIR += eawplus
     SUBDIR += ecasound
+    SUBDIR += elisa
     SUBDIR += emms
     SUBDIR += enscribe
     SUBDIR += epos-devel
@@ -247,7 +249,6 @@
     SUBDIR += gqradio
     SUBDIR += gradio
     SUBDIR += gramofile
-    SUBDIR += grip
     SUBDIR += gsm
     SUBDIR += gsound
     SUBDIR += gstreamer-plugins-a52dec
@@ -303,6 +304,7 @@
     SUBDIR += gstreamer1-plugins-mpg123
     SUBDIR += gstreamer1-plugins-musepack
     SUBDIR += gstreamer1-plugins-ogg
+    SUBDIR += gstreamer1-plugins-openmpt
     SUBDIR += gstreamer1-plugins-opus
     SUBDIR += gstreamer1-plugins-pulse
     SUBDIR += gstreamer1-plugins-shout2
@@ -335,8 +337,8 @@
     SUBDIR += hs-libmpd
     SUBDIR += hts_engine-API
     SUBDIR += hydrogen
+    SUBDIR += icecast
     SUBDIR += icecast-kh
-    SUBDIR += icecast2
     SUBDIR += icegenerator
     SUBDIR += ices
     SUBDIR += id3ed
@@ -353,7 +355,6 @@
     SUBDIR += ir-lv2
     SUBDIR += jack
     SUBDIR += jack-keyboard
-    SUBDIR += jack-rack
     SUBDIR += jack-smf-utils
     SUBDIR += jack_ghero
     SUBDIR += jack_mixer
@@ -414,6 +415,7 @@
     SUBDIR += libgpod-sharp
     SUBDIR += libgroove
     SUBDIR += libid3tag
+    SUBDIR += libinstpatch
     SUBDIR += libkcddb
     SUBDIR += libkcddb-kde4
     SUBDIR += libkcompactdisc
@@ -498,6 +500,7 @@
     SUBDIR += logitechmediaserver-trackstat
     SUBDIR += lollypop
     SUBDIR += lpac
+    SUBDIR += lsp-plugins-lv2
     SUBDIR += lua51-mpd
     SUBDIR += luppp
     SUBDIR += lv2

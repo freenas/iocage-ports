@@ -16,7 +16,7 @@ USES=		cmake:outsource gettext kde:5 qt:5 tar:xz
 USE_GL=		glu
 USE_KDE=	auth codecs config configwidgets coreaddons doctools ecm i18n \
 		kio service widgetsaddons xmlgui
-USE_QT=		core dbus gui location network opengl printsupport qml quick \
+USE_QT=		core dbus declarative gui location network opengl printsupport \
 		svg testlib webchannel webengine widgets xml \
 		buildtools_build qmake_build
 

@@ -7,6 +7,7 @@
     SUBDIR += R-cran-xfun
     SUBDIR += achievo
     SUBDIR += aclgen
+    SUBDIR += actiona
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
@@ -53,6 +54,7 @@
     SUBDIR += compat7x
     SUBDIR += compat8x
     SUBDIR += compat9x
+    SUBDIR += console-bridge
     SUBDIR += countrycodes
     SUBDIR += cpuid
     SUBDIR += crosspad
@@ -170,7 +172,6 @@
     SUBDIR += gplink
     SUBDIR += granulate
     SUBDIR += grc
-    SUBDIR += gregexp
     SUBDIR += gtkfind
     SUBDIR += gwhich
     SUBDIR += hb
@@ -181,6 +182,7 @@
     SUBDIR += histring
     SUBDIR += hotkeys
     SUBDIR += hulgalugha
+    SUBDIR += ignition-fuel-tools
     SUBDIR += imerge
     SUBDIR += img2xterm
     SUBDIR += ini_file_manager
@@ -397,7 +399,6 @@
     SUBDIR += pecl-timezonedb
     SUBDIR += pfm
     SUBDIR += php56-calendar
-    SUBDIR += php70-calendar
     SUBDIR += php71-calendar
     SUBDIR += php72-calendar
     SUBDIR += php73-calendar
@@ -491,8 +492,8 @@
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump
-    SUBDIR += rumprun
     SUBDIR += saaghar
+    SUBDIR += sdformat
     SUBDIR += seabios
     SUBDIR += sent
     SUBDIR += seq2
@@ -505,6 +506,7 @@
     SUBDIR += sloccount
     SUBDIR += sls
     SUBDIR += smssend
+    SUBDIR += snakemake
     SUBDIR += soapysdr
     SUBDIR += solarized
     SUBDIR += spamcalc
@@ -545,6 +547,8 @@
     SUBDIR += unicode-emoji
     SUBDIR += upclient
     SUBDIR += urbit
+    SUBDIR += urdfdom
+    SUBDIR += urdfdom-headers
     SUBDIR += urh
     SUBDIR += us-zipcodes
     SUBDIR += usbids

@@ -21,7 +21,7 @@ USE_GNOME=	glib20
 USE_KDE=	auth codecs config configwidgets coreaddons ecm iconthemes \
 		i18n kcmutils kdeclarative notifications package service \
 		wallet widgetsaddons xmlgui
-USE_QT=		core dbus gui network qml quick widgets xml \
+USE_QT=		core dbus declarative gui network widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 

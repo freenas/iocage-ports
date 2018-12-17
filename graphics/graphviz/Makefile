@@ -3,7 +3,7 @@
 
 PORTNAME=	graphviz
 PORTVERSION=	2.40.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics tk
 MASTER_SITES=	https://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/
 
@@ -212,6 +212,11 @@ CONFIGURE_ARGS+=	--disable-swig
 CONFIGURE_ENV+=		SWIG="/nonexistent"
 .endif
 
+.if ${PORT_OPTIONS:MGVEDIT}
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPHP}
@@ -255,10 +260,8 @@ post-patch:
 	${REINPLACE_CMD} -e 's|GTS_LIBS)|GTS_LIBS) $$(MATH_LIBS)|' \
 		${WRKSRC}/cmd/smyrna/Makefile.in
 	${CP} ${WRKSRC}/lib/cgraph/cgraph.h ${WRKSRC}/plugin/ming/
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100093
 	${REINPLACE_CMD} -e 's|SF_FLAGS|SFIO_FLAGS|g' \
 		${WRKSRC}/lib/sfio/*.[ch]
-.endif
 
 post-patch-DOCS-off:
 	${REINPLACE_CMD} -e 's| install-txtDATA$$||' \

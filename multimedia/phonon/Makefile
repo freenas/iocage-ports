@@ -3,6 +3,7 @@
 
 PORTNAME=	phonon
 DISTVERSION=	4.10.1
+PORTREVISION=	2
 CATEGORIES=	multimedia kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}
 DIST_SUBDIR=	KDE/phonon
@@ -13,7 +14,7 @@ COMMENT=	KDE multimedia framework
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
-FLAVORS=	qt4 qt5
+FLAVORS=	qt5 qt4
 FLAVOR?=	${FLAVORS:[1]}
 
 qt4_LIB_DEPENDS=	libqzeitgeist.so:sysutils/qzeitgeist
@@ -29,6 +30,8 @@ CMAKE_OFF=	PHONON_BUILD_DESIGNER_PLUGIN:BOOL=OFF
 USE_LDCONFIG=	yes
 
 .  if ${FLAVOR} == qt4
+DEPRECATED=	Qt4 has been EOL since december 2015
+EXPIRATION_DATE=2019-03-15
 USES+=		kde:4 qt:4
 USE_KDE=	automoc4
 USE_QT=		corelib dbus declarative gui testlib \

@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	recursor
-DISTVERSION=	4.1.4
-PORTREVISION=	1
+DISTVERSION=	4.1.8
+PORTREVISION=	2
 CATEGORIES=	dns ipv6
 MASTER_SITES=	http://downloads.powerdns.com/releases/
 PKGNAMEPREFIX=	powerdns-

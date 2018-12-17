@@ -23,7 +23,7 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		widgetsaddons windowsystem xmlgui solid sonnet wallet
 # pim components
 USE_KDE+=	calendarcore contacts
-USE_QT=		core dbus gui location qml network printsupport quick webchannel \
+USE_QT=		core dbus declarative gui location network printsupport webchannel \
 		webengine widgets xml \
 		buildtools_build qmake_build
 

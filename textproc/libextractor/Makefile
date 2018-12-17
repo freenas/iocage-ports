@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libextractor
-PORTVERSION=	1.7
+PORTVERSION=	1.8
 CATEGORIES=	textproc
 MASTER_SITES=	GNU
 
