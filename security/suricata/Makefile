@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	suricata
-DISTVERSION=	4.1.0
-PORTREVISION=	1
+DISTVERSION=	4.1.2
 CATEGORIES=	security
 MASTER_SITES=	https://www.openinfosecfoundation.org/download/
 
@@ -106,13 +105,14 @@ PRELUDE_CONFIGURE_ON=		--with-libprelude-prefix=${LOCALBASE}
 PYTHON_USES=			python:2.7
 PYTHON_CONFIGURE_ENABLE=	python
 PYTHON_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR}
+PYTHON_BUILD_DEPENDS=		${PYTHON_RUN_DEPENDS}
 
 REDIS_LIB_DEPENDS=		libhiredis.so:databases/hiredis
 REDIS_CONFIGURE_ON=		--enable-hiredis \
 				--with-libhiredis-includes=${LOCALBASE}/include \
 				--with-libhiredis-libraries=${LOCALBASE}/lib
 
-RUST_BUILD_DEPENDS=		rustc:lang/rust
+RUST_BUILD_DEPENDS=		rustc:lang/${RUST_DEFAULT}
 RUST_CONFIGURE_ENABLE=		rust
 
 TESTS_CONFIGURE_ENABLE=		unittests

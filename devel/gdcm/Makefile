@@ -16,7 +16,7 @@ BUILD_DEPENDS=	pkgconf:devel/pkgconf
 LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg \
 		libexpat.so:textproc/expat2
 
-USES=		alias cmake:outsource compiler:c++11-lang tar:bzip2 ssl
+USES=		alias cmake compiler:c++11-lang tar:bzip2 ssl
 
 OPTIONS_DEFINE=		VTK6
 OPTIONS_SUB=		yes

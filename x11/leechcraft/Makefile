@@ -3,7 +3,7 @@
 
 PORTNAME=	leechcraft
 PORTVERSION=	0.6.70
-PORTREVISION=	38
+PORTREVISION=	39
 CATEGORIES=	x11
 MASTER_SITES=	http://dist.leechcraft.org/LeechCraft/0.6.70/
 
@@ -23,7 +23,7 @@ LIB_DEPENDS=	libqwt6.so:x11-toolkits/qwt6@qt4 \
 #LC_REV=		1526-g7fdb92a
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-USES=		cmake pkgconfig qt:4 tar:xz
+USES=		cmake:insource pkgconfig qt:4 tar:xz
 USE_QT=		corelib declarative gui network script sql sql-sqlite3_run \
 		webkit xml qmake_build moc_build rcc_build uic_build \
 		linguisttools_build
@@ -254,7 +254,7 @@ OORONEE_CMAKE_ON=	-DENABLE_OORONEE:BOOL=true
 OORONEE_CMAKE_OFF=	-DENABLE_OORONEE:BOOL=false
 
 OTLOZHU_DESC=		(BROKEN) Otlozhu, a GTD-inspired ToDo manager
-OTLOZHU_CMAKE_OFF=	-DENABLE_OTLOZHU:BOOL=true
+OTLOZHU_CMAKE_ON=	-DENABLE_OTLOZHU:BOOL=true
 OTLOZHU_CMAKE_OFF=	-DENABLE_OTLOZHU:BOOL=false
 
 PINTAB_DESC=		Provides support for pinning tabs
@@ -361,7 +361,7 @@ OPTIONS_DEFAULT=AGGREGATOR ANHERO ANOTIFI AUSCRIE AZOTH BLASQ BLOGIQUE CERTMGR \
 		LMP MELLONETRAY MUSICZOMBIE NACHEKU NETSTOREMANAGER NETWORKMONITOR \
 		NEWLIFE OORONEE PINTAB POGOOGLUE POLEEMERY POPISHU POSHUKU QROSP ROSENTHAL \
 		SB2 SCROBLIBRE SECMAN SEEKTHRU SUMMARY SYSNOTIFY TABSESSMANAGER TABSLIST \
-		TEXTOGROOSE TOUCHSTREAMS TPI VGRABBER VROOBY VTYULC XPROXY XTAZY
+		TEXTOGROOSE TOUCHSTREAMS TPI VGRABBER VROOBY XPROXY XTAZY
 
 .include <bsd.port.options.mk>
 
@@ -403,6 +403,10 @@ BROKEN=		Lemon has not supported yet because depended by libnl
 
 .if ${PORT_OPTIONS:MOTLOZHU}
 BROKEN=		Otlozhu has not supported yet (not ported liblaretz)
+.endif
+
+.if ${PORT_OPTIONS:MVTYULC}
+BROKEN=		VtyuLC plugin does not build with vlc 3.x
 .endif
 
 post-patch:

@@ -3,7 +3,7 @@
 
 PORTNAME=	gdal
 PORTVERSION=	2.2.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://download.osgeo.org/gdal/${PORTVERSION}/ \
 		ftp://ftp.remotesensing.org/pub/gdal/${PORTVERSION}/ \
@@ -56,7 +56,7 @@ USES=		gmake iconv jpeg localbase tar:xz
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
-SLAVEDIRS=	graphics/p5-Geo-GDAL graphics/php-gdal graphics/py-gdal
+SLAVEDIRS=	graphics/p5-Geo-GDAL graphics/py-gdal
 
 ARMADILLO_CONFIGURE_WITH=	armadillo
 ARMADILLO_LIB_DEPENDS=	libarmadillo.so:math/armadillo

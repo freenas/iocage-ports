@@ -3,7 +3,7 @@
 
 PORTNAME=	labplot
 PORTVERSION=	2.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libgsl.so:math/gsl
 
-USES=		bison cmake:outsource desktop-file-utils kde:5 qt:5 shared-mime-info tar:xz
+USES=		bison cmake desktop-file-utils kde:5 qt:5 shared-mime-info tar:xz
 USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
 		coreaddons crash ecm_build guiaddons i18n iconthemes itemviews \
 		jobwidgets kdelibs4support kio newstuff notifications parts \

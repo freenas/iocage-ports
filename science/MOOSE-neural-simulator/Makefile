@@ -3,7 +3,7 @@
 
 PORTNAME=	MOOSE-neural-simulator
 DISTVERSION=	3.1.2
-PORTREVISION=	6
+PORTREVISION=	7
 DISTVERSIONSUFFIX=	-382-gc93d23a
 CATEGORIES=	science biology
 
@@ -28,7 +28,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}pygraphviz>=0:graphics/py-pygraphviz@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}suds-jurko>=0.4:net/py-suds-jurko@${PY_FLAVOR}
 
-USES=		cmake:outsource fortran gettext-runtime pyqt:4 python:2.7
+USES=		cmake fortran gettext-runtime pyqt:4 python:2.7
 USE_GITHUB=	yes
 GH_ACCOUNT=	BhallaLab
 GH_PROJECT=	moose

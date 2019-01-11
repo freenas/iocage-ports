@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	audacious-plugins
-PORTVERSION=	3.10
-PORTREVISION=	2
+PORTVERSION=	3.10.1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 
@@ -118,7 +117,6 @@ VORBIS_LIB_DEPENDS=	libvorbis.so:audio/libvorbis \
 VORBIS_CONFIGURE_ENABLE=vorbis
 WAVPACK_LIB_DEPENDS=	libwavpack.so:audio/wavpack
 WAVPACK_CONFIGURE_ENABLE=	wavpack
-OPTIONS_SUB=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's| $${MFLAGS}||g' \

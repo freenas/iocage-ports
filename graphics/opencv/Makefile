@@ -3,7 +3,7 @@
 
 PORTNAME=	opencv
 PORTVERSION=	3.4.1
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	graphics
 
 MAINTAINER=	ports@FreeBSD.org
@@ -22,7 +22,7 @@ LIB_DEPENDS=	libprotobuf.so:devel/protobuf \
 		libtesseract.so:graphics/tesseract
 .endif
 
-USES=		cmake:outsource compiler:c++14-lang localbase:ldflags pkgconfig
+USES=		cmake compiler:c++14-lang localbase:ldflags pkgconfig
 
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
