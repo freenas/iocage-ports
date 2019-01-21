@@ -3,7 +3,7 @@
 
 PORTNAME=	libechonest
 PORTVERSION=	2.3.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libqjson-qt5.so:devel/qjson@qt5
 
-USES=		cmake qt:5 pkgconfig
+USES=		cmake compiler:c++11-lang pkgconfig qt:5
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	lfranchi

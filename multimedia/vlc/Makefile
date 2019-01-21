@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vlc
-DISTVERSION=	3.0.5
+DISTVERSION=	3.0.6
 PORTREVISION=	1
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio ipv6 net www
