@@ -344,6 +344,8 @@
     SUBDIR += krfb
     SUBDIR += ksmtp
     SUBDIR += ktnef
+    SUBDIR += kube-controller-manager
+    SUBDIR += kube-scheduler
     SUBDIR += l2tpd
     SUBDIR += ladvd
     SUBDIR += lambdamoo
@@ -456,6 +458,7 @@
     SUBDIR += mgen
     SUBDIR += micro_inetd
     SUBDIR += micro_proxy
+    SUBDIR += microsocks
     SUBDIR += minidlna
     SUBDIR += mininet
     SUBDIR += minisapserver
@@ -904,6 +907,7 @@
     SUBDIR += packetdrill
     SUBDIR += packter-agent
     SUBDIR += panoptis
+    SUBDIR += parpd
     SUBDIR += passlogd
     SUBDIR += pathneck
     SUBDIR += pbnc
@@ -1021,6 +1025,7 @@
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-coherence
+    SUBDIR += py-confluent-kafka
     SUBDIR += py-cymruwhois
     SUBDIR += py-dpkt
     SUBDIR += py-dugong
@@ -1033,6 +1038,7 @@
     SUBDIR += py-haproxy-log-analysis
     SUBDIR += py-haproxyctl
     SUBDIR += py-httpstat
+    SUBDIR += py-ifaddr
     SUBDIR += py-impacket
     SUBDIR += py-ipaddress
     SUBDIR += py-iplib
@@ -1317,6 +1323,7 @@
     SUBDIR += rubygem-rubytter
     SUBDIR += rubygem-rudy
     SUBDIR += rubygem-rye
+    SUBDIR += rubygem-serverengine
     SUBDIR += rubygem-simple_oauth
     SUBDIR += rubygem-stompserver
     SUBDIR += rubygem-t
@@ -1435,6 +1442,7 @@
     SUBDIR += throttled
     SUBDIR += tigervnc
     SUBDIR += tightvnc
+    SUBDIR += timed
     SUBDIR += tintin++
     SUBDIR += tiny-network-utilities
     SUBDIR += tinyfugue

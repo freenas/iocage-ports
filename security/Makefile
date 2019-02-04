@@ -61,6 +61,7 @@
     SUBDIR += bugs
     SUBDIR += bzrtp
     SUBDIR += ca_root_nss
+    SUBDIR += caesarcipher
     SUBDIR += calife
     SUBDIR += cardpeek
     SUBDIR += cargo-audit
@@ -185,6 +186,7 @@
     SUBDIR += gnutls
     SUBDIR += go-cve-dictionary
     SUBDIR += go.crypto
+    SUBDIR += gonepass
     SUBDIR += gopass
     SUBDIR += goptlib
     SUBDIR += gorilla
@@ -924,6 +926,7 @@
     SUBDIR += py-certbot-nginx
     SUBDIR += py-certifi
     SUBDIR += py-certstream
+    SUBDIR += py-ckcc-protocol
     SUBDIR += py-cpe
     SUBDIR += py-cracklib
     SUBDIR += py-cryptkit
@@ -957,6 +960,7 @@
     SUBDIR += py-htpasswd
     SUBDIR += py-itsdangerous
     SUBDIR += py-josepy
+    SUBDIR += py-keepkey
     SUBDIR += py-kerberos
     SUBDIR += py-keyczar
     SUBDIR += py-keyring
@@ -980,6 +984,7 @@
     SUBDIR += py-ospd
     SUBDIR += py-paramiko
     SUBDIR += py-paramiko1
+    SUBDIR += py-pass-audit
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2
     SUBDIR += py-pgpdump
@@ -1010,10 +1015,13 @@
     SUBDIR += py-pysaml2
     SUBDIR += py-pyscard
     SUBDIR += py-pysha3
+    SUBDIR += py-python-axolotl
+    SUBDIR += py-python-axolotl-curve25519
     SUBDIR += py-python-gnupg
     SUBDIR += py-python-jose
     SUBDIR += py-python-nss
     SUBDIR += py-python-openid
+    SUBDIR += py-python-pam
     SUBDIR += py-python-registry
     SUBDIR += py-python3-openid
     SUBDIR += py-pywinrm

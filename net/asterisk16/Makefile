@@ -2,7 +2,7 @@
 
 PORTNAME=	asterisk
 PORTVERSION=	16.1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
@@ -21,7 +21,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
 		libjansson.so:devel/jansson
 
-ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc sparc64
+ONLY_FOR_ARCHS=	amd64 armv6 armv7 i386 powerpc sparc64
 
 EXTRACT_ONLY:=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -34,18 +34,18 @@ USE_RC_SUBR=	asterisk
 USE_GITHUB=	nodefault
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--datarootdir=${DATADIR} \
-			--with-ilbc=internal \
-			--with-crypto=${OPENSSLBASE} \
-			--with-pjproject-bundled=no \
-			--with-ssl=${OPENSSLBASE}
+CONFIGURE_ARGS=	--datarootdir=${DATADIR} \
+		--with-ilbc=internal \
+		--with-crypto=${OPENSSLBASE} \
+		--with-pjproject-bundled=no \
+		--with-ssl=${OPENSSLBASE}
 
 CPE_VENDOR=	digium
 
 SHEBANG_FILES=	agi/agi-test.agi \
 		agi/jukebox.agi \
 		contrib/scripts/astversion
-
+LDFLAGS=	-L.
 MAKE_ENV=	PTHREAD_LIBS="-lpthread" \
 		MKDIR="${MKDIR}" \
 		PWLIBDIR=${LOCALBASE}/share/pwlib \
@@ -60,11 +60,11 @@ CONFLICTS=		ossp-uuid-[0-9]*
 CONFLICTS_BUILD=	linuxthreads-*
 CONFLICTS_INSTALL=	asterisk13 asterisk15
 
-OPTIONS_DEFINE=			ASTVERSION BACKTRACE CURL EXCHANGE FREETDS LDAP LUA \
+OPTIONS_DEFINE=			ASTVERSION BACKTRACE CURL EXCHANGE FREETDS LDAP LUA MACRO \
 				MP3PLAYER OOH323 OPTIMIZED_CFLAGS PJSIP PORTAUDIO RADIUS SNMP \
 				SPANDSP SRTP SYSINFO XMPP
-OPTIONS_DEFAULT=		CURL FREETDS GSM LUA MP3PLAYER NEWT ODBC MYSQL PGSQL PJSIP \
-				PORTAUDIO RADIUS SNMP SPANDSP SPEEX SQLITE2 SRTP VORBIS
+OPTIONS_DEFAULT=		CURL FREETDS GSM LUA MACRO MP3PLAYER NEWT ODBC MYSQL PGSQL \
+				PJSIP PORTAUDIO RADIUS SNMP SPANDSP SPEEX SQLITE2 SRTP VORBIS
 
 OPTIONS_DEFINE_i386=		DAHDI
 OPTIONS_DEFINE_amd64=		DAHDI
@@ -109,6 +109,7 @@ BACKTRACE_DESC?= Stack backtrace support via (lib)execinfo
 BASE_DESC=	Use base compiler
 DAHDI_DESC?=	DAHDI support
 EXCHANGE_DESC?=	Exchange calendar support
+MACRO_DESC?=	Enable app_macro (deprecated)
 MP3PLAYER_DESC=	Install MP3 Player for Music-On-Hold (mpg123)
 NEWG711_DESC?=	New G711 Codec
 OOH323_DESC?=	ooh323 support
@@ -278,6 +279,9 @@ post-configure:
 	@cd ${WRKSRC} && ./menuselect/menuselect --disable res_timing_kqueue menuselect.makeopts
 	@cd ${WRKSRC} && ./menuselect/menuselect --enable chan_mgcp menuselect.makeopts
 	@cd ${WRKSRC} && ./menuselect/menuselect --enable res_pktccops menuselect.makeopts
+
+post-configure-MACRO-on:
+	@cd ${WRKSRC} && ./menuselect/menuselect --enable app_macro menuselect.makeopts
 
 post-configure-MYSQL-on:
 	@cd ${WRKSRC} && ./menuselect/menuselect --enable res_config_mysql menuselect.makeopts

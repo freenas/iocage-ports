@@ -531,6 +531,7 @@
     SUBDIR += nn-aspell
     SUBDIR += no-hunspell
     SUBDIR += nunnimcax
+    SUBDIR += nuspell
     SUBDIR += nux
     SUBDIR += ny-aspell
     SUBDIR += ocaml-csv
@@ -1247,6 +1248,7 @@
     SUBDIR += php73-xmlreader
     SUBDIR += php73-xmlwriter
     SUBDIR += php73-xsl
+    SUBDIR += pict
     SUBDIR += plover
     SUBDIR += po4a
     SUBDIR += pocketreader
@@ -1262,6 +1264,7 @@
     SUBDIR += py-Chameleon
     SUBDIR += py-CommonMark
     SUBDIR += py-MarkupSafe
+    SUBDIR += py-QDarkStyle
     SUBDIR += py-Tempita
     SUBDIR += py-acora
     SUBDIR += py-agate
@@ -1355,6 +1358,7 @@
     SUBDIR += py-pdfminer.six
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw
+    SUBDIR += py-precis_i18n
     SUBDIR += py-pss
     SUBDIR += py-pyPEG2
     SUBDIR += py-pyahocorasick
@@ -1406,6 +1410,7 @@
     SUBDIR += py-sphinx-hieroglyph
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-me
+    SUBDIR += py-sphinx-tabs
     SUBDIR += py-sphinx_numfig
     SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinx_wikipedia
@@ -1879,6 +1884,7 @@
     SUBDIR += yould
     SUBDIR += zenxml
     SUBDIR += zorba
+    SUBDIR += zsh-autosuggestions
     SUBDIR += zsh-syntax-highlighting
     SUBDIR += zu-aspell
     SUBDIR += zu-hunspell
