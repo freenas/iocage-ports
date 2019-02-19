@@ -1,8 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	sway
-DISTVERSION=	1.0-rc1
+DISTVERSION=	1.0-rc3
 CATEGORIES=	x11-wm
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	c968f83261d9.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	i3-compatible Wayland compositor
@@ -26,7 +29,6 @@ USE_GITHUB=	yes
 USE_GNOME=	cairo pango
 USE_XORG=	pixman
 GH_ACCOUNT=	swaywm
-MESON_ARGS=	-Dsway-version="${DISTVERSIONFULL}"
 
 OPTIONS_DEFINE=	MANPAGES PIXBUF SUID X11
 OPTIONS_DEFAULT=MANPAGES PIXBUF SUID X11
@@ -51,6 +53,10 @@ X11_MESON_OFF=		-Dxwayland=disabled
 post-patch:
 # Let @sample handle default files under etc/
 	@${REINPLACE_CMD} -e '/config\.in/{ N; s/@BASENAME@/&.sample/; }' \
+		${WRKSRC}/meson.build
+# Extract (snapshot) version from the port instead of meson.build
+	@${REINPLACE_CMD} -i .nogit -e 's/git.found()/false/' \
+		-e '/project_version/s/@0@/${DISTVERSIONFULL}/' \
 		${WRKSRC}/meson.build
 
 .include <bsd.port.mk>
