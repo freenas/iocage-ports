@@ -15,7 +15,6 @@
     SUBDIR += echat
     SUBDIR += ejabberd
     SUBDIR += ekiga
-    SUBDIR += emesene
     SUBDIR += empathy
     SUBDIR += farsight2
     SUBDIR += farstream
@@ -96,8 +95,6 @@
     SUBDIR += p5-Net-XMPP2
     SUBDIR += p5-Protocol-XMPP
     SUBDIR += p5-SOAP-Transport-JABBER
-    SUBDIR += papyon
-    SUBDIR += pebrot
     SUBDIR += pecl-stomp2
     SUBDIR += pidgin
     SUBDIR += pidgin-birthday-reminder
@@ -174,7 +171,6 @@
     SUBDIR += telegram-purple
     SUBDIR += telegramqml
     SUBDIR += telepathy-accounts-signon
-    SUBDIR += telepathy-butterfly
     SUBDIR += telepathy-farsight
     SUBDIR += telepathy-farstream
     SUBDIR += telepathy-gabble
