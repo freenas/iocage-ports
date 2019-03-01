@@ -282,6 +282,7 @@
     SUBDIR += rendercheck
     SUBDIR += rgb
     SUBDIR += rofi
+    SUBDIR += rofi-pass
     SUBDIR += rox-wallpaper
     SUBDIR += roxbg
     SUBDIR += roxterm
@@ -419,7 +420,6 @@
     SUBDIR += xfindproxy
     SUBDIR += xfishtank
     SUBDIR += xforward
-    SUBDIR += xfree86_xkb_xml
     SUBDIR += xfwp
     SUBDIR += xgamma
     SUBDIR += xgc

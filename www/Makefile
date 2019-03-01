@@ -150,7 +150,6 @@
     SUBDIR += erlang-mochiweb
     SUBDIR += erlang-mochiweb-basho
     SUBDIR += erlang-webmachine
-    SUBDIR += erwn
     SUBDIR += fabio
     SUBDIR += falkon
     SUBDIR += fancybox
@@ -1028,6 +1027,7 @@
     SUBDIR += p5-Jifty
     SUBDIR += p5-LWP-Authen-Negotiate
     SUBDIR += p5-LWP-Authen-OAuth
+    SUBDIR += p5-LWP-Authen-OAuth2
     SUBDIR += p5-LWP-Authen-Wsse
     SUBDIR += p5-LWP-ConnCache-MaxKeepAliveRequests
     SUBDIR += p5-LWP-MediaTypes
@@ -1705,6 +1705,7 @@
     SUBDIR += py-hyperlink
     SUBDIR += py-imdbpy
     SUBDIR += py-internetarchive
+    SUBDIR += py-instabot
     SUBDIR += py-jonpy
     SUBDIR += py-jsonfield
     SUBDIR += py-jswebkit
@@ -1863,6 +1864,7 @@
     SUBDIR += py-splinter
     SUBDIR += py-spyne
     SUBDIR += py-sseclient
+    SUBDIR += py-starlette
     SUBDIR += py-surl
     SUBDIR += py-swapper
     SUBDIR += py-textile
@@ -2063,7 +2065,6 @@
     SUBDIR += rubygem-jsobfu
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-jwt
-    SUBDIR += rubygem-jwt1
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
     SUBDIR += rubygem-kaminari-actionview-rails5
@@ -2117,7 +2118,6 @@
     SUBDIR += rubygem-rack-cache
     SUBDIR += rubygem-rack-contrib
     SUBDIR += rubygem-rack-cors
-    SUBDIR += rubygem-rack-cors0
     SUBDIR += rubygem-rack-mount
     SUBDIR += rubygem-rack-openid
     SUBDIR += rubygem-rack-protection
