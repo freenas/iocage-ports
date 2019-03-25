@@ -172,6 +172,7 @@
     SUBDIR += clrng
     SUBDIR += cminpack
     SUBDIR += cmlib
+    SUBDIR += cocoalib
     SUBDIR += coin-or-data-netlib
     SUBDIR += coin-or-data-sample
     SUBDIR += coin-or-data-stochastic
@@ -333,6 +334,7 @@
     SUBDIR += liblbfgs
     SUBDIR += libmesh
     SUBDIR += libmissing
+    SUBDIR += libnormaliz
     SUBDIR += libocas
     SUBDIR += liborigin
     SUBDIR += libpgmath
@@ -727,6 +729,7 @@
     SUBDIR += py-keras
     SUBDIR += py-keras-applications
     SUBDIR += py-keras-preprocessing
+    SUBDIR += py-kiwisolver
     SUBDIR += py-levmar
     SUBDIR += py-libpoly
     SUBDIR += py-luminol
@@ -737,6 +740,7 @@
     SUBDIR += py-munkres10
     SUBDIR += py-networkx
     SUBDIR += py-networkx1
+    SUBDIR += py-nevergrad
     SUBDIR += py-numarray
     SUBDIR += py-numeric
     SUBDIR += py-numexpr

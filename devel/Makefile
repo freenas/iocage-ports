@@ -460,7 +460,6 @@
     SUBDIR += ding-libs
     SUBDIR += directfb
     SUBDIR += dispy
-    SUBDIR += dissy
     SUBDIR += distcc
     SUBDIR += distel
     SUBDIR += distorm
@@ -709,7 +708,6 @@
     SUBDIR += geany-plugin-ctags
     SUBDIR += geany-plugin-debugger
     SUBDIR += geany-plugin-defineformat
-    SUBDIR += geany-plugin-devhelp
     SUBDIR += geany-plugin-doc
     SUBDIR += geany-plugin-extrasel
     SUBDIR += geany-plugin-geanypy
@@ -743,7 +741,6 @@
     SUBDIR += geany-plugin-utilslib
     SUBDIR += geany-plugin-vc
     SUBDIR += geany-plugin-vimode
-    SUBDIR += geany-plugin-webhelper
     SUBDIR += geany-plugin-workbench
     SUBDIR += geany-plugin-xmlsnippets
     SUBDIR += geany-plugins
@@ -1588,6 +1585,7 @@
     SUBDIR += libstatgrab0
     SUBDIR += libstrfunc
     SUBDIR += libstroke
+    SUBDIR += libsysctlmibinfo
     SUBDIR += libsysinfo
     SUBDIR += libtai
     SUBDIR += libtap
@@ -2991,12 +2989,14 @@
     SUBDIR += p5-Mojolicious-Plugin-NYTProf
     SUBDIR += p5-Moo
     SUBDIR += p5-MooX-Aliases
+    SUBDIR += p5-MooX-Attribute-ENV
     SUBDIR += p5-MooX-Cmd
     SUBDIR += p5-MooX-ConfigFromFile
     SUBDIR += p5-MooX-File-ConfigDir
     SUBDIR += p5-MooX-HandlesVia
     SUBDIR += p5-MooX-Locale-Passthrough
     SUBDIR += p5-MooX-Options
+    SUBDIR += p5-MooX-Role-Parameterized
     SUBDIR += p5-MooX-StrictConstructor
     SUBDIR += p5-MooX-Thunking
     SUBDIR += p5-MooX-Traits
@@ -4519,6 +4519,7 @@
     SUBDIR += py-darcsver
     SUBDIR += py-darts.util.lru
     SUBDIR += py-datatest
+    SUBDIR += py-dateparser
     SUBDIR += py-dateutil
     SUBDIR += py-dateutils
     SUBDIR += py-datrie
@@ -5612,6 +5613,7 @@
     SUBDIR += rubygem-cucumber
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-expressions
+    SUBDIR += rubygem-cucumber-expressions6
     SUBDIR += rubygem-cucumber-formatter-dots
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-tag_expressions
@@ -5668,6 +5670,7 @@
     SUBDIR += rubygem-fast-stemmer
     SUBDIR += rubygem-fast_blank
     SUBDIR += rubygem-fast_gettext
+    SUBDIR += rubygem-fast_gettext1
     SUBDIR += rubygem-fast_stack
     SUBDIR += rubygem-fast_xor
     SUBDIR += rubygem-fastercsv
@@ -5689,6 +5692,7 @@
     SUBDIR += rubygem-fog
     SUBDIR += rubygem-fog-core
     SUBDIR += rubygem-fog-core1
+    SUBDIR += rubygem-fog-core210
     SUBDIR += rubygem-fog-json
     SUBDIR += rubygem-fog-json102
     SUBDIR += rubygem-font-awesome-rails
