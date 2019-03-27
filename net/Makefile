@@ -235,6 +235,7 @@
     SUBDIR += haproxy
     SUBDIR += haproxy-devel
     SUBDIR += haproxy17
+    SUBDIR += haproxy18
     SUBDIR += hexinject
     SUBDIR += hidentd
     SUBDIR += hinfo
@@ -1238,7 +1239,6 @@
     SUBDIR += rubygem-fog-joyent
     SUBDIR += rubygem-fog-local
     SUBDIR += rubygem-fog-openstack
-    SUBDIR += rubygem-fog-openstack02
     SUBDIR += rubygem-fog-ovirt
     SUBDIR += rubygem-fog-powerdns
     SUBDIR += rubygem-fog-profitbricks
