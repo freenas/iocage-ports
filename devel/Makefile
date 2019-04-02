@@ -821,31 +821,12 @@
     SUBDIR += gnulibiberty
     SUBDIR += gnustep
     SUBDIR += gnustep-make
-    SUBDIR += go-bayesian
     SUBDIR += go-bindata
-    SUBDIR += go-cobra
-    SUBDIR += go-codec
-    SUBDIR += go-cpuid
-    SUBDIR += go-crc32
-    SUBDIR += go-faker
-    SUBDIR += go-form
     SUBDIR += go-glide
-    SUBDIR += go-go.uuid
     SUBDIR += go-gocode
     SUBDIR += go-godef
-    SUBDIR += go-goregen
-    SUBDIR += go-hashicorp-logutils
-    SUBDIR += go-logrus
-    SUBDIR += go-metrics
-    SUBDIR += go-nuid
-    SUBDIR += go-pflag
     SUBDIR += go-protobuf
-    SUBDIR += go-raw
-    SUBDIR += go-runewidth
-    SUBDIR += go-slices
     SUBDIR += go-tools
-    SUBDIR += go-uuid
-    SUBDIR += go-yaml
     SUBDIR += gob2
     SUBDIR += gobject-introspection
     SUBDIR += godep
@@ -1488,7 +1469,6 @@
     SUBDIR += liblouis
     SUBDIR += libltdl
     SUBDIR += liblxqt
-    SUBDIR += liblxqt-l10n
     SUBDIR += libmaa
     SUBDIR += libmatheval
     SUBDIR += libmba
@@ -1676,7 +1656,6 @@
     SUBDIR += llvm-cheri
     SUBDIR += llvm-devel
     SUBDIR += llvm35
-    SUBDIR += llvm38
     SUBDIR += llvm40
     SUBDIR += llvm50
     SUBDIR += llvm60
@@ -4290,6 +4269,7 @@
     SUBDIR += py-XStatic-tv4
     SUBDIR += py-ZopeUndo
     SUBDIR += py-adb
+    SUBDIR += py-addict
     SUBDIR += py-aenum
     SUBDIR += py-aiofiles
     SUBDIR += py-aioice
@@ -4520,6 +4500,7 @@
     SUBDIR += py-dal
     SUBDIR += py-darcsver
     SUBDIR += py-darts.util.lru
+    SUBDIR += py-dataclasses
     SUBDIR += py-datatest
     SUBDIR += py-dateparser
     SUBDIR += py-dateutil
@@ -4961,6 +4942,7 @@
     SUBDIR += py-pycodestyle
     SUBDIR += py-pycompilation
     SUBDIR += py-pycparser
+    SUBDIR += py-pydantic
     SUBDIR += py-pydenticon
     SUBDIR += py-pydevd
     SUBDIR += py-pydispatcher
@@ -5192,6 +5174,7 @@
     SUBDIR += py-termcolor
     SUBDIR += py-terminable_thread
     SUBDIR += py-termstyle
+    SUBDIR += py-testfixtures
     SUBDIR += py-testgears
     SUBDIR += py-testinfra
     SUBDIR += py-testoob
@@ -6046,7 +6029,6 @@
     SUBDIR += rubygem-sidekiq
     SUBDIR += rubygem-sidekiq-bulk
     SUBDIR += rubygem-sidekiq-cron
-    SUBDIR += rubygem-sidekiq-cron0
     SUBDIR += rubygem-sidekiq-scheduler
     SUBDIR += rubygem-sidekiq-unique-jobs
     SUBDIR += rubygem-sidetiq
