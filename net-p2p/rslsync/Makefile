@@ -1,7 +1,7 @@
 # $FreeBSD: head/net-p2p/rslsync/Makefile 470279 2018-05-18 08:35:08Z knu $
 
 PORTNAME=	rslsync
-PORTVERSION=	2.6.1
+PORTVERSION=	2.6.3
 CATEGORIES=	net-p2p
 MASTER_SITES=	https://download-cdn.resilio.com/${PORTVERSION}/FreeBSD-${CONFIG_ARCH}/ \
 		http://download-cdn.resilio.com/${PORTVERSION}/FreeBSD-${CONFIG_ARCH}/
