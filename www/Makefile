@@ -155,6 +155,7 @@
     SUBDIR += fcgiwrap
     SUBDIR += feedjack
     SUBDIR += ffproxy
+    SUBDIR += ffsend
     SUBDIR += fgallery
     SUBDIR += firefox
     SUBDIR += firefox-esr
@@ -652,7 +653,6 @@
     SUBDIR += p5-CGI-Upload
     SUBDIR += p5-CGI-Utils
     SUBDIR += p5-CGI-XMLApplication
-    SUBDIR += p5-CGI.pm
     SUBDIR += p5-CIF-Client
     SUBDIR += p5-CSS-DOM
     SUBDIR += p5-CSS-Inliner
@@ -1589,6 +1589,7 @@
     SUBDIR += py-django-pipeline
     SUBDIR += py-django-post_office
     SUBDIR += py-django-profiles
+    SUBDIR += py-django-prometheus
     SUBDIR += py-django-pyscss
     SUBDIR += py-django-ranged-response
     SUBDIR += py-django-recaptcha

@@ -75,6 +75,7 @@
     SUBDIR += R-cran-memisc
     SUBDIR += R-cran-minqa
     SUBDIR += R-cran-miscTools
+    SUBDIR += R-cran-mitools
     SUBDIR += R-cran-mvtnorm
     SUBDIR += R-cran-nloptr
     SUBDIR += R-cran-nnls
@@ -271,6 +272,7 @@
     SUBDIR += gsl
     SUBDIR += hexcalc
     SUBDIR += hipmcl
+    SUBDIR += hmat-oss
     SUBDIR += hs-Agda
     SUBDIR += hs-Agda-stdlib
     SUBDIR += hs-NumInstances
@@ -497,6 +499,7 @@
     SUBDIR += openlibm
     SUBDIR += openmesh
     SUBDIR += opensolaris-libm
+    SUBDIR += optpp
     SUBDIR += orpie
     SUBDIR += osi
     SUBDIR += osqp
@@ -780,6 +783,7 @@
     SUBDIR += py-random2
     SUBDIR += py-rapi
     SUBDIR += py-roman
+    SUBDIR += py-rpy
     SUBDIR += py-rpy2
     SUBDIR += py-scientific
     SUBDIR += py-scikit-umfpack
@@ -821,7 +825,6 @@
     SUBDIR += rngstreams
     SUBDIR += rocs
     SUBDIR += rpcalc
-    SUBDIR += rpy
     SUBDIR += rubygem-algebra
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3
