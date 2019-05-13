@@ -324,9 +324,6 @@
     SUBDIR += harp
     SUBDIR += herrie
     SUBDIR += hexter
-    SUBDIR += hs-ALUT
-    SUBDIR += hs-OpenAL
-    SUBDIR += hs-libmpd
     SUBDIR += hts_engine-API
     SUBDIR += hvl2wav
     SUBDIR += hydrogen
@@ -570,6 +567,7 @@
     SUBDIR += nuvolaplayer
     SUBDIR += oaml
     SUBDIR += ocp
+    SUBDIR += ogg2mp3
     SUBDIR += openal-soft
     SUBDIR += opencore-amr
     SUBDIR += openspc
