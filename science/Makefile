@@ -132,6 +132,7 @@
     SUBDIR += libssm
     SUBDIR += libsvm
     SUBDIR += libsvm-python
+    SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
     SUBDIR += lm
@@ -301,6 +302,7 @@
     SUBDIR += sigrok-firmware-utils
     SUBDIR += silo
     SUBDIR += simbody
+    SUBDIR += simgrid
     SUBDIR += simint
     SUBDIR += simlib
     SUBDIR += simsmith
