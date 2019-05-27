@@ -1,7 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	svt-av1
-PORTVERSION=	s20190512
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.5.0-29
+DISTVERSIONSUFFIX=	-gc7b108ad
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -23,8 +25,6 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	OpenVisualCloud
 GH_PROJECT=	SVT-AV1
-GH_TAGNAME=	430c2a6f
-CMAKE_OFF=	BUILD_TESTING # no useful tests yet
 
 post-patch:
 # Default CFLAGS are already set by USES=cmake

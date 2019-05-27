@@ -170,6 +170,7 @@
     SUBDIR += gnu-watch
     SUBDIR += gnuls
     SUBDIR += gnustep-examples
+    SUBDIR += gobuster
     SUBDIR += gone
     SUBDIR += gonvert
     SUBDIR += gplink
@@ -217,6 +218,7 @@
     SUBDIR += lazyread
     SUBDIR += lc
     SUBDIR += lesspipe
+    SUBDIR += lf
     SUBDIR += libeatmydata
     SUBDIR += libemos
     SUBDIR += libiio
