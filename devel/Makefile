@@ -1010,6 +1010,7 @@
     SUBDIR += jenkins
     SUBDIR += jenkins-lts
     SUBDIR += jetbrains-clion
+    SUBDIR += jetbrains-goland
     SUBDIR += jetbrains-phpstorm
     SUBDIR += jfrog-cli
     SUBDIR += jiic
@@ -1346,6 +1347,7 @@
     SUBDIR += libtar
     SUBDIR += libtecla
     SUBDIR += libtermkey
+    SUBDIR += libtextstyle
     SUBDIR += libthai
     SUBDIR += libthmap
     SUBDIR += libtifiles2
@@ -3834,7 +3836,6 @@
     SUBDIR += pecl-propro2
     SUBDIR += pecl-protobuf
     SUBDIR += pecl-psr
-    SUBDIR += pecl-pthreads
     SUBDIR += pecl-raphf2
     SUBDIR += pecl-request
     SUBDIR += pecl-swoole
@@ -5535,6 +5536,7 @@
     SUBDIR += rubygem-gobject-introspection
     SUBDIR += rubygem-google-api-client
     SUBDIR += rubygem-google-protobuf
+    SUBDIR += rubygem-google-protobuf371
     SUBDIR += rubygem-googleapis-common-protos
     SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf
@@ -5975,6 +5977,7 @@
     SUBDIR += rubygem-wisper
     SUBDIR += rubygem-wmi-lite
     SUBDIR += rubygem-xdg
+    SUBDIR += rubygem-xdg2
     SUBDIR += rubygem-xpath
     SUBDIR += rubygem-yajl-ruby
     SUBDIR += rubygem-yui-compressor
@@ -6032,7 +6035,6 @@
     SUBDIR += skalibs
     SUBDIR += slf4j
     SUBDIR += slibtool
-    SUBDIR += smack
     SUBDIR += smake
     SUBDIR += smc
     SUBDIR += smv
