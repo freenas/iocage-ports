@@ -64,7 +64,6 @@
     SUBDIR += ffaudioconverter
     SUBDIR += ffdec
     SUBDIR += ffmpeg
-    SUBDIR += ffmpeg0
     SUBDIR += ffmpeg2theora
     SUBDIR += ffmpegthumbnailer
     SUBDIR += ffms2
@@ -182,6 +181,7 @@
     SUBDIR += kodi-addon-peripheral-joystick
     SUBDIR += kodi-addon-pvr-hts
     SUBDIR += kodi-addon-pvr-iptvsimple
+    SUBDIR += kodi-addon-vfs.libarchive-devel
     SUBDIR += kodi-devel
     SUBDIR += kvazaar
     SUBDIR += l-smash
@@ -269,7 +269,6 @@
     SUBDIR += mpc-qt
     SUBDIR += mpeg2codec
     SUBDIR += mpeg2play
-    SUBDIR += mpeg4ip
     SUBDIR += mpeg_encode
     SUBDIR += mpeg_play
     SUBDIR += mpeg_stat

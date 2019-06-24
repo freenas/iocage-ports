@@ -224,6 +224,7 @@
     SUBDIR += daemonize
     SUBDIR += daemontools
     SUBDIR += daemontools-encore
+    SUBDIR += daggy
     SUBDIR += dar
     SUBDIR += dateutils
     SUBDIR += dc3dd
@@ -294,6 +295,7 @@
     SUBDIR += dwatch-pwsnoop
     SUBDIR += e2fsprogs
     SUBDIR += ec2-scripts
+    SUBDIR += eclat
     SUBDIR += edid-decode
     SUBDIR += eject
     SUBDIR += eksctl
@@ -759,6 +761,8 @@
     SUBDIR += openhpi
     SUBDIR += openipmi
     SUBDIR += openupsd
+    SUBDIR += openzfs
+    SUBDIR += openzfs-kmod
     SUBDIR += ori
     SUBDIR += osinfo-db-tools
     SUBDIR += osquery
@@ -1548,8 +1552,6 @@
     SUBDIR += zisofs-tools
     SUBDIR += znapzend
     SUBDIR += zogftw
-    SUBDIR += zol
-    SUBDIR += zol-kmod
     SUBDIR += zrep
     SUBDIR += zrepl
     SUBDIR += zsd

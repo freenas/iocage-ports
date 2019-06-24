@@ -10463,7 +10463,6 @@ graphics/OpenEXR|graphics/openexr|2018-09-22|Renamed to match upstream distribut
 math/mtl||2018-09-27|Has expired: fails to fetch: mastersite times out
 dns/dnscrypt-proxy|dns/dnscrypt-proxy2|2018-09-27|Has expired: Deprecated by upstream, use dns/dnscrypt-proxy2 instead
 www/waterfox||2018-09-29|Has expired: experiment ended: unsustainable
-net/ntp-devel|net/ntp|2018-09-30|Has expired: Use net/ntp instead
 net/xrdp-devel|net/xrdp|2018-09-30|Has expired: Use net/xrdp instead
 net/tigervnc-devel|net/tigervnc|2018-09-30|Has expired: Use net/tigervnc instead
 net/unison-devel|net/unison|2018-09-30|Has expired: Use net/unison instead
@@ -12790,3 +12789,22 @@ www/pivotx||2019-05-31|Has expired: inactive upstream and does not work with PHP
 dns/bind912|dns/bind914|2019-05-31|Has expired: Support ends, please move to dns/bind914.
 multimedia/vdr-plugin-softhddevice||2019-05-31|Has expired: unmaintained and depends on vulnerable multimedia/ffmpeg0
 devel/pecl-pthreads||2019-06-02|Has expired: Does not work with recent versions of php
+net-mgmt/ccnet-client||2019-06-10|Removed, no longer has dependencies and has been abandoned upstream
+textproc/cdiff|textproc/ydiff|2019-06-11|Renamed to match upstream
+sysutils/zol|sysutils/openzfs|2019-06-11|Renamed to match upstream changes
+sysutils/zol-kmod|sysutils/openzfs-kmod|2019-06-11|Renamed to match upstream changes
+archivers/nulib||2019-06-12|Abandonware
+shells/rssh||2019-06-13|Has expired: Abandoned by upstream
+multimedia/mpeg4ip||2019-06-15|Has expired: old, unmaintained version; superseded by multimedia/ffmpeg
+multimedia/ffmpeg0||2019-06-15|Has expired: vulnerable and old version; use multimedia/ffmpeg instead
+ftp/ncftpd||2019-06-16|Has expired: binary only abandoned trialware
+databases/dbconnect||2019-06-16|Has expired: Abandonware and unused in the tree
+databases/postgis21|databases/postgis23|2019-06-16|Has expired: Upstream no longer maintained
+databases/postgis20|databases/postgis23|2019-06-16|Has expired: Upstream no longer maintained
+databases/postgis22|databases/postgis23|2019-06-16|Has expired: Upstream no longer maintained
+games/freeciv-sounds||2019-06-16|Unused and already part of games/freeciv
+security/py-bro-pkg|security/py-zkg|2019-06-17|Renamed to match upstream changes
+devel/py-pydocumentdb|devel/py-azure-cosmos|2019-06-20|Renamed upstream
+www/rubygem-lograge-rails50|www/rubygem-lograge-rails5|2019-06-21|Obsolete by gitlab-ce upgrade, use www/rubygem-lograge-rails5 instead
+devel/rubygem-batch-loader12|devel/rubygem-batch-loader|2019-06-21|Obsolete by gitlab-ce upgrade, use devel/rubygem-batch-loader instead
+security/easy-rsa2|security/easy-rsa|2019-06-23|Has expired: Use easy-rsa 3 instead.

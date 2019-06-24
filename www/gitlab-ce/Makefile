@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	11.11.0
+PORTVERSION=	11.11.3
 PORTREVISION=	1
 CATEGORIES=	www devel
 
@@ -19,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 MY_DEPENDS=	git>=2.21.0:devel/git \
 	gitlab-shell>=9.1.0:devel/gitlab-shell \
 	gitlab-workhorse>=8.7.0:www/gitlab-workhorse \
-	gitaly>=1.42.0:devel/gitaly \
+	gitaly>=1.42.4:devel/gitaly \
 	gitlab-pages>=1.5.0:www/gitlab-pages \
 	redis>=3.2.12:databases/redis \
 	yarn>=1.10.0:www/yarn \
@@ -98,7 +98,7 @@ MY_DEPENDS=	git>=2.21.0:devel/git \
 	rubygem-creole>=0.5.0:textproc/rubygem-creole \
 	rubygem-wikicloth081>=0.8.1:textproc/rubygem-wikicloth081 \
 	rubygem-asciidoctor>=1.5.8:textproc/rubygem-asciidoctor \
-	rubygem-asciidoctor-plantuml>=0.0.8:textproc/rubygem-asciidoctor-plantuml \
+	rubygem-asciidoctor-plantuml008>=0.0.8:textproc/rubygem-asciidoctor-plantuml008 \
 	rubygem-rouge>=3.1:textproc/rubygem-rouge \
 	rubygem-truncato>=0.7.11:textproc/rubygem-truncato \
 	rubygem-bootstrap_form>=4.2.0:devel/rubygem-bootstrap_form \
@@ -229,7 +229,7 @@ USE_RC_SUBR=	gitlab
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 # Find the here: https://gitlab.com/gitlab-org/gitlab-ce/tags
-GL_COMMIT=	3e8ca2fb7810dbe2d33058852278282779469f94
+GL_COMMIT=	e3eeb779d72006b9fbbaecf9f1d8fbd52a7d6383
 
 USERS=	git
 GROUPS=	git

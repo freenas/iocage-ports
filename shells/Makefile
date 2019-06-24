@@ -41,7 +41,6 @@
     SUBDIR += pear-PHP_Shell
     SUBDIR += psh
     SUBDIR += rc
-    SUBDIR += rssh
     SUBDIR += rush
     SUBDIR += sash
     SUBDIR += scponly
@@ -54,6 +53,7 @@
     SUBDIR += vshnu
     SUBDIR += wcd
     SUBDIR += xonsh
+    SUBDIR += yash
     SUBDIR += zsh
     SUBDIR += zsh-antigen
     SUBDIR += zsh-autosuggestions

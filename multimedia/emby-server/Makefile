@@ -2,6 +2,7 @@
 
 PORTNAME=	emby-server
 PORTVERSION=	4.1.1.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://github.com/MediaBrowser/Emby.Releases/releases/download/${PORTVERSION}/ \
 		https://mediabrowser.github.io/embytools/
@@ -35,7 +36,7 @@ LIB_DEPENDS=	libass.so:multimedia/libass \
 		libgnutls.so:security/gnutls \
 		libogg.so:audio/libogg \
 		libopus.so:audio/opus \
-		libpng16.so:graphics/png \
+		libpng.so:graphics/png \
 		libtheora.so:multimedia/libtheora \
 		libva.so:multimedia/libva \
 		libvorbis.so:audio/libvorbis \

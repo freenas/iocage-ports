@@ -91,6 +91,7 @@
     SUBDIR += corkscrew
     SUBDIR += corosync2
     SUBDIR += corosync3
+    SUBDIR += coturn
     SUBDIR += courier-authlib-ldap
     SUBDIR += cppzmq
     SUBDIR += cryptcat
@@ -230,6 +231,7 @@
     SUBDIR += haproxy-devel
     SUBDIR += haproxy17
     SUBDIR += haproxy18
+    SUBDIR += haproxy19
     SUBDIR += hexinject
     SUBDIR += hidentd
     SUBDIR += hinfo
@@ -256,6 +258,7 @@
     SUBDIR += ilbc
     SUBDIR += imapproxy
     SUBDIR += incidenceeditor
+    SUBDIR += inlets
     SUBDIR += intel-em-kmod
     SUBDIR += intel-ix-kmod
     SUBDIR += intel-ixl-kmod
@@ -311,6 +314,7 @@
     SUBDIR += kmbox
     SUBDIR += kmime
     SUBDIR += knc
+    SUBDIR += knxd
     SUBDIR += kontactinterface
     SUBDIR += kpimtextedit
     SUBDIR += krdc
@@ -510,6 +514,7 @@
     SUBDIR += ntlmaps
     SUBDIR += ntopng
     SUBDIR += ntp
+    SUBDIR += ntp-devel
     SUBDIR += ntpa
     SUBDIR += ntraceroute
     SUBDIR += nusoap
@@ -526,6 +531,7 @@
     SUBDIR += opal
     SUBDIR += open-isns
     SUBDIR += openbgpd
+    SUBDIR += openbgpd6
     SUBDIR += openbsc
     SUBDIR += openggsn
     SUBDIR += openldap24-client
@@ -1150,6 +1156,7 @@
     SUBDIR += radsecproxy
     SUBDIR += radvd
     SUBDIR += rclone
+    SUBDIR += rclone-browser
     SUBDIR += rdapper
     SUBDIR += rdesktop
     SUBDIR += rdist6
@@ -1175,6 +1182,7 @@
     SUBDIR += ripe-whois
     SUBDIR += routinator
     SUBDIR += rp-pppoe
+    SUBDIR += rsocket-cpp
     SUBDIR += rsplib
     SUBDIR += rsync
     SUBDIR += rsync-bpc
@@ -1211,6 +1219,7 @@
     SUBDIR += rubygem-fog-brightbox
     SUBDIR += rubygem-fog-brightbox0
     SUBDIR += rubygem-fog-cloudatcost
+    SUBDIR += rubygem-fog-cloudstack
     SUBDIR += rubygem-fog-digitalocean
     SUBDIR += rubygem-fog-dnsimple
     SUBDIR += rubygem-fog-dynect
@@ -1272,10 +1281,10 @@
     SUBDIR += rubygem-omniauth-oauth
     SUBDIR += rubygem-omniauth-oauth2
     SUBDIR += rubygem-omniauth-openid
-    SUBDIR += rubygem-omniauth_openid_connect
     SUBDIR += rubygem-omniauth-salesforce
     SUBDIR += rubygem-omniauth-twitter
     SUBDIR += rubygem-omniauth-ultraauth
+    SUBDIR += rubygem-omniauth_openid_connect
     SUBDIR += rubygem-open-uri-cached
     SUBDIR += rubygem-openid_connect
     SUBDIR += rubygem-opennebula

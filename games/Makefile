@@ -189,6 +189,7 @@
     SUBDIR += cutemaze
     SUBDIR += cuyo
     SUBDIR += d2x
+    SUBDIR += dMagnetic
     SUBDIR += dangen
     SUBDIR += dangerdeep
     SUBDIR += dangerdeep-data
@@ -200,7 +201,6 @@
     SUBDIR += diaspora
     SUBDIR += digger-vgl
     SUBDIR += divide-and-succeed
-    SUBDIR += dMagnetic
     SUBDIR += dmjava
     SUBDIR += dodgindiamond2
     SUBDIR += domination
@@ -289,7 +289,6 @@
     SUBDIR += freecell-solver
     SUBDIR += freeciv
     SUBDIR += freeciv-nox11
-    SUBDIR += freeciv-sounds
     SUBDIR += freecol
     SUBDIR += freedink
     SUBDIR += freedink-data
@@ -369,6 +368,7 @@
     SUBDIR += gnustep-ladder
     SUBDIR += gnustep-sudoku
     SUBDIR += gogrepo
+    SUBDIR += gogui
     SUBDIR += golddig
     SUBDIR += golly
     SUBDIR += gomoku
@@ -500,6 +500,7 @@
     SUBDIR += lbreakout
     SUBDIR += lbreakout2
     SUBDIR += ldmud
+    SUBDIR += leela-zero
     SUBDIR += legend-of-edgar
     SUBDIR += legends
     SUBDIR += legesmotus
@@ -513,6 +514,7 @@
     SUBDIR += libmaitretarot
     SUBDIR += libmt_client
     SUBDIR += libshhcards
+    SUBDIR += libtmcg
     SUBDIR += lightsoff
     SUBDIR += lightyears
     SUBDIR += lincity
@@ -550,6 +552,7 @@
     SUBDIR += linux-worldofgoo-demo
     SUBDIR += linwarrior
     SUBDIR += liquidwar
+    SUBDIR += lizzie
     SUBDIR += lm-solve
     SUBDIR += lmarbles
     SUBDIR += lmpc
@@ -710,6 +713,7 @@
     SUBDIR += p5-Games-GuessWord
     SUBDIR += p5-Games-Tournament-RoundRobin
     SUBDIR += pachi
+    SUBDIR += pachi-game-engine
     SUBDIR += pacmanarena
     SUBDIR += palapeli
     SUBDIR += palomino
