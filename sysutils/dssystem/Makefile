@@ -4,7 +4,8 @@ PORTNAME=	dssystem
 PORTVERSION=	14.1
 PORTREVISION=	6
 CATEGORIES=	sysutils
-MASTER_SITES=	https://asigra-f611.kxcdn.com/14.1/hotfixes/
+MASTER_SITES=	https://asigra-f611.kxcdn.com/14.1/hotfixes/ \
+				https://cdn1.tn.ixsystems.com/asigra/14.1/hotfixes/
 DISTNAME=	DS-System_14_1_0_200_FreeBSD
 EXTRACT_SUFX=	.zip
 
