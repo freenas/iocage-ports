@@ -53,6 +53,7 @@
     SUBDIR += boa
     SUBDIR += bolt
     SUBDIR += bozohttpd
+    SUBDIR += bugzilla2atom
     SUBDIR += buku
     SUBDIR += butterfly
     SUBDIR += c-icap
@@ -141,6 +142,7 @@
     SUBDIR += elixir-webassembly
     SUBDIR += emacs-w3m
     SUBDIR += encode-explorer
+    SUBDIR += envoy
     SUBDIR += ephemera
     SUBDIR += epiphany
     SUBDIR += erlang-cowboy
@@ -1517,6 +1519,7 @@
     SUBDIR += py-django-bitfield
     SUBDIR += py-django-bootstrap-form
     SUBDIR += py-django-bootstrap3
+    SUBDIR += py-django-bootstrap4
     SUBDIR += py-django-braces
     SUBDIR += py-django-bulk-update
     SUBDIR += py-django-cacheops
@@ -1693,6 +1696,7 @@
     SUBDIR += py-jonpy
     SUBDIR += py-jsonfield
     SUBDIR += py-kallithea
+    SUBDIR += py-lektor
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
     SUBDIR += py-livereload
@@ -2027,6 +2031,7 @@
     SUBDIR += rubygem-http-cookie
     SUBDIR += rubygem-http-form_data
     SUBDIR += rubygem-http_router
+    SUBDIR += rubygem-http3
     SUBDIR += rubygem-httparty
     SUBDIR += rubygem-httpclient
     SUBDIR += rubygem-httpi
@@ -2460,6 +2465,7 @@
     SUBDIR += zend-framework1
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd
+    SUBDIR += zola
     SUBDIR += zope213
 
 .include <bsd.port.subdir.mk>
