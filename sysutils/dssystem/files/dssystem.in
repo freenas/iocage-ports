@@ -9,6 +9,14 @@
 
 : ${dssystem_enable="NO"}
 
+dssystem_prestart()
+{
+    netstat -nr | grep lo0 | grep -v '::' | grep -v '127.0.0.1' | awk '{print $1}' | head -n 1 > /root/dhcpip
+    IP=`cat /root/dhcpip`
+    sed -i.bak -E "s|codebase=\"(.+)\"|codebase=\"http://$IP/asigra/\"|" /usr/local/www/asigra/DSOP.jnlp
+    rm -f /usr/local/www/asigra/DSOP.jnlp.bak
+}
+
 dssystem_stop()
 {
 	pids="`pgrep -j none dssystem_dc`"
