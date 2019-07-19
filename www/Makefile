@@ -79,6 +79,7 @@
     SUBDIR += cherokee
     SUBDIR += choqok
     SUBDIR += chpasswd
+    SUBDIR += chrome-gnome-shell
     SUBDIR += chromium
     SUBDIR += ckeditor
     SUBDIR += cl-lml
@@ -1953,6 +1954,7 @@
     SUBDIR += rubygem-acts_as_taggable
     SUBDIR += rubygem-addressable
     SUBDIR += rubygem-addressable23
+    SUBDIR += rubygem-addressable25
     SUBDIR += rubygem-adsf
     SUBDIR += rubygem-akami
     SUBDIR += rubygem-amazon-ecs
@@ -2224,6 +2226,7 @@
     SUBDIR += sitecopy
     SUBDIR += skytemplate
     SUBDIR += slowcgi
+    SUBDIR += slowhttptest
     SUBDIR += smarty2
     SUBDIR += smarty3
     SUBDIR += smb_auth
