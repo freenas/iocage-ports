@@ -459,7 +459,6 @@
     SUBDIR += dcd-server
     SUBDIR += dconf
     SUBDIR += dconf-editor
-    SUBDIR += ddd
     SUBDIR += debugedit
     SUBDIR += dee
     SUBDIR += deforaos-libsystem
@@ -3860,6 +3859,7 @@
     SUBDIR += pecl-event
     SUBDIR += pecl-grpc
     SUBDIR += pecl-hrtime
+    SUBDIR += pecl-inotify
     SUBDIR += pecl-jsmin
     SUBDIR += pecl-json_post
     SUBDIR += pecl-jsond
@@ -4741,7 +4741,6 @@
     SUBDIR += py-pip
     SUBDIR += py-pip-api
     SUBDIR += py-pip-tools
-    SUBDIR += py-pip-tools2
     SUBDIR += py-pipdeptree
     SUBDIR += py-pipenv
     SUBDIR += py-pkgconfig
