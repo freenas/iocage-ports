@@ -44,6 +44,7 @@ command=/usr/local/ds-system/dssystem_dc
 dssystem_flags="--daemon --lang en"
 sig_stop="TERM"
 load_rc_config $name
+start_precmd=dssystem_prestart
 stop_cmd=dssystem_stop
 run_rc_command "$1"
 
