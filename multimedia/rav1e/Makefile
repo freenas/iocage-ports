@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rav1e
-PORTVERSION=	s20190726
+PORTVERSION=	s20190809
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -16,19 +16,19 @@ BUILD_DEPENDS_amd64=	nasm:devel/nasm
 USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	xiph
-GH_TAGNAME=	132b008a
+GH_TAGNAME=	ec0c7787
 PLIST_FILES=	bin/${PORTNAME}
 
 CARGO_CRATES=	adler32-1.0.3 \
-		aho-corasick-0.7.4 \
+		aho-corasick-0.7.6 \
 		ansi_term-0.11.0 \
 		aom-sys-0.1.2 \
-		arc-swap-0.3.11 \
+		arc-swap-0.4.1 \
 		arg_enum_proc_macro-0.1.1 \
 		arrayvec-0.4.11 \
 		atty-0.2.13 \
 		autocfg-0.1.5 \
-		backtrace-0.3.33 \
+		backtrace-0.3.34 \
 		backtrace-sys-0.1.31 \
 		better-panic-0.1.2 \
 		bincode-1.1.4 \
@@ -42,7 +42,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		cexpr-0.3.5 \
 		cfg-if-0.1.9 \
 		chrono-0.4.7 \
-		clang-sys-0.28.0 \
+		clang-sys-0.28.1 \
 		clap-2.33.0 \
 		clicolors-control-1.0.0 \
 		cloudabi-0.0.3 \
@@ -70,7 +70,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		fuchsia-cprng-0.1.1 \
 		fxhash-0.2.1 \
 		gif-0.10.2 \
-		glob-0.2.11 \
+		glob-0.3.0 \
 		humantime-1.2.0 \
 		image-0.21.2 \
 		inflate-0.4.5 \
@@ -82,7 +82,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		libc-0.2.60 \
 		libloading-0.5.2 \
 		lock_api-0.3.1 \
-		log-0.4.7 \
+		log-0.4.8 \
 		lzw-0.10.0 \
 		memchr-2.2.1 \
 		memoffset-0.5.1 \
@@ -111,7 +111,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		rand-0.6.5 \
 		rand_chacha-0.1.1 \
 		rand_core-0.3.1 \
-		rand_core-0.4.0 \
+		rand_core-0.4.2 \
 		rand_hc-0.1.0 \
 		rand_isaac-0.1.1 \
 		rand_jitter-0.1.4 \
@@ -125,7 +125,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		redox_syscall-0.1.56 \
 		regex-1.1.9 \
 		regex-automata-0.1.8 \
-		regex-syntax-0.6.10 \
+		regex-syntax-0.6.11 \
 		rustc-demangle-0.1.15 \
 		rustc_version-0.2.3 \
 		ryu-1.0.0 \
@@ -135,15 +135,15 @@ CARGO_CRATES=	adler32-1.0.3 \
 		scopeguard-1.0.0 \
 		semver-0.9.0 \
 		semver-parser-0.7.0 \
-		serde-1.0.97 \
-		serde_derive-1.0.97 \
+		serde-1.0.98 \
+		serde_derive-1.0.98 \
 		serde_json-1.0.40 \
 		shlex-0.1.1 \
 		signal-hook-0.1.10 \
-		signal-hook-registry-1.1.0 \
+		signal-hook-registry-1.1.1 \
 		smallvec-0.6.10 \
 		strsim-0.8.0 \
-		syn-0.15.42 \
+		syn-0.15.43 \
 		synstructure-0.10.2 \
 		termcolor-1.0.5 \
 		termios-0.3.1 \
@@ -153,10 +153,9 @@ CARGO_CRATES=	adler32-1.0.3 \
 		time-0.1.42 \
 		tinytemplate-1.0.2 \
 		toml-0.2.1 \
-		ucd-util-0.1.5 \
 		unicode-width-0.1.5 \
 		unicode-xid-0.1.0 \
-		utf8-ranges-1.0.3 \
+		utf8-ranges-1.0.4 \
 		vec_map-0.8.1 \
 		vergen-3.0.4 \
 		version_check-0.1.5 \
