@@ -1112,6 +1112,7 @@
     SUBDIR += p5-XML-XQL
     SUBDIR += p5-XML-XSLT
     SUBDIR += p5-XML-XUpdate-LibXML
+    SUBDIR += p5-XString
     SUBDIR += p5-YAML
     SUBDIR += p5-YAML-LibYAML
     SUBDIR += p5-YAML-PP
@@ -1588,6 +1589,7 @@
     SUBDIR += rubygem-rails-dom-testing
     SUBDIR += rubygem-rails-dom-testing-rails5
     SUBDIR += rubygem-rails-dom-testing-rails50
+    SUBDIR += rubygem-rails-dom-testing-rails52
     SUBDIR += rubygem-rails-dom-testing1
     SUBDIR += rubygem-rails-html-sanitizer
     SUBDIR += rubygem-rak
@@ -1619,6 +1621,7 @@
     SUBDIR += rubygem-sass-rails-rails4
     SUBDIR += rubygem-sass-rails-rails5
     SUBDIR += rubygem-sass-rails-rails50
+    SUBDIR += rubygem-sass-rails-rails52
     SUBDIR += rubygem-sass32
     SUBDIR += rubygem-sass34
     SUBDIR += rubygem-sassc
@@ -1667,7 +1670,6 @@
     SUBDIR += scdoc
     SUBDIR += scew
     SUBDIR += scim
-    SUBDIR += scim-bridge
     SUBDIR += scim-input-pad
     SUBDIR += scim-kmfl-imengine
     SUBDIR += scim-m17n
