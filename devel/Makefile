@@ -490,6 +490,7 @@
     SUBDIR += dlib
     SUBDIR += dmake
     SUBDIR += dmalloc
+    SUBDIR += dmlc-core
     SUBDIR += dmucs
     SUBDIR += docopt.cpp
     SUBDIR += doctorj
@@ -5427,6 +5428,7 @@
     SUBDIR += rubygem-aws-sdk-core
     SUBDIR += rubygem-aws-sdk-resources
     SUBDIR += rubygem-aws-sdk-v1
+    SUBDIR += rubygem-aws-sigv2
     SUBDIR += rubygem-aws-sigv4
     SUBDIR += rubygem-axiom-types
     SUBDIR += rubygem-backports
@@ -5526,6 +5528,7 @@
     SUBDIR += rubygem-deep_test
     SUBDIR += rubygem-deface
     SUBDIR += rubygem-default_value_for
+    SUBDIR += rubygem-default_value_for32
     SUBDIR += rubygem-delayed_job
     SUBDIR += rubygem-delayer
     SUBDIR += rubygem-delayer-deferred
@@ -5569,6 +5572,7 @@
     SUBDIR += rubygem-fastri
     SUBDIR += rubygem-fattr
     SUBDIR += rubygem-ffi
+    SUBDIR += rubygem-ffi110
     SUBDIR += rubygem-ffi-compiler
     SUBDIR += rubygem-ffi-win32-extensions
     SUBDIR += rubygem-ffi-yajl
@@ -6087,6 +6091,7 @@
     SUBDIR += rubygem-xpath
     SUBDIR += rubygem-yajl-ruby
     SUBDIR += rubygem-yui-compressor
+    SUBDIR += rubygem-zeitwerk
     SUBDIR += rubygem-zentest
     SUBDIR += rudeconfig
     SUBDIR += rudiments
@@ -6140,6 +6145,7 @@
     SUBDIR += simian
     SUBDIR += simple_components
     SUBDIR += skalibs
+    SUBDIR += skypat
     SUBDIR += slf4j
     SUBDIR += slibtool
     SUBDIR += smake
