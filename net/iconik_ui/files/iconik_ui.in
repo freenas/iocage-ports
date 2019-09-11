@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# PROVIDE: iconik_ui
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf to enable this service:
+#
+# iconik_ui_enable (bool): Set to NO by default.
+#
+# Set it to YES to enable it.
+
+. /etc/rc.subr
+name="iconik_ui"
+rcvar="${name}_enable"
+load_rc_config $name
+
+: ${iconik_ui_enable:="NO"}
+
+pidfile="/var/run/iconik_ui.pid"
+command="/usr/sbin/daemon"
+command_args="-c -f -P ${pidfile} -r %%PYTHON_CMD%% /usr/local/www/iconik_ui/iconik_ui/iconik.py"
+
+run_rc_command "$1"
