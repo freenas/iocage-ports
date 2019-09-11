@@ -1,0 +1,56 @@
+#!/bin/sh
+
+# PROVIDE: iconik_storage_gateway
+# REQUIRE: LOGIN cleanvar
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="iconik_storage_gateway"
+start_cmd="${name}_start"
+stop_cmd="${name}_stop"
+
+[ -z "$iconik_storage_gateway" ] && iconik_storage_gateway_enable="NO"
+
+load_rc_config $name
+
+: ${config_ini:=/usr/local/etc/cantemo/iconik_storage_gateway/config.ini}
+: ${executable:=/usr/local/bin/iconik_storage_gateway}
+: ${pidfile:=/var/run/iconik_storage_gateway.pid}
+: ${restart_delay_seconds:=60}
+: ${user:=cantemo}
+
+command=$executable
+command_args="--config $config_ini"
+
+iconik_storage_gateway_start()
+{
+	echo "Start iconik Storage Gateway."
+	export PATH=/usr/local/bin:/usr/bin:/bin:$PATH
+	/usr/sbin/daemon -u ${user} -t $name -p $pidfile -P /var/run/$name-daemon.pid -r -R ${restart_delay_seconds} -S ${command} ${command_args}
+	sleep 5
+	pid=`cat /var/run/iconik_storage_gateway.pid`
+	if [ `pgrep -P $pid` > 0 ]
+	then
+		echo "Success."
+	else
+		echo "Failed to start."
+		tail /var/log/messages
+		kill -2 `cat /var/run/$name-daemon.pid`
+	fi
+}
+
+iconik_storage_gateway_stop()
+{
+	echo "Stop iconik Storage Gateway."
+	kill -2 `cat /var/run/$name.pid` > /dev/null
+	kill -2 `cat /var/run/$name-daemon.pid` > /dev/null
+	while [ `pgrep -fn $name` > 0 ]
+	do
+ 		echo "in progress..."
+ 		sleep 5
+	done
+	echo "Stopped."
+}
+
+run_rc_command "$1"
