@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ "${2}" = "POST-INSTALL" ] ; then
+	/usr/sbin/pw group mod %%GROUP%% -m %%USER%%
+	/bin/mkdir -p /var/cantemo/iconik_storage_gateway/data
+	/bin/mkdir -p /var/log/cantemo/iconik_storage_gateway
+	/usr/sbin/chown -R %%USER%%:%%GROUP%% /var/cantemo/iconik_storage_gateway
+	/usr/sbin/chown -R %%USER%%:%%GROUP%% /var/log/cantemo/iconik_storage_gateway
+fi
