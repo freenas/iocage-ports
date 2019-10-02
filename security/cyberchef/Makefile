@@ -2,12 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	cyberchef
-PORTVERSION=	9.6.0
+PORTVERSION=	9.7.6
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/${GH_TAGNAME}/
-DISTNAME=	CyberChef_v9.6.0
+DISTNAME=	CyberChef_${DISTVERSIONPREFIX}${PORTVERSION}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Cyber operations within a web browser
