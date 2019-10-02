@@ -1,13 +1,13 @@
 # $FreeBSD$
 
 PORTNAME=	llvm
-DISTVERSION=	9.0.0rc4
+DISTVERSION=	9.0.0
 PORTREVISION=	0
 CATEGORIES=	devel lang
 .if ${DISTVERSION:M*rc*}
 MASTER_SITES=  http://prereleases.llvm.org/${LLVM_RELEASE}/${RCDIR}
 .else
-MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION}/
+MASTER_SITES=	http://releases.llvm.org/${LLVM_RELEASE}/
 .endif
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
 DISTNAME=	${PORTNAME}-${DISTVERSION}.src
@@ -66,12 +66,14 @@ CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHON_CMD} \
 CFLAGS+=	-DNDEBUG
 CXXFLAGS+=	-DNDEBUG
 
-OPTIONS_DEFINE=	BE_AMDGPU CLANG DOCS EXTRAS LIT LLD LLDB PYCLANG
+OPTIONS_DEFINE=	BE_AMDGPU CLANG DOCS EXTRAS LIT LLD LLD_LINK LLDB PYCLANG
 OPTIONS_DEFINE_amd64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFINE_i386=	COMPILER_RT OPENMP
-OPTIONS_DEFAULT=	BE_AMDGPU BE_STANDARD CLANG EXTRAS LIT LLD LLDB PYCLANG
+OPTIONS_DEFINE_powerpc64=	OPENMP
+OPTIONS_DEFAULT=	BE_AMDGPU BE_STANDARD CLANG EXTRAS LIT LLD LLD_LINK LLDB PYCLANG
 OPTIONS_DEFAULT_amd64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFAULT_i386=	COMPILER_RT OPENMP
+OPTIONS_DEFAULT_powerpc64=	OPENMP
 OPTIONS_SINGLE=		BACKENDS
 OPTIONS_SINGLE_BACKENDS=BE_FREEBSD BE_NATIVE BE_STANDARD
 OPTIONS_SUB=	yes
@@ -115,6 +117,8 @@ LIT_DESC=		Install lit and FileCheck test tools
 LIT_VARS=		_USES_PYTHON=python:3.6+
 LLD_DESC=		Install lld, the LLVM linker
 LLD_DISTFILES=		lld-${DISTVERSION}.src${EXTRACT_SUFX}
+LLD_LINK_DESC=		Link ld.lld as ld to clang uses it
+LLD_LINK_IMPLIES=	LLD
 LLDB_BUILD_DEPENDS=	swig3.0:devel/swig30 \
 			${PY_ENUM34}
 LLDB_DESC=		Install lldb, the LLVM debugger
@@ -124,6 +128,7 @@ LLDB_IMPLIES=		CLANG
 LLDB_PORTDOCS=		lldb
 LLDB_VARS=		_USES_PYTHON=python:3.6+
 OPENMP_DESC=		Install libomp, the LLVM OpenMP runtime library
+OPENMP_EXTRA_PATCHES=	${PATCHDIR}/openmp
 OPENMP_DISTFILES=	openmp-${DISTVERSION}.src${EXTRACT_SUFX}
 PYCLANG_DESC=	Install python bindings to libclang
 PYCLANG_IMPLIES=	CLANG
@@ -267,7 +272,7 @@ COMMANDS+=	${LLDB_COMMANDS}
 .endif
 
 .if ${PORT_OPTIONS:MPYCLANG}
-PYCLANG_PATTERN=	(clang\/(__init__|cindex|enumerations).py$)
+PYCLANG_PATTERN=	(clang\/(__init__|cindex|enumerations).py)$$
 .endif
 
 .include <bsd.port.pre.mk>
@@ -385,10 +390,6 @@ _COMPILER_RT_LIBS+= \
 	libclang_rt.ubsan_standalone-i386.a \
 	libclang_rt.ubsan_standalone-i386.so \
 	libclang_rt.ubsan_standalone_cxx-i386.a
-.endif
-
-.if ${OPSYS} == "FreeBSD" && ${COMPILER_TYPE} != clang
-CXXFLAGS+=	-D_GLIBCXX_USE_C99
 .endif
 
 # Use lld for armv6 on clang 7 and up to avoid binutils ld issues
@@ -533,6 +534,9 @@ post-install-LIT-on:
 	${LN} -f ${STAGEDIR}${LLVM_PREFIX}/bin/FileCheck \
 	    ${STAGEDIR}${PREFIX}/bin/FileCheck${LLVM_SUFFIX}
 
+post-install-LLD_LINK-on:
+	${LN} -s ld.lld ${STAGEDIR}${LOCALBASE}/llvm${LLVM_SUFFIX}/bin/ld
+
 TEST_CMD=	'(cd ${WRKSRC}/test; ${SETENV} ${MAKE_ENV} LD_LIBRARY_PATH=${WRKSRC}/Release/lib ${MAKE_CMD} check-local-lit)'
 do-test:
 	if [ `${ID} -u` = 0 ]; then \
@@ -579,6 +583,7 @@ build-plist:
 		{printf "%%%%COMPILER_RT%%%%"} \
 	    if ($$0 ~ /(${EXTRAS_PATTERN})/) {printf "%%%%EXTRAS%%%%"} \
 	    if ($$0 ~ /(lld|wasm-ld)/ && $$0 !~ /(lldb)/) {printf "%%%%LLD%%%%"} \
+	    if ($$0 ~ /(bin\/ld$$)/) {printf "%%%%LLD_LINK%%%%"} \
 	    if ($$0 ~ /(argdumper|lldb|six.py)/) {printf "%%%%LLDB%%%%"} \
 	    if ($$0 ~ /(lib.*omp|omp.h|ompt.h)/) {printf "%%%%OPENMP%%%%"} \
 	    if ($$0 ~ /(LLVMgold)/) {printf "%%%%GOLD%%%%"} \

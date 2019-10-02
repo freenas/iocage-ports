@@ -358,7 +358,6 @@
     SUBDIR += imc
     SUBDIR += imgtops
     SUBDIR += imgv
-    SUBDIR += imgvtopgm
     SUBDIR += imlib2
     SUBDIR += imlib2-webp
     SUBDIR += imlib2_loaders
@@ -527,6 +526,7 @@
     SUBDIR += linux-c7-jasper
     SUBDIR += linux-c7-jbigkit
     SUBDIR += linux-c7-jpeg
+    SUBDIR += linux-c7-libdrm
     SUBDIR += linux-c7-libepoxy
     SUBDIR += linux-c7-libglvnd
     SUBDIR += linux-c7-png
@@ -571,6 +571,7 @@
     SUBDIR += mxp
     SUBDIR += mypaint
     SUBDIR += mypaint-brushes
+    SUBDIR += nanosvg
     SUBDIR += nathive
     SUBDIR += netpbm
     SUBDIR += nip2
@@ -655,8 +656,6 @@
     SUBDIR += p5-Geo-GDAL
     SUBDIR += p5-Geo-GML
     SUBDIR += p5-Geo-Gpx
-    SUBDIR += p5-Geo-Point
-    SUBDIR += p5-Geo-Proj4
     SUBDIR += p5-Geometry-Primitive
     SUBDIR += p5-Gimp
     SUBDIR += p5-Google-Chart
@@ -763,6 +762,8 @@
     SUBDIR += php72-gd
     SUBDIR += php73-exif
     SUBDIR += php73-gd
+    SUBDIR += php74-exif
+    SUBDIR += php74-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -773,7 +774,6 @@
     SUBDIR += pixelize
     SUBDIR += pixen
     SUBDIR += pixie
-    SUBDIR += pixmap
     SUBDIR += plasma-kmod
     SUBDIR += plotutils
     SUBDIR += png
@@ -806,7 +806,6 @@
     SUBDIR += price
     SUBDIR += processing
     SUBDIR += proj
-    SUBDIR += proj5
     SUBDIR += pstoedit
     SUBDIR += pstoepsi
     SUBDIR += ptex
@@ -821,6 +820,7 @@
     SUBDIR += py-cairocffi
     SUBDIR += py-cartopy
     SUBDIR += py-chart
+    SUBDIR += py-colour
     SUBDIR += py-descartes
     SUBDIR += py-django-easy-thumbnails
     SUBDIR += py-djvulibre
@@ -886,11 +886,13 @@
     SUBDIR += py-pyqtgraph
     SUBDIR += py-python-poppler-qt5
     SUBDIR += py-qt5-svg
+    SUBDIR += py-rawkit
     SUBDIR += py-sane
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-soya3d
+    SUBDIR += py-spectra
     SUBDIR += py-stltools
     SUBDIR += py-svgwrite
     SUBDIR += py-termtosvg
@@ -922,6 +924,7 @@
     SUBDIR += quesoglc
     SUBDIR += radiance
     SUBDIR += radius-engine
+    SUBDIR += rapid-photo-downloader
     SUBDIR += raster3d
     SUBDIR += rawtherapee
     SUBDIR += rayshade
@@ -977,6 +980,7 @@
     SUBDIR += sane-epkowa
     SUBDIR += sane-frontends
     SUBDIR += scale2x
+    SUBDIR += scantailor
     SUBDIR += scr2png
     SUBDIR += scrot
     SUBDIR += scwm-icons
