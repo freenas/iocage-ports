@@ -250,6 +250,7 @@
     SUBDIR += gle
     SUBDIR += glee
     SUBDIR += glew
+    SUBDIR += glew-wayland
     SUBDIR += glexcess
     SUBDIR += glfw
     SUBDIR += glfw2
@@ -413,7 +414,6 @@
     SUBDIR += lfview
     SUBDIR += lib3ds
     SUBDIR += libGLU
-    SUBDIR += libGLw
     SUBDIR += libQGLViewer
     SUBDIR += libafterimage
     SUBDIR += libansilove
@@ -867,7 +867,9 @@
     SUBDIR += py-pyproj
     SUBDIR += py-pyqrcode
     SUBDIR += py-pyqtgraph
+    SUBDIR += py-pyrsgis
     SUBDIR += py-python-poppler-qt5
+    SUBDIR += py-pyvips
     SUBDIR += py-qt5-svg
     SUBDIR += py-rawkit
     SUBDIR += py-sane
@@ -881,6 +883,7 @@
     SUBDIR += py-termtosvg
     SUBDIR += py-toyplot
     SUBDIR += py-traitsui
+    SUBDIR += py-visvis
     SUBDIR += py-wand
     SUBDIR += py-webcolors
     SUBDIR += py-willow
