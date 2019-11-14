@@ -36,6 +36,7 @@
     SUBDIR += buffer
     SUBDIR += cave
     SUBDIR += cdcollect
+    SUBDIR += cheat
     SUBDIR += chef
     SUBDIR += chmlib
     SUBDIR += cinnamon-translations
@@ -228,6 +229,7 @@
     SUBDIR += libutf
     SUBDIR += lifelines
     SUBDIR += lingoteach
+    SUBDIR += locale-en_DK
     SUBDIR += localedata
     SUBDIR += logsurfer
     SUBDIR += loop
@@ -239,6 +241,7 @@
     SUBDIR += mate-user-guide
     SUBDIR += mbuffer
     SUBDIR += mc
+    SUBDIR += mc-nox11
     SUBDIR += mdp
     SUBDIR += metalink-checker
     SUBDIR += metalink-editor
@@ -252,6 +255,7 @@
     SUBDIR += mtail
     SUBDIR += mtx
     SUBDIR += najitool
+    SUBDIR += netron
     SUBDIR += nms
     SUBDIR += nnn
     SUBDIR += nsf
@@ -262,6 +266,7 @@
     SUBDIR += opencyc
     SUBDIR += openhab2
     SUBDIR += openhab2-addons
+    SUBDIR += openhantek
     SUBDIR += openhmd
     SUBDIR += openmvg
     SUBDIR += openr2

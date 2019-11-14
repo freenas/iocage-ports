@@ -284,6 +284,7 @@
     SUBDIR += hpipm
     SUBDIR += hs-Agda
     SUBDIR += hs-semigroups
+    SUBDIR += ideep
     SUBDIR += ignition-math
     SUBDIR += igraph
     SUBDIR += intervaltree
@@ -370,6 +371,7 @@
     SUBDIR += mpc
     SUBDIR += mpexpr
     SUBDIR += mpfr
+    SUBDIR += mpfrc++
     SUBDIR += mpir
     SUBDIR += mppp
     SUBDIR += mprime
@@ -723,6 +725,7 @@
     SUBDIR += py-luminol
     SUBDIR += py-mathdom
     SUBDIR += py-matplotlib
+    SUBDIR += py-matplotlib-scalebar
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-munkres10
@@ -761,8 +764,8 @@
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
     SUBDIR += py-pysparse
-    SUBDIR += py-pysym
     SUBDIR += py-pystan
+    SUBDIR += py-pysym
     SUBDIR += py-python-louvain
     SUBDIR += py-pyvtk
     SUBDIR += py-quadprog

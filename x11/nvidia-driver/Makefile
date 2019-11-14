@@ -10,9 +10,9 @@
 # slave ports instead (`x11/nvidia-driver-340' or `x11/nvidia-driver-304').
 
 PORTNAME=	nvidia-driver
-DISTVERSION?=	390.87
+DISTVERSION?=	440.31
 # Always try to set PORTREVISION as it can be overridden by the slave ports
-PORTREVISION?=	4
+PORTREVISION?=	0
 CATEGORIES=	x11
 MASTER_SITES=	NVIDIA/XFree86/FreeBSD-${ARCH_SUFX}/${DISTVERSION}
 DISTNAME=	NVIDIA-FreeBSD-${ARCH_SUFX}-${DISTVERSION}
@@ -24,9 +24,14 @@ COMMENT=	NVidia graphics card binary drivers for hardware OpenGL rendering
 LICENSE_FILE=	${WRKSRC}/doc/license.txt
 .include "${.CURDIR}/../nvidia-driver/Makefile.common"
 
-USES=		kmod uidfix
+# Pull GNU sed(1) for "binary" patching of obj/libglvnd/libEGL.so.1 and
+# obj/libEGL_nvidia.so.0 (see below)
+.if ${NVVERSION} >= 410.057
+PATCH_DEPENDS=	gsed:textproc/gsed
+.endif
+
+USES=		kmod uidfix xorg
 USE_XORG=	x11 xorg-server xext
-USE_GL=		gl
 USE_LDCONFIG=	yes
 
 # NVIDIA_ROOT is not set in src/Makefile, which results in bogus -I/src
@@ -35,8 +40,15 @@ USE_LDCONFIG=	yes
 # fixed upstream (across all versions, including legacy ones), use this
 # hack below to universally set NVIDIA_ROOT.  Also provide X11BASE value
 # since it is still used by legacy drivers.
-MAKE_ENV=	NVIDIA_ROOT=${WRKSRC} X11BASE=${LOCALBASE}
-SUB_FILES=	pkg-deinstall pkg-install pkg-message nvidia.conf
+GLVND_JSON_PATH=	${PREFIX}/share/glvnd/egl_vendor.d
+WAYLAND_JSON_PATH=	${PREFIX}/share/egl/egl_external_platform.d
+MAKE_ENV=	NVIDIA_ROOT=${WRKSRC} X11BASE=${LOCALBASE} \
+		EGL_GLVND_JSON_PATH=${STAGEDIR}${GLVND_JSON_PATH} \
+		EGL_WAYLAND_JSON_PATH=${STAGEDIR}${WAYLAND_JSON_PATH}
+SUB_FILES=	pkg-message nvidia.conf
+.if ${NVVERSION} < 410.057
+SUB_FILES+=	pkg-deinstall pkg-install
+.endif
 SUB_PATCHES=	extra-patch-src-Makefile \
 		extra-patch-src-nv-freebsd.h \
 		extra-patch-src-nv-misc.h \
@@ -140,8 +152,10 @@ post-patch: .SILENT
 .endif
 # Adjust installation path of a conflicting file (shared between
 # nvidia-driver and xorg-server) to ease package manager work
+.if ${NVVERSION} < 410.057
 	${REINPLACE_CMD} -e '/LIBDIR/s:xorg/modules/extensions:&/.nvidia:' \
 		${WRKSRC}/x11/extension/Makefile
+.endif
 # Do not execute afterinstall target (prevent automatic module registration
 # and "smart" installation of conflicting files heuristics)
 	${REINPLACE_CMD} -e 's/afterinstall/&_dontexecute/' ${WRKSRC}/Makefile
@@ -150,9 +164,22 @@ post-patch: .SILENT
 # /usr/share/nvidia path is hardcoded in libGL and nvidia-settings, but we
 # won't adhere to this stupidity and install nvidia-application-profiles-*
 # files as part of documentation
-.if ${NVVERSION} >= 334.016
-	${REINPLACE_CMD} -e 's,/usr/share/nvidia,${STAGEDIR}${DOCSDIR},' \
+.if ${NVVERSION} >= 410.057
+	${REINPLACE_CMD} -e 's,/usr/share/nvidia,$${DESTDIR}${DOCSDIR},' \
+		${WRKSRC}/lib/libGLX_nvidia/Makefile ${WRKSRC}/doc/Makefile
+	${REINPLACE_CMD} -e '/AUXLINK_LINK/s,\$${DESTDIR},,' \
+		${WRKSRC}/lib/libGLX_nvidia/Makefile
+	prefix="${PREFIX}" ; padding=$$(($${#prefix}+3)) ; \
+	gsed ${REINPLACE_ARGS} -E "s,/etc/glvnd/egl_vendor\.d.{$$padding},${GLVND_JSON_PATH}\x00," \
+		${WRKSRC}/obj/libglvnd/libEGL.so.1
+.elif ${NVVERSION} >= 334.016
+	${REINPLACE_CMD} -e 's,/usr/share/nvidia,$${DESTDIR}${DOCSDIR},' \
 		${WRKSRC}/lib/libGL/Makefile ${WRKSRC}/doc/Makefile
+.endif
+.if ${NVVERSION} >= 415.013
+	prefix="${PREFIX}" ; padding=$$(($${#prefix}+3)) ; \
+	gsed ${REINPLACE_ARGS} -E "s,/etc/egl/egl_external_platform\.d.{$$padding},${WAYLAND_JSON_PATH}\x00," \
+		${WRKSRC}/obj/libEGL_nvidia.so.0
 .endif
 # Finally, process OPTIONS
 .if ${PORT_OPTIONS:MFREEBSD_AGP}
@@ -209,7 +236,19 @@ post-install: .SILENT
 	${REINPLACE_CMD} -E '/(lib)?nvidia-(debugdump|smi|ml)/d' ${TMPPLIST}
 .endif
 .if ${NVVERSION} < 358.009
-	${REINPLACE_CMD} '/nvidia-modeset.ko/d' ${TMPPLIST}
+	${REINPLACE_CMD} -e '/nvidia-modeset\.ko/d' ${TMPPLIST}
+.endif
+.if ${NVVERSION} < 410.057
+	${REINPLACE_CMD} -E '/lib(EGL|GLESv[12].*)_nvidia/d ; \
+		/lib(GLX|GLdispatch|OpenGL)/d ; \
+		/extensions\/libglxserver_nvidia\.so/d ; \
+		/10_nvidia\.json/d' ${TMPPLIST}
+.else
+	${REINPLACE_CMD} -e '/extensions\/\.nvidia\/libglx/d' ${TMPPLIST}
+.endif
+.if ${NVVERSION} < 415.013
+	${REINPLACE_CMD} -e '/libnvidia-egl-wayland\.so/d ; \
+		/10_nvidia_wayland\.json/d' ${TMPPLIST}
 .endif
 # Rename some libraries and install a libmap file to resolve conflict with
 # Mesa libraries.
