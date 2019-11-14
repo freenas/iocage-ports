@@ -443,7 +443,6 @@
 %%WWWDIR%%/api/src/org/apache/cloudstack/api/command/admin/config/ListHypervisorCapabilitiesCmd.java
 %%WWWDIR%%/api/src/org/apache/cloudstack/api/command/admin/config/UpdateCfgCmd.java
 %%WWWDIR%%/api/src/org/apache/cloudstack/api/command/admin/config/UpdateHypervisorCapabilitiesCmd.java
-%%WWWDIR%%/api/src/org/apache/cloudstack/api/command/admin/direct/download/UploadTemplateDirectDownloadCertificate.java
 %%WWWDIR%%/api/src/org/apache/cloudstack/api/command/admin/domain/CreateDomainCmd.java
 %%WWWDIR%%/api/src/org/apache/cloudstack/api/command/admin/domain/DeleteDomainCmd.java
 %%WWWDIR%%/api/src/org/apache/cloudstack/api/command/admin/domain/ListDomainChildrenCmd.java
@@ -1574,7 +1573,6 @@
 %%WWWDIR%%/core/src/org/apache/cloudstack/agent/directdownload/HttpsDirectDownloadCommand.java
 %%WWWDIR%%/core/src/org/apache/cloudstack/agent/directdownload/MetalinkDirectDownloadCommand.java
 %%WWWDIR%%/core/src/org/apache/cloudstack/agent/directdownload/NfsDirectDownloadCommand.java
-%%WWWDIR%%/core/src/org/apache/cloudstack/agent/directdownload/SetupDirectDownloadCertificate.java
 %%WWWDIR%%/core/src/org/apache/cloudstack/agent/lb/SetupMSListAnswer.java
 %%WWWDIR%%/core/src/org/apache/cloudstack/agent/lb/SetupMSListCommand.java
 %%WWWDIR%%/core/src/org/apache/cloudstack/ca/PostCertificateRenewalCommand.java
@@ -3282,7 +3280,6 @@
 %%WWWDIR%%/packaging/centos63/cloudstack-sccs
 %%WWWDIR%%/packaging/centos63/replace.properties
 %%WWWDIR%%/packaging/centos63/rhel7/cloudstack-management.conf
-%%WWWDIR%%/packaging/centos7/cloud-agent.rc
 %%WWWDIR%%/packaging/centos7/cloud-ipallocator.rc
 %%WWWDIR%%/packaging/centos7/cloud.limits
 %%WWWDIR%%/packaging/centos7/cloud.spec
@@ -5304,9 +5301,7 @@
 %%WWWDIR%%/scripts/util/qemu-ivs-ifup
 %%WWWDIR%%/scripts/vm/hypervisor/kvm/kvmheartbeat.sh
 %%WWWDIR%%/scripts/vm/hypervisor/kvm/kvmvmactivity.sh
-%%WWWDIR%%/scripts/vm/hypervisor/kvm/patchviasocket.py
 %%WWWDIR%%/scripts/vm/hypervisor/kvm/setup_agent.sh
-%%WWWDIR%%/scripts/vm/hypervisor/kvm/test_patchviasocket.py
 %%WWWDIR%%/scripts/vm/hypervisor/ovm3/cloudstack.py
 %%WWWDIR%%/scripts/vm/hypervisor/ovm3/storagehealth.py
 %%WWWDIR%%/scripts/vm/hypervisor/update_host_passwd.sh
@@ -6510,7 +6505,6 @@
 %%WWWDIR%%/systemvm/debian/opt/cloud/bin/setup/dhcpsrvr.sh
 %%WWWDIR%%/systemvm/debian/opt/cloud/bin/setup/elbvm.sh
 %%WWWDIR%%/systemvm/debian/opt/cloud/bin/setup/ilbvm.sh
-%%WWWDIR%%/systemvm/debian/opt/cloud/bin/setup/patchsystemvm.sh
 %%WWWDIR%%/systemvm/debian/opt/cloud/bin/setup/postinit.sh
 %%WWWDIR%%/systemvm/debian/opt/cloud/bin/setup/router.sh
 %%WWWDIR%%/systemvm/debian/opt/cloud/bin/setup/secstorage.sh
@@ -6540,7 +6534,6 @@
 %%WWWDIR%%/systemvm/debian/opt/cloud/testdata/s2s0001.json
 %%WWWDIR%%/systemvm/debian/opt/cloud/testdata/test.sh
 %%WWWDIR%%/systemvm/debian/opt/cloud/testdata/vmp0001.json
-%%WWWDIR%%/systemvm/debian/root/.ssh/authorized_keys
 %%WWWDIR%%/systemvm/debian/root/clearUsageRules.sh
 %%WWWDIR%%/systemvm/debian/root/func.sh
 %%WWWDIR%%/systemvm/debian/root/monitorServices.py

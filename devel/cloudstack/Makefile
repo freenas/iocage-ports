@@ -1,8 +1,8 @@
 # Created by: miwi@ixsystems.com
 
 PORTNAME=	cloudstack
-PORTVERSION=	4.11.1
-PORTREVISION=	2
+PORTVERSION=	4.11.3.0
+PORTREVISION=	0
 CATEGORIES=	devel
 
 MAINTAINER=	miwi@ixsystems.com
@@ -25,7 +25,7 @@ USE_JAVA=	yes
 JAVA_VERSION=	1.8+
 USE_GITHUB=	yes
 GH_ACCOUNT=	miwi-fbsd
-GH_TAGNAME=	2cb2dac
+GH_TAGNAME=	d895983
 NO_BUILD= yes
 
 CLS_HOME?= ${PREFIX}/www/${PORTNAME}
