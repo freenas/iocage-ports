@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mlterm
-PORTVERSION=	3.8.8
+PORTVERSION=	3.8.9
 CATEGORIES=	x11
 MASTER_SITES=	SF/${PORTNAME}/01release/${PORTNAME}-${PORTVERSION}
 
@@ -65,6 +65,7 @@ CAIRO_CONFIGURE_OFF=	--with-type-engines="xcore,xft"
 
 SIXEL_CONFIGURE_ENABLE=	sixel
 
+REGIS_USES=		sdl
 REGIS_USE=		SDL=ttf
 
 .include <bsd.port.options.mk>

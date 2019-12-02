@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	o
-DISTVERSION=	2.6.5
+DISTVERSION=	2.10.2
 CATEGORIES=	editors
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -14,12 +14,14 @@ USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	xyproto
 GH_TUPLE=	\
-		golang:sys:c1f44814a5cd:golang_sys/vendor/golang.org/x/sys \
+		atotto:clipboard:v0.1.2:atotto_clipboard/vendor/github.com/atotto/clipboard \
+		golang:sys:8a8471f7e56d:golang_sys/vendor/golang.org/x/sys \
 		pkg:term:aa71e9d9e942:pkg_term/vendor/github.com/pkg/term \
 		sourcegraph:annotate:f4cad6c6324d:sourcegraph_annotate/vendor/github.com/sourcegraph/annotate \
-		xyproto:syntax:a179398d46f5:xyproto_syntax/vendor/github.com/xyproto/syntax \
-		xyproto:textoutput:v1.8.0:xyproto_textoutput/vendor/github.com/xyproto/textoutput \
-		xyproto:vt100:v1.5.1:xyproto_vt100/vendor/github.com/xyproto/vt100
+		xyproto:burnfont:v1.2.2:xyproto_burnfont/vendor/github.com/xyproto/burnfont \
+		xyproto:syntax:9809e592290a:xyproto_syntax/vendor/github.com/xyproto/syntax \
+		xyproto:textoutput:v1.9.1:xyproto_textoutput/vendor/github.com/xyproto/textoutput \
+		xyproto:vt100:v1.8.1:xyproto_vt100/vendor/github.com/xyproto/vt100
 
 PLIST_FILES=	bin/o
 

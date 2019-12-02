@@ -207,6 +207,7 @@
     SUBDIR += lxqt-globalkeys
     SUBDIR += lxqt-runner
     SUBDIR += lxrandr
+    SUBDIR += ly
     SUBDIR += mate
     SUBDIR += mate-applets
     SUBDIR += mate-base
@@ -218,8 +219,6 @@
     SUBDIR += mate-terminal
     SUBDIR += menu-cache
     SUBDIR += menulibre
-    SUBDIR += mere-about
-    SUBDIR += mere-utils
     SUBDIR += metalock
     SUBDIR += metisse
     SUBDIR += mkcomposecache
@@ -265,6 +264,7 @@
     SUBDIR += printscreen
     SUBDIR += props
     SUBDIR += py-caffeine-ng
+    SUBDIR += py-i3ipc
     SUBDIR += py-pyscreenshot
     SUBDIR += py-pyvirtualdisplay
     SUBDIR += py-qt5-opengl
@@ -306,6 +306,7 @@
     SUBDIR += slop
     SUBDIR += slurp
     SUBDIR += smproxy
+    SUBDIR += squeekboard
     SUBDIR += sselp
     SUBDIR += stalonetray
     SUBDIR += startup-notification
