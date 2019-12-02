@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=		sope4
-PORTVERSION=		4.0.8
+PORTVERSION=		4.1.1
 CATEGORIES=		devel gnustep
 MASTER_SITES=		http://www.sogo.nu/files/downloads/SOGo/Sources/
 DISTNAME=		SOPE-${PORTVERSION}
@@ -32,7 +32,7 @@ USE_GNUSTEP=		base build
 USE_LDCONFIG=		${GNUSTEP_LOCAL_LIBRARIES}
 LLD_UNSAFE=		yes # PR 230608
 
-CONFLICTS=		sope2-[0-9]* sope3-[0-9]*
+#CONFLICTS=		sope2-[0-9]* sope3-[0-9]*
 
 SUB_LIST+=		GNUSTEP_LOCAL_TOOLS=${GNUSTEP_LOCAL_TOOLS} \
 			GNUSTEP_MAKEFILES=${GNUSTEP_MAKEFILES}
@@ -42,7 +42,7 @@ CONFIGURE_ENV+=		CC="${CC}"
 
 LDAP_USE=		OPENLDAP=client
 PGSQL_USES=		pgsql
-MYSQL_USE=		MYSQL=client
+MYSQL_USES=		mysql
 MEMCACHED_RUN_DEPENDS=	${LOCALBASE}/bin/memcached:databases/memcached
 
 post-patch:

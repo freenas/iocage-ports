@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	aws-sdk-resources
-PORTVERSION=	3.57.1
+PORTVERSION=	3.59.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -58,6 +58,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-costandusagereportservice>=1<2:devel/rubygem-aws-sdk-costandusagereportservice \
 		rubygem-aws-sdk-costexplorer>=1<2:devel/rubygem-aws-sdk-costexplorer \
 		rubygem-aws-sdk-databasemigrationservice>=1<2:devel/rubygem-aws-sdk-databasemigrationservice \
+		rubygem-aws-sdk-dataexchange>=1<2:devel/rubygem-aws-sdk-dataexchange \
 		rubygem-aws-sdk-datapipeline>=1<2:devel/rubygem-aws-sdk-datapipeline \
 		rubygem-aws-sdk-datasync>=1<2:devel/rubygem-aws-sdk-datasync \
 		rubygem-aws-sdk-dax>=1<2:devel/rubygem-aws-sdk-dax \
@@ -125,6 +126,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-machinelearning>=1<2:devel/rubygem-aws-sdk-machinelearning \
 		rubygem-aws-sdk-macie>=1<2:devel/rubygem-aws-sdk-macie \
 		rubygem-aws-sdk-managedblockchain>=1<2:devel/rubygem-aws-sdk-managedblockchain \
+		rubygem-aws-sdk-marketplacecatalog>=1<2:devel/rubygem-aws-sdk-marketplacecatalog \
 		rubygem-aws-sdk-marketplacecommerceanalytics>=1<2:devel/rubygem-aws-sdk-marketplacecommerceanalytics \
 		rubygem-aws-sdk-marketplaceentitlementservice>=1<2:devel/rubygem-aws-sdk-marketplaceentitlementservice \
 		rubygem-aws-sdk-marketplacemetering>=1<2:devel/rubygem-aws-sdk-marketplacemetering \
@@ -179,6 +181,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-servicediscovery>=1<2:devel/rubygem-aws-sdk-servicediscovery \
 		rubygem-aws-sdk-servicequotas>=1<2:devel/rubygem-aws-sdk-servicequotas \
 		rubygem-aws-sdk-ses>=1<2:devel/rubygem-aws-sdk-ses \
+		rubygem-aws-sdk-sesv2>=1<2:devel/rubygem-aws-sdk-sesv2 \
 		rubygem-aws-sdk-shield>=1<2:devel/rubygem-aws-sdk-shield \
 		rubygem-aws-sdk-signer>=1<2:devel/rubygem-aws-sdk-signer \
 		rubygem-aws-sdk-simpledb>=1<2:devel/rubygem-aws-sdk-simpledb \

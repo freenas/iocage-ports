@@ -113,6 +113,7 @@
     SUBDIR += SCIP
     SUBDIR += SoPlex
     SUBDIR += aamath
+    SUBDIR += abella
     SUBDIR += abs
     SUBDIR += acalc
     SUBDIR += add
@@ -172,6 +173,7 @@
     SUBDIR += clblas
     SUBDIR += clblast
     SUBDIR += clfft
+    SUBDIR += clingo
     SUBDIR += cln
     SUBDIR += cloog
     SUBDIR += clp
@@ -212,6 +214,7 @@
     SUBDIR += eispack
     SUBDIR += elpa
     SUBDIR += emc2
+    SUBDIR += ensmallen
     SUBDIR += ent
     SUBDIR += entropy
     SUBDIR += eprover
@@ -429,9 +432,11 @@
     SUBDIR += octave-forge-io
     SUBDIR += octave-forge-irsa
     SUBDIR += octave-forge-level-set
+    SUBDIR += octave-forge-linear-algebra
     SUBDIR += octave-forge-lssa
     SUBDIR += octave-forge-ltfat
     SUBDIR += octave-forge-mapping
+    SUBDIR += octave-forge-matgeom
     SUBDIR += octave-forge-miscellaneous
     SUBDIR += octave-forge-missing-functions
     SUBDIR += octave-forge-msh
@@ -476,7 +481,6 @@
     SUBDIR += octomap
     SUBDIR += ogdf
     SUBDIR += oleo
-    SUBDIR += onnx
     SUBDIR += openblas
     SUBDIR += openfst
     SUBDIR += openlibm
@@ -682,6 +686,7 @@
     SUBDIR += py-algopy
     SUBDIR += py-altgraph
     SUBDIR += py-apgl
+    SUBDIR += py-arviz
     SUBDIR += py-autograd
     SUBDIR += py-basemap
     SUBDIR += py-basemap-data
@@ -737,7 +742,6 @@
     SUBDIR += py-numpy
     SUBDIR += py-nzmath
     SUBDIR += py-onnx
-    SUBDIR += py-onnx-tf
     SUBDIR += py-osqp
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
@@ -870,7 +874,6 @@
     SUBDIR += triangle
     SUBDIR += trlan
     SUBDIR += truthtable
-    SUBDIR += tvm
     SUBDIR += tvmet
     SUBDIR += ump
     SUBDIR += units

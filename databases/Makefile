@@ -890,6 +890,7 @@
     SUBDIR += recutils
     SUBDIR += redis
     SUBDIR += redis-devel
+    SUBDIR += redis4
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += retcl
@@ -962,7 +963,6 @@
     SUBDIR += rubygem-em-redis-unified
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
-    SUBDIR += rubygem-flipper-active_record013
     SUBDIR += rubygem-gdbm
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
@@ -978,6 +978,7 @@
     SUBDIR += rubygem-memcache-client
     SUBDIR += rubygem-mysql
     SUBDIR += rubygem-mysql2
+    SUBDIR += rubygem-mysql204
     SUBDIR += rubygem-openid-redis-store
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-peek-mysql2-rails5
@@ -1005,7 +1006,6 @@
     SUBDIR += rubygem-sqlite3-ruby
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
-    SUBDIR += rubygem-state_machines-activerecord05
     SUBDIR += rubygem-tarantool
     SUBDIR += sequeler
     SUBDIR += sfcgal
@@ -1068,7 +1068,6 @@
     SUBDIR += xapian-core12
     SUBDIR += xrootd
     SUBDIR += xtrabackup
-    SUBDIR += zabbix22-libzbxpgsql
     SUBDIR += zabbix3-libzbxpgsql
     SUBDIR += zodb3
 

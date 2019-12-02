@@ -86,6 +86,7 @@
     SUBDIR += clash
     SUBDIR += cloud-init
     SUBDIR += cloud-init-azure
+    SUBDIR += cloudflared
     SUBDIR += clusterit
     SUBDIR += cnd
     SUBDIR += concourse-fly
@@ -115,6 +116,7 @@
     SUBDIR += dgd-lpmud
     SUBDIR += dhcp6
     SUBDIR += dhcpcd
+    SUBDIR += dhcpcd-devel
     SUBDIR += dhcpcd-ui
     SUBDIR += dhcpd
     SUBDIR += dhcpd-pools
@@ -210,6 +212,8 @@
     SUBDIR += grilo
     SUBDIR += grilo-plugins
     SUBDIR += grive2
+    SUBDIR += grpcox
+    SUBDIR += grpcui
     SUBDIR += grpcurl
     SUBDIR += grsync
     SUBDIR += gsk
@@ -235,6 +239,7 @@
     SUBDIR += haproxy17
     SUBDIR += haproxy18
     SUBDIR += haproxy19
+    SUBDIR += haproxy21
     SUBDIR += hexinject
     SUBDIR += hinfo
     SUBDIR += hlmaster
@@ -463,6 +468,7 @@
     SUBDIR += mping
     SUBDIR += mptsd
     SUBDIR += mrouted
+    SUBDIR += mrtparse
     SUBDIR += msend
     SUBDIR += mtr
     SUBDIR += mtr-nox11

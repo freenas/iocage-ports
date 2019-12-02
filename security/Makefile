@@ -357,7 +357,6 @@
     SUBDIR += md5deep
     SUBDIR += medusa
     SUBDIR += meek
-    SUBDIR += mere-auth
     SUBDIR += metasploit
     SUBDIR += mhash
     SUBDIR += mindterm-binary
@@ -1329,6 +1328,7 @@
     SUBDIR += yubikey-personalization-gui
     SUBDIR += yubioath-desktop
     SUBDIR += zebedee
+    SUBDIR += zeek
     SUBDIR += zenmap
     SUBDIR += zeronet
     SUBDIR += zxid
