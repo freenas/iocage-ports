@@ -743,7 +743,6 @@
     SUBDIR += sidplayer
     SUBDIR += simplemod
     SUBDIR += siren
-    SUBDIR += slv2
     SUBDIR += snack
     SUBDIR += snd
     SUBDIR += sndio

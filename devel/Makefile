@@ -134,6 +134,7 @@
     SUBDIR += aphpunit
     SUBDIR += api-sanity-autotest
     SUBDIR += apitrace
+    SUBDIR += app-builder
     SUBDIR += appstream-glib
     SUBDIR += apr1
     SUBDIR += apr2
@@ -168,6 +169,7 @@
     SUBDIR += art
     SUBDIR += artifactory
     SUBDIR += asl
+    SUBDIR += asmjit
     SUBDIR += asmutils
     SUBDIR += asmx
     SUBDIR += astah-community
@@ -558,7 +560,6 @@
     SUBDIR += elixir-exjsx
     SUBDIR += elixir-exprotobuf
     SUBDIR += elixir-gen_stage
-    SUBDIR += elixir-gen_state_machine
     SUBDIR += elixir-gettext
     SUBDIR += elixir-hex
     SUBDIR += elixir-inflex
@@ -574,7 +575,6 @@
     SUBDIR += elixir-poison
     SUBDIR += elixir-quantum
     SUBDIR += elixir-smppex
-    SUBDIR += elixir-swarm
     SUBDIR += elixir-timex
     SUBDIR += elixir-tirexs
     SUBDIR += elixir-trailing_format_plug
@@ -595,7 +595,6 @@
     SUBDIR += erlang-certifi
     SUBDIR += erlang-cf
     SUBDIR += erlang-cl
-    SUBDIR += erlang-clique
     SUBDIR += erlang-common_lib
     SUBDIR += erlang-cuttlefish
     SUBDIR += erlang-erlware_commons
@@ -603,7 +602,6 @@
     SUBDIR += erlang-exmpp
     SUBDIR += erlang-folsom
     SUBDIR += erlang-gen_leader
-    SUBDIR += erlang-gen_rpc
     SUBDIR += erlang-gen_smtp
     SUBDIR += erlang-getopt
     SUBDIR += erlang-goldrush
@@ -618,7 +616,6 @@
     SUBDIR += erlang-lager_syslog
     SUBDIR += erlang-meck
     SUBDIR += erlang-metrics
-    SUBDIR += erlang-msgpack
     SUBDIR += erlang-neotoma
     SUBDIR += erlang-oserl
     SUBDIR += erlang-parse_trans
@@ -1417,6 +1414,7 @@
     SUBDIR += linux-c7-elfutils-libelf
     SUBDIR += linux-c7-elfutils-libs
     SUBDIR += linux-c7-icu
+    SUBDIR += linux-c7-libaio
     SUBDIR += linux-c7-libgfortran
     SUBDIR += linux-c7-libglade2
     SUBDIR += linux-c7-libpciaccess
@@ -1559,6 +1557,7 @@
     SUBDIR += msgpack
     SUBDIR += msgpack-d
     SUBDIR += msgpuck
+    SUBDIR += msitools
     SUBDIR += msp430-debug-stack
     SUBDIR += mspdebug
     SUBDIR += mstch
@@ -1607,7 +1606,6 @@
     SUBDIR += ocaml-classes
     SUBDIR += ocaml-cmdliner
     SUBDIR += ocaml-cppo
-    SUBDIR += ocaml-deriving-ocsigen
     SUBDIR += ocaml-dune
     SUBDIR += ocaml-extlib
     SUBDIR += ocaml-findlib
@@ -3581,6 +3579,7 @@
     SUBDIR += p5-XML-Pastor
     SUBDIR += p5-XS-Object-Magic
     SUBDIR += p5-XSLoader
+    SUBDIR += p5-XXX
     SUBDIR += p5-Xporter
     SUBDIR += p5-YAML-AppConfig
     SUBDIR += p5-Yada-Yada-Yada
@@ -3634,7 +3633,6 @@
     SUBDIR += p5-pip
     SUBDIR += p5-prefork
     SUBDIR += p5-relative
-    SUBDIR += p5-rpm-build-perl
     SUBDIR += p5-self
     SUBDIR += p5-self-init
     SUBDIR += p5-strictures
@@ -4247,6 +4245,7 @@
     SUBDIR += py-cachecontrol
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
+    SUBDIR += py-cachetools3
     SUBDIR += py-cachy
     SUBDIR += py-calendar
     SUBDIR += py-canonicaljson
@@ -4738,6 +4737,7 @@
     SUBDIR += py-oslotest
     SUBDIR += py-osprofiler
     SUBDIR += py-ovs
+    SUBDIR += py-ovsdbapp
     SUBDIR += py-p4python
     SUBDIR += py-packaging
     SUBDIR += py-palm
@@ -4901,6 +4901,7 @@
     SUBDIR += py-pytest-isort
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
+    SUBDIR += py-pytest-pep8
     SUBDIR += py-pytest-pycodestyle
     SUBDIR += py-pytest-relaxed
     SUBDIR += py-pytest-rerunfailures
@@ -5811,7 +5812,13 @@
     SUBDIR += rubygem-ditz
     SUBDIR += rubygem-diva
     SUBDIR += rubygem-docile
+    SUBDIR += rubygem-dry-configurable
+    SUBDIR += rubygem-dry-container
+    SUBDIR += rubygem-dry-core
+    SUBDIR += rubygem-dry-equalizer
     SUBDIR += rubygem-dry-inflector
+    SUBDIR += rubygem-dry-logic
+    SUBDIR += rubygem-dry-types
     SUBDIR += rubygem-drydock
     SUBDIR += rubygem-dynflow
     SUBDIR += rubygem-edavis10-object_daddy
@@ -6296,6 +6303,7 @@
     SUBDIR += rubygem-sumbur
     SUBDIR += rubygem-sundawg_country_codes
     SUBDIR += rubygem-svn2git
+    SUBDIR += rubygem-sync
     SUBDIR += rubygem-sysinfo
     SUBDIR += rubygem-systemu
     SUBDIR += rubygem-table_print
@@ -6416,7 +6424,6 @@
     SUBDIR += sgb
     SUBDIR += shapelib
     SUBDIR += shards
-    SUBDIR += shedskin
     SUBDIR += shell-toolbox
     SUBDIR += shflags
     SUBDIR += shfmt
@@ -6539,6 +6546,7 @@
     SUBDIR += tigcc
     SUBDIR += tijmp
     SUBDIR += tinycbor
+    SUBDIR += tinygo
     SUBDIR += tinylaf
     SUBDIR += tkcon
     SUBDIR += tkcvs
