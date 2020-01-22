@@ -75,7 +75,6 @@
     SUBDIR += box
     SUBDIR += boxer
     SUBDIR += bsd-plotutils
-    SUBDIR += bugle
     SUBDIR += c-a-i-r
     SUBDIR += cadubi
     SUBDIR += caffe
@@ -423,6 +422,7 @@
     SUBDIR += libafterimage
     SUBDIR += libansilove
     SUBDIR += libart_lgpl
+    SUBDIR += libavif
     SUBDIR += libboard
     SUBDIR += libbpg
     SUBDIR += libcaca
@@ -841,7 +841,7 @@
     SUBDIR += py-paint
     SUBDIR += py-photocollage
     SUBDIR += py-pillow
-    SUBDIR += py-pivy-devel
+    SUBDIR += py-pivy
     SUBDIR += py-plotly
     SUBDIR += py-png
     SUBDIR += py-poppler
@@ -852,6 +852,7 @@
     SUBDIR += py-pyepsg
     SUBDIR += py-pygal
     SUBDIR += py-pyganim
+    SUBDIR += py-pygeoapi
     SUBDIR += py-pyglet
     SUBDIR += py-pyglet12
     SUBDIR += py-pygooglechart
@@ -891,6 +892,7 @@
     SUBDIR += qgis
     SUBDIR += qgis-ltr
     SUBDIR += qiv
+    SUBDIR += qr-code-generator
     SUBDIR += qt5-3d
     SUBDIR += qt5-graphicaleffects
     SUBDIR += qt5-imageformats
@@ -953,6 +955,7 @@
     SUBDIR += rubygem-rsvg2
     SUBDIR += rubygem-ruby-graphviz
     SUBDIR += rubygem-scruffy
+    SUBDIR += rx
     SUBDIR += s10sh
     SUBDIR += s2tc
     SUBDIR += sage
