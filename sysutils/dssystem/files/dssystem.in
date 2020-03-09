@@ -11,7 +11,23 @@
 
 dssystem_prestart()
 {
-    netstat -nr | grep lo0 | grep -v '::' | grep -v '127.0.0.1' | awk '{print $1}' | head -n 1 > /root/dhcpip
+    env_file="/etc/iocage-env"
+    grep -q "NETWORKING_MODE=nat" "${env_file}"
+    if [ $? = 0 ]; then
+        ip=$(cat "${env_file}" | grep "HOST_ADDRESS=" | cut -d "=" -f 2)
+        nat_fwd=$(cat "${env_file}" | grep "NAT_FORWARDS=" | cut -d "=" -f 2)
+        for rule in $(echo $nat_fwd | sed "s/,/ /g") ; do
+            echo "${rule}" | grep -q "(80:"
+            if [ $? = 1 ]; then
+                continue
+            fi
+            port=":$(echo "${rule}" | cut -d ':' -f 2 | cut -d ')' -f 1)"
+            break
+        done
+        echo "${ip}${port}" > /root/dhcpip
+    else
+        netstat -nr | grep lo0 | grep -v '::' | grep -v '127.0.0.1' | awk '{print $1}' | head -n 1 > /root/dhcpip
+    fi
     IP=`cat /root/dhcpip`
     sed -i.bak -E "s|codebase=\"(.+)\"|codebase=\"http://$IP/asigra/\"|" /usr/local/www/asigra/DSOP.jnlp
     rm -f /usr/local/www/asigra/DSOP.jnlp.bak
