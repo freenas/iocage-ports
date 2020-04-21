@@ -31,6 +31,16 @@ dssystem_prestart()
     IP=`cat /root/dhcpip`
     sed -i.bak -E "s|codebase=\"(.+)\"|codebase=\"http://$IP/asigra/\"|" /usr/local/www/asigra/DSOP.jnlp
     rm -f /usr/local/www/asigra/DSOP.jnlp.bak
+
+    dssys_file="/etc/dssys.cfg"
+    # We make sure that the port is not added to the IP Address
+    ip=$(echo ${IP} | cut -d':' -f1)
+    grep -q "^External IP Addr.*:" "${dssys_file}"
+    if [ $? -eq 0 ]; then
+        sed -ie "s/\(External IP Addr\)\([ ]*\)\(.*\)/\1\2: ${ip}/" ${dssys_file}
+    else
+        echo "External IP Addr : ${ip}" >> ${dssys_file}
+    fi
 }
 
 dssystem_stop()
