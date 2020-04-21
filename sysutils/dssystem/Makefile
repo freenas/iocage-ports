@@ -2,7 +2,7 @@
 
 PORTNAME=	dssystem
 PORTVERSION=	14.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cdn1.tn.ixsystems.com/asigra/14.1/hotfixes/ \
 		https://asigra-f611.kxcdn.com/14.1/hotfixes/
