@@ -15,7 +15,7 @@ RUN_DEPENDS=	ca_root_nss>0:security/ca_root_nss \
 		icu>0:devel/icu \
 		indexinfo>0:print/indexinfo \
 		libxml2>0:textproc/libxml2 \
-		openldap24-client>2.4.0:net/openldap24-client \
+		openldap-client>2.4.0:net/openldap24-client \
 		nss-pam-ldapd-sasl>0:net/nss-pam-ldapd-sasl
 
 NO_BUILD=	yes
