@@ -2,12 +2,13 @@
 
 PORTNAME=	iconik_ui
 PORTVERSION=	1
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	waqar@ixsystems.com
 COMMENT=	Web Interface for iconik
 
-USES=	python:3.6+
+USES=	python:3.9+
 NO_BUILD=	yes
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Jinja2>=2.10:devel/py-Jinja2@${PY_FLAVOR} \
