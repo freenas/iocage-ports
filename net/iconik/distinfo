@@ -1,3 +1,3 @@
-TIMESTAMP = 1568222327
-SHA256 (iconik_storage_gateway-1.6.3.txz) = 6b241a5d39d794a2b94e9743728614349798d0d65efa21a237c89395c0c40c79
-SIZE (iconik_storage_gateway-1.6.3.txz) = 15456108
+TIMESTAMP = 1639050534
+SHA256 (iconik_storage_gateway-3.1.4-FreeBSD-12.2-RELEASE.txz) = 053f08cf50462040bd70616cf061f901061283abd0a15debc2d41f21bc629003
+SIZE (iconik_storage_gateway-3.1.4-FreeBSD-12.2-RELEASE.txz) = 25286892
