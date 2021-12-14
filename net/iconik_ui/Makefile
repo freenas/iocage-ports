@@ -15,9 +15,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Jinja2>=2.10:devel/py-Jinja2@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}werkzeug>=0.10:www/py-werkzeug@${PY_FLAVOR}
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	iconik-io
+GH_ACCOUNT=	freenas
 GH_PROJECT=	iocage-plugin-iconik-storage-gateway
-GH_TAGNAME=	d3e366388411d433338eac5b0861382c03e99a23
+GH_TAGNAME=	8210acac8177ef88008f92082fea1ce4fbd0c444
 
 USE_RC_SUBR=	${PORTNAME}
 
