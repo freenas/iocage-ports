@@ -1,10 +1,10 @@
 # $FreeBSD$
 
 PORTNAME=	iconik_storage_gateway
-PORTVERSION=	3.1.9
+PORTVERSION=	3.5.3
 CATEGORIES=	net
 MASTER_SITES=	http://cdn1.tn.ixsystems.com/pkg.cdn.trueos.org/iconik/
-DISTNAME=	iconik_storage_gateway-3.1.9-FreeBSD-12.2-RELEASE
+DISTNAME=	iconik_storage_gateway-3.5.3-FreeBSD-12.2-RELEASE
 EXTRACT_SUFX=	.txz
 
 MAINTAINER=	waqar@ixsystems.com
