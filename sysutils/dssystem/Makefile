@@ -1,9 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	dssystem
-PORTVERSION=	14.2.0.5
+PORTVERSION=	14.2.0.6
 CATEGORIES=	sysutils
-MASTER_SITES=	https://cdn1.tn.ixsystems.com/asigra/14.2/20220830/
+MASTER_SITES=	https://cdn1.tn.ixsystems.com/asigra/14.2/20230427/
 EXTRACT_SUFX=	.txz
 
 MAINTAINER=	wg@FreeBSD.org
