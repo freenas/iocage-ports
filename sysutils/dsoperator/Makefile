@@ -1,9 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	dsoperator
-PORTVERSION=	14.2.0.6
+PORTVERSION=	14.2.0.7
 CATEGORIES=	sysutils
-MASTER_SITES=	https://cdn1.tn.ixsystems.com/asigra/14.2/20230427/
+MASTER_SITES=	https://cdn1.tn.ixsystems.com/asigra/14.2/20231208/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	wg@FreeBSD.org
