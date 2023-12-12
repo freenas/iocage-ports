@@ -2,6 +2,7 @@
 
 PORTNAME=	dsoperator
 PORTVERSION=	14.2.0.7
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cdn1.tn.ixsystems.com/asigra/14.2/20231208/
 EXTRACT_SUFX=	.zip
